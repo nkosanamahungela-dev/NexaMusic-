@@ -4,8 +4,6 @@
 
   <p>
     <a href="https://discord.gg/mCHqJXTxq">
-      
-      >>>>>>> main
       <img src="https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join Discord">
     </a>
   </p>
@@ -114,15 +112,30 @@
 
 <div align="center">
   <h2>🙏 Credits</h2>
-  <p>NexaMusic builds on the work of:</p>
-  <ul align="left" style="display:inline-block;">
-    <li><strong><a href="https://github.com/cosmictaserdev-creator/Convx">Convx</a></strong> by Aryan (CosmicTaser) — the project NexaMusic was forked from.</li>
-    <li><strong><a href="https://github.com/vivizzz007/vivi-music">vivi-music</a></strong> by Vividh P Ashokan — which Convx was originally forked from.</li>
-    <li><strong><a href="https://github.com/vfsfitvnm/ViMusic">ViMusic</a></strong> by vfsfitvnm — the original project this whole family is based on.</li>
-    <li><strong><a href="https://github.com/Kyant0/backdrop">Kyant0/backdrop</a></strong> — the real-time backdrop blur/refraction library the Liquid Glass UI is built on.</li>
-    <li><strong><a href="https://github.com/better-lyrics/better-lyrics">Better Lyrics</a></strong> and <strong><a href="https://github.com/maxrave-dev/SimpMusic">SimpMusic</a></strong> — synced lyrics.</li>
-    <li><strong><a href="https://github.com/ibratabian17/YouLyPlus">YouLyPlus</a></strong> — in-app lyrics styling.</li>
-    <li><strong><a href="https://github.com/monochrome-music/monochrome">Monochrome</a></strong> — the animated visualizer canvas.</li>
-  </ul>
+  <p>NexaMusic would not exist without the open-source projects it is built on.</p>
+
+  <table border="0" cellpadding="10" cellspacing="0" width="90%">
+    <tr valign="top">
+      <td width="50%" align="left">
+        <b>Project Lineage</b>
+        <ul>
+          <li><a href="https://github.com/vfsfitvnm/ViMusic"><b>ViMusic</b></a> — by vfsfitvnm. The original project this entire family is descended from.</li>
+          <li><a href="https://github.com/vivizzz007/vivi-music"><b>vivi-music</b></a> — by Vividh P Ashokan. A fork of ViMusic that introduced the Material 3 Expressive UI.</li>
+          <li><a href="https://github.com/cosmictaserdev-creator/Convx"><b>Convx</b></a> — by Aryan (CosmicTaser). A fork of vivi-music that introduced the Liquid Glass design system. NexaMusic is forked directly from Convx.</li>
+        </ul>
+      </td>
+      <td width="50%" align="left">
+        <b>Libraries & Features</b>
+        <ul>
+          <li><a href="https://github.com/Kyant0/backdrop"><b>Kyant0/backdrop</b></a> — the real-time backdrop blur/refraction library the Liquid Glass UI is built on.</li>
+          <li><a href="https://github.com/better-lyrics/better-lyrics"><b>Better Lyrics</b></a> and <a href="https://github.com/maxrave-dev/SimpMusic"><b>SimpMusic</b></a> — synced lyrics sources.</li>
+          <li><a href="https://github.com/ibratabian17/YouLyPlus"><b>YouLyPlus</b></a> — in-app lyrics styling.</li>
+          <li><a href="https://github.com/monochrome-music/monochrome"><b>Monochrome</b></a> — the animated visualizer canvas.</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+  <p>All third-party components remain the property of their respective authors and are used in accordance with their licenses.</p>
   <p align="center"><strong>Made with ❤️ for music lovers everywhere</strong></p>
 </div>
