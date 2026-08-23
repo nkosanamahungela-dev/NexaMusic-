@@ -4,6 +4,8 @@
 
   <p>
     <a href="https://discord.gg/mCHqJXTxq">
+      
+      >>>>>>> main
       <img src="https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join Discord">
     </a>
   </p>
