@@ -1,9 +1,9 @@
 /**
- * Convx Project (C) 2026
- * Licensed under GPL-3.0 | See git history for contributors
+ * NexaMusic Project (C) 2026
+ * Forked from Convx — Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.convx.music.listentogether
+package com.nexamusic.app.listentogether
 
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
