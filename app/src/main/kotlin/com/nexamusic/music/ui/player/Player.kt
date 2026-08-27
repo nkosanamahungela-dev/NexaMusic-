@@ -285,7 +285,7 @@ import androidx.media3.common.MimeTypes
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
-import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
+import com.nexamusic.music.applecanvas.AppleMusicCanvasProvider
 import com.nexamusic.music.canvas.CanvasArtwork
 import com.nexamusic.music.canvas.TidalCanvasProvider
 import com.nexamusic.app.constants.CanvasSource
@@ -296,8 +296,8 @@ import com.nexamusic.app.extensions.metadata
 import com.nexamusic.app.ui.player.CanvasArtworkPlaybackCache
 import com.nexamusic.app.ui.player.normalizeCanvasArtistName
 import com.nexamusic.app.ui.player.normalizeCanvasSongTitle
-import com.nexamusic.app.vivimusiccanvas.ViviMusicCanvasProvider
-import com.nexamusic.app.vivimusiccanvas.EchoMusicCanvasProvider
+import com.nexamusic.music.vivimusiccanvas.ViviMusicCanvasProvider
+import com.nexamusic.music.vivimusiccanvas.EchoMusicCanvasProvider
 import java.util.Locale
 
 /** Poll interval for VideoLoopClock and the bucket width glass surfaces cache

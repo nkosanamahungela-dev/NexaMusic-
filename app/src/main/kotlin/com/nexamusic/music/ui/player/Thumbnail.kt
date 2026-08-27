@@ -123,9 +123,9 @@ import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.delay
-import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
-import com.nexamusic.app.vivimusiccanvas.ViviMusicCanvasProvider
-import com.nexamusic.app.vivimusiccanvas.EchoMusicCanvasProvider
+import com.nexamusic.music.applecanvas.AppleMusicCanvasProvider
+import com.nexamusic.music.vivimusiccanvas.ViviMusicCanvasProvider
+import com.nexamusic.music.vivimusiccanvas.EchoMusicCanvasProvider
 import java.util.Locale
 
 /**

@@ -11,8 +11,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import com.nexamusic.music.canvas.CanvasArtwork
 import com.nexamusic.music.canvas.TidalCanvasProvider
-import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
-import com.nexamusic.app.vivimusiccanvas.ViviMusicCanvasProvider
+import com.nexamusic.music.applecanvas.AppleMusicCanvasProvider
+import com.nexamusic.music.vivimusiccanvas.ViviMusicCanvasProvider
 import com.nexamusic.app.constants.CanvasSource
 import com.nexamusic.app.constants.CanvasSourceKey
 import com.nexamusic.app.models.MediaMetadata

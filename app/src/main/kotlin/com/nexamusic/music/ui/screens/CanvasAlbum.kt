@@ -12,12 +12,12 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
+import com.nexamusic.music.applecanvas.AppleMusicCanvasProvider
 import com.nexamusic.music.canvas.CanvasArtwork
 import com.nexamusic.music.canvas.TidalCanvasProvider
 import com.nexamusic.app.ui.player.CanvasArtworkPlaybackCache
-import com.nexamusic.app.vivimusiccanvas.EchoMusicCanvasProvider
-import com.nexamusic.app.vivimusiccanvas.ViviMusicCanvasProvider
+import com.nexamusic.music.vivimusiccanvas.EchoMusicCanvasProvider
+import com.nexamusic.music.vivimusiccanvas.ViviMusicCanvasProvider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.util.Locale
