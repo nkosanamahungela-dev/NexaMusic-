@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.api
+package com.nexamusic.app.api
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

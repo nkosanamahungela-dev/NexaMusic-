@@ -3,14 +3,14 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.utils
+package com.nexamusic.app.utils
 
 import androidx.datastore.preferences.core.edit
 import com.music.innertube.YouTube
-import com.nexamusic.music.constants.VisitorDataKey
-import com.nexamusic.music.utils.cipher.CipherDeobfuscator
-import com.nexamusic.music.utils.PlaybackLogManager
-import com.nexamusic.music.utils.PlaybackLogLevel
+import com.nexamusic.app.constants.VisitorDataKey
+import com.nexamusic.app.utils.cipher.CipherDeobfuscator
+import com.nexamusic.app.utils.PlaybackLogManager
+import com.nexamusic.app.utils.PlaybackLogLevel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock

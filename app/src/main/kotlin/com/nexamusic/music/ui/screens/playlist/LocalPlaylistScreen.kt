@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.playlist
+package com.nexamusic.app.ui.screens.playlist
 
-import com.nexamusic.music.ui.utils.FloatingChromeSpacer
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.FloatingChromeSpacer
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -109,9 +109,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.painterResource
-import com.nexamusic.music.ui.component.buildAlphabetSectionIndex
-import com.nexamusic.music.ui.component.ListScrollRail
-import com.nexamusic.music.ui.component.AnimatedPlayPauseIcon
+import com.nexamusic.app.ui.component.buildAlphabetSectionIndex
+import com.nexamusic.app.ui.component.ListScrollRail
+import com.nexamusic.app.ui.component.AnimatedPlayPauseIcon
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextRange
@@ -134,74 +134,74 @@ import coil3.compose.AsyncImage
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
 import com.music.innertube.utils.completed
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalDownloadUtil
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.LocalSyncUtils
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.DarkModeKey
-import com.nexamusic.music.constants.PendingPlaylistDeletesKey
-import com.nexamusic.music.constants.PlaylistEditLockKey
-import com.nexamusic.music.constants.PlaylistSongSortDescendingKey
-import com.nexamusic.music.constants.PlaylistSongSortType
-import com.nexamusic.music.constants.PlaylistSongSortTypeKey
-import com.nexamusic.music.constants.SwipeToRemoveSongKey
-import com.nexamusic.music.db.entities.Playlist
-import com.nexamusic.music.db.entities.PlaylistSong
-import com.nexamusic.music.db.entities.PlaylistSongMap
-import com.nexamusic.music.extensions.move
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.queues.ListQueue
-import com.nexamusic.music.ui.component.ActionPromptDialog
-import com.nexamusic.music.ui.component.DefaultDialog
-import com.nexamusic.music.ui.component.EmptyPlaceholder
-import com.nexamusic.music.ui.component.GlassCircleButton
-import com.nexamusic.music.ui.component.ChromeScrim
-import com.nexamusic.music.ui.component.rememberChromeScrimProgress
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.component.LocalAppBackdrop
-import com.nexamusic.music.ui.component.GlassComponent
-import com.nexamusic.music.ui.component.LocalGlassEffectConfig
-import com.nexamusic.music.ui.component.backdrop.backdrops.layerBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberBackdropFreeze
-import com.nexamusic.music.ui.component.LocalItemPrefs
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.OverlayEditButton
-import com.nexamusic.music.ui.component.SongListItem
-import com.nexamusic.music.ui.component.SortHeader
-import com.nexamusic.music.ui.component.isGlassAllowed
-import com.nexamusic.music.ui.component.liquidGlass
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.menu.CustomThumbnailMenu
-import com.nexamusic.music.ui.component.ExpandableText
-import com.nexamusic.music.ui.menu.LocalPlaylistMenu
-import com.nexamusic.music.ui.menu.SelectionSongMenu
-import com.nexamusic.music.ui.menu.SongMenu
-import com.nexamusic.music.ui.screens.settings.DarkMode
-import com.nexamusic.music.ui.component.AlbumStyleHeroImage
-import com.nexamusic.music.LocalTabView
-import com.nexamusic.music.ui.utils.rememberHeroZoom
-import com.nexamusic.music.ui.utils.heroPullZoom
-import com.nexamusic.music.ui.utils.listOverscroll
-import com.nexamusic.music.ui.component.HeroBackground
-import com.nexamusic.music.ui.component.HeroCardHeader
-import com.nexamusic.music.ui.component.rememberHeroSource
-import com.nexamusic.music.ui.component.rememberHeroTint
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.theme.HeroTintedContent
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.listItemShape
-import com.nexamusic.music.utils.makeTimeString
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
-import com.nexamusic.music.utils.reportException
-import com.nexamusic.music.viewmodels.LocalPlaylistViewModel
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalDownloadUtil
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.LocalSyncUtils
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.DarkModeKey
+import com.nexamusic.app.constants.PendingPlaylistDeletesKey
+import com.nexamusic.app.constants.PlaylistEditLockKey
+import com.nexamusic.app.constants.PlaylistSongSortDescendingKey
+import com.nexamusic.app.constants.PlaylistSongSortType
+import com.nexamusic.app.constants.PlaylistSongSortTypeKey
+import com.nexamusic.app.constants.SwipeToRemoveSongKey
+import com.nexamusic.app.db.entities.Playlist
+import com.nexamusic.app.db.entities.PlaylistSong
+import com.nexamusic.app.db.entities.PlaylistSongMap
+import com.nexamusic.app.extensions.move
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.queues.ListQueue
+import com.nexamusic.app.ui.component.ActionPromptDialog
+import com.nexamusic.app.ui.component.DefaultDialog
+import com.nexamusic.app.ui.component.EmptyPlaceholder
+import com.nexamusic.app.ui.component.GlassCircleButton
+import com.nexamusic.app.ui.component.ChromeScrim
+import com.nexamusic.app.ui.component.rememberChromeScrimProgress
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.component.LocalAppBackdrop
+import com.nexamusic.app.ui.component.GlassComponent
+import com.nexamusic.app.ui.component.LocalGlassEffectConfig
+import com.nexamusic.app.ui.component.backdrop.backdrops.layerBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberBackdropFreeze
+import com.nexamusic.app.ui.component.LocalItemPrefs
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.OverlayEditButton
+import com.nexamusic.app.ui.component.SongListItem
+import com.nexamusic.app.ui.component.SortHeader
+import com.nexamusic.app.ui.component.isGlassAllowed
+import com.nexamusic.app.ui.component.liquidGlass
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.menu.CustomThumbnailMenu
+import com.nexamusic.app.ui.component.ExpandableText
+import com.nexamusic.app.ui.menu.LocalPlaylistMenu
+import com.nexamusic.app.ui.menu.SelectionSongMenu
+import com.nexamusic.app.ui.menu.SongMenu
+import com.nexamusic.app.ui.screens.settings.DarkMode
+import com.nexamusic.app.ui.component.AlbumStyleHeroImage
+import com.nexamusic.app.LocalTabView
+import com.nexamusic.app.ui.utils.rememberHeroZoom
+import com.nexamusic.app.ui.utils.heroPullZoom
+import com.nexamusic.app.ui.utils.listOverscroll
+import com.nexamusic.app.ui.component.HeroBackground
+import com.nexamusic.app.ui.component.HeroCardHeader
+import com.nexamusic.app.ui.component.rememberHeroSource
+import com.nexamusic.app.ui.component.rememberHeroTint
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.theme.HeroTintedContent
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.listItemShape
+import com.nexamusic.app.utils.makeTimeString
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
+import com.nexamusic.app.utils.reportException
+import com.nexamusic.app.viewmodels.LocalPlaylistViewModel
 import com.yalantis.ucrop.UCrop
 import io.ktor.client.plugins.ClientRequestException
 import kotlinx.coroutines.Dispatchers
@@ -211,10 +211,10 @@ import kotlinx.coroutines.withContext
 import sh.calvin.reorderable.ReorderableItem
 import sh.calvin.reorderable.rememberReorderableLazyListState
 import java.time.LocalDateTime
-import com.nexamusic.music.playback.DownloadTarget
-import com.nexamusic.music.playback.cancelDownloads
-import com.nexamusic.music.playback.downloadSongs
-import com.nexamusic.music.playback.removeDownloads
+import com.nexamusic.app.playback.DownloadTarget
+import com.nexamusic.app.playback.cancelDownloads
+import com.nexamusic.app.playback.downloadSongs
+import com.nexamusic.app.playback.removeDownloads
 
 @SuppressLint("RememberReturnType")
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
@@ -585,7 +585,7 @@ fun LocalPlaylistScreen(
     }
 
     val tint = rememberHeroTint(heroUrl)
-    val onTint = com.nexamusic.music.ui.theme.AppleTokens.onColor(tint)
+    val onTint = com.nexamusic.app.ui.theme.AppleTokens.onColor(tint)
 
     val glassConfig = LocalGlassEffectConfig.current
     val useGlass = glassConfig.isEnabledFor(GlassComponent.NAV_BAR) && isGlassAllowed()

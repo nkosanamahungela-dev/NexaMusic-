@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.screens.wrapped.pages
+package com.nexamusic.app.ui.screens.wrapped.pages
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -23,9 +23,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.screens.wrapped.components.AnimatedBackground
-import com.nexamusic.music.ui.screens.wrapped.components.ShapeType
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.screens.wrapped.components.AnimatedBackground
+import com.nexamusic.app.ui.screens.wrapped.components.ShapeType
 
 @Composable
 fun ConclusionPage(onClose: () -> Unit) {

@@ -3,11 +3,11 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.wrapped
+package com.nexamusic.app.ui.screens.wrapped
 
 import android.content.Context
 import androidx.compose.runtime.compositionLocalOf
-import com.nexamusic.music.db.DatabaseDao
+import com.nexamusic.app.db.DatabaseDao
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors

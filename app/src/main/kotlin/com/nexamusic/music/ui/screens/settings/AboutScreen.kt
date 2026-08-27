@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -57,18 +57,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.nexamusic.music.BuildConfig
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.constants.DonationKofiUrl
-import com.nexamusic.music.constants.DonationUpiId
-import com.nexamusic.music.constants.DonationUpiUri
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.component.Material3SettingsGroup
-import com.nexamusic.music.ui.component.Material3SettingsItem
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.ui.utils.safeOpenUri
+import com.nexamusic.app.BuildConfig
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.constants.DonationKofiUrl
+import com.nexamusic.app.constants.DonationUpiId
+import com.nexamusic.app.constants.DonationUpiUri
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.component.Material3SettingsGroup
+import com.nexamusic.app.ui.component.Material3SettingsItem
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.ui.utils.safeOpenUri
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

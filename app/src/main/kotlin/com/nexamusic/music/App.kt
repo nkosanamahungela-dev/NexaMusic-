@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music
+package com.nexamusic.app
 
 import android.app.Application
 import android.app.NotificationChannel
@@ -31,16 +31,16 @@ import com.music.innertube.models.IpVersion
 import com.music.innertube.models.YouTubeLocale
 import com.music.kugou.KuGou
 import com.music.lastfm.LastFM
-import com.nexamusic.music.constants.*
-import com.nexamusic.music.di.ApplicationScope
-import com.nexamusic.music.extensions.toEnum
-import com.nexamusic.music.extensions.toInetSocketAddress
-import com.nexamusic.music.utils.CrashHandler
-import com.nexamusic.music.utils.DebugLogs
-import com.nexamusic.music.utils.cipher.CipherDeobfuscator
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
-import com.nexamusic.music.utils.reportException
+import com.nexamusic.app.constants.*
+import com.nexamusic.app.di.ApplicationScope
+import com.nexamusic.app.extensions.toEnum
+import com.nexamusic.app.extensions.toInetSocketAddress
+import com.nexamusic.app.utils.CrashHandler
+import com.nexamusic.app.utils.DebugLogs
+import com.nexamusic.app.utils.cipher.CipherDeobfuscator
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
+import com.nexamusic.app.utils.reportException
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

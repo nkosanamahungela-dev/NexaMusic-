@@ -1,4 +1,4 @@
-package com.nexamusic.music.vivimusic.updater.downloadmanager
+package com.nexamusic.app.vivimusic.updater.downloadmanager
 
 import android.app.Notification
 import android.content.Context
@@ -13,7 +13,7 @@ import androidx.media3.session.DefaultMediaNotificationProvider
 import androidx.media3.session.MediaNotification
 import androidx.media3.session.MediaSession
 import com.google.common.collect.ImmutableList
-import com.nexamusic.music.R
+import com.nexamusic.app.R
 import java.util.Locale
 
 /**

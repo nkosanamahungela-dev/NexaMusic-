@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.annotation.DrawableRes
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -34,8 +34,8 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.ui.player.customize.PlayerIconSlot
-import com.nexamusic.music.ui.player.customize.rememberPlayerIcon
+import com.nexamusic.app.ui.player.customize.PlayerIconSlot
+import com.nexamusic.app.ui.player.customize.rememberPlayerIcon
 
 /**
  * @param slot when non-null, the button honours the user's custom glyph for that player control

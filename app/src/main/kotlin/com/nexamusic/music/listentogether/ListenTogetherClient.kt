@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.listentogether
+package com.nexamusic.app.listentogether
 
 import android.util.Base64
 import android.Manifest
@@ -21,18 +21,18 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.getSystemService
 import androidx.datastore.preferences.core.edit
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ListenTogetherAutoAddSuggestionsKey
-import com.nexamusic.music.constants.ListenTogetherAutoApprovalKey
-import com.nexamusic.music.constants.ListenTogetherIsHostKey
-import com.nexamusic.music.constants.ListenTogetherRoomCodeKey
-import com.nexamusic.music.constants.ListenTogetherServerUrlKey
-import com.nexamusic.music.constants.ListenTogetherSessionTimestampKey
-import com.nexamusic.music.constants.ListenTogetherSessionTokenKey
-import com.nexamusic.music.constants.ListenTogetherUserIdKey
-import com.nexamusic.music.utils.NetworkConnectivityObserver
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ListenTogetherAutoAddSuggestionsKey
+import com.nexamusic.app.constants.ListenTogetherAutoApprovalKey
+import com.nexamusic.app.constants.ListenTogetherIsHostKey
+import com.nexamusic.app.constants.ListenTogetherRoomCodeKey
+import com.nexamusic.app.constants.ListenTogetherServerUrlKey
+import com.nexamusic.app.constants.ListenTogetherSessionTimestampKey
+import com.nexamusic.app.constants.ListenTogetherSessionTokenKey
+import com.nexamusic.app.constants.ListenTogetherUserIdKey
+import com.nexamusic.app.utils.NetworkConnectivityObserver
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -174,10 +174,10 @@ class ListenTogetherClient @Inject constructor(
 
         // Notification constants
         private const val NOTIFICATION_CHANNEL_ID = "listen_together_channel"
-        const val ACTION_APPROVE_JOIN = "com.nexamusic.music.LISTEN_TOGETHER_APPROVE_JOIN"
-        const val ACTION_REJECT_JOIN = "com.nexamusic.music.LISTEN_TOGETHER_REJECT_JOIN"
-        const val ACTION_APPROVE_SUGGESTION = "com.nexamusic.music.LISTEN_TOGETHER_APPROVE_SUGGESTION"
-        const val ACTION_REJECT_SUGGESTION = "com.nexamusic.music.LISTEN_TOGETHER_REJECT_SUGGESTION"
+        const val ACTION_APPROVE_JOIN = "com.nexamusic.app.LISTEN_TOGETHER_APPROVE_JOIN"
+        const val ACTION_REJECT_JOIN = "com.nexamusic.app.LISTEN_TOGETHER_REJECT_JOIN"
+        const val ACTION_APPROVE_SUGGESTION = "com.nexamusic.app.LISTEN_TOGETHER_APPROVE_SUGGESTION"
+        const val ACTION_REJECT_SUGGESTION = "com.nexamusic.app.LISTEN_TOGETHER_REJECT_SUGGESTION"
         const val EXTRA_USER_ID = "extra_user_id"
         const val EXTRA_SUGGESTION_ID = "extra_suggestion_id"
         const val EXTRA_NOTIFICATION_ID = "extra_notification_id"
@@ -334,7 +334,7 @@ class ListenTogetherClient @Inject constructor(
      */
     private fun loadBlockedUsernames() {
         try {
-            val blockedJson = context.dataStore.get(com.nexamusic.music.constants.ListenTogetherBlockedUsersKey, "")
+            val blockedJson = context.dataStore.get(com.nexamusic.app.constants.ListenTogetherBlockedUsersKey, "")
             val blockedList = if (blockedJson.isNotEmpty()) {
                 json.decodeFromString<List<String>>(blockedJson)
             } else {
@@ -354,7 +354,7 @@ class ListenTogetherClient @Inject constructor(
         try {
             val blockedJson = json.encodeToString(_blockedUsernames.value.toList())
             context.dataStore.edit { preferences ->
-                preferences[com.nexamusic.music.constants.ListenTogetherBlockedUsersKey] = blockedJson
+                preferences[com.nexamusic.app.constants.ListenTogetherBlockedUsersKey] = blockedJson
             }
         } catch (e: Exception) {
             log(LogLevel.ERROR, "Failed to save blocked usernames", e.message)

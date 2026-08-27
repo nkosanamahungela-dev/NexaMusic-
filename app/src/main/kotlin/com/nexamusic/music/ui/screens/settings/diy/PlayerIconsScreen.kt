@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings.diy
+package com.nexamusic.app.ui.screens.settings.diy
 
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -52,23 +52,23 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.datastore.preferences.core.edit
 import androidx.navigation.NavController
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.PlayerIconsKey
-import com.nexamusic.music.constants.UseAppleMusicPlayerKey
-import com.nexamusic.music.constants.V2PlayerIconsKey
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.player.customize.DiyOrientation
-import com.nexamusic.music.ui.player.customize.DiyPlayerMockup
-import com.nexamusic.music.ui.player.customize.PlayerIconOverride
-import com.nexamusic.music.ui.player.customize.PlayerIconSet
-import com.nexamusic.music.ui.player.customize.PlayerIconSlot
-import com.nexamusic.music.ui.player.customize.PlayerIconStore
-import com.nexamusic.music.ui.player.customize.rememberPlayerIcon
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.MediaImport
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.PlayerIconsKey
+import com.nexamusic.app.constants.UseAppleMusicPlayerKey
+import com.nexamusic.app.constants.V2PlayerIconsKey
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.player.customize.DiyOrientation
+import com.nexamusic.app.ui.player.customize.DiyPlayerMockup
+import com.nexamusic.app.ui.player.customize.PlayerIconOverride
+import com.nexamusic.app.ui.player.customize.PlayerIconSet
+import com.nexamusic.app.ui.player.customize.PlayerIconSlot
+import com.nexamusic.app.ui.player.customize.PlayerIconStore
+import com.nexamusic.app.ui.player.customize.rememberPlayerIcon
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.MediaImport
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

@@ -4,7 +4,7 @@
  */
 // Apple Music player UI ported from vivizzz007/vivi-music (https://github.com/vivizzz007/vivi-music), GPL-3.0.
 
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import android.content.res.Configuration
 import androidx.compose.animation.AnimatedVisibility
@@ -50,21 +50,21 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.media3.common.Player
 import coil3.compose.AsyncImage
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.*
-import com.nexamusic.music.listentogether.ListenTogetherManager
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.playback.CastConnectionHandler
-import com.nexamusic.music.playback.PlayerConnection
-import com.nexamusic.music.ui.screens.settings.DarkMode
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.*
+import com.nexamusic.app.listentogether.ListenTogetherManager
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.playback.CastConnectionHandler
+import com.nexamusic.app.playback.PlayerConnection
+import com.nexamusic.app.ui.screens.settings.DarkMode
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
 import kotlin.math.roundToInt
-import com.nexamusic.music.ui.component.Icon as MIcon
+import com.nexamusic.app.ui.component.Icon as MIcon
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

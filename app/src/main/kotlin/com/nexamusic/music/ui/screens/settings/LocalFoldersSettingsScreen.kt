@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -36,7 +36,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
-import com.nexamusic.music.ui.component.GlassSwitchCompat as Switch
+import com.nexamusic.app.ui.component.GlassSwitchCompat as Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
@@ -56,15 +56,15 @@ import androidx.compose.ui.unit.dp
 import androidx.datastore.preferences.core.edit
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.LocalExcludedFoldersKey
-import com.nexamusic.music.ui.screens.library.LocalMusicViewModel
-import com.nexamusic.music.utils.LocalFolderIndex
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.decodeExcludedFolders
-import com.nexamusic.music.utils.encodeExcludedFolders
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.LocalExcludedFoldersKey
+import com.nexamusic.app.ui.screens.library.LocalMusicViewModel
+import com.nexamusic.app.utils.LocalFolderIndex
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.decodeExcludedFolders
+import com.nexamusic.app.utils.encodeExcludedFolders
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.launch
 
 /**

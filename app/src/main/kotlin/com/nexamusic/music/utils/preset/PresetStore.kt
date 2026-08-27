@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.utils.preset
+package com.nexamusic.app.utils.preset
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -16,24 +16,24 @@ import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.core.stringSetPreferencesKey
-import com.nexamusic.music.constants.CustomFontPathKey
-import com.nexamusic.music.constants.DiyLayoutKey
-import com.nexamusic.music.constants.HomeBackgroundPathKey
-import com.nexamusic.music.constants.PlayerIconsKey
-import com.nexamusic.music.constants.V2PlayerIconsKey
-import com.nexamusic.music.constants.PrefType
-import com.nexamusic.music.constants.PresetCategory
-import com.nexamusic.music.constants.PresetKeys
-import com.nexamusic.music.constants.presetKeyTypes
-import com.nexamusic.music.ui.player.customize.DIY_MAX_STICKERS
-import com.nexamusic.music.ui.player.customize.DiyLayout
-import com.nexamusic.music.ui.player.customize.DiyStickerKind
-import com.nexamusic.music.ui.player.customize.DiyStore
-import com.nexamusic.music.ui.player.customize.PlayerIconSet
-import com.nexamusic.music.ui.player.customize.PlayerIconStore
-import com.nexamusic.music.ui.theme.customFontDir
-import com.nexamusic.music.utils.MediaImport
-import com.nexamusic.music.utils.dataStore
+import com.nexamusic.app.constants.CustomFontPathKey
+import com.nexamusic.app.constants.DiyLayoutKey
+import com.nexamusic.app.constants.HomeBackgroundPathKey
+import com.nexamusic.app.constants.PlayerIconsKey
+import com.nexamusic.app.constants.V2PlayerIconsKey
+import com.nexamusic.app.constants.PrefType
+import com.nexamusic.app.constants.PresetCategory
+import com.nexamusic.app.constants.PresetKeys
+import com.nexamusic.app.constants.presetKeyTypes
+import com.nexamusic.app.ui.player.customize.DIY_MAX_STICKERS
+import com.nexamusic.app.ui.player.customize.DiyLayout
+import com.nexamusic.app.ui.player.customize.DiyStickerKind
+import com.nexamusic.app.ui.player.customize.DiyStore
+import com.nexamusic.app.ui.player.customize.PlayerIconSet
+import com.nexamusic.app.ui.player.customize.PlayerIconStore
+import com.nexamusic.app.ui.theme.customFontDir
+import com.nexamusic.app.utils.MediaImport
+import com.nexamusic.app.utils.dataStore
 import kotlinx.coroutines.flow.first
 import org.json.JSONArray
 import org.json.JSONObject

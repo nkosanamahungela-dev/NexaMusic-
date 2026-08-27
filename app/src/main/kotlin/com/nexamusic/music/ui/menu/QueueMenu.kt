@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -58,26 +58,26 @@ import androidx.media3.exoplayer.offline.DownloadService
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import com.music.innertube.YouTube
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalDownloadUtil
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.LocalSyncUtils
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ListItemHeight
-import com.nexamusic.music.constants.ListThumbnailSize
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.ExoDownloadService
-import com.nexamusic.music.playback.queues.YouTubeQueue
-import com.nexamusic.music.ui.component.BottomSheetState
-import com.nexamusic.music.ui.component.ListDialog
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
-import com.nexamusic.music.ui.component.MediaMetadataListItem
-import com.nexamusic.music.ui.component.NewAction
-import com.nexamusic.music.ui.component.NewActionGrid
-import com.nexamusic.music.utils.listItemShape
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalDownloadUtil
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.LocalSyncUtils
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ListItemHeight
+import com.nexamusic.app.constants.ListThumbnailSize
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.ExoDownloadService
+import com.nexamusic.app.playback.queues.YouTubeQueue
+import com.nexamusic.app.ui.component.BottomSheetState
+import com.nexamusic.app.ui.component.ListDialog
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
+import com.nexamusic.app.ui.component.MediaMetadataListItem
+import com.nexamusic.app.ui.component.NewAction
+import com.nexamusic.app.ui.component.NewActionGrid
+import com.nexamusic.app.utils.listItemShape
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch

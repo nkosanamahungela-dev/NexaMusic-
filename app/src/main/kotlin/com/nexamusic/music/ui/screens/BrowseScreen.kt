@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
  
  import androidx.compose.foundation.ExperimentalFoundationApi
  
@@ -28,29 +28,29 @@ package com.nexamusic.music.ui.screens
  import com.music.innertube.models.AlbumItem
  import com.music.innertube.models.ArtistItem
  import com.music.innertube.models.PlaylistItem
- import com.nexamusic.music.LocalPlayerAwareWindowInsets
- import com.nexamusic.music.LocalPlayerConnection
- import com.nexamusic.music.R
-import com.nexamusic.music.ui.utils.rememberGridColumns
- import com.nexamusic.music.constants.GridItemSize
- import com.nexamusic.music.constants.GridItemsSizeKey
- import com.nexamusic.music.constants.GridThumbnailHeight
- import com.nexamusic.music.ui.component.IconButton
- import com.nexamusic.music.ui.component.LocalMenuState
- import com.nexamusic.music.ui.component.YouTubeGridItem
- import com.nexamusic.music.ui.component.shimmer.GridItemPlaceHolder
- import com.nexamusic.music.ui.component.shimmer.ShimmerHost
- import com.nexamusic.music.ui.menu.YouTubeAlbumMenu
- import com.nexamusic.music.ui.menu.YouTubeArtistMenu
- import com.nexamusic.music.ui.menu.YouTubePlaylistMenu
- import com.nexamusic.music.ui.utils.backToMain
- import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.combinedBounceClick
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.utils.rememberEnumPreference
- import com.nexamusic.music.viewmodels.BrowseViewModel
+ import com.nexamusic.app.LocalPlayerAwareWindowInsets
+ import com.nexamusic.app.LocalPlayerConnection
+ import com.nexamusic.app.R
+import com.nexamusic.app.ui.utils.rememberGridColumns
+ import com.nexamusic.app.constants.GridItemSize
+ import com.nexamusic.app.constants.GridItemsSizeKey
+ import com.nexamusic.app.constants.GridThumbnailHeight
+ import com.nexamusic.app.ui.component.IconButton
+ import com.nexamusic.app.ui.component.LocalMenuState
+ import com.nexamusic.app.ui.component.YouTubeGridItem
+ import com.nexamusic.app.ui.component.shimmer.GridItemPlaceHolder
+ import com.nexamusic.app.ui.component.shimmer.ShimmerHost
+ import com.nexamusic.app.ui.menu.YouTubeAlbumMenu
+ import com.nexamusic.app.ui.menu.YouTubeArtistMenu
+ import com.nexamusic.app.ui.menu.YouTubePlaylistMenu
+ import com.nexamusic.app.ui.utils.backToMain
+ import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.combinedBounceClick
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.utils.rememberEnumPreference
+ import com.nexamusic.app.viewmodels.BrowseViewModel
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
  @Composable

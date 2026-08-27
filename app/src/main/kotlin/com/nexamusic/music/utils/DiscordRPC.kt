@@ -3,11 +3,11 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.utils
+package com.nexamusic.app.utils
 
 import android.content.Context
-import com.nexamusic.music.R
-import com.nexamusic.music.db.entities.Song
+import com.nexamusic.app.R
+import com.nexamusic.app.db.entities.Song
 import com.my.kizzy.rpc.KizzyRPC
 import com.my.kizzy.rpc.RpcImage
 

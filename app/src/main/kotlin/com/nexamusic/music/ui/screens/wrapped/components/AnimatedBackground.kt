@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.screens.wrapped.components
+package com.nexamusic.app.ui.screens.wrapped.components
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode

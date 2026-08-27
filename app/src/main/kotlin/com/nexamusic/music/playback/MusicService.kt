@@ -5,7 +5,7 @@
 
 @file:Suppress("DEPRECATION")
 
-package com.nexamusic.music.playback
+package com.nexamusic.app.playback
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -84,126 +84,126 @@ import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.WatchEndpoint
 import com.music.lastfm.LastFM
-import com.nexamusic.music.MainActivity
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.AudioNormalizationKey
-import com.nexamusic.music.constants.AudioOffload
-import com.nexamusic.music.constants.AudioQualityKey
-import com.nexamusic.music.constants.EnableTidalStreamingKey
-import com.nexamusic.music.constants.EnabledModulesKey
-import com.nexamusic.music.constants.AutoLoadMoreKey
-import com.nexamusic.music.constants.AutoSkipNextOnErrorKey
-import com.nexamusic.music.constants.CrossfadeDurationKey
-import com.nexamusic.music.constants.CrossfadeEnabledKey
-import com.nexamusic.music.constants.AutoDjMixingEnabledKey
-import com.nexamusic.music.constants.CreativeTransitionsEnabledKey
-import com.nexamusic.music.constants.CrossfadeGaplessKey
-import com.nexamusic.music.constants.DisableLoadMoreWhenRepeatAllKey
+import com.nexamusic.app.MainActivity
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.AudioNormalizationKey
+import com.nexamusic.app.constants.AudioOffload
+import com.nexamusic.app.constants.AudioQualityKey
+import com.nexamusic.app.constants.EnableTidalStreamingKey
+import com.nexamusic.app.constants.EnabledModulesKey
+import com.nexamusic.app.constants.AutoLoadMoreKey
+import com.nexamusic.app.constants.AutoSkipNextOnErrorKey
+import com.nexamusic.app.constants.CrossfadeDurationKey
+import com.nexamusic.app.constants.CrossfadeEnabledKey
+import com.nexamusic.app.constants.AutoDjMixingEnabledKey
+import com.nexamusic.app.constants.CreativeTransitionsEnabledKey
+import com.nexamusic.app.constants.CrossfadeGaplessKey
+import com.nexamusic.app.constants.DisableLoadMoreWhenRepeatAllKey
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
-import com.nexamusic.music.constants.DiscordActivityNameKey
-import com.nexamusic.music.constants.DiscordActivityTypeKey
-import com.nexamusic.music.constants.DiscordAdvancedModeKey
-import com.nexamusic.music.constants.DiscordButton1TextKey
-import com.nexamusic.music.constants.DiscordButton1VisibleKey
-import com.nexamusic.music.constants.DiscordButton2TextKey
-import com.nexamusic.music.constants.DiscordButton2VisibleKey
-import com.nexamusic.music.constants.DiscordStatusKey
-import com.nexamusic.music.constants.DiscordTokenKey
-import com.nexamusic.music.constants.DiscordUseDetailsKey
-import com.nexamusic.music.constants.EnableDiscordRPCKey
-import com.nexamusic.music.constants.EnableLastFMScrobblingKey
-import com.nexamusic.music.constants.HideExplicitKey
-import com.nexamusic.music.constants.HideVideoSongsKey
-import com.nexamusic.music.constants.DataSaverEnabledKey
-import com.nexamusic.music.constants.ListenBrainzEnabledKey
-import com.nexamusic.music.constants.ListenBrainzTokenKey
-import com.nexamusic.music.constants.HistoryDuration
-import com.nexamusic.music.constants.LastFMUseNowPlaying
-import com.nexamusic.music.constants.MediaSessionConstants.CommandToggleLike
-import com.nexamusic.music.constants.MediaSessionConstants.CommandToggleRepeatMode
-import com.nexamusic.music.constants.MediaSessionConstants.CommandToggleShuffle
-import com.nexamusic.music.constants.MediaSessionConstants.CommandToggleStartRadio
-import com.nexamusic.music.constants.PauseListenHistoryKey
-import com.nexamusic.music.constants.PauseOnMute
-import com.nexamusic.music.constants.PersistentQueueKey
-import com.nexamusic.music.constants.PersistentShuffleAcrossQueuesKey
-import com.nexamusic.music.constants.PlayerVolumeKey
-import com.nexamusic.music.constants.RememberShuffleAndRepeatKey
-import com.nexamusic.music.constants.RepeatModeKey
-import com.nexamusic.music.constants.ResumeOnBluetoothConnectKey
-import com.nexamusic.music.constants.ScrobbleDelayPercentKey
-import com.nexamusic.music.constants.ScrobbleDelaySecondsKey
-import com.nexamusic.music.constants.ScrobbleMinSongDurationKey
-import com.nexamusic.music.constants.ShowLyricsKey
-import com.nexamusic.music.constants.ShuffleModeKey
-import com.nexamusic.music.constants.ShufflePlaylistFirstKey
-import com.nexamusic.music.constants.PreventDuplicateTracksInQueueKey
-import com.nexamusic.music.constants.SimilarContent
-import com.nexamusic.music.constants.SkipSilenceInstantKey
-import com.nexamusic.music.constants.SkipSilenceKey
-import com.nexamusic.music.constants.IpVersionKey
+import com.nexamusic.app.constants.DiscordActivityNameKey
+import com.nexamusic.app.constants.DiscordActivityTypeKey
+import com.nexamusic.app.constants.DiscordAdvancedModeKey
+import com.nexamusic.app.constants.DiscordButton1TextKey
+import com.nexamusic.app.constants.DiscordButton1VisibleKey
+import com.nexamusic.app.constants.DiscordButton2TextKey
+import com.nexamusic.app.constants.DiscordButton2VisibleKey
+import com.nexamusic.app.constants.DiscordStatusKey
+import com.nexamusic.app.constants.DiscordTokenKey
+import com.nexamusic.app.constants.DiscordUseDetailsKey
+import com.nexamusic.app.constants.EnableDiscordRPCKey
+import com.nexamusic.app.constants.EnableLastFMScrobblingKey
+import com.nexamusic.app.constants.HideExplicitKey
+import com.nexamusic.app.constants.HideVideoSongsKey
+import com.nexamusic.app.constants.DataSaverEnabledKey
+import com.nexamusic.app.constants.ListenBrainzEnabledKey
+import com.nexamusic.app.constants.ListenBrainzTokenKey
+import com.nexamusic.app.constants.HistoryDuration
+import com.nexamusic.app.constants.LastFMUseNowPlaying
+import com.nexamusic.app.constants.MediaSessionConstants.CommandToggleLike
+import com.nexamusic.app.constants.MediaSessionConstants.CommandToggleRepeatMode
+import com.nexamusic.app.constants.MediaSessionConstants.CommandToggleShuffle
+import com.nexamusic.app.constants.MediaSessionConstants.CommandToggleStartRadio
+import com.nexamusic.app.constants.PauseListenHistoryKey
+import com.nexamusic.app.constants.PauseOnMute
+import com.nexamusic.app.constants.PersistentQueueKey
+import com.nexamusic.app.constants.PersistentShuffleAcrossQueuesKey
+import com.nexamusic.app.constants.PlayerVolumeKey
+import com.nexamusic.app.constants.RememberShuffleAndRepeatKey
+import com.nexamusic.app.constants.RepeatModeKey
+import com.nexamusic.app.constants.ResumeOnBluetoothConnectKey
+import com.nexamusic.app.constants.ScrobbleDelayPercentKey
+import com.nexamusic.app.constants.ScrobbleDelaySecondsKey
+import com.nexamusic.app.constants.ScrobbleMinSongDurationKey
+import com.nexamusic.app.constants.ShowLyricsKey
+import com.nexamusic.app.constants.ShuffleModeKey
+import com.nexamusic.app.constants.ShufflePlaylistFirstKey
+import com.nexamusic.app.constants.PreventDuplicateTracksInQueueKey
+import com.nexamusic.app.constants.SimilarContent
+import com.nexamusic.app.constants.SkipSilenceInstantKey
+import com.nexamusic.app.constants.SkipSilenceKey
+import com.nexamusic.app.constants.IpVersionKey
 import com.music.innertube.models.IpVersion
 import okhttp3.Dns
 import java.net.InetAddress
 import java.net.Inet4Address
 import java.net.Inet6Address
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.Event
-import com.nexamusic.music.db.entities.FormatEntity
-import com.nexamusic.music.db.entities.LyricsEntity
-import com.nexamusic.music.db.entities.RelatedSongMap
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.di.DownloadCache
-import com.nexamusic.music.di.PlayerCache
-import com.nexamusic.music.eq.EqualizerService
-import com.nexamusic.music.eq.audio.CustomEqualizerAudioProcessor
-import com.nexamusic.music.eq.data.EQProfileRepository
-import com.nexamusic.music.extensions.SilentHandler
-import com.nexamusic.music.extensions.collect
-import com.nexamusic.music.extensions.collectLatest
-import com.nexamusic.music.extensions.currentMetadata
-import com.nexamusic.music.extensions.findNextMediaItemById
-import com.nexamusic.music.extensions.mediaItems
-import com.nexamusic.music.extensions.metadata
-import com.nexamusic.music.extensions.setOffloadEnabled
-import com.nexamusic.music.extensions.toEnum
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.extensions.toPersistQueue
-import com.nexamusic.music.extensions.toQueue
-import com.nexamusic.music.lyrics.LyricsHelper
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.models.PersistPlayerState
-import com.nexamusic.music.models.PersistQueue
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.audio.TrackAnalyzerAudioProcessor
-import com.nexamusic.music.playback.dj.DjEngine
-import com.nexamusic.music.playback.audio.DelayAudioProcessor
-import com.nexamusic.music.playback.audio.DjFilterAudioProcessor
-import com.nexamusic.music.playback.audio.DjTailAudioProcessor
-import com.nexamusic.music.playback.audio.DjMixPlan
-import com.nexamusic.music.playback.audio.DjMixTier
-import com.nexamusic.music.playback.audio.LosslessStallWatchdogAudioProcessor
-import com.nexamusic.music.playback.audio.SilenceDetectorAudioProcessor
-import com.nexamusic.music.playback.queues.EmptyQueue
-import com.nexamusic.music.playback.queues.Queue
-import com.nexamusic.music.playback.queues.YouTubeQueue
-import com.nexamusic.music.playback.queues.filterExplicit
-import com.nexamusic.music.playback.queues.filterVideoSongs
-import com.nexamusic.music.utils.CoilBitmapLoader
-import com.nexamusic.music.utils.DiscordRPC
-import com.nexamusic.music.utils.NetworkConnectivityObserver
-import com.nexamusic.music.utils.ScrobbleManager
-import com.nexamusic.music.utils.SyncUtils
-import com.nexamusic.music.utils.YTPlayerUtils
-import com.nexamusic.music.constants.StopMusicOnTaskClearKey
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
-import com.nexamusic.music.utils.reportException
-import com.nexamusic.music.widget.vivimusicWidgetManager
-import com.nexamusic.music.widget.MusicWidgetReceiver
-import com.nexamusic.music.widget.NowPlayingWidgetReceiver
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.Event
+import com.nexamusic.app.db.entities.FormatEntity
+import com.nexamusic.app.db.entities.LyricsEntity
+import com.nexamusic.app.db.entities.RelatedSongMap
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.di.DownloadCache
+import com.nexamusic.app.di.PlayerCache
+import com.nexamusic.app.eq.EqualizerService
+import com.nexamusic.app.eq.audio.CustomEqualizerAudioProcessor
+import com.nexamusic.app.eq.data.EQProfileRepository
+import com.nexamusic.app.extensions.SilentHandler
+import com.nexamusic.app.extensions.collect
+import com.nexamusic.app.extensions.collectLatest
+import com.nexamusic.app.extensions.currentMetadata
+import com.nexamusic.app.extensions.findNextMediaItemById
+import com.nexamusic.app.extensions.mediaItems
+import com.nexamusic.app.extensions.metadata
+import com.nexamusic.app.extensions.setOffloadEnabled
+import com.nexamusic.app.extensions.toEnum
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.extensions.toPersistQueue
+import com.nexamusic.app.extensions.toQueue
+import com.nexamusic.app.lyrics.LyricsHelper
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.models.PersistPlayerState
+import com.nexamusic.app.models.PersistQueue
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.audio.TrackAnalyzerAudioProcessor
+import com.nexamusic.app.playback.dj.DjEngine
+import com.nexamusic.app.playback.audio.DelayAudioProcessor
+import com.nexamusic.app.playback.audio.DjFilterAudioProcessor
+import com.nexamusic.app.playback.audio.DjTailAudioProcessor
+import com.nexamusic.app.playback.audio.DjMixPlan
+import com.nexamusic.app.playback.audio.DjMixTier
+import com.nexamusic.app.playback.audio.LosslessStallWatchdogAudioProcessor
+import com.nexamusic.app.playback.audio.SilenceDetectorAudioProcessor
+import com.nexamusic.app.playback.queues.EmptyQueue
+import com.nexamusic.app.playback.queues.Queue
+import com.nexamusic.app.playback.queues.YouTubeQueue
+import com.nexamusic.app.playback.queues.filterExplicit
+import com.nexamusic.app.playback.queues.filterVideoSongs
+import com.nexamusic.app.utils.CoilBitmapLoader
+import com.nexamusic.app.utils.DiscordRPC
+import com.nexamusic.app.utils.NetworkConnectivityObserver
+import com.nexamusic.app.utils.ScrobbleManager
+import com.nexamusic.app.utils.SyncUtils
+import com.nexamusic.app.utils.YTPlayerUtils
+import com.nexamusic.app.constants.StopMusicOnTaskClearKey
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
+import com.nexamusic.app.utils.reportException
+import com.nexamusic.app.widget.vivimusicWidgetManager
+import com.nexamusic.app.widget.MusicWidgetReceiver
+import com.nexamusic.app.widget.NowPlayingWidgetReceiver
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.math.PI
 import kotlin.math.cos
@@ -277,7 +277,7 @@ class MusicService :
     lateinit var widgetManager: vivimusicWidgetManager
 
     @Inject
-    lateinit var listenTogetherManager: com.nexamusic.music.listentogether.ListenTogetherManager
+    lateinit var listenTogetherManager: com.nexamusic.app.listentogether.ListenTogetherManager
 
     private lateinit var audioManager: AudioManager
     private var audioFocusRequest: AudioFocusRequest? = null
@@ -343,13 +343,13 @@ class MusicService :
     val waitingForNetworkConnection = MutableStateFlow(false)
     private val isNetworkConnected = MutableStateFlow(false)
 
-    private lateinit var audioQuality: com.nexamusic.music.constants.AudioQuality
+    private lateinit var audioQuality: com.nexamusic.app.constants.AudioQuality
     private lateinit var ipVersion: IpVersion
 
     private var currentQueue: Queue = EmptyQueue
     var queueTitle: String? = null
 
-    val currentMediaMetadata = MutableStateFlow<com.nexamusic.music.models.MediaMetadata?>(null)
+    val currentMediaMetadata = MutableStateFlow<com.nexamusic.app.models.MediaMetadata?>(null)
     private val currentSong =
         currentMediaMetadata
             .flatMapLatest { mediaMetadata ->
@@ -655,7 +655,7 @@ class MusicService :
 
         audioManager.registerAudioDeviceCallback(audioDeviceCallback, null)
 
-        audioQuality = dataStore.get(AudioQualityKey).toEnum(com.nexamusic.music.constants.AudioQuality.AUTO)
+        audioQuality = dataStore.get(AudioQualityKey).toEnum(com.nexamusic.app.constants.AudioQuality.AUTO)
         ipVersion = dataStore.get(IpVersionKey).toEnum(IpVersion.AUTO)
         playerVolume = MutableStateFlow(dataStore.get(PlayerVolumeKey, 1f).coerceIn(0f, 1f))
 
@@ -706,11 +706,11 @@ class MusicService :
             dataStore.data
                 .map { prefs ->
                     if (prefs[DataSaverEnabledKey] ?: false) {
-                        com.nexamusic.music.constants.AudioQuality.LOW
+                        com.nexamusic.app.constants.AudioQuality.LOW
                     } else {
                         prefs[AudioQualityKey]?.let { value ->
-                            com.nexamusic.music.constants.AudioQuality.entries.find { it.name == value }
-                        } ?: com.nexamusic.music.constants.AudioQuality.AUTO
+                            com.nexamusic.app.constants.AudioQuality.entries.find { it.name == value }
+                        } ?: com.nexamusic.app.constants.AudioQuality.AUTO
                     }
                 }
                 .distinctUntilChanged()
@@ -3802,7 +3802,7 @@ class MusicService :
      * Initialize Google Cast support
      */
     private fun initializeCast() {
-        if (dataStore.get(com.nexamusic.music.constants.EnableGoogleCastKey, true)) {
+        if (dataStore.get(com.nexamusic.app.constants.EnableGoogleCastKey, true)) {
             try {
                 castConnectionHandler = CastConnectionHandler(this, scope, this)
                 castConnectionHandler?.initialize()
@@ -4223,7 +4223,7 @@ class MusicService :
         if (!listenBrainzEnabled || cleanToken.isBlank()) return
         scope.launch {
             if (isFinished) {
-                com.nexamusic.music.ui.screens.settings.ListenBrainzManager.submitFinished(
+                com.nexamusic.app.ui.screens.settings.ListenBrainzManager.submitFinished(
                     context = this@MusicService,
                     token = cleanToken,
                     title = title,
@@ -4234,7 +4234,7 @@ class MusicService :
                     endMs = endMs
                 )
             } else {
-                com.nexamusic.music.ui.screens.settings.ListenBrainzManager.submitPlayingNow(
+                com.nexamusic.app.ui.screens.settings.ListenBrainzManager.submitPlayingNow(
                     context = this@MusicService,
                     token = cleanToken,
                     title = title,

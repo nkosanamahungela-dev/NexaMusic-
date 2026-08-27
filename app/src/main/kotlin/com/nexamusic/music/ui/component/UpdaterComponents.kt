@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
@@ -44,7 +44,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.core.content.ContextCompat
-import com.nexamusic.music.vivimusic.updater.extractUrls
+import com.nexamusic.app.vivimusic.updater.extractUrls
 @Composable
 fun AnimatedActionButton(
     text: String,

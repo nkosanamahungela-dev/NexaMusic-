@@ -3,16 +3,16 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.extensions
+package com.nexamusic.app.extensions
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import com.music.innertube.utils.parseCookieString
-import com.nexamusic.music.constants.InnerTubeCookieKey
-import com.nexamusic.music.constants.YtmSyncKey
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
+import com.nexamusic.app.constants.InnerTubeCookieKey
+import com.nexamusic.app.constants.YtmSyncKey
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
 import kotlinx.coroutines.runBlocking
 
 fun Context.isSyncEnabled(): Boolean {

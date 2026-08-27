@@ -3,15 +3,15 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.utils
+package com.nexamusic.app.utils
 
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import com.nexamusic.music.R
-import com.nexamusic.music.WelcomeActivity
+import com.nexamusic.app.R
+import com.nexamusic.app.WelcomeActivity
 
 /**
  * The launcher icon variants shipped with the app.

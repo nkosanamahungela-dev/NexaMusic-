@@ -1,10 +1,10 @@
-package com.nexamusic.music.ui.screens.equalizer
+package com.nexamusic.app.ui.screens.equalizer
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nexamusic.music.eq.EqualizerService
-import com.nexamusic.music.eq.data.EQProfileRepository
-import com.nexamusic.music.eq.data.ParametricEQParser
+import com.nexamusic.app.eq.EqualizerService
+import com.nexamusic.app.eq.data.EQProfileRepository
+import com.nexamusic.app.eq.data.ParametricEQParser
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

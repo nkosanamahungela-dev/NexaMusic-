@@ -3,27 +3,27 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
-import com.nexamusic.music.MainActivity
-import com.nexamusic.music.R
-import com.nexamusic.music.db.InternalDatabase
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.ArtistEntity
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.db.entities.SongEntity
-import com.nexamusic.music.extensions.div
-import com.nexamusic.music.extensions.tryOrNull
-import com.nexamusic.music.extensions.zipInputStream
-import com.nexamusic.music.extensions.zipOutputStream
-import com.nexamusic.music.playback.MusicService
-import com.nexamusic.music.playback.MusicService.Companion.PERSISTENT_QUEUE_FILE
-import com.nexamusic.music.utils.reportException
+import com.nexamusic.app.MainActivity
+import com.nexamusic.app.R
+import com.nexamusic.app.db.InternalDatabase
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.ArtistEntity
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.db.entities.SongEntity
+import com.nexamusic.app.extensions.div
+import com.nexamusic.app.extensions.tryOrNull
+import com.nexamusic.app.extensions.zipInputStream
+import com.nexamusic.app.extensions.zipOutputStream
+import com.nexamusic.app.playback.MusicService
+import com.nexamusic.app.playback.MusicService.Companion.PERSISTENT_QUEUE_FILE
+import com.nexamusic.app.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking

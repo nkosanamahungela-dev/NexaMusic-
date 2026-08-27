@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.widget
+package com.nexamusic.app.widget
 
 import android.content.Context
 

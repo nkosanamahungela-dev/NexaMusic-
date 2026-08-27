@@ -1,10 +1,10 @@
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -32,14 +32,14 @@ import androidx.compose.ui.window.DialogProperties
 
 import coil3.compose.AsyncImage
 import com.music.innertube.utils.parseCookieString
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.AccountEmailKey
-import com.nexamusic.music.constants.InnerTubeCookieKey
-import com.nexamusic.music.constants.UseLoginForBrowse
-import com.nexamusic.music.constants.YtmSyncKey
-import com.nexamusic.music.BuildConfig
-import com.nexamusic.music.utils.rememberPreference
-import com.nexamusic.music.viewmodels.HomeViewModel
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.AccountEmailKey
+import com.nexamusic.app.constants.InnerTubeCookieKey
+import com.nexamusic.app.constants.UseLoginForBrowse
+import com.nexamusic.app.constants.YtmSyncKey
+import com.nexamusic.app.BuildConfig
+import com.nexamusic.app.utils.rememberPreference
+import com.nexamusic.app.viewmodels.HomeViewModel
 import kotlinx.coroutines.flow.map
 
 @Composable

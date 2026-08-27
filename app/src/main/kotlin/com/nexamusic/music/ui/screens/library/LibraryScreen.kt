@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.library
+package com.nexamusic.app.ui.screens.library
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -14,12 +14,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ChipSortTypeKey
-import com.nexamusic.music.constants.LibraryFilter
-import com.nexamusic.music.ui.component.ChipsRow
-import com.nexamusic.music.ui.component.HomeImageBackground
-import com.nexamusic.music.utils.rememberEnumPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ChipSortTypeKey
+import com.nexamusic.app.constants.LibraryFilter
+import com.nexamusic.app.ui.component.ChipsRow
+import com.nexamusic.app.ui.component.HomeImageBackground
+import com.nexamusic.app.utils.rememberEnumPreference
 
 @Composable
 fun LibraryScreen(navController: NavController) {

@@ -7,12 +7,12 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package com.nexamusic.music.ui.component.backdrop.internal
+package com.nexamusic.app.ui.component.backdrop.internal
 
 import android.graphics.BlurMaskFilter
 import androidx.compose.ui.graphics.Paint
-import com.nexamusic.music.ui.component.backdrop.RuntimeShader
-import com.nexamusic.music.ui.component.backdrop.asAndroidRuntimeShader
+import com.nexamusic.app.ui.component.backdrop.RuntimeShader
+import com.nexamusic.app.ui.component.backdrop.asAndroidRuntimeShader
 
 internal fun Paint.blur(radius: Float) {
     this.asFrameworkPaint().maskFilter =

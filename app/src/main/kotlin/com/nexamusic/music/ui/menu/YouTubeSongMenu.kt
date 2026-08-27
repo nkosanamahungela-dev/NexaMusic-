@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -59,33 +59,33 @@ import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalDownloadUtil
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.LocalSyncUtils
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ListItemHeight
-import com.nexamusic.music.constants.ListThumbnailSize
-import com.nexamusic.music.constants.ThumbnailCornerRadius
-import com.nexamusic.music.constants.ThumbnailRoundedShape
-import com.nexamusic.music.db.entities.SpeedDialItem
-import com.nexamusic.music.db.entities.SongEntity
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.ExoDownloadService
-import com.nexamusic.music.playback.queues.YouTubeQueue
-import com.nexamusic.music.ui.component.ListDialog
-import com.nexamusic.music.ui.component.LocalBottomSheetPageState
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
-import com.nexamusic.music.ui.component.NewAction
-import com.nexamusic.music.ui.component.NewActionGrid
-import com.nexamusic.music.ui.utils.ShowMediaInfo
-import com.nexamusic.music.ui.utils.resize
-import com.nexamusic.music.utils.joinByBullet
-import com.nexamusic.music.utils.makeTimeString
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalDownloadUtil
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.LocalSyncUtils
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ListItemHeight
+import com.nexamusic.app.constants.ListThumbnailSize
+import com.nexamusic.app.constants.ThumbnailCornerRadius
+import com.nexamusic.app.constants.ThumbnailRoundedShape
+import com.nexamusic.app.db.entities.SpeedDialItem
+import com.nexamusic.app.db.entities.SongEntity
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.ExoDownloadService
+import com.nexamusic.app.playback.queues.YouTubeQueue
+import com.nexamusic.app.ui.component.ListDialog
+import com.nexamusic.app.ui.component.LocalBottomSheetPageState
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
+import com.nexamusic.app.ui.component.NewAction
+import com.nexamusic.app.ui.component.NewActionGrid
+import com.nexamusic.app.ui.utils.ShowMediaInfo
+import com.nexamusic.app.ui.utils.resize
+import com.nexamusic.app.utils.joinByBullet
+import com.nexamusic.app.utils.makeTimeString
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -100,7 +100,7 @@ fun YouTubeSongMenu(
     onHistoryRemoved: () -> Unit = {}
 ) {
     val context = LocalContext.current
-    val ringtoneViewModel = com.nexamusic.music.LocalRingtoneViewModel.current
+    val ringtoneViewModel = com.nexamusic.app.LocalRingtoneViewModel.current
     val database = LocalDatabase.current
     val playerConnection = LocalPlayerConnection.current ?: return
     val librarySong by database.song(song.id).collectAsState(initial = null)
@@ -336,7 +336,7 @@ fun YouTubeSongMenu(
                             },
                             onClick = {
                                 val durationMs = if (song.duration != null && song.duration!! > 0) song.duration!! * 1000L else 180000L
-                                val trackInfo = com.nexamusic.music.listentogether.TrackInfo(
+                                val trackInfo = com.nexamusic.app.listentogether.TrackInfo(
                                     id = song.id,
                                     title = song.title,
                                     artist = artists.joinToString(", ") { it.name },

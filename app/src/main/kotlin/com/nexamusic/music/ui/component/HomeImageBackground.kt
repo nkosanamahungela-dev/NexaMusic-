@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.core.animateFloatAsState
@@ -29,15 +29,15 @@ import androidx.compose.material3.MaterialTheme
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nexamusic.music.constants.AppBackgroundColorKey
-import com.nexamusic.music.constants.HomeBackgroundAnimateKey
-import com.nexamusic.music.constants.HomeBackgroundBlurKey
-import com.nexamusic.music.constants.HomeBackgroundDimKey
-import com.nexamusic.music.constants.HomeBackgroundEnabledKey
-import com.nexamusic.music.constants.HomeBackgroundIsVideoKey
-import com.nexamusic.music.constants.HomeBackgroundPathKey
-import com.nexamusic.music.constants.HomeBackgroundQualityKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.AppBackgroundColorKey
+import com.nexamusic.app.constants.HomeBackgroundAnimateKey
+import com.nexamusic.app.constants.HomeBackgroundBlurKey
+import com.nexamusic.app.constants.HomeBackgroundDimKey
+import com.nexamusic.app.constants.HomeBackgroundEnabledKey
+import com.nexamusic.app.constants.HomeBackgroundIsVideoKey
+import com.nexamusic.app.constants.HomeBackgroundPathKey
+import com.nexamusic.app.constants.HomeBackgroundQualityKey
+import com.nexamusic.app.utils.rememberPreference
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalDensity
 import java.io.File
@@ -98,7 +98,7 @@ fun hasCustomHomeBackground(): Boolean {
  *
  * 1. an explicit background colour ([AppBackgroundColorKey]) if the user picked one,
  * 2. otherwise the theme colour when dynamic theming is off (what
- *    [com.nexamusic.music.ui.component.rememberAppBackgroundTint] has always done),
+ *    [com.nexamusic.app.ui.component.rememberAppBackgroundTint] has always done),
  * 3. otherwise [fallback] — each screen's own default surface.
  *
  * Home, Library and both search screens previously each resolved this differently and

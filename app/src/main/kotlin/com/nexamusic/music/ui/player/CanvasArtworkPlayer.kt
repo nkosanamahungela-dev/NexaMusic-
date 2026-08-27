@@ -4,7 +4,7 @@
  */
 // Apple Music player UI ported from vivizzz007/vivi-music (https://github.com/vivizzz007/vivi-music), GPL-3.0.
 
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -35,7 +35,7 @@ import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.exoplayer.trackselection.DefaultTrackSelector
 import androidx.media3.ui.AspectRatioFrameLayout
-import com.nexamusic.music.LocalDownloadUtil
+import com.nexamusic.app.LocalDownloadUtil
 import com.music.innertube.YouTube
 import com.music.innertube.models.YouTubeClient
 import okhttp3.OkHttpClient

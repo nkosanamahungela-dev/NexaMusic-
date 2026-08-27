@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -55,31 +55,31 @@ import androidx.media3.exoplayer.offline.Download
 import androidx.navigation.NavController
 import com.music.innertube.YouTube
 import com.music.innertube.models.AlbumItem
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalDownloadUtil
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ListItemHeight
-import com.nexamusic.music.constants.ListThumbnailSize
-import com.nexamusic.music.db.entities.SpeedDialItem
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.playback.queues.YouTubeAlbumRadio
-import com.nexamusic.music.ui.component.ListDialog
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
-import com.nexamusic.music.ui.component.NewAction
-import com.nexamusic.music.ui.component.NewActionGrid
-import com.nexamusic.music.ui.component.SongListItem
-import com.nexamusic.music.ui.component.YouTubeListItem
-import com.nexamusic.music.utils.reportException
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalDownloadUtil
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ListItemHeight
+import com.nexamusic.app.constants.ListThumbnailSize
+import com.nexamusic.app.db.entities.SpeedDialItem
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.playback.queues.YouTubeAlbumRadio
+import com.nexamusic.app.ui.component.ListDialog
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
+import com.nexamusic.app.ui.component.NewAction
+import com.nexamusic.app.ui.component.NewActionGrid
+import com.nexamusic.app.ui.component.SongListItem
+import com.nexamusic.app.ui.component.YouTubeListItem
+import com.nexamusic.app.utils.reportException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import com.nexamusic.music.playback.DownloadTarget
-import com.nexamusic.music.playback.cancelDownloads
-import com.nexamusic.music.playback.downloadSongs
-import com.nexamusic.music.playback.removeDownloads
+import com.nexamusic.app.playback.DownloadTarget
+import com.nexamusic.app.playback.cancelDownloads
+import com.nexamusic.app.playback.downloadSongs
+import com.nexamusic.app.playback.removeDownloads
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("MutableCollectionMutableState")

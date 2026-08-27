@@ -6,7 +6,7 @@
  * Not published as a library — ported straight from the catalog demo app that
  * showcases Kyant0/backdrop, source-only. Package renamed accordingly.
  */
-package com.nexamusic.music.ui.component.backdrop.catalog.utils
+package com.nexamusic.app.ui.component.backdrop.catalog.utils
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.spring

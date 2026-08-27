@@ -1,9 +1,9 @@
-package com.nexamusic.music.di
+package com.nexamusic.app.di
 
 import android.content.Context
-import com.nexamusic.music.db.DatabaseDao
-import com.nexamusic.music.ui.screens.wrapped.WrappedAudioService
-import com.nexamusic.music.ui.screens.wrapped.WrappedManager
+import com.nexamusic.app.db.DatabaseDao
+import com.nexamusic.app.ui.screens.wrapped.WrappedAudioService
+import com.nexamusic.app.ui.screens.wrapped.WrappedManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

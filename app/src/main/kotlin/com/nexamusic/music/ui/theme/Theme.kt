@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.theme
+package com.nexamusic.app.ui.theme
 
 import android.graphics.Bitmap
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -19,10 +19,10 @@ import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.text.font.FontFamily
 import androidx.palette.graphics.Palette
-import com.nexamusic.music.constants.AppFont
-import com.nexamusic.music.constants.AppTextColorKey
-import com.nexamusic.music.constants.SelectedFontKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.AppFont
+import com.nexamusic.app.constants.AppTextColorKey
+import com.nexamusic.app.constants.SelectedFontKey
+import com.nexamusic.app.utils.rememberPreference
 import com.materialkolor.PaletteStyle
 import com.materialkolor.dynamiccolor.ColorSpec
 import com.materialkolor.rememberDynamicColorScheme
@@ -139,7 +139,7 @@ fun Bitmap.extractThemeColor(): Color {
 }
 
 /** True when the artwork carries no usable hue. Shares the tested rule in
- *  [com.nexamusic.music.ui.theme.PlayerColorExtractor.isAchromatic]. */
+ *  [com.nexamusic.app.ui.theme.PlayerColorExtractor.isAchromatic]. */
 private fun List<Palette.Swatch>.isAchromatic(): Boolean {
     if (isEmpty()) return true
     val hsv = FloatArray(3)

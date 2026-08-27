@@ -2,7 +2,7 @@
  * Convx Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,8 +13,8 @@ import androidx.compose.material3.TopAppBarScrollBehavior
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
-import com.nexamusic.music.ui.screens.library.LibraryScreen
-import com.nexamusic.music.ui.screens.settings.SettingsScreen
+import com.nexamusic.app.ui.screens.library.LibraryScreen
+import com.nexamusic.app.ui.screens.settings.SettingsScreen
 
 /**
  * Page order for [MainTabsPager] -- index into this list is the pager page index.

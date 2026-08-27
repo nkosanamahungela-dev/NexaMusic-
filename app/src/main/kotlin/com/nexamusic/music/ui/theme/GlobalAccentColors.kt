@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.theme
+package com.nexamusic.app.ui.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import com.nexamusic.music.constants.AppTextColorKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.AppTextColorKey
+import com.nexamusic.app.utils.rememberPreference
 
 /**
  * (container, content) colors for accent buttons/chips (Play, Shuffle, sort pills, ...)

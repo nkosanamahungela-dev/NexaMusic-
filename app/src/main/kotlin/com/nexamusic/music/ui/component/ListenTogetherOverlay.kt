@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.CubicBezierEasing
@@ -46,12 +46,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.R
-import com.nexamusic.music.listentogether.ListenTogetherEvent
-import com.nexamusic.music.listentogether.ListenTogetherManager
-import com.nexamusic.music.playback.PlayerConnection
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.utils.bounceClick
+import com.nexamusic.app.R
+import com.nexamusic.app.listentogether.ListenTogetherEvent
+import com.nexamusic.app.listentogether.ListenTogetherManager
+import com.nexamusic.app.playback.PlayerConnection
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.utils.bounceClick
 
 /** How far the music is pulled down while a request is waiting. Not silence —
  *  the point is that someone with the phone in their pocket notices the dip

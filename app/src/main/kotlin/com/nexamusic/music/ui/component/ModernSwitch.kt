@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier

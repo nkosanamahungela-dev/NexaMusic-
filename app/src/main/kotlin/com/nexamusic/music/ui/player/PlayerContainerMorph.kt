@@ -2,7 +2,7 @@
  * Convx Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -24,7 +24,7 @@ import androidx.compose.ui.graphics.layer.drawLayer
 import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.unit.Dp
-import com.nexamusic.music.ui.component.PLAYER_LAYER_HANDOFF_PROGRESS
+import com.nexamusic.app.ui.component.PLAYER_LAYER_HANDOFF_PROGRESS
 
 /**
  * Where the mini player's own pill sits on screen, in root coordinates.

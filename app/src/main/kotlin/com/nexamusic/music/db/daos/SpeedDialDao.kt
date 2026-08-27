@@ -1,10 +1,10 @@
-package com.nexamusic.music.db.daos
+package com.nexamusic.app.db.daos
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.nexamusic.music.db.entities.SpeedDialItem
+import com.nexamusic.app.db.entities.SpeedDialItem
 import kotlinx.coroutines.flow.Flow
 
 @Dao

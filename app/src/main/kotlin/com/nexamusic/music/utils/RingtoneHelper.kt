@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.utils
+package com.nexamusic.app.utils
 
 import android.content.ContentValues
 import android.content.Context
@@ -20,7 +20,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.provider.Settings
 import androidx.core.content.getSystemService
-import com.nexamusic.music.constants.AudioQuality
+import com.nexamusic.app.constants.AudioQuality
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File

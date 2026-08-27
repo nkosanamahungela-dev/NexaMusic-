@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.search.suggestions
+package com.nexamusic.app.ui.screens.search.suggestions
 
 data class SuggestionTrack(
     val rank: Int,

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -29,20 +29,20 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ArtistSongSortType
-import com.nexamusic.music.db.entities.SpeedDialItem
-import com.nexamusic.music.db.entities.Artist
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.playback.queues.ListQueue
-import com.nexamusic.music.ui.component.ArtistListItem
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
-import com.nexamusic.music.ui.component.NewAction
-import com.nexamusic.music.ui.component.NewActionGrid
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ArtistSongSortType
+import com.nexamusic.app.db.entities.SpeedDialItem
+import com.nexamusic.app.db.entities.Artist
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.playback.queues.ListQueue
+import com.nexamusic.app.ui.component.ArtistListItem
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
+import com.nexamusic.app.ui.component.NewAction
+import com.nexamusic.app.ui.component.NewActionGrid
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first

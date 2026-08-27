@@ -2,7 +2,7 @@
  * Convx Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.foundation.layout.Arrangement
@@ -39,12 +39,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.HomeSectionOrderKey
-import com.nexamusic.music.constants.HomeSectionHiddenKey
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.HomeSectionOrderKey
+import com.nexamusic.app.constants.HomeSectionHiddenKey
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.utils.rememberPreference
 import sh.calvin.reorderable.ReorderableItem
 import sh.calvin.reorderable.rememberReorderableLazyListState
 

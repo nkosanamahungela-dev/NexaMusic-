@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.wrapped
+package com.nexamusic.app.ui.screens.wrapped
 
 data class MessagePair(val range: LongRange, val tease: String, val reveal: String)
 

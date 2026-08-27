@@ -2,7 +2,7 @@
  * Convx Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
-package com.nexamusic.music.ui.screens.library
+package com.nexamusic.app.ui.screens.library
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -33,28 +33,28 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.LocalSongSortDescendingKey
-import com.nexamusic.music.constants.LocalSongSortTypeKey
-import com.nexamusic.music.constants.SongSortType
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.playback.queues.ListQueue
-import com.nexamusic.music.ui.component.HideOnScrollFAB
-import com.nexamusic.music.ui.component.LargeScreenTitle
-import com.nexamusic.music.ui.component.ListScrollRail
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.SongListItem
-import com.nexamusic.music.ui.component.SortOption
-import com.nexamusic.music.ui.component.SortPopupButton
-import com.nexamusic.music.ui.component.buildAlphabetSectionIndex
-import com.nexamusic.music.ui.menu.SongMenu
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.utils.listItemShape
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.LocalSongSortDescendingKey
+import com.nexamusic.app.constants.LocalSongSortTypeKey
+import com.nexamusic.app.constants.SongSortType
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.playback.queues.ListQueue
+import com.nexamusic.app.ui.component.HideOnScrollFAB
+import com.nexamusic.app.ui.component.LargeScreenTitle
+import com.nexamusic.app.ui.component.ListScrollRail
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.SongListItem
+import com.nexamusic.app.ui.component.SortOption
+import com.nexamusic.app.ui.component.SortPopupButton
+import com.nexamusic.app.ui.component.buildAlphabetSectionIndex
+import com.nexamusic.app.ui.menu.SongMenu
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.utils.listItemShape
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
 
 /**
  * Every song on the device, in one flat list.

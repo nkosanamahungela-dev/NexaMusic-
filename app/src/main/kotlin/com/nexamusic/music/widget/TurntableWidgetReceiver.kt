@@ -3,14 +3,14 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.widget
+package com.nexamusic.app.widget
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.content.Intent
 import androidx.core.content.ContextCompat
-import com.nexamusic.music.playback.MusicService
+import com.nexamusic.app.playback.MusicService
 
 class TurntableWidgetReceiver : AppWidgetProvider() {
 
@@ -60,9 +60,9 @@ class TurntableWidgetReceiver : AppWidgetProvider() {
     }
 
     companion object {
-        const val ACTION_TURNTABLE_PLAY_PAUSE = "com.nexamusic.music.widget.TURNTABLE_PLAY_PAUSE"
-        const val ACTION_TURNTABLE_NEXT = "com.nexamusic.music.widget.TURNTABLE_NEXT"
-        const val ACTION_TURNTABLE_PREVIOUS = "com.nexamusic.music.widget.TURNTABLE_PREVIOUS"
-        const val ACTION_UPDATE_TURNTABLE_WIDGET = "com.nexamusic.music.widget.UPDATE_TURNTABLE_WIDGET"
+        const val ACTION_TURNTABLE_PLAY_PAUSE = "com.nexamusic.app.widget.TURNTABLE_PLAY_PAUSE"
+        const val ACTION_TURNTABLE_NEXT = "com.nexamusic.app.widget.TURNTABLE_NEXT"
+        const val ACTION_TURNTABLE_PREVIOUS = "com.nexamusic.app.widget.TURNTABLE_PREVIOUS"
+        const val ACTION_UPDATE_TURNTABLE_WIDGET = "com.nexamusic.app.widget.UPDATE_TURNTABLE_WIDGET"
     }
 }

@@ -3,14 +3,14 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.search.suggestions
+package com.nexamusic.app.ui.screens.search.suggestions
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -40,12 +40,12 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.compose.SubcomposeAsyncImage
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.SuggestionRegionKey
-import com.nexamusic.music.constants.SuggestionRegionSlugToName
-import com.nexamusic.music.ui.component.NavigationTitle
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.SuggestionRegionKey
+import com.nexamusic.app.constants.SuggestionRegionSlugToName
+import com.nexamusic.app.ui.component.NavigationTitle
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.utils.rememberPreference
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.pulltorefresh.PullToRefreshDefaults
 import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
@@ -77,7 +77,7 @@ fun SuggestionsTabContent(
     val isLoading by viewModel.isLoading.collectAsState()
     val isManualLoading by viewModel.isManualLoading.collectAsState()
     val uriHandler = androidx.compose.ui.platform.LocalUriHandler.current
-    val playerConnection = com.nexamusic.music.LocalPlayerConnection.current
+    val playerConnection = com.nexamusic.app.LocalPlayerConnection.current
     val context = LocalContext.current
     val (regionCode, _) = rememberPreference(
         key = SuggestionRegionKey,

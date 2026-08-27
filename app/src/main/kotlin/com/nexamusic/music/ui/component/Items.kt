@@ -5,7 +5,7 @@
  * Optimized for minimal recomposition during navigation
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
@@ -103,30 +103,30 @@ import com.music.innertube.models.ArtistItem
 import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.YTItem
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalDownloadUtil
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.GridItemSize
-import com.nexamusic.music.constants.GridThumbnailHeight
-import com.nexamusic.music.constants.ListItemHeight
-import com.nexamusic.music.constants.ListThumbnailSize
-import com.nexamusic.music.constants.SmallGridThumbnailHeight
-import com.nexamusic.music.constants.ThumbnailCornerRadius
-import com.nexamusic.music.constants.ThumbnailRoundedShape
-import com.nexamusic.music.db.entities.Album
-import com.nexamusic.music.db.entities.Artist
-import com.nexamusic.music.db.entities.Playlist
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.utils.marqueeWhenVisible
-import com.nexamusic.music.ui.utils.rememberGridSpacing
-import com.nexamusic.music.ui.utils.resize
-import com.nexamusic.music.ui.utils.sharedArtworkSource
-import com.nexamusic.music.utils.joinByBullet
-import com.nexamusic.music.utils.makeTimeString
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalDownloadUtil
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.GridItemSize
+import com.nexamusic.app.constants.GridThumbnailHeight
+import com.nexamusic.app.constants.ListItemHeight
+import com.nexamusic.app.constants.ListThumbnailSize
+import com.nexamusic.app.constants.SmallGridThumbnailHeight
+import com.nexamusic.app.constants.ThumbnailCornerRadius
+import com.nexamusic.app.constants.ThumbnailRoundedShape
+import com.nexamusic.app.db.entities.Album
+import com.nexamusic.app.db.entities.Artist
+import com.nexamusic.app.db.entities.Playlist
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.utils.marqueeWhenVisible
+import com.nexamusic.app.ui.utils.rememberGridSpacing
+import com.nexamusic.app.ui.utils.resize
+import com.nexamusic.app.ui.utils.sharedArtworkSource
+import com.nexamusic.app.utils.joinByBullet
+import com.nexamusic.app.utils.makeTimeString
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first

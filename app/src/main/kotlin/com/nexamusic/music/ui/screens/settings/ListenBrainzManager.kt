@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import android.content.Context
 import kotlinx.coroutines.CoroutineScope

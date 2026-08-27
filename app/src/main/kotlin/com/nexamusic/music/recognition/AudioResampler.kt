@@ -1,4 +1,4 @@
-package com.nexamusic.music.recognition
+package com.nexamusic.app.recognition
 
 import androidx.annotation.OptIn
 import androidx.media3.common.util.UnstableApi

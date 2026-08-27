@@ -1,8 +1,8 @@
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import com.nexamusic.music.R
+import com.nexamusic.app.R
 
 data class SearchableSetting(
     val title: String,

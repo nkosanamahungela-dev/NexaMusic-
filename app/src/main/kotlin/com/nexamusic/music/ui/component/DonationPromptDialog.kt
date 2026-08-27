@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -30,14 +30,14 @@ import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.DonationKofiUrl
-import com.nexamusic.music.constants.DonationPromptDismissedKey
-import com.nexamusic.music.constants.DonationPromptLastShownKey
-import com.nexamusic.music.constants.DonationUpiUri
-import com.nexamusic.music.constants.FirstLaunchTimestampKey
-import com.nexamusic.music.ui.utils.safeOpenUri
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.DonationKofiUrl
+import com.nexamusic.app.constants.DonationPromptDismissedKey
+import com.nexamusic.app.constants.DonationPromptLastShownKey
+import com.nexamusic.app.constants.DonationUpiUri
+import com.nexamusic.app.constants.FirstLaunchTimestampKey
+import com.nexamusic.app.ui.utils.safeOpenUri
+import com.nexamusic.app.utils.rememberPreference
 import java.util.concurrent.TimeUnit
 
 private val MIN_DAYS_BEFORE_FIRST_PROMPT = TimeUnit.DAYS.toMillis(3)

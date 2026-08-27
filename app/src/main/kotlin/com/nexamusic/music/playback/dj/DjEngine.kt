@@ -3,22 +3,22 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.playback.dj
+package com.nexamusic.app.playback.dj
 
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackParameters
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.exoplayer.ExoPlayer
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.SongAnalysisEntity
-import com.nexamusic.music.playback.audio.DelayAudioProcessor
-import com.nexamusic.music.playback.audio.DjFilterAudioProcessor
-import com.nexamusic.music.playback.audio.DjTailAudioProcessor
-import com.nexamusic.music.playback.audio.DjMixPlan
-import com.nexamusic.music.playback.audio.DjMixPlanner
-import com.nexamusic.music.playback.audio.DjMixTier
-import com.nexamusic.music.playback.audio.TrackAnalyzerAudioProcessor
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.SongAnalysisEntity
+import com.nexamusic.app.playback.audio.DelayAudioProcessor
+import com.nexamusic.app.playback.audio.DjFilterAudioProcessor
+import com.nexamusic.app.playback.audio.DjTailAudioProcessor
+import com.nexamusic.app.playback.audio.DjMixPlan
+import com.nexamusic.app.playback.audio.DjMixPlanner
+import com.nexamusic.app.playback.audio.DjMixTier
+import com.nexamusic.app.playback.audio.TrackAnalyzerAudioProcessor
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

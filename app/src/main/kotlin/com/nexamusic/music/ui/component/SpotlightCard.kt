@@ -2,7 +2,7 @@
  * Convx Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import android.os.Build
 import androidx.compose.foundation.background
@@ -39,10 +39,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.theme.rememberArtworkTint
-import com.nexamusic.music.ui.utils.bounceClick
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.theme.rememberArtworkTint
+import com.nexamusic.app.ui.utils.bounceClick
 
 /** Square artwork edge. The card is this wide; one page of the spotlight row. */
 val SpotlightCardArtworkSize = 240.dp

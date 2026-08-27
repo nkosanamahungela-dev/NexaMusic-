@@ -1,4 +1,4 @@
-package com.nexamusic.music.vivimusic.updater
+package com.nexamusic.app.vivimusic.updater
 
 import android.content.Context
 import android.os.Environment

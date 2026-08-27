@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.lyrics
+package com.nexamusic.app.lyrics
 
 import android.content.Context
-import com.nexamusic.music.betterlyrics.BetterLyrics
-import com.nexamusic.music.constants.EnableBetterLyricsKey
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
+import com.nexamusic.app.betterlyrics.BetterLyrics
+import com.nexamusic.app.constants.EnableBetterLyricsKey
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
 
 object BetterLyricsProvider : LyricsProvider {
     override val name = "BetterLyrics"

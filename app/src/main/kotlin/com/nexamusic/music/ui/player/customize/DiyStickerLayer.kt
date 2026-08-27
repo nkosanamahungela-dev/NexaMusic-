@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.player.customize
+package com.nexamusic.app.ui.player.customize
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -28,8 +28,8 @@ import androidx.compose.material3.Text
 import androidx.compose.foundation.shape.RoundedCornerShape
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
-import com.nexamusic.music.constants.DiyLayoutKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.DiyLayoutKey
+import com.nexamusic.app.utils.rememberPreference
 import kotlin.math.min
 
 /**

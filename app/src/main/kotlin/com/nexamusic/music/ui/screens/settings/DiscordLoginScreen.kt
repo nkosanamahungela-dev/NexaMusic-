@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import android.annotation.SuppressLint
 import android.os.Build
@@ -31,12 +31,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.DiscordTokenKey
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.DiscordTokenKey
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import timber.log.Timber

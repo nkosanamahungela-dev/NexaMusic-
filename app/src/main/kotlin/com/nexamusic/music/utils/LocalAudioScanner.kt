@@ -3,20 +3,20 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.utils
+package com.nexamusic.app.utils
 
 import android.content.ContentUris
 import android.content.Context
 import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
-import com.nexamusic.music.constants.LocalExcludedFoldersKey
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.AlbumEntity
-import com.nexamusic.music.db.entities.ArtistEntity
-import com.nexamusic.music.db.entities.SongAlbumMap
-import com.nexamusic.music.db.entities.SongArtistMap
-import com.nexamusic.music.db.entities.SongEntity
+import com.nexamusic.app.constants.LocalExcludedFoldersKey
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.AlbumEntity
+import com.nexamusic.app.db.entities.ArtistEntity
+import com.nexamusic.app.db.entities.SongAlbumMap
+import com.nexamusic.app.db.entities.SongArtistMap
+import com.nexamusic.app.db.entities.SongEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext

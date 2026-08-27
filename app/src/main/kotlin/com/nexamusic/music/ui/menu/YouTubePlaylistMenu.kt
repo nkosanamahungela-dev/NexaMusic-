@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -56,39 +56,39 @@ import com.music.innertube.YouTube
 import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.SongItem
 import com.music.innertube.utils.completed
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalDownloadUtil
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ListThumbnailSize
-import com.nexamusic.music.constants.ThumbnailCornerRadius
-import com.nexamusic.music.constants.ThumbnailRoundedShape
-import com.nexamusic.music.db.entities.SpeedDialItem
-import com.nexamusic.music.db.entities.PlaylistEntity
-import com.nexamusic.music.db.entities.PlaylistSongMap
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.queues.YouTubeQueue
-import com.nexamusic.music.ui.component.DefaultDialog
-import com.nexamusic.music.ui.component.ListDialog
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
-import com.nexamusic.music.ui.component.NewAction
-import com.nexamusic.music.ui.component.NewActionGrid
-import com.nexamusic.music.ui.component.YouTubeListItem
-import com.nexamusic.music.ui.utils.resize
-import com.nexamusic.music.utils.joinByBullet
-import com.nexamusic.music.utils.makeTimeString
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalDownloadUtil
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ListThumbnailSize
+import com.nexamusic.app.constants.ThumbnailCornerRadius
+import com.nexamusic.app.constants.ThumbnailRoundedShape
+import com.nexamusic.app.db.entities.SpeedDialItem
+import com.nexamusic.app.db.entities.PlaylistEntity
+import com.nexamusic.app.db.entities.PlaylistSongMap
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.queues.YouTubeQueue
+import com.nexamusic.app.ui.component.DefaultDialog
+import com.nexamusic.app.ui.component.ListDialog
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
+import com.nexamusic.app.ui.component.NewAction
+import com.nexamusic.app.ui.component.NewActionGrid
+import com.nexamusic.app.ui.component.YouTubeListItem
+import com.nexamusic.app.ui.utils.resize
+import com.nexamusic.app.utils.joinByBullet
+import com.nexamusic.app.utils.makeTimeString
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.nexamusic.music.playback.DownloadTarget
-import com.nexamusic.music.playback.cancelDownloads
-import com.nexamusic.music.playback.downloadSongs
-import com.nexamusic.music.playback.removeDownloads
+import com.nexamusic.app.playback.DownloadTarget
+import com.nexamusic.app.playback.cancelDownloads
+import com.nexamusic.app.playback.downloadSongs
+import com.nexamusic.app.playback.removeDownloads
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("MutableCollectionMutableState")

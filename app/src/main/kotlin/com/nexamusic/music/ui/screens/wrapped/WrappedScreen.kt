@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.wrapped
+package com.nexamusic.app.ui.screens.wrapped
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -41,22 +41,22 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.navigation.NavController
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.screens.wrapped.pages.ConclusionPage
-import com.nexamusic.music.ui.screens.wrapped.pages.PlaylistPage
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedIntro
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedMinutesScreen
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedMinutesTease
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedTop5AlbumsScreen
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedTop5ArtistsScreen
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedTop5SongsScreen
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedTopAlbumScreen
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedTopArtistScreen
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedTopSongScreen
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedTotalAlbumsScreen
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedTotalArtistsScreen
-import com.nexamusic.music.ui.screens.wrapped.pages.WrappedTotalSongsScreen
-import com.nexamusic.music.ui.screens.wrapped.components.WrappedBackground
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.screens.wrapped.pages.ConclusionPage
+import com.nexamusic.app.ui.screens.wrapped.pages.PlaylistPage
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedIntro
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedMinutesScreen
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedMinutesTease
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedTop5AlbumsScreen
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedTop5ArtistsScreen
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedTop5SongsScreen
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedTopAlbumScreen
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedTopArtistScreen
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedTopSongScreen
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedTotalAlbumsScreen
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedTotalArtistsScreen
+import com.nexamusic.app.ui.screens.wrapped.pages.WrappedTotalSongsScreen
+import com.nexamusic.app.ui.screens.wrapped.components.WrappedBackground
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 

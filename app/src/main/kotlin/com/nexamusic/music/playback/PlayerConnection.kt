@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.playback
+package com.nexamusic.app.playback
 
 import android.content.Context
 import androidx.media3.common.MediaItem
@@ -16,15 +16,15 @@ import androidx.media3.common.Player.REPEAT_MODE_OFF
 import androidx.media3.common.Player.STATE_ENDED
 import androidx.media3.common.Timeline
 import androidx.media3.exoplayer.ExoPlayer
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.extensions.currentMetadata
-import com.nexamusic.music.extensions.getCurrentQueueIndex
-import com.nexamusic.music.extensions.getQueueWindows
-import com.nexamusic.music.extensions.metadata
-import com.nexamusic.music.extensions.togglePlayPause
-import com.nexamusic.music.playback.MusicService.MusicBinder
-import com.nexamusic.music.playback.queues.Queue
-import com.nexamusic.music.utils.reportException
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.extensions.currentMetadata
+import com.nexamusic.app.extensions.getCurrentQueueIndex
+import com.nexamusic.app.extensions.getQueueWindows
+import com.nexamusic.app.extensions.metadata
+import com.nexamusic.app.extensions.togglePlayPause
+import com.nexamusic.app.playback.MusicService.MusicBinder
+import com.nexamusic.app.playback.queues.Queue
+import com.nexamusic.app.utils.reportException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow

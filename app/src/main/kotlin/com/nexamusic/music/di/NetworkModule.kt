@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.di
+package com.nexamusic.app.di
 
 import android.content.Context
-import com.nexamusic.music.utils.NetworkConnectivityObserver
+import com.nexamusic.app.utils.NetworkConnectivityObserver
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

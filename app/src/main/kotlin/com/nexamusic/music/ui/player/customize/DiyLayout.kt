@@ -3,12 +3,12 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.player.customize
+package com.nexamusic.app.ui.player.customize
 
 import android.content.Context
-import com.nexamusic.music.constants.DiyLayoutKey
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
+import com.nexamusic.app.constants.DiyLayoutKey
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
 import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File

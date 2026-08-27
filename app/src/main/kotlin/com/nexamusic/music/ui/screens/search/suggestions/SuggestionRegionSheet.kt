@@ -1,8 +1,8 @@
-package com.nexamusic.music.ui.screens.search.suggestions
+package com.nexamusic.app.ui.screens.search.suggestions
 
 import androidx.compose.animation.core.animateDpAsState
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.*
@@ -22,7 +22,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.constants.SuggestionRegionSlugToName
+import com.nexamusic.app.constants.SuggestionRegionSlugToName
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)

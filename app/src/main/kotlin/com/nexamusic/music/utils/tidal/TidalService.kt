@@ -17,7 +17,7 @@
  * MPD manifest) is not decoded here yet and returns null (caller falls back).
  */
 
-package com.nexamusic.music.utils.tidal
+package com.nexamusic.app.utils.tidal
 import timber.log.Timber
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body

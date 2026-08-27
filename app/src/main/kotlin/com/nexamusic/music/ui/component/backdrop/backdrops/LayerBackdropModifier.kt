@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package com.nexamusic.music.ui.component.backdrop.backdrops
+package com.nexamusic.app.ui.component.backdrop.backdrops
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.drawscope.ContentDrawScope
@@ -20,7 +20,7 @@ import androidx.compose.ui.node.invalidateDraw
 import androidx.compose.ui.platform.InspectorInfo
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import com.nexamusic.music.ui.component.backdrop.internal.recordLayer
+import com.nexamusic.app.ui.component.backdrop.internal.recordLayer
 
 /**
  * @param frozen while this returns true the source is NOT re-recorded: the content is

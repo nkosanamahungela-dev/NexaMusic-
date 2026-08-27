@@ -1,4 +1,4 @@
-package com.nexamusic.music.utils.potoken
+package com.nexamusic.app.utils.potoken
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonNull

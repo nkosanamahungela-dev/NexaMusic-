@@ -4,19 +4,19 @@
  * capsule/src/main/java/com/kyant/capsule/AdvancedContinuity.kt
  *
  * Vendored so the shape ships as source with this app. Package renamed
- * accordingly (com.kyant.capsule -> com.nexamusic.music.ui.component.shapes).
+ * accordingly (com.kyant.capsule -> com.nexamusic.app.ui.component.shapes).
  */
-package com.nexamusic.music.ui.component.shapes
+package com.nexamusic.app.ui.component.shapes
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.RoundRect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Outline
-import com.nexamusic.music.ui.component.shapes.core.Point
-import com.nexamusic.music.ui.component.shapes.path.PathSegments
-import com.nexamusic.music.ui.component.shapes.path.buildCirclePathSegments
-import com.nexamusic.music.ui.component.shapes.path.toPath
+import com.nexamusic.app.ui.component.shapes.core.Point
+import com.nexamusic.app.ui.component.shapes.path.PathSegments
+import com.nexamusic.app.ui.component.shapes.path.buildCirclePathSegments
+import com.nexamusic.app.ui.component.shapes.path.toPath
 
 @Immutable
 abstract class AdvancedContinuity : Continuity {

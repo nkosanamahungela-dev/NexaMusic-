@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import android.app.SearchManager
 import android.content.Intent
@@ -59,29 +59,29 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.R
-import com.nexamusic.music.db.entities.LyricsEntity
-import com.nexamusic.music.db.entities.SongEntity
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.ui.component.DefaultDialog
-import com.nexamusic.music.ui.component.ListDialog
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
-import com.nexamusic.music.ui.component.NewAction
-import com.nexamusic.music.ui.component.NewActionGrid
-import com.nexamusic.music.ui.component.TextFieldDialog
-import com.nexamusic.music.viewmodels.LyricsMenuViewModel
-import com.nexamusic.music.constants.OpenRouterApiKey
-import com.nexamusic.music.constants.DeeplApiKey
-import com.nexamusic.music.constants.AiProviderKey
-import com.nexamusic.music.constants.TranslateLanguageKey
-import com.nexamusic.music.constants.TranslateModeKey
-import com.nexamusic.music.constants.OpenRouterBaseUrlKey
-import com.nexamusic.music.constants.OpenRouterModelKey
-import com.nexamusic.music.constants.DeeplFormalityKey
-import com.nexamusic.music.lyrics.LyricsTranslationHelper
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.R
+import com.nexamusic.app.db.entities.LyricsEntity
+import com.nexamusic.app.db.entities.SongEntity
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.ui.component.DefaultDialog
+import com.nexamusic.app.ui.component.ListDialog
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
+import com.nexamusic.app.ui.component.NewAction
+import com.nexamusic.app.ui.component.NewActionGrid
+import com.nexamusic.app.ui.component.TextFieldDialog
+import com.nexamusic.app.viewmodels.LyricsMenuViewModel
+import com.nexamusic.app.constants.OpenRouterApiKey
+import com.nexamusic.app.constants.DeeplApiKey
+import com.nexamusic.app.constants.AiProviderKey
+import com.nexamusic.app.constants.TranslateLanguageKey
+import com.nexamusic.app.constants.TranslateModeKey
+import com.nexamusic.app.constants.OpenRouterBaseUrlKey
+import com.nexamusic.app.constants.OpenRouterModelKey
+import com.nexamusic.app.constants.DeeplFormalityKey
+import com.nexamusic.app.lyrics.LyricsTranslationHelper
+import com.nexamusic.app.utils.rememberPreference
 import androidx.compose.runtime.collectAsState
 
 @OptIn(ExperimentalMaterial3Api::class)

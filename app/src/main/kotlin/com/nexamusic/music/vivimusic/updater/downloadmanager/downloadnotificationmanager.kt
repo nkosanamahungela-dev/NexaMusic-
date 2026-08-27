@@ -1,4 +1,4 @@
-package com.nexamusic.music.vivimusic.updater.downloadmanager
+package com.nexamusic.app.vivimusic.updater.downloadmanager
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -10,7 +10,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.core.graphics.toColorInt
-import com.nexamusic.music.R
+import com.nexamusic.app.R
 
 object DownloadNotificationManager {
     private lateinit var notificationManager: NotificationManager

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.playlist
+package com.nexamusic.app.ui.screens.playlist
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -38,9 +38,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.nexamusic.music.R
-import com.nexamusic.music.ai.AiPlaylistModifier
-import com.nexamusic.music.db.entities.PlaylistSong
+import com.nexamusic.app.R
+import com.nexamusic.app.ai.AiPlaylistModifier
+import com.nexamusic.app.db.entities.PlaylistSong
 import kotlinx.coroutines.launch
 
 @Composable

@@ -3,25 +3,25 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import android.content.Context
 import android.content.Intent
 import android.webkit.CookieManager
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nexamusic.music.App
-import com.nexamusic.music.constants.AccountChannelHandleKey
-import com.nexamusic.music.constants.AccountEmailKey
-import com.nexamusic.music.constants.AccountNameKey
-import com.nexamusic.music.constants.DataSyncIdKey
-import com.nexamusic.music.constants.InnerTubeCookieKey
-import com.nexamusic.music.constants.SavedAccount
-import com.nexamusic.music.constants.SavedAccountsKey
-import com.nexamusic.music.constants.VisitorDataKey
-import com.nexamusic.music.constants.toJson
-import com.nexamusic.music.utils.SyncUtils
-import com.nexamusic.music.utils.dataStore
+import com.nexamusic.app.App
+import com.nexamusic.app.constants.AccountChannelHandleKey
+import com.nexamusic.app.constants.AccountEmailKey
+import com.nexamusic.app.constants.AccountNameKey
+import com.nexamusic.app.constants.DataSyncIdKey
+import com.nexamusic.app.constants.InnerTubeCookieKey
+import com.nexamusic.app.constants.SavedAccount
+import com.nexamusic.app.constants.SavedAccountsKey
+import com.nexamusic.app.constants.VisitorDataKey
+import com.nexamusic.app.constants.toJson
+import com.nexamusic.app.utils.SyncUtils
+import com.nexamusic.app.utils.dataStore
 import com.music.innertube.YouTube
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -163,7 +163,7 @@ class AccountSettingsViewModel @Inject constructor(
     /**
      * Switches the active channel to an already-saved account. No WebView, no
      * restart — the cookie is unchanged (same Google login), only which channel
-     * it acts as changes, same mechanism [com.nexamusic.music.ui.screens.SwitchChannelScreen]
+     * it acts as changes, same mechanism [com.nexamusic.app.ui.screens.SwitchChannelScreen]
      * uses when it detects a DATASYNC_ID change.
      */
     fun switchToSavedAccount(context: Context, account: SavedAccount) {

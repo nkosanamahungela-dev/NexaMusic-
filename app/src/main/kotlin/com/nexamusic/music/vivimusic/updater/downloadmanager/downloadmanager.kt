@@ -1,8 +1,8 @@
-package com.nexamusic.music.vivimusic.updater.downloadmanager
+package com.nexamusic.app.vivimusic.updater.downloadmanager
 
 import android.content.Context
 import android.os.Environment
-import com.nexamusic.music.R
+import com.nexamusic.app.R
 import kotlinx.coroutines.*
 import java.io.File
 import java.io.FileOutputStream

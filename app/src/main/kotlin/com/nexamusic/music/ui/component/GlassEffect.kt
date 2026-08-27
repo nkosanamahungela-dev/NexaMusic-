@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import android.app.ActivityManager
 import android.os.Build
@@ -23,23 +23,23 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.isSpecified
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.graphics.luminance
-import com.nexamusic.music.ui.component.backdrop.BackdropEffectScope
+import com.nexamusic.app.ui.component.backdrop.BackdropEffectScope
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.ui.component.backdrop.Backdrop
-import com.nexamusic.music.ui.component.backdrop.drawBackdrop
-import com.nexamusic.music.ui.component.backdrop.isRenderEffectSupported
-import com.nexamusic.music.ui.component.backdrop.effects.blur
-import com.nexamusic.music.ui.component.backdrop.effects.colorControls
-import com.nexamusic.music.ui.component.backdrop.effects.lens
-import com.nexamusic.music.ui.component.backdrop.highlight.Highlight
-import com.nexamusic.music.ui.component.backdrop.highlight.HighlightStyle
-import com.nexamusic.music.ui.component.backdrop.shadow.Shadow
+import com.nexamusic.app.ui.component.backdrop.Backdrop
+import com.nexamusic.app.ui.component.backdrop.drawBackdrop
+import com.nexamusic.app.ui.component.backdrop.isRenderEffectSupported
+import com.nexamusic.app.ui.component.backdrop.effects.blur
+import com.nexamusic.app.ui.component.backdrop.effects.colorControls
+import com.nexamusic.app.ui.component.backdrop.effects.lens
+import com.nexamusic.app.ui.component.backdrop.highlight.Highlight
+import com.nexamusic.app.ui.component.backdrop.highlight.HighlightStyle
+import com.nexamusic.app.ui.component.backdrop.shadow.Shadow
 
 /**
  * User-configurable parameters of the liquid glass effect, sourced from DataStore
- * preferences in [com.nexamusic.music.MainActivity] and distributed through
+ * preferences in [com.nexamusic.app.MainActivity] and distributed through
  * [LocalGlassEffectConfig].
  */
 @Stable
@@ -308,7 +308,7 @@ val LocalBackdropLoopBucket = staticCompositionLocalOf<(() -> Int)?> { null }
 
 /**
  * Whether the Apple Music-styled UI (iOS 26/27 liquid glass look, SF-style tab icons,
- * denser glass) is active. Read by [com.nexamusic.music.ui.screens.Screens] consumers to pick
+ * denser glass) is active. Read by [com.nexamusic.app.ui.screens.Screens] consumers to pick
  * between the classic and iOS icon sets.
  */
 val LocalAppleMusicUi = staticCompositionLocalOf { false }

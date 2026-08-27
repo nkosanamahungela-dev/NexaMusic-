@@ -4,13 +4,13 @@
  * capsule/src/main/java/com/kyant/capsule/core/Point.kt
  *
  * Vendored so the shape ships as source with this app. Package renamed
- * accordingly (com.kyant.capsule -> com.nexamusic.music.ui.component.shapes).
+ * accordingly (com.kyant.capsule -> com.nexamusic.app.ui.component.shapes).
  */
-package com.nexamusic.music.ui.component.shapes.core
+package com.nexamusic.app.ui.component.shapes.core
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
-import com.nexamusic.music.ui.component.shapes.lerp
+import com.nexamusic.app.ui.component.shapes.lerp
 import kotlin.math.sqrt
 
 @Immutable

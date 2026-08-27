@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.constants
+package com.nexamusic.app.constants
 
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.floatPreferencesKey
@@ -599,7 +599,7 @@ val LiquidGlassSurfaceTintColorKey = intPreferencesKey("liquidGlassSurfaceTintCo
 val LiquidGlassSurfaceOpacityKey = floatPreferencesKey("liquidGlassSurfaceOpacity")
 
 /** Specular rim colour as an ARGB int. 0 = default white. */
-/** Which [com.nexamusic.music.ui.component.GlassStyle] every glass surface uses. */
+/** Which [com.nexamusic.app.ui.component.GlassStyle] every glass surface uses. */
 val LiquidGlassStyleKey = stringPreferencesKey("liquidGlassStyle")
 
 /** Selection puck wash colour as an ARGB int. 0 = adaptive to the theme. */

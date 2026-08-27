@@ -1,10 +1,10 @@
-package com.nexamusic.music.eq.audio
+package com.nexamusic.app.eq.audio
 
 import androidx.media3.common.C
 import androidx.media3.common.audio.AudioProcessor
 import androidx.media3.common.util.UnstableApi
-import com.nexamusic.music.eq.data.ParametricEQ
-import com.nexamusic.music.eq.data.ParametricEQBand
+import com.nexamusic.app.eq.data.ParametricEQ
+import com.nexamusic.app.eq.data.ParametricEQBand
 import timber.log.Timber
 import java.nio.ByteBuffer
 import java.nio.ByteOrder

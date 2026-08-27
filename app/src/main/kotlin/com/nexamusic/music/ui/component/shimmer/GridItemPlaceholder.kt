@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component.shimmer
+package com.nexamusic.app.ui.component.shimmer
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -21,14 +21,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.constants.GridItemSize
-import com.nexamusic.music.constants.GridItemsSizeKey
-import com.nexamusic.music.constants.GridThumbnailHeight
-import com.nexamusic.music.constants.SmallGridThumbnailHeight
-import com.nexamusic.music.constants.ThumbnailCornerRadius
-import com.nexamusic.music.constants.ThumbnailRoundedShape
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.utils.rememberEnumPreference
+import com.nexamusic.app.constants.GridItemSize
+import com.nexamusic.app.constants.GridItemsSizeKey
+import com.nexamusic.app.constants.GridThumbnailHeight
+import com.nexamusic.app.constants.SmallGridThumbnailHeight
+import com.nexamusic.app.constants.ThumbnailCornerRadius
+import com.nexamusic.app.constants.ThumbnailRoundedShape
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.utils.rememberEnumPreference
 
 @Composable
 fun GridItemPlaceHolder(

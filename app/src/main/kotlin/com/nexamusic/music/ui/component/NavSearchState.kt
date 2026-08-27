@@ -3,16 +3,16 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.text.input.TextFieldValue
-import com.nexamusic.music.constants.SearchSource
+import com.nexamusic.app.constants.SearchSource
 
 /**
- * Search input state shared between [com.nexamusic.music.ui.component.AppFloatingNavBar]
+ * Search input state shared between [com.nexamusic.app.ui.component.AppFloatingNavBar]
  * (which now owns the actual search text field) and the search_input/search/{query}
  * screens (which just read the query to filter/display results). Hoisted to
  * MainActivity, provided via [LocalNavSearchState] — the nav bar renders outside

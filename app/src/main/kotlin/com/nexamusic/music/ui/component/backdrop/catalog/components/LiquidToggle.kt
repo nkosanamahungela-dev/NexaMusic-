@@ -5,13 +5,13 @@
  *
  * Not published as a library — ported straight from the catalog demo app that
  * showcases Kyant0/backdrop, source-only. Package renamed, imports repointed at
- * this app's vendored com.nexamusic.music.ui.component.backdrop, and
+ * this app's vendored com.nexamusic.app.ui.component.backdrop, and
  * com.kyant.shapes.Capsule swapped for RoundedCornerShape(percent = 50) (the
  * lens effect only supports CornerBasedShape here — see GlassEffect.kt).
  *
  * Not wired into any screen yet — vendored for later use.
  */
-package com.nexamusic.music.ui.component.backdrop.catalog.components
+package com.nexamusic.app.ui.component.backdrop.catalog.components
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
@@ -43,18 +43,18 @@ import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastCoerceIn
 import androidx.compose.ui.util.lerp
-import com.nexamusic.music.ui.component.backdrop.Backdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.layerBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberCombinedBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
-import com.nexamusic.music.ui.component.backdrop.catalog.utils.DampedDragAnimation
-import com.nexamusic.music.ui.component.backdrop.drawBackdrop
-import com.nexamusic.music.ui.component.backdrop.effects.blur
-import com.nexamusic.music.ui.component.backdrop.effects.lens
-import com.nexamusic.music.ui.component.backdrop.highlight.Highlight
-import com.nexamusic.music.ui.component.backdrop.shadow.InnerShadow
-import com.nexamusic.music.ui.component.backdrop.shadow.Shadow
+import com.nexamusic.app.ui.component.backdrop.Backdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.layerBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberCombinedBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import com.nexamusic.app.ui.component.backdrop.catalog.utils.DampedDragAnimation
+import com.nexamusic.app.ui.component.backdrop.drawBackdrop
+import com.nexamusic.app.ui.component.backdrop.effects.blur
+import com.nexamusic.app.ui.component.backdrop.effects.lens
+import com.nexamusic.app.ui.component.backdrop.highlight.Highlight
+import com.nexamusic.app.ui.component.backdrop.shadow.InnerShadow
+import com.nexamusic.app.ui.component.backdrop.shadow.Shadow
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable

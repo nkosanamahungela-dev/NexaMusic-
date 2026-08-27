@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
@@ -16,14 +16,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
 import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.WatchEndpoint
-import com.nexamusic.music.R
-import com.nexamusic.music.db.entities.Album
-import com.nexamusic.music.db.entities.Artist
-import com.nexamusic.music.db.entities.Playlist
-import com.nexamusic.music.ui.menu.AlbumMenu
-import com.nexamusic.music.ui.menu.ArtistMenu
-import com.nexamusic.music.ui.menu.PlaylistMenu
-import com.nexamusic.music.ui.menu.YouTubePlaylistMenu
+import com.nexamusic.app.R
+import com.nexamusic.app.db.entities.Album
+import com.nexamusic.app.db.entities.Artist
+import com.nexamusic.app.db.entities.Playlist
+import com.nexamusic.app.ui.menu.AlbumMenu
+import com.nexamusic.app.ui.menu.ArtistMenu
+import com.nexamusic.app.ui.menu.PlaylistMenu
+import com.nexamusic.app.ui.menu.YouTubePlaylistMenu
 import kotlinx.coroutines.CoroutineScope
 
 @Composable

@@ -3,18 +3,18 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.wrapped
+package com.nexamusic.app.ui.screens.wrapped
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import com.music.innertube.YouTube
 import com.music.innertube.models.AccountInfo
-import com.nexamusic.music.constants.ArtistSongSortType
-import com.nexamusic.music.db.DatabaseDao
-import com.nexamusic.music.db.entities.Artist
-import com.nexamusic.music.db.entities.PlaylistEntity
-import com.nexamusic.music.db.entities.SongWithStats
+import com.nexamusic.app.constants.ArtistSongSortType
+import com.nexamusic.app.db.DatabaseDao
+import com.nexamusic.app.db.entities.Artist
+import com.nexamusic.app.db.entities.PlaylistEntity
+import com.nexamusic.app.db.entities.SongWithStats
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -215,7 +215,7 @@ class WrappedManager(
             @Suppress("UNCHECKED_CAST")
             val topSongsResult = results[1] as List<SongWithStats>
             @Suppress("UNCHECKED_CAST")
-            val topAlbumsResult = results[3] as List<com.nexamusic.music.db.entities.Album>
+            val topAlbumsResult = results[3] as List<com.nexamusic.app.db.entities.Album>
             @Suppress("UNCHECKED_CAST")
             val topArtistsResult = results[2] as List<Artist>
             _state.update {

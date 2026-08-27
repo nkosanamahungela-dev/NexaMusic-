@@ -5,12 +5,12 @@
 
 @file:OptIn(ExperimentalSharedTransitionApi::class)
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.activity.compose.BackHandler
-import com.nexamusic.music.constants.AppBackgroundColorKey
-import com.nexamusic.music.constants.AppTextColorKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.AppBackgroundColorKey
+import com.nexamusic.app.constants.AppTextColorKey
+import com.nexamusic.app.utils.rememberPreference
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibilityScope
 import androidx.compose.animation.ExperimentalSharedTransitionApi
@@ -44,7 +44,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.animation.animateColorAsState
-import com.nexamusic.music.ui.utils.Motion
+import com.nexamusic.app.ui.utils.Motion
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -67,18 +67,18 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.SearchSource
-import com.nexamusic.music.ui.component.backdrop.catalog.utils.InteractiveHighlight
-import com.nexamusic.music.ui.player.FloatingMiniPlayer
-import com.nexamusic.music.ui.screens.Screens
-import com.nexamusic.music.ui.screens.search.DynamicSearchPlaceholder
-import com.nexamusic.music.ui.component.floatingtabbar.FloatingTabBar
-import com.nexamusic.music.ui.component.floatingtabbar.LocalTabBarBackdropFrozen
-import com.nexamusic.music.ui.component.floatingtabbar.FloatingTabBarDefaults
-import com.nexamusic.music.ui.component.floatingtabbar.FloatingTabBarScrollConnection
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.utils.bounceClick
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.SearchSource
+import com.nexamusic.app.ui.component.backdrop.catalog.utils.InteractiveHighlight
+import com.nexamusic.app.ui.player.FloatingMiniPlayer
+import com.nexamusic.app.ui.screens.Screens
+import com.nexamusic.app.ui.screens.search.DynamicSearchPlaceholder
+import com.nexamusic.app.ui.component.floatingtabbar.FloatingTabBar
+import com.nexamusic.app.ui.component.floatingtabbar.LocalTabBarBackdropFrozen
+import com.nexamusic.app.ui.component.floatingtabbar.FloatingTabBarDefaults
+import com.nexamusic.app.ui.component.floatingtabbar.FloatingTabBarScrollConnection
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.utils.bounceClick
 import kotlinx.coroutines.delay
 
 // Kyant0/Capsule's continuous (superellipse) capsule instead of a circular-arc
@@ -535,7 +535,7 @@ private fun SearchBarPlaceholder(
  * Keyboard-active search state — replaces the whole nav bar (mini player and
  * current-screen icon included) while focused, since the keyboard covers that
  * screen space anyway. Docked above the keyboard via [Modifier.imePadding].
- * Relocated from the old [com.nexamusic.music.ui.screens.search.SearchScreen]
+ * Relocated from the old [com.nexamusic.app.ui.screens.search.SearchScreen]
  * bottomBar pill — same markup, now driven by hoisted [NavSearchState].
  */
 @Composable

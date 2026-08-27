@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import android.os.Build
 import androidx.compose.foundation.Canvas
@@ -39,7 +39,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Surface
-import com.nexamusic.music.ui.component.GlassSwitchCompat as Switch
+import com.nexamusic.app.ui.component.GlassSwitchCompat as Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -74,40 +74,40 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.PlayerArtworkStyle
-import com.nexamusic.music.constants.PlayerArtworkStyleKey
-import com.nexamusic.music.constants.PlayerBackgroundStyle
-import com.nexamusic.music.constants.PlayerBackgroundStyleKey
-import com.nexamusic.music.constants.UseAppleMusicPlayerKey
-import com.nexamusic.music.constants.ShowPlayerThumbnailShadowKey
-import com.nexamusic.music.constants.ShowUpNextKey
-import com.nexamusic.music.constants.PlayerThumbnailShadowElevationKey
-import com.nexamusic.music.constants.PlayerGradientAngleKey
-import com.nexamusic.music.constants.PlayerGradientStopsKey
-import com.nexamusic.music.constants.PlayerLayoutHiddenSlotsKey
-import com.nexamusic.music.constants.PlayerLayoutOrderKey
-import com.nexamusic.music.constants.PlayerStaticColorKey
-import com.nexamusic.music.constants.SliderStyle
-import com.nexamusic.music.constants.SliderStyleKey
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.ui.component.ColorPickerDialog
-import com.nexamusic.music.ui.component.SwitchPreference
-import com.nexamusic.music.ui.component.SliderPreference
-import com.nexamusic.music.ui.component.IconButton as AppIconButton
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.player.PlayerLayoutRegistry
-import com.nexamusic.music.ui.player.PlayerSlot
-import com.nexamusic.music.ui.theme.DefaultGradientStops
-import com.nexamusic.music.ui.theme.decodeGradientStops
-import com.nexamusic.music.ui.theme.encodeGradientStops
-import com.nexamusic.music.ui.theme.tiltedGradient
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.PlayerArtworkStyle
+import com.nexamusic.app.constants.PlayerArtworkStyleKey
+import com.nexamusic.app.constants.PlayerBackgroundStyle
+import com.nexamusic.app.constants.PlayerBackgroundStyleKey
+import com.nexamusic.app.constants.UseAppleMusicPlayerKey
+import com.nexamusic.app.constants.ShowPlayerThumbnailShadowKey
+import com.nexamusic.app.constants.ShowUpNextKey
+import com.nexamusic.app.constants.PlayerThumbnailShadowElevationKey
+import com.nexamusic.app.constants.PlayerGradientAngleKey
+import com.nexamusic.app.constants.PlayerGradientStopsKey
+import com.nexamusic.app.constants.PlayerLayoutHiddenSlotsKey
+import com.nexamusic.app.constants.PlayerLayoutOrderKey
+import com.nexamusic.app.constants.PlayerStaticColorKey
+import com.nexamusic.app.constants.SliderStyle
+import com.nexamusic.app.constants.SliderStyleKey
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.ui.component.ColorPickerDialog
+import com.nexamusic.app.ui.component.SwitchPreference
+import com.nexamusic.app.ui.component.SliderPreference
+import com.nexamusic.app.ui.component.IconButton as AppIconButton
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.player.PlayerLayoutRegistry
+import com.nexamusic.app.ui.player.PlayerSlot
+import com.nexamusic.app.ui.theme.DefaultGradientStops
+import com.nexamusic.app.ui.theme.decodeGradientStops
+import com.nexamusic.app.ui.theme.encodeGradientStops
+import com.nexamusic.app.ui.theme.tiltedGradient
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlin.math.roundToInt
 import sh.calvin.reorderable.ReorderableItem
@@ -950,7 +950,7 @@ private fun SeekBarPreview(style: SliderStyle, color: Color) {
             val slot = size.width / bars
             val barW = slot * 0.5f
             val mid = size.height / 2f
-            val heights = com.nexamusic.music.ui.component.waveformBars(7, bars)
+            val heights = com.nexamusic.app.ui.component.waveformBars(7, bars)
             for (i in 0 until bars) {
                 val h = (heights[i] * size.height).coerceAtLeast(size.height * 0.2f)
                 val x = i * slot + slot / 2f

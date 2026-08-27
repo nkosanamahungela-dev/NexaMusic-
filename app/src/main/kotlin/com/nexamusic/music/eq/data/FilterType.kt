@@ -1,4 +1,4 @@
-package com.nexamusic.music.eq.data
+package com.nexamusic.app.eq.data
 
 import kotlinx.serialization.Serializable
 

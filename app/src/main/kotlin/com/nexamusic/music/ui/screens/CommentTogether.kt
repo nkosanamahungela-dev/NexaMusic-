@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
 
 import androidx.compose.animation.*
 import androidx.compose.foundation.background
@@ -33,13 +33,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.listentogether.ChatMessagePayload
-import com.nexamusic.music.listentogether.RepliedMessage
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.listentogether.ChatMessagePayload
+import com.nexamusic.app.listentogether.RepliedMessage
 import androidx.compose.ui.text.*
 import androidx.compose.ui.text.style.TextDecoration
 import android.net.Uri

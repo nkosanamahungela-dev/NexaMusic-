@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.search.suggestions
+package com.nexamusic.app.ui.screens.search.suggestions
 import timber.log.Timber
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -21,8 +21,8 @@ import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.ArtistItem
 import com.music.innertube.models.WatchEndpoint
-import com.nexamusic.music.playback.PlayerConnection
-import com.nexamusic.music.playback.queues.YouTubeQueue
+import com.nexamusic.app.playback.PlayerConnection
+import com.nexamusic.app.playback.queues.YouTubeQueue
 import androidx.navigation.NavController
 
 @HiltViewModel

@@ -3,9 +3,9 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.lyrics
+package com.nexamusic.app.lyrics
 
-import com.nexamusic.music.constants.PreferredLyricsProvider
+import com.nexamusic.app.constants.PreferredLyricsProvider
 
 /**
  * Central registry for all lyrics providers.

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
@@ -62,7 +62,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.constants.AppBarHeight
+import com.nexamusic.app.constants.AppBarHeight
 
 @ExperimentalMaterial3Api
 @Composable

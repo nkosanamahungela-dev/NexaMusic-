@@ -3,15 +3,15 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.playback.audio
+package com.nexamusic.app.playback.audio
 
 import androidx.media3.common.C
 import androidx.media3.common.audio.AudioProcessor
 import androidx.media3.common.util.UnstableApi
-import com.nexamusic.music.playback.dj.BeatGrid
-import com.nexamusic.music.playback.dj.BeatTracker
-import com.nexamusic.music.playback.dj.KeyDetector
-import com.nexamusic.music.playback.dj.MusicalKey
+import com.nexamusic.app.playback.dj.BeatGrid
+import com.nexamusic.app.playback.dj.BeatTracker
+import com.nexamusic.app.playback.dj.KeyDetector
+import com.nexamusic.app.playback.dj.MusicalKey
 import timber.log.Timber
 import java.nio.ByteBuffer
 import java.nio.ByteOrder

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.utils
+package com.nexamusic.app.ui.utils
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -54,16 +54,16 @@ import com.music.innertube.YouTube
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import com.music.innertube.models.MediaInfo
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.utils.LocalAudioProperties
-import com.nexamusic.music.utils.readLocalAudioProperties
-import com.nexamusic.music.db.entities.FormatEntity
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.ui.component.LocalBottomSheetPageState
-import com.nexamusic.music.ui.component.shimmer.ShimmerHost
-import com.nexamusic.music.ui.component.shimmer.TextPlaceholder
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.utils.LocalAudioProperties
+import com.nexamusic.app.utils.readLocalAudioProperties
+import com.nexamusic.app.db.entities.FormatEntity
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.ui.component.LocalBottomSheetPageState
+import com.nexamusic.app.ui.component.shimmer.ShimmerHost
+import com.nexamusic.app.ui.component.shimmer.TextPlaceholder
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

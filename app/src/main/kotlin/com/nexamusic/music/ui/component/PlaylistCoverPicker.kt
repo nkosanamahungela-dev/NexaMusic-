@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import android.app.Activity
 import android.content.Context
@@ -26,14 +26,14 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.FileProvider
 import com.music.innertube.YouTube
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.DarkModeKey
-import com.nexamusic.music.ui.screens.settings.DarkMode
-import com.nexamusic.music.db.entities.Playlist
-import com.nexamusic.music.ui.screens.playlist.uriToByteArray
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.reportException
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.DarkModeKey
+import com.nexamusic.app.ui.screens.settings.DarkMode
+import com.nexamusic.app.db.entities.Playlist
+import com.nexamusic.app.ui.screens.playlist.uriToByteArray
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.reportException
 import com.yalantis.ucrop.UCrop
 import io.ktor.client.plugins.ClientRequestException
 import kotlinx.coroutines.Dispatchers

@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.lyrics
+package com.nexamusic.app.lyrics
 
 import android.content.Context
 import com.music.kugou.KuGou
-import com.nexamusic.music.constants.EnableKugouKey
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
+import com.nexamusic.app.constants.EnableKugouKey
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
 
 object KuGouLyricsProvider : LyricsProvider {
     override val name = "Kugou"

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
@@ -35,23 +35,23 @@ import androidx.compose.ui.unit.dp
 import androidx.media3.exoplayer.offline.Download
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalDownloadUtil
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.LocalSyncUtils
-import com.nexamusic.music.R
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.queues.ListQueue
-import com.nexamusic.music.ui.component.DefaultDialog
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalDownloadUtil
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.LocalSyncUtils
+import com.nexamusic.app.R
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.queues.ListQueue
+import com.nexamusic.app.ui.component.DefaultDialog
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
-import com.nexamusic.music.playback.DownloadTarget
-import com.nexamusic.music.playback.cancelDownloads
-import com.nexamusic.music.playback.downloadSongs
-import com.nexamusic.music.playback.removeDownloads
+import com.nexamusic.app.playback.DownloadTarget
+import com.nexamusic.app.playback.cancelDownloads
+import com.nexamusic.app.playback.downloadSongs
+import com.nexamusic.app.playback.removeDownloads
 
 @Composable
 fun YouTubeSelectionSongMenu(
@@ -70,7 +70,7 @@ fun YouTubeSelectionSongMenu(
         mutableStateOf(false)
     }
 
-    val listenTogetherManager = com.nexamusic.music.LocalListenTogetherManager.current
+    val listenTogetherManager = com.nexamusic.app.LocalListenTogetherManager.current
     val isGuest = listenTogetherManager?.isInRoom == true && listenTogetherManager.isHost == false
 
     var showRemoveDownloadDialog by remember {
@@ -124,8 +124,8 @@ fun YouTubeSelectionSongMenu(
             songSelection.map { song ->
                 // Convert SongItem to Song entity
                 val metadata = song.toMediaMetadata()
-                com.nexamusic.music.db.entities.Song(
-                    song = com.nexamusic.music.db.entities.SongEntity(
+                com.nexamusic.app.db.entities.Song(
+                    song = com.nexamusic.app.db.entities.SongEntity(
                         id = metadata.id,
                         title = metadata.title,
                         duration = metadata.duration,
@@ -140,13 +140,13 @@ fun YouTubeSelectionSongMenu(
                         libraryRemoveToken = metadata.libraryRemoveToken
                     ),
                     artists = metadata.artists.map { artist ->
-                        com.nexamusic.music.db.entities.ArtistEntity(
+                        com.nexamusic.app.db.entities.ArtistEntity(
                             id = artist.id ?: "",
                             name = artist.name
                         )
                     },
                     album = metadata.album?.let { album ->
-                        com.nexamusic.music.db.entities.AlbumEntity(
+                        com.nexamusic.app.db.entities.AlbumEntity(
                             id = album.id,
                             title = album.title,
                             thumbnailUrl = metadata.thumbnailUrl, // Use song's thumbnail as album thumbnail
@@ -384,7 +384,7 @@ fun YouTubeSelectionSongMenu(
                                         // Insert the song first if it doesn't exist
                                         insert(metadata)
                                         // Create SongEntity with toggled like status
-                                        val songEntity = com.nexamusic.music.db.entities.SongEntity(
+                                        val songEntity = com.nexamusic.app.db.entities.SongEntity(
                                             id = metadata.id,
                                             title = metadata.title,
                                             duration = metadata.duration,

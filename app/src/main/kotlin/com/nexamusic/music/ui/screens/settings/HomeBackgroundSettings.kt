@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import android.graphics.Bitmap
 import android.net.Uri
@@ -35,7 +35,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Slider
-import com.nexamusic.music.ui.component.GlassSwitchCompat as Switch
+import com.nexamusic.app.ui.component.GlassSwitchCompat as Switch
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -54,23 +54,23 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.HomeBackgroundAnimateKey
-import com.nexamusic.music.constants.HomeBackgroundBlurKey
-import com.nexamusic.music.constants.HomeBackgroundDimKey
-import com.nexamusic.music.constants.HomeBackgroundEnabledKey
-import com.nexamusic.music.constants.HomeBackgroundIsVideoKey
-import com.nexamusic.music.constants.HomeBackgroundPathKey
-import com.nexamusic.music.constants.HomeBackgroundQualityKey
-import com.nexamusic.music.constants.LibraryBackgroundMode
-import com.nexamusic.music.constants.LibraryBackgroundModeKey
-import com.nexamusic.music.ui.component.DefaultDialog
-import com.nexamusic.music.ui.component.HomeVideoBackground
-import com.nexamusic.music.ui.component.rememberHomeBackgroundTargetSize
-import com.nexamusic.music.ui.component.Material3SettingsGroup
-import com.nexamusic.music.ui.component.Material3SettingsItem
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.HomeBackgroundAnimateKey
+import com.nexamusic.app.constants.HomeBackgroundBlurKey
+import com.nexamusic.app.constants.HomeBackgroundDimKey
+import com.nexamusic.app.constants.HomeBackgroundEnabledKey
+import com.nexamusic.app.constants.HomeBackgroundIsVideoKey
+import com.nexamusic.app.constants.HomeBackgroundPathKey
+import com.nexamusic.app.constants.HomeBackgroundQualityKey
+import com.nexamusic.app.constants.LibraryBackgroundMode
+import com.nexamusic.app.constants.LibraryBackgroundModeKey
+import com.nexamusic.app.ui.component.DefaultDialog
+import com.nexamusic.app.ui.component.HomeVideoBackground
+import com.nexamusic.app.ui.component.rememberHomeBackgroundTargetSize
+import com.nexamusic.app.ui.component.Material3SettingsGroup
+import com.nexamusic.app.ui.component.Material3SettingsItem
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

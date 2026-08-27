@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.theme
+package com.nexamusic.app.ui.theme
 
 import android.content.Context
 import android.net.Uri
@@ -13,10 +13,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-import com.nexamusic.music.constants.CustomFontArtistOnlyKey
-import com.nexamusic.music.constants.CustomFontEnabledKey
-import com.nexamusic.music.constants.CustomFontPathKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.CustomFontArtistOnlyKey
+import com.nexamusic.app.constants.CustomFontEnabledKey
+import com.nexamusic.app.constants.CustomFontPathKey
+import com.nexamusic.app.utils.rememberPreference
 import java.io.File
 
 /** Where installed custom fonts live, one file per install (old one is deleted on replace). */

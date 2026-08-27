@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import android.graphics.Bitmap
 import androidx.compose.animation.animateColorAsState
@@ -20,7 +20,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.toArgb
-import com.nexamusic.music.ui.theme.PlayerColorExtractor
+import com.nexamusic.app.ui.theme.PlayerColorExtractor
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.palette.graphics.Palette

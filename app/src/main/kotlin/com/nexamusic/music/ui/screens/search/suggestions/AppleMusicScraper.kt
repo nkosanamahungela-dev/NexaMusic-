@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.search.suggestions
+package com.nexamusic.app.ui.screens.search.suggestions
 import timber.log.Timber
 import okhttp3.OkHttpClient
 import okhttp3.Request

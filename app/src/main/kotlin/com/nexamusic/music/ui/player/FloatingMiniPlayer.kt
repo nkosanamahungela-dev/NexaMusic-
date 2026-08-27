@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
@@ -63,23 +63,23 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.player.customize.PlayerGlyph
-import com.nexamusic.music.ui.player.customize.PlayerIconSlot
-import com.nexamusic.music.constants.MiniBarTabStyleKey
-import com.nexamusic.music.constants.MiniPlayerWaveformKey
-import com.nexamusic.music.constants.SwipeSensitivityKey
-import com.nexamusic.music.constants.SwipeThumbnailKey
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.player.customize.PlayerGlyph
+import com.nexamusic.app.ui.player.customize.PlayerIconSlot
+import com.nexamusic.app.constants.MiniBarTabStyleKey
+import com.nexamusic.app.constants.MiniPlayerWaveformKey
+import com.nexamusic.app.constants.SwipeSensitivityKey
+import com.nexamusic.app.constants.SwipeThumbnailKey
 import androidx.media3.common.Player
-import com.nexamusic.music.extensions.togglePlayPause
-import com.nexamusic.music.extensions.toggleRepeatMode
-import com.nexamusic.music.ui.component.AnimatedPlayPauseIcon
-import com.nexamusic.music.ui.component.ScrollingWaveformSeekBar
-import com.nexamusic.music.ui.component.rememberPlaybackFraction
-import com.nexamusic.music.ui.component.backdrop.catalog.utils.InteractiveHighlight
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.extensions.togglePlayPause
+import com.nexamusic.app.extensions.toggleRepeatMode
+import com.nexamusic.app.ui.component.AnimatedPlayPauseIcon
+import com.nexamusic.app.ui.component.ScrollingWaveformSeekBar
+import com.nexamusic.app.ui.component.rememberPlaybackFraction
+import com.nexamusic.app.ui.component.backdrop.catalog.utils.InteractiveHighlight
+import com.nexamusic.app.utils.rememberPreference
 import kotlin.math.abs
 import kotlin.math.exp
 import kotlin.math.roundToInt

@@ -1,4 +1,4 @@
-package com.nexamusic.music.vivimusic
+package com.nexamusic.app.vivimusic
 
 import android.content.Context
 import android.media.AudioDeviceInfo

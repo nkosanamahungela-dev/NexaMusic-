@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.theme
+package com.nexamusic.app.ui.theme
 
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
@@ -9,10 +9,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb
 import androidx.core.graphics.ColorUtils
-import com.nexamusic.music.constants.AppTextColorKey
-import com.nexamusic.music.ui.component.LocalAppBackdrop
-import com.nexamusic.music.ui.component.backdrop.Backdrop
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.AppTextColorKey
+import com.nexamusic.app.ui.component.LocalAppBackdrop
+import com.nexamusic.app.ui.component.backdrop.Backdrop
+import com.nexamusic.app.utils.rememberPreference
 
 /** saturation floor shared with [AppleTokens.shiftedForContrast] (0.08f). */
 internal fun Color.isHueless(): Boolean {

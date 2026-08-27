@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateDpAsState
@@ -54,14 +54,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.AppIconKey
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.AppIcon
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.AppIconKey
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.AppIcon
+import com.nexamusic.app.utils.rememberPreference
 
 /** Adaptive icons draw a 108dp canvas but launchers only reveal about 72dp of it. */
 private const val ADAPTIVE_OVERSCAN = 108f / 72f

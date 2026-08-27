@@ -1,4 +1,4 @@
-package com.nexamusic.music.utils.potoken
+package com.nexamusic.app.utils.potoken
 
 import android.content.Context
 import android.webkit.ConsoleMessage
@@ -8,7 +8,7 @@ import android.webkit.WebView
 import androidx.annotation.MainThread
 import androidx.collection.ArrayMap
 import com.music.innertube.YouTube
-import com.nexamusic.music.BuildConfig
+import com.nexamusic.app.BuildConfig
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope

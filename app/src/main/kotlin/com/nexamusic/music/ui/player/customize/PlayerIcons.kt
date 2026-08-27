@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.player.customize
+package com.nexamusic.app.ui.player.customize
 
 import android.content.Context
 import androidx.annotation.DrawableRes
@@ -19,13 +19,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.PlayerIconsKey
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.PlayerIconsKey
 import androidx.datastore.preferences.core.Preferences
-import com.nexamusic.music.constants.V2PlayerIconsKey
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.V2PlayerIconsKey
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
+import com.nexamusic.app.utils.rememberPreference
 import org.json.JSONObject
 import java.io.File
 

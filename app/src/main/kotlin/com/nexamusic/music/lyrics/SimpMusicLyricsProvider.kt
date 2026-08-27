@@ -3,12 +3,12 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.lyrics
+package com.nexamusic.app.lyrics
 
 import android.content.Context
-import com.nexamusic.music.constants.EnableSimpMusicKey
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
+import com.nexamusic.app.constants.EnableSimpMusicKey
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
 import com.music.simpmusic.SimpMusicLyrics
 
 object SimpMusicLyricsProvider : LyricsProvider {

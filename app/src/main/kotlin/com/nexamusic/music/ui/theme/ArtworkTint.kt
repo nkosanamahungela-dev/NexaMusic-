@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.theme
+package com.nexamusic.app.ui.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -36,7 +36,7 @@ private val artworkTintCache = LruCache<String, List<Color>>(128)
  * darker variant, black) from an arbitrary artwork URL — the "single color
  * from the image" background tint used by the Artist/Album/Playlist detail
  * screens. Same Coil load + [Palette] pipeline as
- * [com.nexamusic.music.ui.component.AlbumGradient], copied rather than composed
+ * [com.nexamusic.app.ui.component.AlbumGradient], copied rather than composed
  * since callers need the raw colors for buttons/text too, not just a painted
  * gradient box.
  *

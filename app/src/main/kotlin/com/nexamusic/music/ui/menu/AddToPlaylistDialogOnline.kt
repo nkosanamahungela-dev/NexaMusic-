@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -13,7 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
-import com.nexamusic.music.utils.listItemShape
+import com.nexamusic.app.utils.listItemShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -45,27 +45,27 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalSyncUtils
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.AddToPlaylistSortDescendingKey
-import com.nexamusic.music.constants.AddToPlaylistSortTypeKey
-import com.nexamusic.music.constants.ListThumbnailSize
-import com.nexamusic.music.constants.PlaylistSortType
-import com.nexamusic.music.db.entities.Playlist
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.models.ItemsPage
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.ui.component.CreatePlaylistDialog
-import com.nexamusic.music.ui.component.DefaultDialog
-import com.nexamusic.music.ui.component.ListDialog
-import com.nexamusic.music.ui.component.ListItem
-import com.nexamusic.music.ui.component.PlaylistListItem
-import com.nexamusic.music.ui.component.SortHeader
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
-import com.nexamusic.music.utils.reportException
-import com.nexamusic.music.viewmodels.PlaylistsViewModel
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalSyncUtils
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.AddToPlaylistSortDescendingKey
+import com.nexamusic.app.constants.AddToPlaylistSortTypeKey
+import com.nexamusic.app.constants.ListThumbnailSize
+import com.nexamusic.app.constants.PlaylistSortType
+import com.nexamusic.app.db.entities.Playlist
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.models.ItemsPage
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.ui.component.CreatePlaylistDialog
+import com.nexamusic.app.ui.component.DefaultDialog
+import com.nexamusic.app.ui.component.ListDialog
+import com.nexamusic.app.ui.component.ListItem
+import com.nexamusic.app.ui.component.PlaylistListItem
+import com.nexamusic.app.ui.component.SortHeader
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
+import com.nexamusic.app.utils.reportException
+import com.nexamusic.app.viewmodels.PlaylistsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

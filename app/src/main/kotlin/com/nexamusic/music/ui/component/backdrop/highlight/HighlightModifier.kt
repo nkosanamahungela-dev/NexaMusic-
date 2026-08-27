@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package com.nexamusic.music.ui.component.backdrop.highlight
+package com.nexamusic.app.ui.component.backdrop.highlight
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Outline
@@ -28,12 +28,12 @@ import androidx.compose.ui.platform.InspectorInfo
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.util.fastCoerceAtMost
-import com.nexamusic.music.ui.component.backdrop.RuntimeShaderCacheImpl
-import com.nexamusic.music.ui.component.backdrop.internal.ShapeProvider
-import com.nexamusic.music.ui.component.backdrop.internal.blur
-import com.nexamusic.music.ui.component.backdrop.internal.clipOutline
-import com.nexamusic.music.ui.component.backdrop.internal.setRuntimeShader
-import com.nexamusic.music.ui.component.backdrop.isRuntimeShaderSupported
+import com.nexamusic.app.ui.component.backdrop.RuntimeShaderCacheImpl
+import com.nexamusic.app.ui.component.backdrop.internal.ShapeProvider
+import com.nexamusic.app.ui.component.backdrop.internal.blur
+import com.nexamusic.app.ui.component.backdrop.internal.clipOutline
+import com.nexamusic.app.ui.component.backdrop.internal.setRuntimeShader
+import com.nexamusic.app.ui.component.backdrop.isRuntimeShaderSupported
 import kotlin.math.ceil
 
 internal class HighlightElement(

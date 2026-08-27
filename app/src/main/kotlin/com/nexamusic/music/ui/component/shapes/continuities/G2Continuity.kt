@@ -4,20 +4,20 @@
  * capsule/src/main/java/com/kyant/capsule/continuities/G2Continuity.kt
  *
  * Vendored so the shape ships as source with this app. Package renamed
- * accordingly (com.kyant.capsule -> com.nexamusic.music.ui.component.shapes).
+ * accordingly (com.kyant.capsule -> com.nexamusic.app.ui.component.shapes).
  */
-package com.nexamusic.music.ui.component.shapes.continuities
+package com.nexamusic.app.ui.component.shapes.continuities
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.util.fastCoerceAtLeast
 import androidx.compose.ui.util.fastCoerceIn
-import com.nexamusic.music.ui.component.shapes.AdvancedContinuity
-import com.nexamusic.music.ui.component.shapes.Continuity
-import com.nexamusic.music.ui.component.shapes.core.Point
-import com.nexamusic.music.ui.component.shapes.lerp
-import com.nexamusic.music.ui.component.shapes.path.PathSegments
-import com.nexamusic.music.ui.component.shapes.path.PathSegmentsBuilder
-import com.nexamusic.music.ui.component.shapes.path.buildPathSegments
+import com.nexamusic.app.ui.component.shapes.AdvancedContinuity
+import com.nexamusic.app.ui.component.shapes.Continuity
+import com.nexamusic.app.ui.component.shapes.core.Point
+import com.nexamusic.app.ui.component.shapes.lerp
+import com.nexamusic.app.ui.component.shapes.path.PathSegments
+import com.nexamusic.app.ui.component.shapes.path.PathSegmentsBuilder
+import com.nexamusic.app.ui.component.shapes.path.buildPathSegments
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.min

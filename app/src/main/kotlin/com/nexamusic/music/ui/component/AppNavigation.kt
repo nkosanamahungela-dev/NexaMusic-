@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import com.nexamusic.music.constants.AppBackgroundColorKey
-import com.nexamusic.music.constants.AppTextColorKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.AppBackgroundColorKey
+import com.nexamusic.app.constants.AppTextColorKey
+import com.nexamusic.app.utils.rememberPreference
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
 import androidx.compose.foundation.layout.Arrangement
@@ -52,8 +52,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.ui.screens.Screens
-import com.nexamusic.music.ui.utils.pressWobble
+import com.nexamusic.app.ui.screens.Screens
+import com.nexamusic.app.ui.utils.pressWobble
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 
@@ -196,7 +196,7 @@ fun AppLandscapeRail(
         else -> MaterialTheme.colorScheme.surfaceContainerHigh
     }
 
-    val selectedContentColor = com.nexamusic.music.ui.theme.LocalAccentColor.current
+    val selectedContentColor = com.nexamusic.app.ui.theme.LocalAccentColor.current
     // Non-glass fell back to hardcoded white, which is invisible on a light
     // theme. glassConfig.textColor is already the adaptive colour (computed from
     // what the surface composites to); onSurface is its non-glass equivalent.

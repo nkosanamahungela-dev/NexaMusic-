@@ -7,15 +7,15 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package com.nexamusic.music.ui.component.backdrop.effects
+package com.nexamusic.app.ui.component.backdrop.effects
 
 import androidx.compose.ui.graphics.RenderEffect
-import com.nexamusic.music.ui.component.backdrop.BackdropEffectScope
-import com.nexamusic.music.ui.component.backdrop.RuntimeShader
-import com.nexamusic.music.ui.component.backdrop.internal.RuntimeShaderEffect
-import com.nexamusic.music.ui.component.backdrop.internal.chain
-import com.nexamusic.music.ui.component.backdrop.isRenderEffectSupported
-import com.nexamusic.music.ui.component.backdrop.isRuntimeShaderSupported
+import com.nexamusic.app.ui.component.backdrop.BackdropEffectScope
+import com.nexamusic.app.ui.component.backdrop.RuntimeShader
+import com.nexamusic.app.ui.component.backdrop.internal.RuntimeShaderEffect
+import com.nexamusic.app.ui.component.backdrop.internal.chain
+import com.nexamusic.app.ui.component.backdrop.isRenderEffectSupported
+import com.nexamusic.app.ui.component.backdrop.isRuntimeShaderSupported
 import org.intellij.lang.annotations.Language
 import kotlin.contracts.ExperimentalContracts
 

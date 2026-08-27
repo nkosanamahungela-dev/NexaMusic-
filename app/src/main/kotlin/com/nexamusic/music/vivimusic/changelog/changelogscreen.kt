@@ -1,4 +1,4 @@
-package com.nexamusic.music.vivimusic.changelog
+package com.nexamusic.app.vivimusic.changelog
 
 
 
@@ -78,10 +78,10 @@ import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import com.nexamusic.music.BuildConfig
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.vivimusic.updater.extractUrls
+import com.nexamusic.app.BuildConfig
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.vivimusic.updater.extractUrls
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

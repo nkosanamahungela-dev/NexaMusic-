@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.library
+package com.nexamusic.app.ui.screens.library
 
 import androidx.compose.foundation.lazy.rememberLazyListState
-import com.nexamusic.music.ui.component.ListScrollRail
+import com.nexamusic.app.ui.component.ListScrollRail
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -31,20 +31,20 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.playback.queues.ListQueue
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.SongListItem
-import com.nexamusic.music.ui.menu.SongMenu
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.theme.rememberGlobalAccentColors
-import com.nexamusic.music.utils.LocalFolderIndex
-import com.nexamusic.music.utils.listItemShape
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.playback.queues.ListQueue
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.SongListItem
+import com.nexamusic.app.ui.menu.SongMenu
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.theme.rememberGlobalAccentColors
+import com.nexamusic.app.utils.LocalFolderIndex
+import com.nexamusic.app.utils.listItemShape
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.ui.text.font.FontWeight
 

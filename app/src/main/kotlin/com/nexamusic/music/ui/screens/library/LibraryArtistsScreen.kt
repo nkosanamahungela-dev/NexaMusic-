@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.library
+package com.nexamusic.app.ui.screens.library
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
@@ -53,42 +53,42 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.utils.rememberGridColumns
-import com.nexamusic.music.constants.ArtistFilter
-import com.nexamusic.music.constants.ArtistFilterKey
-import com.nexamusic.music.constants.LocalOnlyModeKey
-import com.nexamusic.music.constants.ArtistSortDescendingKey
-import com.nexamusic.music.constants.ArtistSortType
-import com.nexamusic.music.constants.ArtistSortTypeKey
-import com.nexamusic.music.constants.ArtistViewTypeKey
-import com.nexamusic.music.constants.CONTENT_TYPE_ARTIST
-import com.nexamusic.music.constants.CONTENT_TYPE_HEADER
-import com.nexamusic.music.constants.GridItemSize
-import com.nexamusic.music.constants.GridItemsSizeKey
-import com.nexamusic.music.constants.GridThumbnailHeight
-import com.nexamusic.music.constants.LibraryIconsOnlyKey
-import com.nexamusic.music.constants.LibraryViewType
-import com.nexamusic.music.constants.YtmSyncKey
-import com.nexamusic.music.ui.component.buildAlphabetSectionIndex
-import com.nexamusic.music.ui.component.ListScrollRail
-import com.nexamusic.music.ui.component.LargeScreenTitle
-import com.nexamusic.music.ui.component.ChipsRow
-import com.nexamusic.music.ui.component.EmptyPlaceholder
-import com.nexamusic.music.ui.component.LibraryArtistGridItem
-import com.nexamusic.music.ui.component.LibraryArtistListItem
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.SortHeader
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
-import com.nexamusic.music.viewmodels.LibraryArtistsViewModel
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.utils.rememberGridColumns
+import com.nexamusic.app.constants.ArtistFilter
+import com.nexamusic.app.constants.ArtistFilterKey
+import com.nexamusic.app.constants.LocalOnlyModeKey
+import com.nexamusic.app.constants.ArtistSortDescendingKey
+import com.nexamusic.app.constants.ArtistSortType
+import com.nexamusic.app.constants.ArtistSortTypeKey
+import com.nexamusic.app.constants.ArtistViewTypeKey
+import com.nexamusic.app.constants.CONTENT_TYPE_ARTIST
+import com.nexamusic.app.constants.CONTENT_TYPE_HEADER
+import com.nexamusic.app.constants.GridItemSize
+import com.nexamusic.app.constants.GridItemsSizeKey
+import com.nexamusic.app.constants.GridThumbnailHeight
+import com.nexamusic.app.constants.LibraryIconsOnlyKey
+import com.nexamusic.app.constants.LibraryViewType
+import com.nexamusic.app.constants.YtmSyncKey
+import com.nexamusic.app.ui.component.buildAlphabetSectionIndex
+import com.nexamusic.app.ui.component.ListScrollRail
+import com.nexamusic.app.ui.component.LargeScreenTitle
+import com.nexamusic.app.ui.component.ChipsRow
+import com.nexamusic.app.ui.component.EmptyPlaceholder
+import com.nexamusic.app.ui.component.LibraryArtistGridItem
+import com.nexamusic.app.ui.component.LibraryArtistListItem
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.SortHeader
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
+import com.nexamusic.app.viewmodels.LibraryArtistsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.utils.heroPullZoom
-import com.nexamusic.music.ui.utils.listOverscroll
-import com.nexamusic.music.ui.utils.rememberHeroZoom
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.utils.heroPullZoom
+import com.nexamusic.app.ui.utils.listOverscroll
+import com.nexamusic.app.ui.utils.rememberHeroZoom
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

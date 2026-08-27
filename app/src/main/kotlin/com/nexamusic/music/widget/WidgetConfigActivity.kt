@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.widget
+package com.nexamusic.app.widget
 
 import android.app.Activity
 import android.appwidget.AppWidgetManager
@@ -37,11 +37,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.component.PreferenceEntry
-import com.nexamusic.music.ui.component.PreferenceGroupTitle
-import com.nexamusic.music.ui.component.SwitchPreference
-import com.nexamusic.music.ui.theme.vivimusicTheme
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.component.PreferenceEntry
+import com.nexamusic.app.ui.component.PreferenceGroupTitle
+import com.nexamusic.app.ui.component.SwitchPreference
+import com.nexamusic.app.ui.theme.vivimusicTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 /**

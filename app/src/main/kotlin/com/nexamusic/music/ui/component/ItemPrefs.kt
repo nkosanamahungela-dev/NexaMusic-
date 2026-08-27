@@ -3,21 +3,21 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.staticCompositionLocalOf
-import com.nexamusic.music.constants.CropAlbumArtKey
-import com.nexamusic.music.constants.GridCardHeightOverrideKey
-import com.nexamusic.music.constants.GridItemSize
-import com.nexamusic.music.constants.GridItemsSizeKey
-import com.nexamusic.music.constants.SwipeToRemoveSongKey
-import com.nexamusic.music.constants.SwipeToSongKey
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.CropAlbumArtKey
+import com.nexamusic.app.constants.GridCardHeightOverrideKey
+import com.nexamusic.app.constants.GridItemSize
+import com.nexamusic.app.constants.GridItemsSizeKey
+import com.nexamusic.app.constants.SwipeToRemoveSongKey
+import com.nexamusic.app.constants.SwipeToSongKey
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
 
 /**
  * The handful of preferences that every list row and grid tile reads.

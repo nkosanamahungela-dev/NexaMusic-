@@ -1,4 +1,4 @@
-package com.nexamusic.music.utils.cipher
+package com.nexamusic.app.utils.cipher
 
 import timber.log.Timber
 

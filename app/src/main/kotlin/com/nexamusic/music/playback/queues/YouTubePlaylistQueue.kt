@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.playback.queues
+package com.nexamusic.app.playback.queues
 
 import androidx.media3.common.MediaItem
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.models.MediaMetadata
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.models.MediaMetadata
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.withContext
 

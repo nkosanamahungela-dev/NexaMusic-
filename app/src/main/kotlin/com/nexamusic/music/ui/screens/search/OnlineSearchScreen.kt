@@ -3,12 +3,12 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.search
+package com.nexamusic.app.ui.screens.search
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -61,24 +61,24 @@ import com.music.innertube.models.AlbumItem
 import com.music.innertube.models.ArtistItem
 import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.SongItem
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.SuggestionItemHeight
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.queues.YouTubeQueue
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.YouTubeListItem
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.utils.listItemShape
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.SuggestionItemHeight
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.queues.YouTubeQueue
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.YouTubeListItem
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.utils.listItemShape
 import androidx.compose.material3.Surface
 import com.music.innertube.utils.YouTubeUrlParser
-import com.nexamusic.music.ui.menu.YouTubeAlbumMenu
-import com.nexamusic.music.ui.menu.YouTubeArtistMenu
-import com.nexamusic.music.ui.menu.YouTubePlaylistMenu
-import com.nexamusic.music.ui.menu.YouTubeSongMenu
-import com.nexamusic.music.viewmodels.OnlineSearchSuggestionViewModel
+import com.nexamusic.app.ui.menu.YouTubeAlbumMenu
+import com.nexamusic.app.ui.menu.YouTubeArtistMenu
+import com.nexamusic.app.ui.menu.YouTubePlaylistMenu
+import com.nexamusic.app.ui.menu.YouTubeSongMenu
+import com.nexamusic.app.viewmodels.OnlineSearchSuggestionViewModel
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.debounce

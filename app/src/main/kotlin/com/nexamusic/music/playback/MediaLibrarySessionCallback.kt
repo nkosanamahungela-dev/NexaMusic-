@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.playback
+package com.nexamusic.app.playback
 
 import android.content.ContentResolver
 import android.content.Context
@@ -34,21 +34,21 @@ import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.filterExplicit
 import com.music.innertube.models.filterVideoSongs
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.HideExplicitKey
-import com.nexamusic.music.constants.HideVideoSongsKey
-import com.nexamusic.music.constants.DataSaverEnabledKey
-import com.nexamusic.music.constants.MediaSessionConstants
-import com.nexamusic.music.constants.SongSortType
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.PlaylistEntity
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.extensions.toggleRepeatMode
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
-import com.nexamusic.music.utils.reportException
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.HideExplicitKey
+import com.nexamusic.app.constants.HideVideoSongsKey
+import com.nexamusic.app.constants.DataSaverEnabledKey
+import com.nexamusic.app.constants.MediaSessionConstants
+import com.nexamusic.app.constants.SongSortType
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.PlaylistEntity
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.extensions.toggleRepeatMode
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
+import com.nexamusic.app.utils.reportException
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -796,7 +796,7 @@ constructor(
         singleItemStyle = MediaConstants.EXTRAS_VALUE_CONTENT_STYLE_CATEGORY_LIST_ITEM,
     )
 
-    private fun com.nexamusic.music.db.entities.Playlist.toBrowsableMediaItem() = browsableMediaItem(
+    private fun com.nexamusic.app.db.entities.Playlist.toBrowsableMediaItem() = browsableMediaItem(
         "${MusicService.PLAYLIST}/$id",
         playlist.name,
         context.resources.getQuantityString(

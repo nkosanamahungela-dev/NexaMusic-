@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import android.graphics.BlurMaskFilter
 import androidx.compose.animation.core.animateFloatAsState
@@ -47,12 +47,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.constants.AppleMusicLyricsBlurKey
-import com.nexamusic.music.constants.LyricsRomanizeAsMainKey
-import com.nexamusic.music.lyrics.LyricsEntry
-import com.nexamusic.music.ui.screens.settings.LyricsPosition
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.constants.AppleMusicLyricsBlurKey
+import com.nexamusic.app.constants.LyricsRomanizeAsMainKey
+import com.nexamusic.app.lyrics.LyricsEntry
+import com.nexamusic.app.ui.screens.settings.LyricsPosition
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.isActive
 import kotlin.math.PI
 import kotlin.math.cos

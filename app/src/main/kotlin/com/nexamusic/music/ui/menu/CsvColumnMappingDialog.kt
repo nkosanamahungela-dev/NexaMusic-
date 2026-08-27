@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.horizontalScroll
@@ -39,9 +39,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.nexamusic.music.R
-import com.nexamusic.music.viewmodels.ConvertedSongLog
-import com.nexamusic.music.viewmodels.CsvImportState
+import com.nexamusic.app.R
+import com.nexamusic.app.viewmodels.ConvertedSongLog
+import com.nexamusic.app.viewmodels.CsvImportState
 
 @Composable
 fun CsvColumnMappingDialog(

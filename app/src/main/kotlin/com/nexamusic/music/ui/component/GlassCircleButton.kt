@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -23,8 +23,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.utils.pressWobble
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.utils.pressWobble
 
 // Kyant0/Capsule's continuous (superellipse) circle instead of CircleShape's
 // circular-arc corners — same reasoning as the floating nav bar/search pill:
@@ -36,7 +36,7 @@ private val GlassCircleShape = ContinuousRoundedRectangle(percent = 50)
  * the Artist/Album/Playlist detail screens, replacing their Material TopAppBar
  * and flat-colored circular Surface/IconButton. Falls back to a translucent
  * flat circle when glass is disabled or unsupported, same as
- * [com.nexamusic.music.ui.component.FloatingNavBar]'s own useGlass fallback.
+ * [com.nexamusic.app.ui.component.FloatingNavBar]'s own useGlass fallback.
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

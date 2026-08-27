@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.screens.library
+package com.nexamusic.app.ui.screens.library
 
 import android.Manifest
 import android.os.Build
@@ -24,7 +24,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
-import com.nexamusic.music.constants.ThumbnailRoundedShape
+import com.nexamusic.app.constants.ThumbnailRoundedShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -61,18 +61,18 @@ import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.size.Size as CoilSize
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.theme.rememberGlobalAccentColors
-import com.nexamusic.music.db.entities.Album
-import com.nexamusic.music.db.entities.Artist
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.playback.queues.ListQueue
-import com.nexamusic.music.ui.component.ListScrollRail
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.menu.SongMenu
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.theme.rememberGlobalAccentColors
+import com.nexamusic.app.db.entities.Album
+import com.nexamusic.app.db.entities.Artist
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.playback.queues.ListQueue
+import com.nexamusic.app.ui.component.ListScrollRail
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.menu.SongMenu
 import java.time.LocalDateTime
 
 @OptIn(ExperimentalMaterial3Api::class)

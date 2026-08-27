@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.di
+package com.nexamusic.app.di
 
 import android.content.Context
 import androidx.media3.database.DatabaseProvider
@@ -12,13 +12,13 @@ import androidx.media3.datasource.cache.LeastRecentlyUsedCacheEvictor
 import androidx.media3.datasource.cache.NoOpCacheEvictor
 import androidx.media3.datasource.cache.SimpleCache
 import androidx.room.Room
-import com.nexamusic.music.constants.MaxSongCacheSizeKey
-import com.nexamusic.music.db.InternalDatabase
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.listentogether.ListenTogetherClient
-import com.nexamusic.music.listentogether.ListenTogetherManager
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
+import com.nexamusic.app.constants.MaxSongCacheSizeKey
+import com.nexamusic.app.db.InternalDatabase
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.listentogether.ListenTogetherClient
+import com.nexamusic.app.listentogether.ListenTogetherManager
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

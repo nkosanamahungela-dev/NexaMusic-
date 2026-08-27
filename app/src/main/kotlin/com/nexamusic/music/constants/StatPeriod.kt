@@ -3,9 +3,9 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.constants
+package com.nexamusic.app.constants
 
-import com.nexamusic.music.ui.screens.OptionStats
+import com.nexamusic.app.ui.screens.OptionStats
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 

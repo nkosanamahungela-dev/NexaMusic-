@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -44,10 +44,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nexamusic.music.constants.AppleMusicLyricsBlurKey
-import com.nexamusic.music.lyrics.LyricsEntry
-import com.nexamusic.music.ui.screens.settings.LyricsPosition
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.AppleMusicLyricsBlurKey
+import com.nexamusic.app.lyrics.LyricsEntry
+import com.nexamusic.app.ui.screens.settings.LyricsPosition
+import com.nexamusic.app.utils.rememberPreference
 
 /**
  * Exact Apple Music style lyrics animation ported from vivi-music-5.0.3
@@ -111,7 +111,7 @@ fun ViviMusicLyricsLine(
 
     // Segment the line into words with their own time windows
     val wordData = remember(entry.text, entry.words, activeDuration) {
-        val isHindiText = com.nexamusic.music.lyrics.LyricsUtils.isHindi(entry.text)
+        val isHindiText = com.nexamusic.app.lyrics.LyricsUtils.isHindi(entry.text)
         if (!isHindiText && entry.words != null && entry.words.isNotEmpty()) {
             // Use precise word timestamps if available
             entry.words.mapIndexed { index, word ->

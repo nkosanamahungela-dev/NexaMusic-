@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -51,8 +51,8 @@ import androidx.compose.ui.unit.sp
 import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nexamusic.music.R
-import com.nexamusic.music.models.MediaMetadata
+import com.nexamusic.app.R
+import com.nexamusic.app.models.MediaMetadata
 
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.graphics.Brush

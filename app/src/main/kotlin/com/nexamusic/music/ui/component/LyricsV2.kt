@@ -5,7 +5,7 @@
  * Ported and adapted from ArchiveTune-dev (LyricsV2.kt)
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -37,8 +37,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nexamusic.music.lyrics.LyricsEntry
-import com.nexamusic.music.lyrics.WordTimestamp
+import com.nexamusic.app.lyrics.LyricsEntry
+import com.nexamusic.app.lyrics.WordTimestamp
 import kotlin.math.PI
 import kotlin.math.sin
 

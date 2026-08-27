@@ -6,7 +6,7 @@
  * https://github.com/marlboro-advance/mpvEx
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
@@ -42,8 +42,8 @@ import androidx.compose.ui.graphics.drawscope.clipRect
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.ui.player.customize.PlayerIconSlot
-import com.nexamusic.music.ui.player.customize.rememberPlayerIcon
+import com.nexamusic.app.ui.player.customize.PlayerIconSlot
+import com.nexamusic.app.ui.player.customize.rememberPlayerIcon
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch

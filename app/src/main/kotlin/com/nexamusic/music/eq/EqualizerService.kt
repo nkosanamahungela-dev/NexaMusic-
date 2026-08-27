@@ -1,12 +1,12 @@
-package com.nexamusic.music.eq
+package com.nexamusic.app.eq
 
 
 import android.annotation.SuppressLint
 import androidx.annotation.OptIn
 import androidx.media3.common.util.UnstableApi
-import com.nexamusic.music.eq.audio.CustomEqualizerAudioProcessor
-import com.nexamusic.music.eq.data.ParametricEQ
-import com.nexamusic.music.eq.data.SavedEQProfile
+import com.nexamusic.app.eq.audio.CustomEqualizerAudioProcessor
+import com.nexamusic.app.eq.data.ParametricEQ
+import com.nexamusic.app.eq.data.SavedEQProfile
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton

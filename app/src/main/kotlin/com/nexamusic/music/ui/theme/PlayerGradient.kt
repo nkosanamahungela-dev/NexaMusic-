@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.theme
+package com.nexamusic.app.ui.theme
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind

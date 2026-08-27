@@ -27,7 +27,7 @@
  *   the puck. See [DampedDragAnimation] and [InteractiveHighlight].
  */
 
-package com.nexamusic.music.ui.component.floatingtabbar
+package com.nexamusic.app.ui.component.floatingtabbar
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibilityScope
@@ -110,22 +110,22 @@ import androidx.compose.ui.util.fastRoundToInt
 import androidx.compose.ui.util.lerp
 import androidx.compose.ui.graphics.isSpecified
 import androidx.compose.ui.graphics.luminance
-import com.nexamusic.music.ui.component.LocalGlassEffectConfig
-import com.nexamusic.music.ui.component.glassResolutionScale
-import com.nexamusic.music.ui.component.backdrop.Backdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.layerBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberCombinedBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
-import com.nexamusic.music.ui.component.backdrop.catalog.utils.DampedDragAnimation
-import com.nexamusic.music.ui.component.backdrop.catalog.utils.InteractiveHighlight
-import com.nexamusic.music.ui.component.backdrop.drawBackdrop
-import com.nexamusic.music.ui.component.backdrop.effects.blur
-import com.nexamusic.music.ui.component.backdrop.effects.lens
-import com.nexamusic.music.ui.component.backdrop.effects.vibrancy
-import com.nexamusic.music.ui.component.backdrop.highlight.Highlight
-import com.nexamusic.music.ui.component.backdrop.shadow.InnerShadow
-import com.nexamusic.music.ui.component.backdrop.shadow.Shadow
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.component.LocalGlassEffectConfig
+import com.nexamusic.app.ui.component.glassResolutionScale
+import com.nexamusic.app.ui.component.backdrop.Backdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.layerBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberCombinedBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import com.nexamusic.app.ui.component.backdrop.catalog.utils.DampedDragAnimation
+import com.nexamusic.app.ui.component.backdrop.catalog.utils.InteractiveHighlight
+import com.nexamusic.app.ui.component.backdrop.drawBackdrop
+import com.nexamusic.app.ui.component.backdrop.effects.blur
+import com.nexamusic.app.ui.component.backdrop.effects.lens
+import com.nexamusic.app.ui.component.backdrop.effects.vibrancy
+import com.nexamusic.app.ui.component.backdrop.highlight.Highlight
+import com.nexamusic.app.ui.component.backdrop.shadow.InnerShadow
+import com.nexamusic.app.ui.component.backdrop.shadow.Shadow
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
 import kotlinx.coroutines.launch
 import kotlin.math.abs
 import kotlin.math.sign
@@ -1859,7 +1859,7 @@ object FloatingTabBarDefaults {
     /**
      * Width of one expanded tab slot at full size. Callers that have to fit the
      * pill plus the standalone tab into a narrow screen shrink below this — see
-     * [com.nexamusic.music.ui.component.AppFloatingNavBar] — so it is the ceiling,
+     * [com.nexamusic.app.ui.component.AppFloatingNavBar] — so it is the ceiling,
      * not a guarantee.
      */
     val TabWidth: Dp = 88.dp

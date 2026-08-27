@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.search
+package com.nexamusic.app.ui.screens.search
 
 import android.content.res.Configuration
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -49,43 +49,43 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.CONTENT_TYPE_LIST
-import com.nexamusic.music.db.entities.Album
-import com.nexamusic.music.db.entities.Artist
-import com.nexamusic.music.db.entities.Playlist
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.playback.queues.ListQueue
-import com.nexamusic.music.ui.component.AlbumListItem
-import com.nexamusic.music.ui.component.ArtistListItem
-import com.nexamusic.music.ui.component.ChipsRow
-import com.nexamusic.music.ui.component.EmptyPlaceholder
-import com.nexamusic.music.ui.component.HeroBackground
-import com.nexamusic.music.ui.component.HomeImageBackground
-import com.nexamusic.music.ui.component.rememberAppBackgroundColor
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.CONTENT_TYPE_LIST
+import com.nexamusic.app.db.entities.Album
+import com.nexamusic.app.db.entities.Artist
+import com.nexamusic.app.db.entities.Playlist
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.playback.queues.ListQueue
+import com.nexamusic.app.ui.component.AlbumListItem
+import com.nexamusic.app.ui.component.ArtistListItem
+import com.nexamusic.app.ui.component.ChipsRow
+import com.nexamusic.app.ui.component.EmptyPlaceholder
+import com.nexamusic.app.ui.component.HeroBackground
+import com.nexamusic.app.ui.component.HomeImageBackground
+import com.nexamusic.app.ui.component.rememberAppBackgroundColor
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.ui.text.font.FontWeight
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.NavigationTitle
-import com.nexamusic.music.ui.component.rememberHeroSource
-import com.nexamusic.music.ui.component.rememberHeroTint
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.theme.HeroTintedContent
-import com.nexamusic.music.ui.component.GlassComponent
-import com.nexamusic.music.ui.component.LocalGlassEffectConfig
-import com.nexamusic.music.ui.component.isGlassAllowed
-import com.nexamusic.music.ui.component.liquidGlass
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
-import com.nexamusic.music.ui.component.PlaylistListItem
-import com.nexamusic.music.ui.component.SongListItem
-import com.nexamusic.music.ui.menu.SongMenu
-import com.nexamusic.music.utils.listItemShape
-import com.nexamusic.music.viewmodels.LocalFilter
-import com.nexamusic.music.viewmodels.LocalSearchViewModel
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.NavigationTitle
+import com.nexamusic.app.ui.component.rememberHeroSource
+import com.nexamusic.app.ui.component.rememberHeroTint
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.theme.HeroTintedContent
+import com.nexamusic.app.ui.component.GlassComponent
+import com.nexamusic.app.ui.component.LocalGlassEffectConfig
+import com.nexamusic.app.ui.component.isGlassAllowed
+import com.nexamusic.app.ui.component.liquidGlass
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import com.nexamusic.app.ui.component.PlaylistListItem
+import com.nexamusic.app.ui.component.SongListItem
+import com.nexamusic.app.ui.menu.SongMenu
+import com.nexamusic.app.utils.listItemShape
+import com.nexamusic.app.viewmodels.LocalFilter
+import com.nexamusic.app.viewmodels.LocalSearchViewModel
 import kotlinx.coroutines.flow.drop
 
 @OptIn(ExperimentalFoundationApi::class)

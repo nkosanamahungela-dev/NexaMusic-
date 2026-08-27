@@ -1,4 +1,4 @@
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import android.content.Context
 import android.util.LruCache
@@ -10,12 +10,12 @@ import com.music.innertube.models.PlaylistItem
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.YTItem
 import com.music.innertube.models.filterVideoSongs
-import com.nexamusic.music.constants.HideVideoSongsKey
-import com.nexamusic.music.constants.DataSaverEnabledKey
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
-import com.nexamusic.music.utils.reportException
+import com.nexamusic.app.constants.HideVideoSongsKey
+import com.nexamusic.app.constants.DataSaverEnabledKey
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
+import com.nexamusic.app.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers

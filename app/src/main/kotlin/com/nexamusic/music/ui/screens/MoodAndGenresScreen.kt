@@ -3,9 +3,9 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
 
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
 import android.content.res.Configuration.ORIENTATION_LANDSCAPE
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -15,26 +15,26 @@ import androidx.compose.foundation.background
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.theme.HeroTintedContent
-import com.nexamusic.music.ui.component.LargeScreenTitle
-import com.nexamusic.music.ui.component.HeroBackground
-import com.nexamusic.music.ui.utils.rememberHeroZoom
-import com.nexamusic.music.ui.utils.heroPullZoom
-import com.nexamusic.music.ui.utils.listOverscroll
-import com.nexamusic.music.ui.component.HeroSource
-import com.nexamusic.music.ui.component.backdrop.backdrops.layerBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberBackdropFreeze
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
-import com.nexamusic.music.ui.component.LocalAppBackdrop
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.theme.HeroTintedContent
+import com.nexamusic.app.ui.component.LargeScreenTitle
+import com.nexamusic.app.ui.component.HeroBackground
+import com.nexamusic.app.ui.utils.rememberHeroZoom
+import com.nexamusic.app.ui.utils.heroPullZoom
+import com.nexamusic.app.ui.utils.listOverscroll
+import com.nexamusic.app.ui.component.HeroSource
+import com.nexamusic.app.ui.component.backdrop.backdrops.layerBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberBackdropFreeze
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import com.nexamusic.app.ui.component.LocalAppBackdrop
 import androidx.compose.ui.text.font.FontWeight
-import com.nexamusic.music.ui.component.GlassCircleButton
+import com.nexamusic.app.ui.component.GlassCircleButton
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.layout.windowInsetsPadding
-import com.nexamusic.music.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.bounceClick
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -56,7 +56,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.utils.rememberPreference
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.painterResource
@@ -65,14 +65,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.component.NavigationTitle
-import com.nexamusic.music.ui.component.shimmer.ListItemPlaceHolder
-import com.nexamusic.music.ui.component.shimmer.ShimmerHost
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.viewmodels.MoodAndGenresViewModel
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.component.NavigationTitle
+import com.nexamusic.app.ui.component.shimmer.ListItemPlaceHolder
+import com.nexamusic.app.ui.component.shimmer.ShimmerHost
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.viewmodels.MoodAndGenresViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

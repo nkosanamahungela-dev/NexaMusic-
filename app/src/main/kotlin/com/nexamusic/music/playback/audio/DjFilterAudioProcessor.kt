@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.playback.audio
+package com.nexamusic.app.playback.audio
 
 import androidx.media3.common.C
 import androidx.media3.common.audio.AudioProcessor
 import androidx.media3.common.audio.BaseAudioProcessor
 import androidx.media3.common.util.UnstableApi
-import com.nexamusic.music.playback.dj.Biquad
+import com.nexamusic.app.playback.dj.Biquad
 import java.nio.ByteBuffer
 import kotlin.math.abs
 import kotlin.math.exp

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.layout.Arrangement
@@ -36,21 +36,21 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.EnableSaavnStreamingKey
-import com.nexamusic.music.constants.ForceSelectedQualityKey
-import com.nexamusic.music.constants.SaavnAudioQuality
-import com.nexamusic.music.constants.SaavnAudioQualityKey
-import com.nexamusic.music.constants.SaavnFallbackToYouTubeKey
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.component.Material3SettingsGroup
-import com.nexamusic.music.ui.component.Material3SettingsItem
-import com.nexamusic.music.ui.component.ModernSwitch
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.EnableSaavnStreamingKey
+import com.nexamusic.app.constants.ForceSelectedQualityKey
+import com.nexamusic.app.constants.SaavnAudioQuality
+import com.nexamusic.app.constants.SaavnAudioQualityKey
+import com.nexamusic.app.constants.SaavnFallbackToYouTubeKey
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.component.Material3SettingsGroup
+import com.nexamusic.app.ui.component.Material3SettingsItem
+import com.nexamusic.app.ui.component.ModernSwitch
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

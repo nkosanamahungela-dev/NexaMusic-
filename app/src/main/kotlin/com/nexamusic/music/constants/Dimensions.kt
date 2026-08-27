@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.constants
+package com.nexamusic.app.constants
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring

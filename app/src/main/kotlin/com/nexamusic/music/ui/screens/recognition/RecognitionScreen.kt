@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.recognition
+package com.nexamusic.app.ui.screens.recognition
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -23,8 +23,8 @@ import androidx.compose.animation.scaleOut
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -76,11 +76,11 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.R
-import com.nexamusic.music.db.entities.RecognitionHistory
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.utils.backToMain
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.R
+import com.nexamusic.app.db.entities.RecognitionHistory
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.utils.backToMain
 import com.music.shazamkit.models.RecognitionResult
 import com.music.shazamkit.models.RecognitionStatus
 import kotlinx.coroutines.Dispatchers
@@ -98,18 +98,18 @@ fun RecognitionScreen(
     
     // Reset recognition status when entering the screen
     LaunchedEffect(Unit) {
-        com.nexamusic.music.recognition.MusicRecognitionService.reset()
+        com.nexamusic.app.recognition.MusicRecognitionService.reset()
     }
     
     // Reset recognition status when leaving the screen
     DisposableEffect(Unit) {
         onDispose {
-            com.nexamusic.music.recognition.MusicRecognitionService.reset()
+            com.nexamusic.app.recognition.MusicRecognitionService.reset()
         }
     }
     
     // Observe recognition status from service for real-time updates (Listening -> Processing -> Result)
-    val recognitionStatus by com.nexamusic.music.recognition.MusicRecognitionService.recognitionStatus.collectAsState()
+    val recognitionStatus by com.nexamusic.app.recognition.MusicRecognitionService.recognitionStatus.collectAsState()
     
     var hasPermission by remember {
         mutableStateOf(
@@ -124,7 +124,7 @@ fun RecognitionScreen(
         hasPermission = isGranted
         if (isGranted) {
             coroutineScope.launch {
-                com.nexamusic.music.recognition.MusicRecognitionService.recognize(context)
+                com.nexamusic.app.recognition.MusicRecognitionService.recognize(context)
             }
         }
     }
@@ -132,7 +132,7 @@ fun RecognitionScreen(
     fun startRecognition() {
         if (hasPermission) {
             coroutineScope.launch {
-                com.nexamusic.music.recognition.MusicRecognitionService.recognize(context)
+                com.nexamusic.app.recognition.MusicRecognitionService.recognize(context)
             }
         } else {
             permissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
@@ -140,7 +140,7 @@ fun RecognitionScreen(
     }
     
     fun resetToReady() {
-        com.nexamusic.music.recognition.MusicRecognitionService.reset()
+        com.nexamusic.app.recognition.MusicRecognitionService.reset()
     }
 
     fun saveToHistory(result: RecognitionResult) {
@@ -216,7 +216,7 @@ fun RecognitionScreen(
                     }
                     is RecognitionStatus.Listening -> {
                         ListeningState(
-                            onCancel = { com.nexamusic.music.recognition.MusicRecognitionService.reset() }
+                            onCancel = { com.nexamusic.app.recognition.MusicRecognitionService.reset() }
                         )
                     }
                     is RecognitionStatus.Processing -> {
@@ -457,7 +457,7 @@ private fun SuccessState(
             modifier = Modifier
                 .size(180.dp)
                 .aspectRatio(1f),
-            shape = RoundedCornerShape(com.nexamusic.music.constants.ThumbnailCornerRadius),
+            shape = RoundedCornerShape(com.nexamusic.app.constants.ThumbnailCornerRadius),
             elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
         ) {
             AsyncImage(

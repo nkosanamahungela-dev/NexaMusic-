@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.Canvas
@@ -38,8 +38,8 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.ui.player.customize.PlayerIconSlot
-import com.nexamusic.music.ui.player.customize.rememberPlayerIcon
+import com.nexamusic.app.ui.player.customize.PlayerIconSlot
+import com.nexamusic.app.ui.player.customize.rememberPlayerIcon
 
 @OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable

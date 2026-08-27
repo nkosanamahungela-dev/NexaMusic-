@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import android.annotation.SuppressLint
 import androidx.activity.compose.BackHandler
@@ -113,34 +113,34 @@ import androidx.media3.common.Player
 import androidx.media3.common.Timeline
 import androidx.media3.exoplayer.source.ShuffleOrder.DefaultShuffleOrder
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ListItemHeight
-import com.nexamusic.music.constants.PlayerBackgroundStyle
-import com.nexamusic.music.constants.QueueEditLockKey
-import com.nexamusic.music.constants.ShowCommentButtonKey
-import com.nexamusic.music.constants.UseNewPlayerDesignKey
-import com.nexamusic.music.extensions.metadata
-import com.nexamusic.music.extensions.move
-import com.nexamusic.music.extensions.toggleRepeatMode
-import com.nexamusic.music.listentogether.RoomRole
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.ui.component.ActionPromptDialog
-import com.nexamusic.music.ui.component.BottomSheet
-import com.nexamusic.music.ui.component.BottomSheetState
-import com.nexamusic.music.ui.component.LocalBottomSheetPageState
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.MediaMetadataListItem
-import com.nexamusic.music.ui.component.thumbnailPx
-import com.nexamusic.music.ui.menu.PlayerMenu
-import com.nexamusic.music.ui.menu.QueueMenu
-import com.nexamusic.music.ui.menu.SelectionMediaMetadataMenu
-import com.nexamusic.music.ui.screens.CommentSheet
-import com.nexamusic.music.ui.utils.ShowMediaInfo
-import com.nexamusic.music.utils.listItemShape
-import com.nexamusic.music.utils.makeTimeString
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ListItemHeight
+import com.nexamusic.app.constants.PlayerBackgroundStyle
+import com.nexamusic.app.constants.QueueEditLockKey
+import com.nexamusic.app.constants.ShowCommentButtonKey
+import com.nexamusic.app.constants.UseNewPlayerDesignKey
+import com.nexamusic.app.extensions.metadata
+import com.nexamusic.app.extensions.move
+import com.nexamusic.app.extensions.toggleRepeatMode
+import com.nexamusic.app.listentogether.RoomRole
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.ui.component.ActionPromptDialog
+import com.nexamusic.app.ui.component.BottomSheet
+import com.nexamusic.app.ui.component.BottomSheetState
+import com.nexamusic.app.ui.component.LocalBottomSheetPageState
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.MediaMetadataListItem
+import com.nexamusic.app.ui.component.thumbnailPx
+import com.nexamusic.app.ui.menu.PlayerMenu
+import com.nexamusic.app.ui.menu.QueueMenu
+import com.nexamusic.app.ui.menu.SelectionMediaMetadataMenu
+import com.nexamusic.app.ui.screens.CommentSheet
+import com.nexamusic.app.ui.utils.ShowMediaInfo
+import com.nexamusic.app.utils.listItemShape
+import com.nexamusic.app.utils.makeTimeString
+import com.nexamusic.app.utils.rememberPreference
 import androidx.compose.material.icons.Icons
 import androidx.compose.runtime.produceState
 import android.content.IntentFilter
@@ -152,8 +152,8 @@ import android.bluetooth.BluetoothDevice
 import android.os.Build
 import android.os.Handler
 import android.os.Looper
-import com.nexamusic.music.vivimusic.isBluetoothHeadphoneConnected
-import com.nexamusic.music.vivimusic.AudioDeviceBottomSheet
+import com.nexamusic.app.vivimusic.isBluetoothHeadphoneConnected
+import com.nexamusic.app.vivimusic.AudioDeviceBottomSheet
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
@@ -238,7 +238,7 @@ fun Queue(
 
     // Listen Together state (reactive)
     val listenTogetherManager = LocalListenTogetherManager.current
-    val listenTogetherRoleState = listenTogetherManager?.role?.collectAsState(initial = com.nexamusic.music.listentogether.RoomRole.NONE)
+    val listenTogetherRoleState = listenTogetherManager?.role?.collectAsState(initial = com.nexamusic.app.listentogether.RoomRole.NONE)
     // See Player.kt: gated on control mode, not on role.
     val canControlTogether = listenTogetherManager?.canControl?.collectAsState(initial = true)
     val isListenTogetherGuest = canControlTogether?.value == false

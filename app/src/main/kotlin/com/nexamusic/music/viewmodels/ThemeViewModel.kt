@@ -3,11 +3,11 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import androidx.lifecycle.ViewModel
-import com.nexamusic.music.ui.screens.settings.DarkMode
-import com.nexamusic.music.ui.theme.DefaultThemeColor
+import com.nexamusic.app.ui.screens.settings.DarkMode
+import com.nexamusic.app.ui.theme.DefaultThemeColor
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

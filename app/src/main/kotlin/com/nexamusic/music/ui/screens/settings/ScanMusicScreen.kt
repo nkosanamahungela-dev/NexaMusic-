@@ -2,7 +2,7 @@
  * Convx Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -34,12 +34,12 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.component.NavigationTitle
-import com.nexamusic.music.ui.screens.library.LocalMusicViewModel
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.utils.LocalFolderIndex
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.component.NavigationTitle
+import com.nexamusic.app.ui.screens.library.LocalMusicViewModel
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.utils.LocalFolderIndex
 
 /**
  * What the device scan is doing, and what it found.

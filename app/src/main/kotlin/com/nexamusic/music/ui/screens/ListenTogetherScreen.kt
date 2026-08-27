@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
 
 import android.content.Context
 import androidx.compose.foundation.layout.calculateEndPadding
@@ -16,8 +16,8 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.background
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -42,7 +42,7 @@ import androidx.compose.foundation.relocation.bringIntoViewRequester
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import com.nexamusic.music.ui.component.DefaultDialog
+import com.nexamusic.app.ui.component.DefaultDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -84,23 +84,23 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.AppBarHeight
-import com.nexamusic.music.constants.ListenTogetherInTopBarKey
-import com.nexamusic.music.constants.ListenTogetherUsernameKey
-import com.nexamusic.music.listentogether.ConnectionState
-import com.nexamusic.music.listentogether.JoinRequestPayload
-import com.nexamusic.music.listentogether.ListenTogetherEvent
-import com.nexamusic.music.listentogether.MAX_ROOM_CODE_LENGTH
-import com.nexamusic.music.listentogether.MIN_ROOM_CODE_LENGTH
-import com.nexamusic.music.listentogether.SuggestionReceivedPayload
-import com.nexamusic.music.listentogether.UserInfo
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.AppBarHeight
+import com.nexamusic.app.constants.ListenTogetherInTopBarKey
+import com.nexamusic.app.constants.ListenTogetherUsernameKey
+import com.nexamusic.app.listentogether.ConnectionState
+import com.nexamusic.app.listentogether.JoinRequestPayload
+import com.nexamusic.app.listentogether.ListenTogetherEvent
+import com.nexamusic.app.listentogether.MAX_ROOM_CODE_LENGTH
+import com.nexamusic.app.listentogether.MIN_ROOM_CODE_LENGTH
+import com.nexamusic.app.listentogether.SuggestionReceivedPayload
+import com.nexamusic.app.listentogether.UserInfo
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
@@ -1500,7 +1500,7 @@ private fun ControlModeCard(
     controlMode: String,
     onChange: (String) -> Unit
 ) {
-    val everyone = controlMode == com.nexamusic.music.listentogether.ControlModes.EVERYONE
+    val everyone = controlMode == com.nexamusic.app.listentogether.ControlModes.EVERYONE
     // Container dropped to match the rest of the room view; the segmented
     // control is already a strong enough shape to hold this section on its own.
     Column(modifier = Modifier.fillMaxWidth()) {
@@ -1519,12 +1519,12 @@ private fun ControlModeCard(
             SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
                 SegmentedButton(
                     selected = !everyone,
-                    onClick = { onChange(com.nexamusic.music.listentogether.ControlModes.OWNER) },
+                    onClick = { onChange(com.nexamusic.app.listentogether.ControlModes.OWNER) },
                     shape = SegmentedButtonDefaults.itemShape(index = 0, count = 2)
                 ) { Text(stringResource(R.string.listen_together_control_owner)) }
                 SegmentedButton(
                     selected = everyone,
-                    onClick = { onChange(com.nexamusic.music.listentogether.ControlModes.EVERYONE) },
+                    onClick = { onChange(com.nexamusic.app.listentogether.ControlModes.EVERYONE) },
                     shape = SegmentedButtonDefaults.itemShape(index = 1, count = 2)
                 ) { Text(stringResource(R.string.listen_together_control_everyone)) }
             }

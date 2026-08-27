@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package com.nexamusic.music.ui.component.backdrop
+package com.nexamusic.app.ui.component.backdrop
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
@@ -41,15 +41,15 @@ import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.toSize
-import com.nexamusic.music.ui.component.backdrop.backdrops.LayerBackdrop
-import com.nexamusic.music.ui.component.backdrop.highlight.Highlight
-import com.nexamusic.music.ui.component.backdrop.highlight.HighlightElement
-import com.nexamusic.music.ui.component.backdrop.internal.ShapeProvider
-import com.nexamusic.music.ui.component.backdrop.internal.recordLayer
-import com.nexamusic.music.ui.component.backdrop.shadow.InnerShadow
-import com.nexamusic.music.ui.component.backdrop.shadow.InnerShadowElement
-import com.nexamusic.music.ui.component.backdrop.shadow.Shadow
-import com.nexamusic.music.ui.component.backdrop.shadow.ShadowElement
+import com.nexamusic.app.ui.component.backdrop.backdrops.LayerBackdrop
+import com.nexamusic.app.ui.component.backdrop.highlight.Highlight
+import com.nexamusic.app.ui.component.backdrop.highlight.HighlightElement
+import com.nexamusic.app.ui.component.backdrop.internal.ShapeProvider
+import com.nexamusic.app.ui.component.backdrop.internal.recordLayer
+import com.nexamusic.app.ui.component.backdrop.shadow.InnerShadow
+import com.nexamusic.app.ui.component.backdrop.shadow.InnerShadowElement
+import com.nexamusic.app.ui.component.backdrop.shadow.Shadow
+import com.nexamusic.app.ui.component.backdrop.shadow.ShadowElement
 
 private val DefaultHighlight = { Highlight.Default }
 private val DefaultShadow = { Shadow.Default }

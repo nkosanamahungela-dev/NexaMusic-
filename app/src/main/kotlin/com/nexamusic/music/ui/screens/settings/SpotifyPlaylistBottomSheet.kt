@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -21,13 +21,13 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil3.compose.AsyncImage
 import com.music.spotify.SpotifyMapper
 import com.music.spotify.models.SpotifyPlaylist
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.component.AnimatedActionButton
-import com.nexamusic.music.ui.component.detachedItemShape
-import com.nexamusic.music.ui.component.endItemShape
-import com.nexamusic.music.ui.component.leadingItemShape
-import com.nexamusic.music.ui.component.middleItemShape
-import com.nexamusic.music.viewmodels.SpotifyImportViewModel
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.component.AnimatedActionButton
+import com.nexamusic.app.ui.component.detachedItemShape
+import com.nexamusic.app.ui.component.endItemShape
+import com.nexamusic.app.ui.component.leadingItemShape
+import com.nexamusic.app.ui.component.middleItemShape
+import com.nexamusic.app.viewmodels.SpotifyImportViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

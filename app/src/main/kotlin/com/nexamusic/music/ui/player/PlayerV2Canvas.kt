@@ -4,21 +4,21 @@
  */
 // Apple Music player UI ported from vivizzz007/vivi-music (https://github.com/vivizzz007/vivi-music), GPL-3.0.
 
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import com.nexamusic.music.canvas.CanvasArtwork
-import com.nexamusic.music.canvas.TidalCanvasProvider
-import com.nexamusic.music.applecanvas.AppleMusicCanvasProvider
-import com.nexamusic.music.vivimusiccanvas.ViviMusicCanvasProvider
-import com.nexamusic.music.constants.CanvasSource
-import com.nexamusic.music.constants.CanvasSourceKey
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
-import com.nexamusic.music.constants.CanvasThumbnailAnimationKey
+import com.nexamusic.app.canvas.CanvasArtwork
+import com.nexamusic.app.canvas.TidalCanvasProvider
+import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
+import com.nexamusic.app.vivimusiccanvas.ViviMusicCanvasProvider
+import com.nexamusic.app.constants.CanvasSource
+import com.nexamusic.app.constants.CanvasSourceKey
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
+import com.nexamusic.app.constants.CanvasThumbnailAnimationKey
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.util.Locale

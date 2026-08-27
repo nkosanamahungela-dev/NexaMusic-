@@ -4,7 +4,7 @@
  * Convx Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
-package com.nexamusic.music.ui.utils
+package com.nexamusic.app.ui.utils
 
 import androidx.compose.animation.AnimatedVisibilityScope
 import androidx.compose.animation.BoundsTransform
@@ -33,8 +33,8 @@ import androidx.compose.ui.layout.LayoutCoordinates
 import androidx.compose.ui.layout.onPlaced
 import android.os.Bundle
 import androidx.navigation.NavBackStackEntry
-import com.nexamusic.music.constants.ThumbnailCornerRadius
-import com.nexamusic.music.ui.player.rememberScreenCornerRadius
+import com.nexamusic.app.constants.ThumbnailCornerRadius
+import com.nexamusic.app.ui.player.rememberScreenCornerRadius
 
 /**
  * The app-wide [SharedTransitionScope], provided once around the NavHost.

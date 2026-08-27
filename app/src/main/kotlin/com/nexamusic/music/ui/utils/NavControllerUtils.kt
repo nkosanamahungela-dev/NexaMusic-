@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.utils
+package com.nexamusic.app.ui.utils
 
 import androidx.navigation.NavController
-import com.nexamusic.music.ui.screens.Screens
+import com.nexamusic.app.ui.screens.Screens
 
 fun NavController.backToMain() {
     while (previousBackStackEntry != null &&

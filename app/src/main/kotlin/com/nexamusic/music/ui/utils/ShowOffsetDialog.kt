@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.utils
+package com.nexamusic.app.ui.utils
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -35,9 +35,9 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.R
-import com.nexamusic.music.db.entities.SongEntity
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.R
+import com.nexamusic.app.db.entities.SongEntity
 import kotlinx.coroutines.FlowPreview
 
 @OptIn(FlowPreview::class)

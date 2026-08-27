@@ -4,9 +4,9 @@
  * capsule/src/main/java/com/kyant/capsule/MathUtils.kt
  *
  * Vendored so the shape ships as source with this app. Package renamed
- * accordingly (com.kyant.capsule -> com.nexamusic.music.ui.component.shapes).
+ * accordingly (com.kyant.capsule -> com.nexamusic.app.ui.component.shapes).
  */
-package com.nexamusic.music.ui.component.shapes
+package com.nexamusic.app.ui.component.shapes
 
 @Suppress("NOTHING_TO_INLINE")
 internal inline fun lerp(start: Double, stop: Double, fraction: Double): Double {

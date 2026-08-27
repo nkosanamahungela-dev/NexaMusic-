@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.search
+package com.nexamusic.app.ui.screens.search
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -68,25 +68,25 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.navigation.NavController
 import com.music.innertube.models.WatchEndpoint
 import com.music.innertube.utils.YouTubeUrlParser
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalIsPlayerExpanded
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.utils.rememberGridColumns
-import com.nexamusic.music.constants.PauseSearchHistoryKey
-import com.nexamusic.music.constants.LocalOnlyModeKey
-import com.nexamusic.music.constants.SearchSource
-import com.nexamusic.music.db.entities.SearchHistory
-import com.nexamusic.music.playback.queues.YouTubeQueue
-import com.nexamusic.music.ui.component.NavigationTitle
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
-import com.nexamusic.music.viewmodels.MoodAndGenresViewModel
-import com.nexamusic.music.viewmodels.ExploreViewModel
-import com.nexamusic.music.ui.screens.search.suggestions.SuggestionsTabContent
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalIsPlayerExpanded
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.utils.rememberGridColumns
+import com.nexamusic.app.constants.PauseSearchHistoryKey
+import com.nexamusic.app.constants.LocalOnlyModeKey
+import com.nexamusic.app.constants.SearchSource
+import com.nexamusic.app.db.entities.SearchHistory
+import com.nexamusic.app.playback.queues.YouTubeQueue
+import com.nexamusic.app.ui.component.NavigationTitle
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
+import com.nexamusic.app.viewmodels.MoodAndGenresViewModel
+import com.nexamusic.app.viewmodels.ExploreViewModel
+import com.nexamusic.app.ui.screens.search.suggestions.SuggestionsTabContent
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.net.URLEncoder
@@ -103,30 +103,30 @@ import androidx.compose.foundation.layout.PaddingValues
 
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
-import com.nexamusic.music.ui.component.LargeScreenTitle
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.YouTubeGridItem
-import com.nexamusic.music.ui.menu.YouTubeAlbumMenu
-import com.nexamusic.music.constants.GridThumbnailHeight
-import com.nexamusic.music.constants.GridItemsSizeKey
-import com.nexamusic.music.constants.GridItemSize
-import com.nexamusic.music.ui.component.HeroBackground
-import com.nexamusic.music.ui.component.HomeImageBackground
-import com.nexamusic.music.ui.component.rememberAppBackgroundColor
-import com.nexamusic.music.ui.component.rememberHeroSource
-import com.nexamusic.music.ui.component.rememberHeroTint
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.theme.HeroTintedContent
+import com.nexamusic.app.ui.component.LargeScreenTitle
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.YouTubeGridItem
+import com.nexamusic.app.ui.menu.YouTubeAlbumMenu
+import com.nexamusic.app.constants.GridThumbnailHeight
+import com.nexamusic.app.constants.GridItemsSizeKey
+import com.nexamusic.app.constants.GridItemSize
+import com.nexamusic.app.ui.component.HeroBackground
+import com.nexamusic.app.ui.component.HomeImageBackground
+import com.nexamusic.app.ui.component.rememberAppBackgroundColor
+import com.nexamusic.app.ui.component.rememberHeroSource
+import com.nexamusic.app.ui.component.rememberHeroTint
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.theme.HeroTintedContent
 
-import com.nexamusic.music.ui.component.LocalNavSearchState
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.component.backdrop.backdrops.layerBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberBackdropFreeze
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
-import com.nexamusic.music.ui.component.backdrop.catalog.components.LiquidBottomTab
-import com.nexamusic.music.ui.component.backdrop.catalog.components.LiquidBottomTabs
+import com.nexamusic.app.ui.component.LocalNavSearchState
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.component.backdrop.backdrops.layerBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberBackdropFreeze
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import com.nexamusic.app.ui.component.backdrop.catalog.components.LiquidBottomTab
+import com.nexamusic.app.ui.component.backdrop.catalog.components.LiquidBottomTabs
 import androidx.compose.ui.text.font.FontWeight
-import com.nexamusic.music.ui.component.GlassCircleButton
+import com.nexamusic.app.ui.component.GlassCircleButton
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.offset
@@ -204,7 +204,7 @@ fun SearchScreen(
       HomeImageBackground()
       HeroTintedContent(tint = tint, backdrop = heroBackdrop) {
         val chromeShape = ContinuousRoundedRectangle(percent = 50)
-        val accent = com.nexamusic.music.ui.theme.LocalAccentColor.current
+        val accent = com.nexamusic.app.ui.theme.LocalAccentColor.current
 
         // Space for the floating side bar in tab view (0 otherwise). The hero
         // background stays full-bleed behind the Scaffold; only the foreground —

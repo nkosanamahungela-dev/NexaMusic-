@@ -3,12 +3,12 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.wrapped
+package com.nexamusic.app.ui.screens.wrapped
 
 import com.music.innertube.models.AccountInfo
-import com.nexamusic.music.db.entities.Album
-import com.nexamusic.music.db.entities.Artist
-import com.nexamusic.music.db.entities.SongWithStats
+import com.nexamusic.app.db.entities.Album
+import com.nexamusic.app.db.entities.Artist
+import com.nexamusic.app.db.entities.SongWithStats
 
 data class WrappedState(
     val accountInfo: AccountInfo? = null,

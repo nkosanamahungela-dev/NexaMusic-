@@ -3,9 +3,9 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.search
+package com.nexamusic.app.ui.screens.search
 
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 
@@ -70,42 +70,42 @@ import com.music.innertube.models.YTItem
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.MiniPlayerBottomSpacing
-import com.nexamusic.music.constants.MiniPlayerHeight
-import com.nexamusic.music.constants.NavigationBarHeight
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.queues.YouTubeQueue
-import com.nexamusic.music.ui.component.ChipsRow
-import com.nexamusic.music.ui.component.EmptyPlaceholder
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.LocalNavSearchState
-import com.nexamusic.music.ui.component.NavigationTitle
-import com.nexamusic.music.ui.component.YouTubeListItem
-import com.nexamusic.music.ui.component.HomeImageBackground
-import com.nexamusic.music.ui.component.hasCustomHomeBackground
-import com.nexamusic.music.ui.component.rememberAppBackgroundColor
-import com.nexamusic.music.ui.component.rememberHeroTint
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.theme.HeroTintedContent
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.MiniPlayerBottomSpacing
+import com.nexamusic.app.constants.MiniPlayerHeight
+import com.nexamusic.app.constants.NavigationBarHeight
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.queues.YouTubeQueue
+import com.nexamusic.app.ui.component.ChipsRow
+import com.nexamusic.app.ui.component.EmptyPlaceholder
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.LocalNavSearchState
+import com.nexamusic.app.ui.component.NavigationTitle
+import com.nexamusic.app.ui.component.YouTubeListItem
+import com.nexamusic.app.ui.component.HomeImageBackground
+import com.nexamusic.app.ui.component.hasCustomHomeBackground
+import com.nexamusic.app.ui.component.rememberAppBackgroundColor
+import com.nexamusic.app.ui.component.rememberHeroTint
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.theme.HeroTintedContent
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberLayerBackdrop
 import androidx.compose.ui.text.font.FontWeight
-import com.nexamusic.music.ui.component.shimmer.ListItemPlaceHolder
-import com.nexamusic.music.ui.component.shimmer.ShimmerHost
-import com.nexamusic.music.ui.menu.YouTubeAlbumMenu
-import com.nexamusic.music.ui.menu.YouTubeArtistMenu
-import com.nexamusic.music.ui.menu.YouTubePlaylistMenu
-import com.nexamusic.music.ui.menu.YouTubeSongMenu
-import com.nexamusic.music.utils.listItemShape
-import com.nexamusic.music.viewmodels.OnlineSearchViewModel
+import com.nexamusic.app.ui.component.shimmer.ListItemPlaceHolder
+import com.nexamusic.app.ui.component.shimmer.ShimmerHost
+import com.nexamusic.app.ui.menu.YouTubeAlbumMenu
+import com.nexamusic.app.ui.menu.YouTubeArtistMenu
+import com.nexamusic.app.ui.menu.YouTubePlaylistMenu
+import com.nexamusic.app.ui.menu.YouTubeSongMenu
+import com.nexamusic.app.utils.listItemShape
+import com.nexamusic.app.viewmodels.OnlineSearchViewModel
 import kotlinx.coroutines.launch
 import java.net.URLDecoder
-import com.nexamusic.music.ui.utils.heroPullZoom
-import com.nexamusic.music.ui.utils.listOverscroll
-import com.nexamusic.music.ui.utils.rememberHeroZoom
+import com.nexamusic.app.ui.utils.heroPullZoom
+import com.nexamusic.app.ui.utils.listOverscroll
+import com.nexamusic.app.ui.utils.rememberHeroZoom
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable

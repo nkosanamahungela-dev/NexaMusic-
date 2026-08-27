@@ -4,7 +4,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.utils
+package com.nexamusic.app.utils
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit
@@ -16,20 +16,20 @@ import com.music.innertube.models.SongItem
 import com.music.innertube.utils.completed
 import com.music.innertube.utils.parseCookieString
 import com.music.lastfm.LastFM
-import com.nexamusic.music.constants.InnerTubeCookieKey
-import com.nexamusic.music.constants.LastFMUseSendLikes
-import com.nexamusic.music.constants.LastFullSyncKey
-import com.nexamusic.music.constants.PendingPlaylistDeletesKey
-import com.nexamusic.music.constants.SYNC_COOLDOWN
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.ArtistEntity
-import com.nexamusic.music.db.entities.PlaylistEntity
-import com.nexamusic.music.db.entities.PlaylistSongMap
-import com.nexamusic.music.db.entities.SongEntity
-import com.nexamusic.music.extensions.collectLatest
-import com.nexamusic.music.extensions.isInternetConnected
-import com.nexamusic.music.extensions.isSyncEnabled
-import com.nexamusic.music.models.toMediaMetadata
+import com.nexamusic.app.constants.InnerTubeCookieKey
+import com.nexamusic.app.constants.LastFMUseSendLikes
+import com.nexamusic.app.constants.LastFullSyncKey
+import com.nexamusic.app.constants.PendingPlaylistDeletesKey
+import com.nexamusic.app.constants.SYNC_COOLDOWN
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.ArtistEntity
+import com.nexamusic.app.db.entities.PlaylistEntity
+import com.nexamusic.app.db.entities.PlaylistSongMap
+import com.nexamusic.app.db.entities.SongEntity
+import com.nexamusic.app.extensions.collectLatest
+import com.nexamusic.app.extensions.isInternetConnected
+import com.nexamusic.app.extensions.isSyncEnabled
+import com.nexamusic.app.models.toMediaMetadata
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineExceptionHandler

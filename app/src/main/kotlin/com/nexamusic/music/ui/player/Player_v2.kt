@@ -4,7 +4,7 @@
  */
 // Apple Music player UI ported from vivizzz007/vivi-music (https://github.com/vivizzz007/vivi-music), GPL-3.0.
 
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import android.content.BroadcastReceiver
 import android.content.Intent
@@ -47,54 +47,54 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import androidx.media3.common.C
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.constants.PlayerBackgroundStyle
-import com.nexamusic.music.constants.PlayerBackgroundStyleKey
-import com.nexamusic.music.constants.ShowPlayerThumbnailShadowKey
-import com.nexamusic.music.constants.PlayerThumbnailShadowElevationKey
-import com.nexamusic.music.constants.EnableGoogleCastKey
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.ui.component.BottomSheetState
-import com.nexamusic.music.ui.component.PlayerSliderTrack
-import com.nexamusic.music.ui.theme.PlayerSliderColors
-import com.nexamusic.music.utils.makeTimeString
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.extensions.togglePlayPause
-import com.nexamusic.music.ui.component.Lyrics
-import com.nexamusic.music.ui.component.rememberBottomSheetState
-import com.nexamusic.music.ui.component.expandedAnchor
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.constants.PlayerBackgroundStyle
+import com.nexamusic.app.constants.PlayerBackgroundStyleKey
+import com.nexamusic.app.constants.ShowPlayerThumbnailShadowKey
+import com.nexamusic.app.constants.PlayerThumbnailShadowElevationKey
+import com.nexamusic.app.constants.EnableGoogleCastKey
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.ui.component.BottomSheetState
+import com.nexamusic.app.ui.component.PlayerSliderTrack
+import com.nexamusic.app.ui.theme.PlayerSliderColors
+import com.nexamusic.app.utils.makeTimeString
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.extensions.togglePlayPause
+import com.nexamusic.app.ui.component.Lyrics
+import com.nexamusic.app.ui.component.rememberBottomSheetState
+import com.nexamusic.app.ui.component.expandedAnchor
 import androidx.compose.ui.platform.LocalConfiguration
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.delay
-import com.nexamusic.music.ui.component.LocalBottomSheetPageState
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.menu.LyricsMenu
-import com.nexamusic.music.ui.menu.PlayerMenu
-import com.nexamusic.music.ui.utils.ShowMediaInfo
-import com.nexamusic.music.ui.utils.ShowOffsetDialog
-import com.nexamusic.music.ui.utils.resize
+import com.nexamusic.app.ui.component.LocalBottomSheetPageState
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.menu.LyricsMenu
+import com.nexamusic.app.ui.menu.PlayerMenu
+import com.nexamusic.app.ui.utils.ShowMediaInfo
+import com.nexamusic.app.ui.utils.ShowOffsetDialog
+import com.nexamusic.app.ui.utils.resize
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.size.Size as CoilSize
-import com.nexamusic.music.extensions.SwipeGesture
-import com.nexamusic.music.vivimusic.AudioDeviceBottomSheet
-import com.nexamusic.music.vivimusic.getConnectedBluetoothDeviceName
-import com.nexamusic.music.ui.component.CastButton
-import com.nexamusic.music.BuildConfig
-import com.nexamusic.music.R
-import com.nexamusic.music.utils.rememberPreference
-import com.nexamusic.music.constants.AppTextColorKey
-import com.nexamusic.music.constants.ShowUpNextKey
-import com.nexamusic.music.ui.player.customize.DiyStickerLayer
-import com.nexamusic.music.ui.player.customize.PlayerGlyph
-import com.nexamusic.music.ui.player.customize.PlayerIconSlot
-import com.nexamusic.music.ui.player.customize.rememberDiyLayout
-import com.nexamusic.music.ui.player.customize.DiyOrientation
-import com.nexamusic.music.ui.player.customize.DiyDesignCanvas
-import com.nexamusic.music.LocalPlayerConnection
+import com.nexamusic.app.extensions.SwipeGesture
+import com.nexamusic.app.vivimusic.AudioDeviceBottomSheet
+import com.nexamusic.app.vivimusic.getConnectedBluetoothDeviceName
+import com.nexamusic.app.ui.component.CastButton
+import com.nexamusic.app.BuildConfig
+import com.nexamusic.app.R
+import com.nexamusic.app.utils.rememberPreference
+import com.nexamusic.app.constants.AppTextColorKey
+import com.nexamusic.app.constants.ShowUpNextKey
+import com.nexamusic.app.ui.player.customize.DiyStickerLayer
+import com.nexamusic.app.ui.player.customize.PlayerGlyph
+import com.nexamusic.app.ui.player.customize.PlayerIconSlot
+import com.nexamusic.app.ui.player.customize.rememberDiyLayout
+import com.nexamusic.app.ui.player.customize.DiyOrientation
+import com.nexamusic.app.ui.player.customize.DiyDesignCanvas
+import com.nexamusic.app.LocalPlayerConnection
 import kotlinx.coroutines.launch
 
 enum class PlayerInternalState { COVER, LYRICS, QUEUE }
@@ -137,9 +137,9 @@ fun PlayerV2(
     val bottomSheetPageState = LocalBottomSheetPageState.current
     var playerState by remember { mutableStateOf(PlayerInternalState.COVER) }
     
-    val listenTogetherManager = com.nexamusic.music.LocalListenTogetherManager.current
-    val listenTogetherRoleState = listenTogetherManager?.role?.collectAsState(initial = com.nexamusic.music.listentogether.RoomRole.NONE)
-    val isListenTogetherGuest = listenTogetherRoleState?.value == com.nexamusic.music.listentogether.RoomRole.GUEST
+    val listenTogetherManager = com.nexamusic.app.LocalListenTogetherManager.current
+    val listenTogetherRoleState = listenTogetherManager?.role?.collectAsState(initial = com.nexamusic.app.listentogether.RoomRole.NONE)
+    val isListenTogetherGuest = listenTogetherRoleState?.value == com.nexamusic.app.listentogether.RoomRole.GUEST
     val isMuted by playerConnection.isMuted.collectAsState()
     val canSkipPrevious by playerConnection.canSkipPrevious.collectAsState()
     val canSkipNext by playerConnection.canSkipNext.collectAsState()

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.listentogether
+package com.nexamusic.app.listentogether
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

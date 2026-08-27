@@ -3,12 +3,12 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.utils
+package com.nexamusic.app.ui.utils
 
 import android.content.Context
 import android.widget.Toast
 import androidx.compose.ui.platform.UriHandler
-import com.nexamusic.music.R
+import com.nexamusic.app.R
 
 /**
  * Safely opens a URI using the provided [UriHandler].

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.playback.dj
+package com.nexamusic.app.playback.dj
 
 /**
  * Readers for the per-second energy curve stored on `SongAnalysisEntity`.

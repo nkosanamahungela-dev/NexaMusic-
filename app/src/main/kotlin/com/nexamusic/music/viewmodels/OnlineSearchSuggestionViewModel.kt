@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
@@ -14,13 +14,13 @@ import com.music.innertube.models.YTItem
 import com.music.innertube.models.filterExplicit
 import com.music.innertube.models.filterVideoSongs
 import com.music.innertube.utils.YouTubeUrlParser
-import com.nexamusic.music.constants.HideExplicitKey
-import com.nexamusic.music.constants.HideVideoSongsKey
-import com.nexamusic.music.constants.DataSaverEnabledKey
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.SearchHistory
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
+import com.nexamusic.app.constants.HideExplicitKey
+import com.nexamusic.app.constants.HideVideoSongsKey
+import com.nexamusic.app.constants.DataSaverEnabledKey
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.SearchHistory
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi

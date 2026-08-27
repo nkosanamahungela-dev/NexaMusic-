@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsetsSides
@@ -30,12 +30,12 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.component.Material3SettingsGroup
-import com.nexamusic.music.ui.component.Material3SettingsItem
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.viewmodels.AccountSettingsViewModel
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.component.Material3SettingsGroup
+import com.nexamusic.app.ui.component.Material3SettingsItem
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.viewmodels.AccountSettingsViewModel
 
 /**
  * Shown right after a WebView login when the signed-in Google Account has more

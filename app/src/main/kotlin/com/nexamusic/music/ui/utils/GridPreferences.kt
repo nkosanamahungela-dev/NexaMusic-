@@ -3,17 +3,17 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.utils
+package com.nexamusic.app.ui.utils
 
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.constants.GridColumnMinWidth
-import com.nexamusic.music.constants.GridColumnsOverrideKey
-import com.nexamusic.music.constants.GridSpacingKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.GridColumnMinWidth
+import com.nexamusic.app.constants.GridColumnsOverrideKey
+import com.nexamusic.app.constants.GridSpacingKey
+import com.nexamusic.app.utils.rememberPreference
 
 /** Discrete steps a user can pick for [GridColumnsOverrideKey] / [SpeedDialColumnsOverrideKey]. 0 = auto. */
 val GridColumnChoices = listOf(0, 2, 3, 4, 5, 6)

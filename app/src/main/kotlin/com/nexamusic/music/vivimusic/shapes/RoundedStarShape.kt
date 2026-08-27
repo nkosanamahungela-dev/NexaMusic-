@@ -1,4 +1,4 @@
-package com.nexamusic.music.vivimusic.shapes
+package com.nexamusic.app.vivimusic.shapes
 
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Outline

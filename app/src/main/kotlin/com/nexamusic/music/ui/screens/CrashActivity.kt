@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
 
 import android.content.Intent
 import android.os.Bundle
@@ -42,9 +42,9 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.FileProvider
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.theme.vivimusicTheme
-import com.nexamusic.music.utils.CrashHandler
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.theme.vivimusicTheme
+import com.nexamusic.app.utils.CrashHandler
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date

@@ -3,19 +3,19 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.lyrics
+package com.nexamusic.app.lyrics
 
 import android.content.Context
 import android.util.LruCache
-import com.nexamusic.music.constants.LyricsProviderOrderKey
-import com.nexamusic.music.constants.PreferredLyricsProvider
-import com.nexamusic.music.constants.PreferredLyricsProviderKey
-import com.nexamusic.music.db.entities.LyricsEntity.Companion.LYRICS_NOT_FOUND
-import com.nexamusic.music.extensions.toEnum
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.utils.NetworkConnectivityObserver
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.reportException
+import com.nexamusic.app.constants.LyricsProviderOrderKey
+import com.nexamusic.app.constants.PreferredLyricsProvider
+import com.nexamusic.app.constants.PreferredLyricsProviderKey
+import com.nexamusic.app.db.entities.LyricsEntity.Companion.LYRICS_NOT_FOUND
+import com.nexamusic.app.extensions.toEnum
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.utils.NetworkConnectivityObserver
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.reportException
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job

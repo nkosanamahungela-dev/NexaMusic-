@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 
-package com.nexamusic.music.vivimusic
+package com.nexamusic.app.vivimusic
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -40,7 +40,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.runtime.key
-import com.nexamusic.music.vivimusic.shapes.RoundedStarShape
+import com.nexamusic.app.vivimusic.shapes.RoundedStarShape
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -125,11 +125,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.nexamusic.music.R
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.constants.AudioQuality
-import com.nexamusic.music.constants.AudioQualityKey
-import com.nexamusic.music.utils.rememberEnumPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.constants.AudioQuality
+import com.nexamusic.app.constants.AudioQualityKey
+import com.nexamusic.app.utils.rememberEnumPreference
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 

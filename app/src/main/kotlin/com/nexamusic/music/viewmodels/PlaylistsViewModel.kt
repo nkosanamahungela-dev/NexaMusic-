@@ -5,18 +5,18 @@
 
 @file:OptIn(ExperimentalCoroutinesApi::class)
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nexamusic.music.constants.AddToPlaylistSortDescendingKey
-import com.nexamusic.music.constants.AddToPlaylistSortTypeKey
-import com.nexamusic.music.constants.PlaylistSortType
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.extensions.toEnum
-import com.nexamusic.music.utils.SyncUtils
-import com.nexamusic.music.utils.dataStore
+import com.nexamusic.app.constants.AddToPlaylistSortDescendingKey
+import com.nexamusic.app.constants.AddToPlaylistSortTypeKey
+import com.nexamusic.app.constants.PlaylistSortType
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.extensions.toEnum
+import com.nexamusic.app.utils.SyncUtils
+import com.nexamusic.app.utils.dataStore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi

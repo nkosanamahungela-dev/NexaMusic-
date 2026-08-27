@@ -2,7 +2,7 @@
  * Convx Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedVisibility
@@ -31,8 +31,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
 
 /**
  * The long-press actions, as an overlay rather than a bottom sheet.

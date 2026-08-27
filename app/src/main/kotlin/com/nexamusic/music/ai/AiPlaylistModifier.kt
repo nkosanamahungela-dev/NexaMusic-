@@ -3,21 +3,21 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ai
+package com.nexamusic.app.ai
 
 import android.content.Context
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
-import com.nexamusic.music.constants.AiProviderKey
-import com.nexamusic.music.constants.OpenRouterApiKey
-import com.nexamusic.music.constants.OpenRouterBaseUrlKey
-import com.nexamusic.music.constants.OpenRouterModelKey
-import com.nexamusic.music.db.InternalDatabase
-import com.nexamusic.music.db.entities.PlaylistSong
-import com.nexamusic.music.db.entities.PlaylistSongMap
-import com.nexamusic.music.db.entities.SongEntity
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
+import com.nexamusic.app.constants.AiProviderKey
+import com.nexamusic.app.constants.OpenRouterApiKey
+import com.nexamusic.app.constants.OpenRouterBaseUrlKey
+import com.nexamusic.app.constants.OpenRouterModelKey
+import com.nexamusic.app.db.InternalDatabase
+import com.nexamusic.app.db.entities.PlaylistSong
+import com.nexamusic.app.db.entities.PlaylistSongMap
+import com.nexamusic.app.db.entities.SongEntity
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.MediaType.Companion.toMediaType

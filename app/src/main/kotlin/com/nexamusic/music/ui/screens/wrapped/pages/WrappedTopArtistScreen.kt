@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.wrapped.pages
+package com.nexamusic.app.ui.screens.wrapped.pages
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
@@ -37,8 +37,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
-import com.nexamusic.music.R
-import com.nexamusic.music.db.entities.Artist
+import com.nexamusic.app.R
+import com.nexamusic.app.db.entities.Artist
 
 @Composable
 fun WrappedTopArtistScreen(topArtist: Artist?, isVisible: Boolean) {

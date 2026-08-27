@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.playback
+package com.nexamusic.app.playback
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableLongStateOf

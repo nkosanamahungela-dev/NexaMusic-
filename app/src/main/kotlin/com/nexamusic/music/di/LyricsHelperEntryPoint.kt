@@ -3,9 +3,9 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.di
+package com.nexamusic.app.di
 
-import com.nexamusic.music.lyrics.LyricsHelper
+import com.nexamusic.app.lyrics.LyricsHelper
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent

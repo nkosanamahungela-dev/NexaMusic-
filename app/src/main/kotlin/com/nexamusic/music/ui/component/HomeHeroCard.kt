@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -45,13 +45,13 @@ import android.os.Build
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.HomeCardCornerRadiusOverrideKey
-import com.nexamusic.music.constants.HomeHeroCardHeightOverrideKey
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.HomeCardCornerRadiusOverrideKey
+import com.nexamusic.app.constants.HomeHeroCardHeightOverrideKey
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.utils.rememberPreference
 
 /**
  * The "star of the day" card that opens Home.

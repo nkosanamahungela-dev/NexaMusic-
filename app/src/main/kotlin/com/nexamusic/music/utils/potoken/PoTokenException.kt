@@ -1,4 +1,4 @@
-package com.nexamusic.music.utils.potoken
+package com.nexamusic.app.utils.potoken
 
 class PoTokenException(message: String) : Exception(message)
 

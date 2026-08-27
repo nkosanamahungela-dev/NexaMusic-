@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.db
+package com.nexamusic.app.db
 
 import androidx.room.TypeConverter
 import java.time.Instant

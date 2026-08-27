@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
 
 import android.annotation.SuppressLint
 import android.webkit.CookieManager
@@ -32,16 +32,16 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavController
 import android.widget.Toast
 import com.music.innertube.YouTube
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.DataSyncIdKey
-import com.nexamusic.music.constants.InnerTubeCookieKey
-import com.nexamusic.music.constants.SavedAccount
-import com.nexamusic.music.constants.SavedAccountsKey
-import com.nexamusic.music.constants.toJson
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.DataSyncIdKey
+import com.nexamusic.app.constants.InnerTubeCookieKey
+import com.nexamusic.app.constants.SavedAccount
+import com.nexamusic.app.constants.SavedAccountsKey
+import com.nexamusic.app.constants.toJson
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.launch
 
 /**

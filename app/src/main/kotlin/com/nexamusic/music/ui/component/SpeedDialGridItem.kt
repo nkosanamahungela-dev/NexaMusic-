@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,10 +22,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.music.innertube.models.YTItem
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ThumbnailRoundedShape
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.theme.AppleTokens
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ThumbnailRoundedShape
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.theme.AppleTokens
 
 @Composable
 fun SpeedDialGridItem(

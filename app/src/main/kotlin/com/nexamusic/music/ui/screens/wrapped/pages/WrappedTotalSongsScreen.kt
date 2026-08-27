@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.wrapped.pages
+package com.nexamusic.app.ui.screens.wrapped.pages
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -33,10 +33,10 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.screens.wrapped.components.AnimatedBackground
-import com.nexamusic.music.ui.screens.wrapped.components.ShapeType
-import com.nexamusic.music.ui.theme.bbh_bartle
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.screens.wrapped.components.AnimatedBackground
+import com.nexamusic.app.ui.screens.wrapped.components.ShapeType
+import com.nexamusic.app.ui.theme.bbh_bartle
 
 @Composable
 fun WrappedTotalSongsScreen(

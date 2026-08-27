@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.di
+package com.nexamusic.app.di
 
 import javax.inject.Qualifier
 

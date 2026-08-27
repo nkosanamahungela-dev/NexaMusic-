@@ -1,6 +1,6 @@
-package com.nexamusic.music.eq.audio
+package com.nexamusic.app.eq.audio
 
-import com.nexamusic.music.eq.data.FilterType
+import com.nexamusic.app.eq.data.FilterType
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.pow

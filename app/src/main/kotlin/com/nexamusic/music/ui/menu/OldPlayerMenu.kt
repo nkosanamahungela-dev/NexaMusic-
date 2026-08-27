@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import android.content.Intent
 import android.widget.Toast
@@ -49,26 +49,26 @@ import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import androidx.navigation.NavController
 import com.music.innertube.YouTube
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalDownloadUtil
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ListItemHeight
-import com.nexamusic.music.extensions.toggleRepeatMode
-import com.nexamusic.music.listentogether.RoomRole
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.playback.ExoDownloadService
-import com.nexamusic.music.ui.component.BottomSheetState
-import com.nexamusic.music.ui.component.ListDialog
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
-import com.nexamusic.music.ui.component.NewAction
-import com.nexamusic.music.ui.component.NewActionGrid
-import com.nexamusic.music.ui.component.VolumeSlider
-import com.nexamusic.music.ui.theme.rememberGlobalAccentColors
-import com.nexamusic.music.constants.EnableSaavnStreamingKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalDownloadUtil
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ListItemHeight
+import com.nexamusic.app.extensions.toggleRepeatMode
+import com.nexamusic.app.listentogether.RoomRole
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.playback.ExoDownloadService
+import com.nexamusic.app.ui.component.BottomSheetState
+import com.nexamusic.app.ui.component.ListDialog
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
+import com.nexamusic.app.ui.component.NewAction
+import com.nexamusic.app.ui.component.NewActionGrid
+import com.nexamusic.app.ui.component.VolumeSlider
+import com.nexamusic.app.ui.theme.rememberGlobalAccentColors
+import com.nexamusic.app.constants.EnableSaavnStreamingKey
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -82,7 +82,7 @@ fun OldPlayerMenu(
 ) {
     mediaMetadata ?: return
     val context = LocalContext.current
-    val ringtoneViewModel = com.nexamusic.music.LocalRingtoneViewModel.current
+    val ringtoneViewModel = com.nexamusic.app.LocalRingtoneViewModel.current
     val database = LocalDatabase.current
     val playerConnection = LocalPlayerConnection.current ?: return
     val coroutineScope = rememberCoroutineScope()

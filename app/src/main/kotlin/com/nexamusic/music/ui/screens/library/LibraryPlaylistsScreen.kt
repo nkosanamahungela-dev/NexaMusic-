@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.library
+package com.nexamusic.app.ui.screens.library
 
 import android.content.Intent
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -16,11 +16,11 @@ import androidx.compose.runtime.produceState
 import androidx.compose.ui.platform.LocalContext
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.ui.utils.rememberGridColumns
-import com.nexamusic.music.constants.SongSortType
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.ui.utils.rememberGridColumns
+import com.nexamusic.app.constants.SongSortType
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
 import kotlinx.coroutines.flow.first
 
 import androidx.compose.foundation.layout.Arrangement
@@ -70,49 +70,49 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.music.innertube.utils.parseCookieString
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.CONTENT_TYPE_HEADER
-import com.nexamusic.music.constants.CONTENT_TYPE_PLAYLIST
-import com.nexamusic.music.constants.GridItemSize
-import com.nexamusic.music.constants.GridItemsSizeKey
-import com.nexamusic.music.constants.GridThumbnailHeight
-import com.nexamusic.music.constants.InnerTubeCookieKey
-import com.nexamusic.music.constants.LibraryIconsOnlyKey
-import com.nexamusic.music.constants.LibraryViewType
-import com.nexamusic.music.constants.PlaylistSortDescendingKey
-import com.nexamusic.music.constants.PlaylistSortType
-import com.nexamusic.music.constants.PlaylistSortTypeKey
-import com.nexamusic.music.constants.PlaylistViewTypeKey
-import com.nexamusic.music.constants.ShowCachedPlaylistKey
-import com.nexamusic.music.constants.ShowDownloadedPlaylistKey
-import com.nexamusic.music.constants.ShowLikedPlaylistKey
-import com.nexamusic.music.constants.ShowTopPlaylistKey
-import com.nexamusic.music.constants.ShowUploadedPlaylistKey
-import com.nexamusic.music.constants.YtmSyncKey
-import com.nexamusic.music.db.entities.Playlist
-import com.nexamusic.music.db.entities.PlaylistEntity
-import com.nexamusic.music.ui.component.buildAlphabetSectionIndex
-import com.nexamusic.music.ui.component.ListScrollRail
-import com.nexamusic.music.ui.component.LargeScreenTitle
-import com.nexamusic.music.ui.component.CreatePlaylistDialog
-import com.nexamusic.music.ui.component.HideOnScrollFAB
-import com.nexamusic.music.ui.component.LibraryPlaylistGridItem
-import com.nexamusic.music.ui.component.LibraryPlaylistListItem
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.PlaylistGridItem
-import com.nexamusic.music.ui.component.PlaylistListItem
-import com.nexamusic.music.ui.component.SortHeader
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
-import com.nexamusic.music.viewmodels.LibraryPlaylistsViewModel
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.CONTENT_TYPE_HEADER
+import com.nexamusic.app.constants.CONTENT_TYPE_PLAYLIST
+import com.nexamusic.app.constants.GridItemSize
+import com.nexamusic.app.constants.GridItemsSizeKey
+import com.nexamusic.app.constants.GridThumbnailHeight
+import com.nexamusic.app.constants.InnerTubeCookieKey
+import com.nexamusic.app.constants.LibraryIconsOnlyKey
+import com.nexamusic.app.constants.LibraryViewType
+import com.nexamusic.app.constants.PlaylistSortDescendingKey
+import com.nexamusic.app.constants.PlaylistSortType
+import com.nexamusic.app.constants.PlaylistSortTypeKey
+import com.nexamusic.app.constants.PlaylistViewTypeKey
+import com.nexamusic.app.constants.ShowCachedPlaylistKey
+import com.nexamusic.app.constants.ShowDownloadedPlaylistKey
+import com.nexamusic.app.constants.ShowLikedPlaylistKey
+import com.nexamusic.app.constants.ShowTopPlaylistKey
+import com.nexamusic.app.constants.ShowUploadedPlaylistKey
+import com.nexamusic.app.constants.YtmSyncKey
+import com.nexamusic.app.db.entities.Playlist
+import com.nexamusic.app.db.entities.PlaylistEntity
+import com.nexamusic.app.ui.component.buildAlphabetSectionIndex
+import com.nexamusic.app.ui.component.ListScrollRail
+import com.nexamusic.app.ui.component.LargeScreenTitle
+import com.nexamusic.app.ui.component.CreatePlaylistDialog
+import com.nexamusic.app.ui.component.HideOnScrollFAB
+import com.nexamusic.app.ui.component.LibraryPlaylistGridItem
+import com.nexamusic.app.ui.component.LibraryPlaylistListItem
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.PlaylistGridItem
+import com.nexamusic.app.ui.component.PlaylistListItem
+import com.nexamusic.app.ui.component.SortHeader
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
+import com.nexamusic.app.viewmodels.LibraryPlaylistsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.util.UUID
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.utils.heroPullZoom
-import com.nexamusic.music.ui.utils.listOverscroll
-import com.nexamusic.music.ui.utils.rememberHeroZoom
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.utils.heroPullZoom
+import com.nexamusic.app.ui.utils.listOverscroll
+import com.nexamusic.app.ui.utils.rememberHeroZoom
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

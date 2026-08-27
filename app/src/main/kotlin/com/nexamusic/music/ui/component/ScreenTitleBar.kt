@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -34,9 +34,9 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.constants.AppBarHeight
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.theme.LocalAccentTextColor
+import com.nexamusic.app.constants.AppBarHeight
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.theme.LocalAccentTextColor
 
 /**
  * A screen's large title, rendered as the first item of its list or grid.

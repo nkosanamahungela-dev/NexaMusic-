@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.extensions
+package com.nexamusic.app.extensions
 
 import androidx.media3.common.C
 import androidx.media3.common.MediaItem
@@ -13,7 +13,7 @@ import androidx.media3.common.Player.REPEAT_MODE_OFF
 import androidx.media3.common.Player.REPEAT_MODE_ONE
 import androidx.media3.common.Timeline
 import androidx.media3.common.TrackSelectionParameters
-import com.nexamusic.music.models.MediaMetadata
+import com.nexamusic.app.models.MediaMetadata
 import java.util.ArrayDeque
 
 fun Player.togglePlayPause() {

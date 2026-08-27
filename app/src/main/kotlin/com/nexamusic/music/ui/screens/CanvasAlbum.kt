@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -12,12 +12,12 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.nexamusic.music.applecanvas.AppleMusicCanvasProvider
-import com.nexamusic.music.canvas.CanvasArtwork
-import com.nexamusic.music.canvas.TidalCanvasProvider
-import com.nexamusic.music.ui.player.CanvasArtworkPlaybackCache
-import com.nexamusic.music.vivimusiccanvas.EchoMusicCanvasProvider
-import com.nexamusic.music.vivimusiccanvas.ViviMusicCanvasProvider
+import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
+import com.nexamusic.app.canvas.CanvasArtwork
+import com.nexamusic.app.canvas.TidalCanvasProvider
+import com.nexamusic.app.ui.player.CanvasArtworkPlaybackCache
+import com.nexamusic.app.vivimusiccanvas.EchoMusicCanvasProvider
+import com.nexamusic.app.vivimusiccanvas.ViviMusicCanvasProvider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.util.Locale

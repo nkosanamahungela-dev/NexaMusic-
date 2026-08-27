@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -56,17 +56,17 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.EnabledModulesKey
-import com.nexamusic.music.constants.FetchedModulesKey
-import com.nexamusic.music.constants.ModuleSourcesKey
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.component.ModernSwitch
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.EnabledModulesKey
+import com.nexamusic.app.constants.FetchedModulesKey
+import com.nexamusic.app.constants.ModuleSourcesKey
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.component.ModernSwitch
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.rememberPreference
 import com.music.spine.ModuleManager
 import com.music.spine.SpineModule
 import kotlinx.coroutines.launch

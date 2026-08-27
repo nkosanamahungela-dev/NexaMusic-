@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -40,8 +40,8 @@ import androidx.compose.ui.unit.dp
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
-import com.nexamusic.music.R
-import com.nexamusic.music.utils.makeTimeString
+import com.nexamusic.app.R
+import com.nexamusic.app.utils.makeTimeString
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)

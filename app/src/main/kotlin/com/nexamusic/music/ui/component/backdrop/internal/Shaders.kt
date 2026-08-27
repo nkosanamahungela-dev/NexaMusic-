@@ -23,7 +23,7 @@
    limitations under the License.
  */
 
-package com.nexamusic.music.ui.component.backdrop.internal
+package com.nexamusic.app.ui.component.backdrop.internal
 
 import org.intellij.lang.annotations.Language
 

@@ -8,7 +8,7 @@
  * variants were dropped — this app only uses the LTR-aware
  * ContinuousRoundedRectangle.
  */
-package com.nexamusic.music.ui.component.shapes
+package com.nexamusic.app.ui.component.shapes
 
 import androidx.annotation.FloatRange
 import androidx.annotation.IntRange

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import android.content.Context
 import android.content.Intent
@@ -17,12 +17,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.media3.exoplayer.offline.Download
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.R
-import com.nexamusic.music.db.entities.Playlist
-import com.nexamusic.music.db.entities.PlaylistSong
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.R
+import com.nexamusic.app.db.entities.Playlist
+import com.nexamusic.app.db.entities.PlaylistSong
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
 
 /**
  * Menu for Local Playlist Screen

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.models
+package com.nexamusic.app.models
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable

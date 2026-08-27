@@ -3,23 +3,23 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.media3.datasource.cache.SimpleCache
-import com.nexamusic.music.constants.HideExplicitKey
-import com.nexamusic.music.constants.HideVideoSongsKey
-import com.nexamusic.music.constants.DataSaverEnabledKey
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.di.DownloadCache
-import com.nexamusic.music.di.PlayerCache
-import com.nexamusic.music.extensions.filterExplicit
-import com.nexamusic.music.extensions.filterVideoSongs
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
+import com.nexamusic.app.constants.HideExplicitKey
+import com.nexamusic.app.constants.HideVideoSongsKey
+import com.nexamusic.app.constants.DataSaverEnabledKey
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.di.DownloadCache
+import com.nexamusic.app.di.PlayerCache
+import com.nexamusic.app.extensions.filterExplicit
+import com.nexamusic.app.extensions.filterVideoSongs
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.delay

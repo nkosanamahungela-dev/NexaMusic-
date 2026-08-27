@@ -3,12 +3,12 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens
+package com.nexamusic.app.ui.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.LocalContext
-import com.nexamusic.music.utils.NetworkConnectivityObserver
+import com.nexamusic.app.utils.NetworkConnectivityObserver
 
 @Composable
 fun NetworkReload(

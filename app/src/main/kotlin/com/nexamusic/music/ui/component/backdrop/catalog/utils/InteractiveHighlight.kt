@@ -5,9 +5,9 @@
  *
  * Not published as a library — ported straight from the catalog demo app that
  * showcases Kyant0/backdrop, source-only. Package renamed and RuntimeShader
- * imports repointed at this app's vendored com.nexamusic.music.ui.component.backdrop.
+ * imports repointed at this app's vendored com.nexamusic.app.ui.component.backdrop.
  */
-package com.nexamusic.music.ui.component.backdrop.catalog.utils
+package com.nexamusic.app.ui.component.backdrop.catalog.utils
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.VectorConverter
@@ -22,9 +22,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ShaderBrush
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.util.fastCoerceIn
-import com.nexamusic.music.ui.component.backdrop.RuntimeShader
-import com.nexamusic.music.ui.component.backdrop.asComposeShader
-import com.nexamusic.music.ui.component.backdrop.isRuntimeShaderSupported
+import com.nexamusic.app.ui.component.backdrop.RuntimeShader
+import com.nexamusic.app.ui.component.backdrop.asComposeShader
+import com.nexamusic.app.ui.component.backdrop.isRuntimeShaderSupported
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings.diy
+package com.nexamusic.app.ui.screens.settings.diy
 
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -76,29 +76,29 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.datastore.preferences.core.edit
 import androidx.navigation.NavController
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.DiyLayoutKey
-import com.nexamusic.music.constants.PureBlackKey
-import com.nexamusic.music.ui.component.BottomSheetState
-import com.nexamusic.music.ui.component.LocalAppBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
-import com.nexamusic.music.ui.component.expandedAnchor
-import com.nexamusic.music.ui.component.rememberBottomSheetState
-import com.nexamusic.music.ui.player.BottomSheetPlayer
-import com.nexamusic.music.ui.player.customize.DIY_MAX_ASSET_BYTES
-import com.nexamusic.music.ui.player.customize.DIY_MAX_STICKERS
-import com.nexamusic.music.ui.player.customize.DiyBounds
-import com.nexamusic.music.ui.player.customize.DiyDesignCanvas
-import com.nexamusic.music.ui.player.customize.DiyLayout
-import com.nexamusic.music.ui.player.customize.DiyOrientation
-import com.nexamusic.music.ui.player.customize.DiySticker
-import com.nexamusic.music.ui.player.customize.DiyStickerContent
-import com.nexamusic.music.ui.player.customize.DiyStickerKind
-import com.nexamusic.music.ui.player.customize.DiyStore
-import com.nexamusic.music.ui.player.customize.DiyTransform
-import com.nexamusic.music.utils.MediaImport
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.DiyLayoutKey
+import com.nexamusic.app.constants.PureBlackKey
+import com.nexamusic.app.ui.component.BottomSheetState
+import com.nexamusic.app.ui.component.LocalAppBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import com.nexamusic.app.ui.component.expandedAnchor
+import com.nexamusic.app.ui.component.rememberBottomSheetState
+import com.nexamusic.app.ui.player.BottomSheetPlayer
+import com.nexamusic.app.ui.player.customize.DIY_MAX_ASSET_BYTES
+import com.nexamusic.app.ui.player.customize.DIY_MAX_STICKERS
+import com.nexamusic.app.ui.player.customize.DiyBounds
+import com.nexamusic.app.ui.player.customize.DiyDesignCanvas
+import com.nexamusic.app.ui.player.customize.DiyLayout
+import com.nexamusic.app.ui.player.customize.DiyOrientation
+import com.nexamusic.app.ui.player.customize.DiySticker
+import com.nexamusic.app.ui.player.customize.DiyStickerContent
+import com.nexamusic.app.ui.player.customize.DiyStickerKind
+import com.nexamusic.app.ui.player.customize.DiyStore
+import com.nexamusic.app.ui.player.customize.DiyTransform
+import com.nexamusic.app.utils.MediaImport
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

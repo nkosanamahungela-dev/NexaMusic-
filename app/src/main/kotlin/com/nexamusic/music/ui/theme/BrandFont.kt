@@ -3,16 +3,16 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.theme
+package com.nexamusic.app.ui.theme
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.BrandFontEnabledKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.BrandFontEnabledKey
+import com.nexamusic.app.utils.rememberPreference
 
 /** The product wordmark, always set in caps. */
 const val BrandName = "CONVX"

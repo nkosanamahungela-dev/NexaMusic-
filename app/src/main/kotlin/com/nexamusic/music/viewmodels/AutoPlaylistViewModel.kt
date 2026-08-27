@@ -3,24 +3,24 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nexamusic.music.constants.HideExplicitKey
-import com.nexamusic.music.constants.HideVideoSongsKey
-import com.nexamusic.music.constants.DataSaverEnabledKey
-import com.nexamusic.music.constants.SongSortDescendingKey
-import com.nexamusic.music.constants.SongSortType
-import com.nexamusic.music.constants.SongSortTypeKey
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.extensions.filterExplicit
-import com.nexamusic.music.extensions.filterVideoSongs
-import com.nexamusic.music.extensions.toEnum
-import com.nexamusic.music.utils.SyncUtils
-import com.nexamusic.music.utils.dataStore
+import com.nexamusic.app.constants.HideExplicitKey
+import com.nexamusic.app.constants.HideVideoSongsKey
+import com.nexamusic.app.constants.DataSaverEnabledKey
+import com.nexamusic.app.constants.SongSortDescendingKey
+import com.nexamusic.app.constants.SongSortType
+import com.nexamusic.app.constants.SongSortTypeKey
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.extensions.filterExplicit
+import com.nexamusic.app.extensions.filterVideoSongs
+import com.nexamusic.app.extensions.toEnum
+import com.nexamusic.app.utils.SyncUtils
+import com.nexamusic.app.utils.dataStore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -110,7 +110,7 @@ constructor(
         viewModelScope.launch(Dispatchers.IO) {
             _isScanning.value = true
             try {
-                com.nexamusic.music.utils.LocalAudioScanner.scanAndInsert(context, database)
+                com.nexamusic.app.utils.LocalAudioScanner.scanAndInsert(context, database)
             } catch (e: Exception) {
                 Timber.tag("AutoPlaylistViewModel").e(e, "local scan failed")
             } finally {

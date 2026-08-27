@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import android.content.Context
 import androidx.compose.animation.core.animateFloatAsState
@@ -53,16 +53,16 @@ import coil3.imageLoader
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.toBitmap
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.DynamicThemeKey
-import com.nexamusic.music.constants.PureBlackHeroBackgroundKey
-import com.nexamusic.music.constants.SelectedThemeColorKey
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.theme.DefaultThemeColor
-import com.nexamusic.music.ui.theme.LocalAccentColor
-import com.nexamusic.music.ui.theme.extractThemeColor
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.DynamicThemeKey
+import com.nexamusic.app.constants.PureBlackHeroBackgroundKey
+import com.nexamusic.app.constants.SelectedThemeColorKey
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.theme.DefaultThemeColor
+import com.nexamusic.app.ui.theme.LocalAccentColor
+import com.nexamusic.app.ui.theme.extractThemeColor
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -256,7 +256,7 @@ fun rememberAppBackgroundTint(contentTint: Color): Color {
  * Album-screen style hero header: a full-width square artwork that fades
  * (DstIn vertical gradient) into whatever tint plane sits behind it, so the
  * image dissolves into the color. Meant to be the FIRST item of a LazyColumn
- * whose parent paints [com.nexamusic.music.ui.theme.AppleTokens] tint behind it.
+ * whose parent paints [com.nexamusic.app.ui.theme.AppleTokens] tint behind it.
  *
  * Falls back to the default music image when [artworkUrl] is null/blank.
  */

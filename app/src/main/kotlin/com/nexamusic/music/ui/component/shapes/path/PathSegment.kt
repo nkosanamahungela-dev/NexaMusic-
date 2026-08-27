@@ -4,15 +4,15 @@
  * capsule/src/main/java/com/kyant/capsule/path/PathSegment.kt
  *
  * Vendored so the shape ships as source with this app. Package renamed
- * accordingly (com.kyant.capsule -> com.nexamusic.music.ui.component.shapes).
+ * accordingly (com.kyant.capsule -> com.nexamusic.app.ui.component.shapes).
  */
-package com.nexamusic.music.ui.component.shapes.path
+package com.nexamusic.app.ui.component.shapes.path
 
 import android.graphics.RectF
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.asAndroidPath
-import com.nexamusic.music.ui.component.shapes.core.Point
+import com.nexamusic.app.ui.component.shapes.core.Point
 import java.lang.Math.PI
 import kotlin.math.cos
 import kotlin.math.sin

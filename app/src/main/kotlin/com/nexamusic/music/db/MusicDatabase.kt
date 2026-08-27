@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.db
+package com.nexamusic.app.db
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -21,29 +21,29 @@ import androidx.room.migration.AutoMigrationSpec
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.sqlite.db.SupportSQLiteOpenHelper
-import com.nexamusic.music.db.daos.SpeedDialDao
-import com.nexamusic.music.db.entities.AlbumArtistMap
-import com.nexamusic.music.db.entities.AlbumEntity
-import com.nexamusic.music.db.entities.ArtistEntity
-import com.nexamusic.music.db.entities.Event
-import com.nexamusic.music.db.entities.FormatEntity
-import com.nexamusic.music.db.entities.LyricsEntity
-import com.nexamusic.music.db.entities.PlayCountEntity
-import com.nexamusic.music.db.entities.PlaylistEntity
-import com.nexamusic.music.db.entities.PlaylistSongMap
-import com.nexamusic.music.db.entities.PlaylistSongMapPreview
-import com.nexamusic.music.db.entities.RecognitionHistory
-import com.nexamusic.music.db.entities.RelatedSongMap
-import com.nexamusic.music.db.entities.SearchHistory
-import com.nexamusic.music.db.entities.SetVideoIdEntity
-import com.nexamusic.music.db.entities.SongAlbumMap
-import com.nexamusic.music.db.entities.SongAnalysisEntity
-import com.nexamusic.music.db.entities.SongArtistMap
-import com.nexamusic.music.db.entities.SongEntity
-import com.nexamusic.music.db.entities.SpeedDialItem
-import com.nexamusic.music.db.entities.SortedSongAlbumMap
-import com.nexamusic.music.db.entities.SortedSongArtistMap
-import com.nexamusic.music.extensions.toSQLiteQuery
+import com.nexamusic.app.db.daos.SpeedDialDao
+import com.nexamusic.app.db.entities.AlbumArtistMap
+import com.nexamusic.app.db.entities.AlbumEntity
+import com.nexamusic.app.db.entities.ArtistEntity
+import com.nexamusic.app.db.entities.Event
+import com.nexamusic.app.db.entities.FormatEntity
+import com.nexamusic.app.db.entities.LyricsEntity
+import com.nexamusic.app.db.entities.PlayCountEntity
+import com.nexamusic.app.db.entities.PlaylistEntity
+import com.nexamusic.app.db.entities.PlaylistSongMap
+import com.nexamusic.app.db.entities.PlaylistSongMapPreview
+import com.nexamusic.app.db.entities.RecognitionHistory
+import com.nexamusic.app.db.entities.RelatedSongMap
+import com.nexamusic.app.db.entities.SearchHistory
+import com.nexamusic.app.db.entities.SetVideoIdEntity
+import com.nexamusic.app.db.entities.SongAlbumMap
+import com.nexamusic.app.db.entities.SongAnalysisEntity
+import com.nexamusic.app.db.entities.SongArtistMap
+import com.nexamusic.app.db.entities.SongEntity
+import com.nexamusic.app.db.entities.SpeedDialItem
+import com.nexamusic.app.db.entities.SortedSongAlbumMap
+import com.nexamusic.app.db.entities.SortedSongArtistMap
+import com.nexamusic.app.extensions.toSQLiteQuery
 import timber.log.Timber
 import java.time.Instant
 import java.time.LocalDateTime

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit
@@ -24,38 +24,38 @@ import com.music.innertube.models.filterYoutubeShorts
 import com.music.innertube.pages.ExplorePage
 import com.music.innertube.pages.HomePage
 import com.music.innertube.utils.completed
-import com.nexamusic.music.constants.HideExplicitKey
-import com.nexamusic.music.constants.HideVideoSongsKey
-import com.nexamusic.music.constants.DataSaverEnabledKey
-import com.nexamusic.music.constants.HideYoutubeShortsKey
-import com.nexamusic.music.constants.InnerTubeCookieKey
-import com.nexamusic.music.constants.LocalAlbumsByYearKey
-import com.nexamusic.music.constants.LocalOnlyModeKey
-import com.nexamusic.music.constants.LocalSongSortDescendingKey
-import com.nexamusic.music.constants.LocalSongSortTypeKey
-import com.nexamusic.music.constants.PlaylistSortType
-import com.nexamusic.music.constants.SongSortType
-import com.nexamusic.music.constants.QuickPicks
-import com.nexamusic.music.constants.QuickPicksKey
-import com.nexamusic.music.constants.ShowWrappedCardKey
-import com.nexamusic.music.constants.WrappedSeenKey
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.Album
-import com.nexamusic.music.db.entities.LocalItem
-import com.nexamusic.music.db.entities.Playlist
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.db.entities.SpeedDialItem
-import com.nexamusic.music.extensions.filterVideoSongs
-import com.nexamusic.music.extensions.toEnum
-import com.nexamusic.music.models.SimilarRecommendation
-import com.nexamusic.music.ui.screens.wrapped.WrappedAudioService
-import com.nexamusic.music.ui.screens.wrapped.WrappedManager
-import com.nexamusic.music.utils.LocalAudioScanner
-import com.nexamusic.music.utils.LocalFolderIndex
-import com.nexamusic.music.utils.SyncUtils
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
-import com.nexamusic.music.utils.reportException
+import com.nexamusic.app.constants.HideExplicitKey
+import com.nexamusic.app.constants.HideVideoSongsKey
+import com.nexamusic.app.constants.DataSaverEnabledKey
+import com.nexamusic.app.constants.HideYoutubeShortsKey
+import com.nexamusic.app.constants.InnerTubeCookieKey
+import com.nexamusic.app.constants.LocalAlbumsByYearKey
+import com.nexamusic.app.constants.LocalOnlyModeKey
+import com.nexamusic.app.constants.LocalSongSortDescendingKey
+import com.nexamusic.app.constants.LocalSongSortTypeKey
+import com.nexamusic.app.constants.PlaylistSortType
+import com.nexamusic.app.constants.SongSortType
+import com.nexamusic.app.constants.QuickPicks
+import com.nexamusic.app.constants.QuickPicksKey
+import com.nexamusic.app.constants.ShowWrappedCardKey
+import com.nexamusic.app.constants.WrappedSeenKey
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.Album
+import com.nexamusic.app.db.entities.LocalItem
+import com.nexamusic.app.db.entities.Playlist
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.db.entities.SpeedDialItem
+import com.nexamusic.app.extensions.filterVideoSongs
+import com.nexamusic.app.extensions.toEnum
+import com.nexamusic.app.models.SimilarRecommendation
+import com.nexamusic.app.ui.screens.wrapped.WrappedAudioService
+import com.nexamusic.app.ui.screens.wrapped.WrappedManager
+import com.nexamusic.app.utils.LocalAudioScanner
+import com.nexamusic.app.utils.LocalFolderIndex
+import com.nexamusic.app.utils.SyncUtils
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
+import com.nexamusic.app.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -143,7 +143,7 @@ class HomeViewModel @Inject constructor(
             if (byYear) database.albumsLocalByYearDesc() else database.albumsLocalByNameAsc()
         }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
-    val localArtists: StateFlow<List<com.nexamusic.music.db.entities.Artist>> = database.artistsLocalByNameAsc()
+    val localArtists: StateFlow<List<com.nexamusic.app.db.entities.Artist>> = database.artistsLocalByNameAsc()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     // Playlists the user made here — a synced YouTube playlist has a browseId.
     val localPlaylists: StateFlow<List<Playlist>> =

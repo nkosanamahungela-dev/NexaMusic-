@@ -3,9 +3,9 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
-import com.nexamusic.music.R
+import com.nexamusic.app.R
 import android.os.Build
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -51,15 +51,15 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.nexamusic.music.BuildConfig
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.component.Material3SettingsGroup
-import com.nexamusic.music.ui.component.Material3SettingsItem
-import com.nexamusic.music.ui.theme.AppleTokens
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.vivimusic.updater.getUpdateAvailableState
+import com.nexamusic.app.BuildConfig
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.component.Material3SettingsGroup
+import com.nexamusic.app.ui.component.Material3SettingsItem
+import com.nexamusic.app.ui.theme.AppleTokens
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.vivimusic.updater.getUpdateAvailableState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -69,7 +69,7 @@ fun SettingsScreen(
 ) {
     val context = androidx.compose.ui.platform.LocalContext.current
     val isUpdateAvailable = getUpdateAvailableState(context) &&
-        com.nexamusic.music.vivimusic.updater.getAutoUpdateCheckSetting(context)
+        com.nexamusic.app.vivimusic.updater.getAutoUpdateCheckSetting(context)
 
     var searchQuery by rememberSaveable { mutableStateOf("") }
     val searchLower = searchQuery.trim().lowercase()

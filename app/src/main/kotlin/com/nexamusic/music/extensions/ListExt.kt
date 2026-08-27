@@ -3,11 +3,11 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.extensions
+package com.nexamusic.app.extensions
 
-import com.nexamusic.music.db.entities.Album
-import com.nexamusic.music.db.entities.Playlist
-import com.nexamusic.music.db.entities.Song
+import com.nexamusic.app.db.entities.Album
+import com.nexamusic.app.db.entities.Playlist
+import com.nexamusic.app.db.entities.Song
 
 fun <T> List<T>.reversed(reversed: Boolean) = if (reversed) asReversed() else this
 

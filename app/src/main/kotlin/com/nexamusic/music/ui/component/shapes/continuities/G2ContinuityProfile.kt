@@ -4,16 +4,16 @@
  * capsule/src/main/java/com/kyant/capsule/continuities/G2ContinuityProfile.kt
  *
  * Vendored so the shape ships as source with this app. Package renamed
- * accordingly (com.kyant.capsule -> com.nexamusic.music.ui.component.shapes).
+ * accordingly (com.kyant.capsule -> com.nexamusic.app.ui.component.shapes).
  */
-package com.nexamusic.music.ui.component.shapes.continuities
+package com.nexamusic.app.ui.component.shapes.continuities
 
 import androidx.annotation.FloatRange
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.util.fastCoerceAtLeast
-import com.nexamusic.music.ui.component.shapes.core.CubicBezier
-import com.nexamusic.music.ui.component.shapes.core.Point
-import com.nexamusic.music.ui.component.shapes.lerp
+import com.nexamusic.app.ui.component.shapes.core.CubicBezier
+import com.nexamusic.app.ui.component.shapes.core.Point
+import com.nexamusic.app.ui.component.shapes.lerp
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin

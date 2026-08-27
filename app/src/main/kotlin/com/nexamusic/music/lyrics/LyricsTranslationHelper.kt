@@ -3,16 +3,16 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.lyrics
+package com.nexamusic.app.lyrics
 
 import android.content.Context
-import com.nexamusic.music.api.DeepLService
-import com.nexamusic.music.api.MistralService
-import com.nexamusic.music.api.OpenRouterService
-import com.nexamusic.music.api.OpenRouterStreamingService
-import com.nexamusic.music.constants.LanguageCodeToName
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.LyricsEntity
+import com.nexamusic.app.api.DeepLService
+import com.nexamusic.app.api.MistralService
+import com.nexamusic.app.api.OpenRouterService
+import com.nexamusic.app.api.OpenRouterStreamingService
+import com.nexamusic.app.constants.LanguageCodeToName
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.LyricsEntity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -241,12 +241,12 @@ object LyricsTranslationHelper {
                 // Validate inputs
                 val effectiveApiKey = if (provider == "DeepL") deeplApiKey else apiKey
                 if (effectiveApiKey.isBlank()) {
-                    _status.value = TranslationStatus.Error(context.getString(com.nexamusic.music.R.string.ai_error_api_key_required))
+                    _status.value = TranslationStatus.Error(context.getString(com.nexamusic.app.R.string.ai_error_api_key_required))
                     return@launch
                 }
 
                 if (lyrics.isEmpty()) {
-                    _status.value = TranslationStatus.Error(context.getString(com.nexamusic.music.R.string.ai_error_no_lyrics))
+                    _status.value = TranslationStatus.Error(context.getString(com.nexamusic.app.R.string.ai_error_no_lyrics))
                     return@launch
                 }
 
@@ -256,7 +256,7 @@ object LyricsTranslationHelper {
                 }
 
                 if (nonEmptyEntries.isEmpty()) {
-                    _status.value = TranslationStatus.Error(context.getString(com.nexamusic.music.R.string.ai_error_lyrics_empty))
+                    _status.value = TranslationStatus.Error(context.getString(com.nexamusic.app.R.string.ai_error_lyrics_empty))
                     return@launch
                 }
 
@@ -307,7 +307,7 @@ object LyricsTranslationHelper {
 
                 // Validate language for all modes
                 if (targetLanguage.isBlank()) {
-                    _status.value = TranslationStatus.Error(context.getString(com.nexamusic.music.R.string.ai_error_language_required))
+                    _status.value = TranslationStatus.Error(context.getString(com.nexamusic.app.R.string.ai_error_language_required))
                     return@launch
                 }
 
@@ -454,7 +454,7 @@ object LyricsTranslationHelper {
                             _status.value = TranslationStatus.Success
                         }
                         else -> {
-                            _status.value = TranslationStatus.Error(context.getString(com.nexamusic.music.R.string.ai_error_unexpected))
+                            _status.value = TranslationStatus.Error(context.getString(com.nexamusic.app.R.string.ai_error_unexpected))
                         }
                     }
 
@@ -468,12 +468,12 @@ object LyricsTranslationHelper {
                         return@onFailure
                     }
 
-                    val errorMessage = error.message ?: context.getString(com.nexamusic.music.R.string.ai_error_unknown)
+                    val errorMessage = error.message ?: context.getString(com.nexamusic.app.R.string.ai_error_unknown)
                     _status.value = TranslationStatus.Error(errorMessage)
                 }
             } catch (e: Exception) {
                 if (e !is kotlinx.coroutines.CancellationException && isCompositionActive) {
-                    val errorMessage = e.message ?: context.getString(com.nexamusic.music.R.string.ai_error_translation_failed)
+                    val errorMessage = e.message ?: context.getString(com.nexamusic.app.R.string.ai_error_translation_failed)
                     _status.value = TranslationStatus.Error(errorMessage)
                 }
             }

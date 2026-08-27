@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import android.content.Context
 import androidx.compose.runtime.getValue
@@ -17,16 +17,16 @@ import com.music.innertube.models.filterExplicit
 import com.music.innertube.models.filterVideoSongs
 import com.music.innertube.models.filterYoutubeShorts
 import com.music.innertube.pages.ArtistPage
-import com.nexamusic.music.constants.HideExplicitKey
-import com.nexamusic.music.constants.HideVideoSongsKey
-import com.nexamusic.music.constants.DataSaverEnabledKey
-import com.nexamusic.music.constants.HideYoutubeShortsKey
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.extensions.filterExplicit
-import com.nexamusic.music.extensions.filterExplicitAlbums
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
-import com.nexamusic.music.utils.reportException
+import com.nexamusic.app.constants.HideExplicitKey
+import com.nexamusic.app.constants.HideVideoSongsKey
+import com.nexamusic.app.constants.DataSaverEnabledKey
+import com.nexamusic.app.constants.HideYoutubeShortsKey
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.extensions.filterExplicit
+import com.nexamusic.app.extensions.filterExplicitAlbums
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
+import com.nexamusic.app.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -37,8 +37,8 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import com.nexamusic.music.extensions.filterVideoSongs as filterVideoSongsLocal
-import com.nexamusic.music.artistvideo.ArtistVideoCanvasProvider
+import com.nexamusic.app.extensions.filterVideoSongs as filterVideoSongsLocal
+import com.nexamusic.app.artistvideo.ArtistVideoCanvasProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 

@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
@@ -30,8 +30,8 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.material3.Icon
 import androidx.compose.ui.text.font.FontWeight
 import androidx.media3.exoplayer.ExoPlayer
-import com.nexamusic.music.R
-import com.nexamusic.music.playback.PlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.playback.PlayerConnection
 
 @Composable
 fun AudioQualityBadge(

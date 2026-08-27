@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.ambient
+package com.nexamusic.app.ui.screens.ambient
 
 import android.app.Activity
 import android.content.pm.ActivityInfo
@@ -42,9 +42,9 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.player.InlineLyricsView
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.player.InlineLyricsView
 import kotlin.math.abs
 
 @Composable

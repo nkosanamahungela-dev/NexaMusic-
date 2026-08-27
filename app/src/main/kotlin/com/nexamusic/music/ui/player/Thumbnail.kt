@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.LinearEasing
@@ -19,7 +19,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.snapping.rememberSnapFlingBehavior
-import com.nexamusic.music.ui.utils.rememberEdgeAwareFlingBehavior
+import com.nexamusic.app.ui.utils.rememberEdgeAwareFlingBehavior
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -89,43 +89,43 @@ import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.size.Size as CoilSize
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.CropAlbumArtKey
-import com.nexamusic.music.constants.HidePlayerThumbnailKey
-import com.nexamusic.music.constants.PlayerBackgroundStyle
-import com.nexamusic.music.constants.PlayerBackgroundStyleKey
-import com.nexamusic.music.constants.PlayerHorizontalPadding
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.constants.PlayerArtworkStyle
-import com.nexamusic.music.constants.PlayerArtworkStyleKey
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.CropAlbumArtKey
+import com.nexamusic.app.constants.HidePlayerThumbnailKey
+import com.nexamusic.app.constants.PlayerBackgroundStyle
+import com.nexamusic.app.constants.PlayerBackgroundStyleKey
+import com.nexamusic.app.constants.PlayerHorizontalPadding
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.constants.PlayerArtworkStyle
+import com.nexamusic.app.constants.PlayerArtworkStyleKey
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.drawscope.Stroke
-import com.nexamusic.music.constants.SeekExtraSeconds
-import com.nexamusic.music.constants.SwipeThumbnailKey
-import com.nexamusic.music.constants.ThumbnailCornerRadiusKey
-import com.nexamusic.music.constants.ThumbnailCornerRadius
-import com.nexamusic.music.listentogether.RoomRole
-import com.nexamusic.music.ui.component.CastButton
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.constants.CanvasSource
-import com.nexamusic.music.constants.CanvasSourceKey
-import com.nexamusic.music.constants.CanvasThumbnailAnimationKey
-import com.nexamusic.music.constants.DataSaverEnabledKey
-import com.nexamusic.music.canvas.TidalCanvasProvider
-import com.nexamusic.music.canvas.CanvasArtwork
-import com.nexamusic.music.extensions.metadata
-import com.nexamusic.music.ui.utils.resize
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.SeekExtraSeconds
+import com.nexamusic.app.constants.SwipeThumbnailKey
+import com.nexamusic.app.constants.ThumbnailCornerRadiusKey
+import com.nexamusic.app.constants.ThumbnailCornerRadius
+import com.nexamusic.app.listentogether.RoomRole
+import com.nexamusic.app.ui.component.CastButton
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.constants.CanvasSource
+import com.nexamusic.app.constants.CanvasSourceKey
+import com.nexamusic.app.constants.CanvasThumbnailAnimationKey
+import com.nexamusic.app.constants.DataSaverEnabledKey
+import com.nexamusic.app.canvas.TidalCanvasProvider
+import com.nexamusic.app.canvas.CanvasArtwork
+import com.nexamusic.app.extensions.metadata
+import com.nexamusic.app.ui.utils.resize
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.delay
-import com.nexamusic.music.applecanvas.AppleMusicCanvasProvider
-import com.nexamusic.music.vivimusiccanvas.ViviMusicCanvasProvider
-import com.nexamusic.music.vivimusiccanvas.EchoMusicCanvasProvider
+import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
+import com.nexamusic.app.vivimusiccanvas.ViviMusicCanvasProvider
+import com.nexamusic.app.vivimusiccanvas.EchoMusicCanvasProvider
 import java.util.Locale
 
 /**
@@ -632,7 +632,7 @@ private fun ThumbnailItem(
     textBackgroundColor: Color,
     layoutDirection: LayoutDirection,
     onSeek: (String, Boolean) -> Unit,
-    playerConnection: com.nexamusic.music.playback.PlayerConnection,
+    playerConnection: com.nexamusic.app.playback.PlayerConnection,
     context: android.content.Context,
     isLandscape: Boolean = false,
     isListenTogetherGuest: Boolean = false,

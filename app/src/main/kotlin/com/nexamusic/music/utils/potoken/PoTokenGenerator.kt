@@ -1,7 +1,7 @@
-package com.nexamusic.music.utils.potoken
+package com.nexamusic.app.utils.potoken
 
 import android.webkit.CookieManager
-import com.nexamusic.music.utils.cipher.CipherDeobfuscator
+import com.nexamusic.app.utils.cipher.CipherDeobfuscator
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.sync.Mutex

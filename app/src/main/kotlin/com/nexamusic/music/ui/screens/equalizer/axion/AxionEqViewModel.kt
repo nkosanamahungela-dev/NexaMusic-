@@ -1,13 +1,13 @@
-package com.nexamusic.music.ui.screens.equalizer.axion
+package com.nexamusic.app.ui.screens.equalizer.axion
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nexamusic.music.eq.EqualizerService
-import com.nexamusic.music.eq.data.EQProfileRepository
-import com.nexamusic.music.eq.data.FilterType
-import com.nexamusic.music.eq.data.ParametricEQBand
-import com.nexamusic.music.eq.data.SavedEQProfile
+import com.nexamusic.app.eq.EqualizerService
+import com.nexamusic.app.eq.data.EQProfileRepository
+import com.nexamusic.app.eq.data.FilterType
+import com.nexamusic.app.eq.data.ParametricEQBand
+import com.nexamusic.app.eq.data.SavedEQProfile
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow

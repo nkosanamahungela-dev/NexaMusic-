@@ -7,7 +7,7 @@
  * Special thanks to Aleksey Saenko for the music recognition implementation.
  */
 
-package com.nexamusic.music.recognition
+package com.nexamusic.app.recognition
 
 import android.Manifest
 import android.annotation.SuppressLint

@@ -5,13 +5,13 @@
  *
  * Not published as a library — ported straight from the catalog demo app that
  * showcases Kyant0/backdrop, source-only. Package renamed, imports repointed at
- * this app's vendored com.nexamusic.music.ui.component.backdrop, and
+ * this app's vendored com.nexamusic.app.ui.component.backdrop, and
  * com.kyant.shapes.Capsule swapped for RoundedCornerShape(percent = 50) (the
  * lens effect only supports CornerBasedShape here — see GlassEffect.kt).
  *
  * Used directly by LiquidBottomTabs.kt — see that file for where it's wired in.
  */
-package com.nexamusic.music.ui.component.backdrop.catalog.components
+package com.nexamusic.app.ui.component.backdrop.catalog.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

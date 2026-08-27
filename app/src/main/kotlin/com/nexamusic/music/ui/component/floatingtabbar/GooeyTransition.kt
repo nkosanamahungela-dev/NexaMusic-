@@ -9,7 +9,7 @@
  * instead of a flat crossfade. Built from primitives already vendored in
  * this app (see imports) rather than a new custom shader.
  */
-package com.nexamusic.music.ui.component.floatingtabbar
+package com.nexamusic.app.ui.component.floatingtabbar
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.BlurEffect
@@ -19,8 +19,8 @@ import androidx.compose.ui.graphics.CompositingStrategy
 import androidx.compose.ui.graphics.RenderEffect
 import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.graphics.graphicsLayer
-import com.nexamusic.music.ui.component.backdrop.internal.ColorFilterEffect
-import com.nexamusic.music.ui.component.backdrop.isRenderEffectSupported
+import com.nexamusic.app.ui.component.backdrop.internal.ColorFilterEffect
+import com.nexamusic.app.ui.component.backdrop.isRenderEffectSupported
 
 // Alpha (0..255 scale, matching this app's other ColorMatrix usage in
 // backdrop/effects/ColorFilter.kt) snaps from 0 to 1 across a narrow band

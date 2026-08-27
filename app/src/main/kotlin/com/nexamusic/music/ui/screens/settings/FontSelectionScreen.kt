@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings
+package com.nexamusic.app.ui.screens.settings
 
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -43,25 +43,25 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.AppFont
-import com.nexamusic.music.constants.BrandFontEnabledKey
-import com.nexamusic.music.constants.CustomFontEnabledKey
-import com.nexamusic.music.constants.CustomFontNameKey
-import com.nexamusic.music.constants.CustomFontPathKey
-import com.nexamusic.music.constants.SelectedFontKey
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.component.Material3SettingsGroup
-import com.nexamusic.music.ui.component.Material3SettingsItem
-import com.nexamusic.music.ui.theme.GoogleSansFontFamily
-import com.nexamusic.music.ui.theme.OutfitFontFamily
-import com.nexamusic.music.ui.theme.PlusJakartaSansFontFamily
-import com.nexamusic.music.ui.theme.SansFlexFontFamily
-import com.nexamusic.music.ui.theme.copyCustomFont
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.AppFont
+import com.nexamusic.app.constants.BrandFontEnabledKey
+import com.nexamusic.app.constants.CustomFontEnabledKey
+import com.nexamusic.app.constants.CustomFontNameKey
+import com.nexamusic.app.constants.CustomFontPathKey
+import com.nexamusic.app.constants.SelectedFontKey
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.component.Material3SettingsGroup
+import com.nexamusic.app.ui.component.Material3SettingsItem
+import com.nexamusic.app.ui.theme.GoogleSansFontFamily
+import com.nexamusic.app.ui.theme.OutfitFontFamily
+import com.nexamusic.app.ui.theme.PlusJakartaSansFontFamily
+import com.nexamusic.app.ui.theme.SansFlexFontFamily
+import com.nexamusic.app.ui.theme.copyCustomFont
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

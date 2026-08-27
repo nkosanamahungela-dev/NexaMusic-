@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.wrapped.components
+package com.nexamusic.app.ui.screens.wrapped.components
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

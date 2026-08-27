@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.utils
+package com.nexamusic.app.ui.utils
 
 import androidx.compose.animation.core.AnimationSpec
 import androidx.compose.animation.core.DecayAnimationSpec
@@ -31,7 +31,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.unit.dp
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
 
 /**
  * Window insets for a screen's TopAppBar so its title/back button clear the

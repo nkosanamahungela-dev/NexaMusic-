@@ -7,13 +7,13 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package com.nexamusic.music.ui.component.backdrop.effects
+package com.nexamusic.app.ui.component.backdrop.effects
 
 import androidx.annotation.FloatRange
 import androidx.compose.ui.graphics.BlurEffect
 import androidx.compose.ui.graphics.TileMode
-import com.nexamusic.music.ui.component.backdrop.BackdropEffectScope
-import com.nexamusic.music.ui.component.backdrop.isRenderEffectSupported
+import com.nexamusic.app.ui.component.backdrop.BackdropEffectScope
+import com.nexamusic.app.ui.component.backdrop.isRenderEffectSupported
 
 fun BackdropEffectScope.blur(
     @FloatRange(from = 0.0) radius: Float,

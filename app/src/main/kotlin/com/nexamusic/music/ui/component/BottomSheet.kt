@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.Animatable
@@ -41,11 +41,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.graphicsLayer
-import com.nexamusic.music.ui.player.PlayerMorph
-import com.nexamusic.music.ui.player.easeOutCubic
-import com.nexamusic.music.ui.player.SCREEN_CORNER_EXPANSION_MILLIS
-import com.nexamusic.music.ui.player.recordPlayerLayer
-import com.nexamusic.music.ui.player.sharedContainerCornerRadius
+import com.nexamusic.app.ui.player.PlayerMorph
+import com.nexamusic.app.ui.player.easeOutCubic
+import com.nexamusic.app.ui.player.SCREEN_CORNER_EXPANSION_MILLIS
+import com.nexamusic.app.ui.player.recordPlayerLayer
+import com.nexamusic.app.ui.player.sharedContainerCornerRadius
 import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.pointer.pointerInput
@@ -56,7 +56,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.isSpecified
-import com.nexamusic.music.constants.NavigationBarAnimationSpec
+import com.nexamusic.app.constants.NavigationBarAnimationSpec
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import kotlin.math.pow

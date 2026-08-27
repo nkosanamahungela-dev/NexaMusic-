@@ -4,14 +4,14 @@
  * capsule/src/main/java/com/kyant/capsule/continuities/G0Continuity.kt
  *
  * Vendored so the shape ships as source with this app. Package renamed
- * accordingly (com.kyant.capsule -> com.nexamusic.music.ui.component.shapes).
+ * accordingly (com.kyant.capsule -> com.nexamusic.app.ui.component.shapes).
  */
-package com.nexamusic.music.ui.component.shapes.continuities
+package com.nexamusic.app.ui.component.shapes.continuities
 
 import androidx.compose.runtime.Immutable
-import com.nexamusic.music.ui.component.shapes.Continuity
-import com.nexamusic.music.ui.component.shapes.path.PathSegments
-import com.nexamusic.music.ui.component.shapes.path.buildPathSegments
+import com.nexamusic.app.ui.component.shapes.Continuity
+import com.nexamusic.app.ui.component.shapes.path.PathSegments
+import com.nexamusic.app.ui.component.shapes.path.buildPathSegments
 
 @Immutable
 data object G0Continuity : Continuity {

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.utils
+package com.nexamusic.app.utils
 
 import android.net.ConnectivityManager
 
@@ -12,7 +12,7 @@ import com.music.innertube.NewPipeExtractor
 import com.music.innertube.YouTube
 import com.music.innertube.models.YouTubeClient
 import com.music.innertube.models.YouTubeClient.Companion.ANDROID_CREATOR
-import com.nexamusic.music.utils.BotDetectionMitigator
+import com.nexamusic.app.utils.BotDetectionMitigator
 import com.music.innertube.models.YouTubeClient.Companion.ANDROID_VR_1_43_32
 import com.music.innertube.models.YouTubeClient.Companion.ANDROID_VR_1_61_48
 import com.music.innertube.models.YouTubeClient.Companion.ANDROID_VR_NO_AUTH
@@ -26,31 +26,31 @@ import com.music.innertube.models.YouTubeClient.Companion.WEB
 import com.music.innertube.models.YouTubeClient.Companion.WEB_CREATOR
 import com.music.innertube.models.YouTubeClient.Companion.WEB_REMIX
 import com.music.innertube.models.response.PlayerResponse
-import com.nexamusic.music.constants.AudioQuality
-import com.nexamusic.music.constants.EnableSaavnStreamingKey
-import com.nexamusic.music.constants.ForceSelectedQualityKey
-import com.nexamusic.music.constants.SaavnFallbackToYouTubeKey
-import com.nexamusic.music.constants.EnableTidalStreamingKey
-import com.nexamusic.music.constants.EnabledModulesKey
-import com.nexamusic.music.constants.ModuleSourcesKey
-import com.nexamusic.music.constants.ModuleSettingsKey
-import com.nexamusic.music.constants.SaavnAudioQuality
-import com.nexamusic.music.constants.SaavnAudioQualityKey
-import com.nexamusic.music.constants.TidalInstanceUrlKey
-import com.nexamusic.music.constants.TidalQuality
-import com.nexamusic.music.constants.TidalQualityKey
-import com.nexamusic.music.utils.tidal.TidalService
+import com.nexamusic.app.constants.AudioQuality
+import com.nexamusic.app.constants.EnableSaavnStreamingKey
+import com.nexamusic.app.constants.ForceSelectedQualityKey
+import com.nexamusic.app.constants.SaavnFallbackToYouTubeKey
+import com.nexamusic.app.constants.EnableTidalStreamingKey
+import com.nexamusic.app.constants.EnabledModulesKey
+import com.nexamusic.app.constants.ModuleSourcesKey
+import com.nexamusic.app.constants.ModuleSettingsKey
+import com.nexamusic.app.constants.SaavnAudioQuality
+import com.nexamusic.app.constants.SaavnAudioQualityKey
+import com.nexamusic.app.constants.TidalInstanceUrlKey
+import com.nexamusic.app.constants.TidalQuality
+import com.nexamusic.app.constants.TidalQualityKey
+import com.nexamusic.app.utils.tidal.TidalService
 import com.music.spine.ModuleManager
 import org.json.JSONArray
-import com.nexamusic.music.utils.cipher.CipherDeobfuscator
-import com.nexamusic.music.utils.YTPlayerUtils.MAIN_CLIENT
-import com.nexamusic.music.utils.YTPlayerUtils.STREAM_FALLBACK_CLIENTS
-import com.nexamusic.music.utils.YTPlayerUtils.validateStatus
-import com.nexamusic.music.utils.potoken.PoTokenGenerator
-import com.nexamusic.music.utils.potoken.PoTokenResult
-import com.nexamusic.music.utils.sabr.EjsNTransformSolver
-import com.nexamusic.music.utils.PlaybackLogLevel
-import com.nexamusic.music.utils.PlaybackLogManager
+import com.nexamusic.app.utils.cipher.CipherDeobfuscator
+import com.nexamusic.app.utils.YTPlayerUtils.MAIN_CLIENT
+import com.nexamusic.app.utils.YTPlayerUtils.STREAM_FALLBACK_CLIENTS
+import com.nexamusic.app.utils.YTPlayerUtils.validateStatus
+import com.nexamusic.app.utils.potoken.PoTokenGenerator
+import com.nexamusic.app.utils.potoken.PoTokenResult
+import com.nexamusic.app.utils.sabr.EjsNTransformSolver
+import com.nexamusic.app.utils.PlaybackLogLevel
+import com.nexamusic.app.utils.PlaybackLogManager
 import com.music.innertube.models.IpVersion
 import com.music.innertube.models.WatchEndpoint
 import com.music.jiosaavn.SaavnService
@@ -587,7 +587,7 @@ object YTPlayerUtils {
                     // Try every match, best-quality-first, instead of aborting to
                     // Saavn/YouTube the instant the single first candidate's
                     // stream fetch fails.
-                    var best: com.nexamusic.music.utils.tidal.TidalTrack? = null
+                    var best: com.nexamusic.app.utils.tidal.TidalTrack? = null
                     var streamUrl: String? = null
                     for (candidate in matchingCandidates) {
                         val url = TidalService.streamUrl(candidate.id, quality.toApiValue(), customUrl)

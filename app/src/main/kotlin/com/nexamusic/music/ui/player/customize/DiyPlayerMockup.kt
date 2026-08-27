@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.player.customize
+package com.nexamusic.app.ui.player.customize
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
@@ -50,31 +50,31 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.HidePlayerThumbnailKey
-import com.nexamusic.music.constants.PlayerHorizontalPadding
-import com.nexamusic.music.constants.PlayerArtworkStyle
-import com.nexamusic.music.constants.PlayerArtworkStyleKey
-import com.nexamusic.music.constants.PlayerBackgroundStyle
-import com.nexamusic.music.constants.PlayerBackgroundStyleKey
-import com.nexamusic.music.constants.PlayerButtonsStyle
-import com.nexamusic.music.constants.PlayerButtonsStyleKey
-import com.nexamusic.music.constants.PlayerGradientAngleKey
-import com.nexamusic.music.constants.PlayerGradientStopsKey
-import com.nexamusic.music.constants.PlayerStaticColorKey
-import com.nexamusic.music.constants.SliderStyle
-import com.nexamusic.music.constants.SliderStyleKey
-import com.nexamusic.music.constants.ThumbnailCornerRadiusKey
-import com.nexamusic.music.ui.component.LocalAppBackdrop
-import com.nexamusic.music.ui.component.LocalGlassEffectConfig
-import com.nexamusic.music.ui.component.PLAYER_BLUR_MULTIPLIER
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
-import com.nexamusic.music.ui.component.isGlassAllowed
-import com.nexamusic.music.ui.component.liquidGlass
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.theme.decodeGradientStops
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.HidePlayerThumbnailKey
+import com.nexamusic.app.constants.PlayerHorizontalPadding
+import com.nexamusic.app.constants.PlayerArtworkStyle
+import com.nexamusic.app.constants.PlayerArtworkStyleKey
+import com.nexamusic.app.constants.PlayerBackgroundStyle
+import com.nexamusic.app.constants.PlayerBackgroundStyleKey
+import com.nexamusic.app.constants.PlayerButtonsStyle
+import com.nexamusic.app.constants.PlayerButtonsStyleKey
+import com.nexamusic.app.constants.PlayerGradientAngleKey
+import com.nexamusic.app.constants.PlayerGradientStopsKey
+import com.nexamusic.app.constants.PlayerStaticColorKey
+import com.nexamusic.app.constants.SliderStyle
+import com.nexamusic.app.constants.SliderStyleKey
+import com.nexamusic.app.constants.ThumbnailCornerRadiusKey
+import com.nexamusic.app.ui.component.LocalAppBackdrop
+import com.nexamusic.app.ui.component.LocalGlassEffectConfig
+import com.nexamusic.app.ui.component.PLAYER_BLUR_MULTIPLIER
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import com.nexamusic.app.ui.component.isGlassAllowed
+import com.nexamusic.app.ui.component.liquidGlass
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.theme.decodeGradientStops
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
 import kotlin.math.min
 import kotlin.math.sin
 

@@ -5,7 +5,7 @@
  * Performance optimized MiniPlayer - prevents unnecessary recomposition
  */
 
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import android.os.Build
 import androidx.compose.animation.AnimatedVisibility
@@ -32,15 +32,15 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import com.nexamusic.music.ui.component.ScrollingWaveformSeekBar
-import com.nexamusic.music.ui.component.rememberPlaybackFraction
-import com.nexamusic.music.ui.component.thumbnailPx
-import com.nexamusic.music.constants.MiniPlayerWaveformKey
-import com.nexamusic.music.constants.PlayerGradientAngleKey
-import com.nexamusic.music.constants.PlayerGradientStopsKey
-import com.nexamusic.music.ui.theme.decodeGradientStops
-import com.nexamusic.music.ui.theme.tiltedGradient
-import com.nexamusic.music.constants.PlayerStaticColorKey
+import com.nexamusic.app.ui.component.ScrollingWaveformSeekBar
+import com.nexamusic.app.ui.component.rememberPlaybackFraction
+import com.nexamusic.app.ui.component.thumbnailPx
+import com.nexamusic.app.constants.MiniPlayerWaveformKey
+import com.nexamusic.app.constants.PlayerGradientAngleKey
+import com.nexamusic.app.constants.PlayerGradientStopsKey
+import com.nexamusic.app.ui.theme.decodeGradientStops
+import com.nexamusic.app.ui.theme.tiltedGradient
+import com.nexamusic.app.constants.PlayerStaticColorKey
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -116,44 +116,44 @@ import coil3.request.allowHardware
 import coil3.request.crossfade
 import coil3.size.Size as CoilSize
 import coil3.toBitmap
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.player.customize.PlayerGlyph
-import com.nexamusic.music.ui.player.customize.PlayerIconSlot
-import com.nexamusic.music.constants.CropAlbumArtKey
-import com.nexamusic.music.constants.DarkModeKey
-import com.nexamusic.music.constants.MiniPlayerBackgroundStyleKey
-import com.nexamusic.music.constants.MiniPlayerHeight
-import com.nexamusic.music.constants.PlayerBackgroundStyle
-import com.nexamusic.music.constants.PureBlackMiniPlayerKey
-import com.nexamusic.music.constants.SwipeSensitivityKey
-import com.nexamusic.music.constants.SwipeThumbnailKey
-import com.nexamusic.music.constants.ThumbnailCornerRadius
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.constants.UseNewMiniPlayerDesignKey
-import com.nexamusic.music.db.entities.ArtistEntity
-import com.nexamusic.music.listentogether.ListenTogetherManager
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.playback.CastConnectionHandler
-import com.nexamusic.music.playback.PlayerConnection
-import com.nexamusic.music.ui.screens.settings.DarkMode
-import com.nexamusic.music.ui.component.AnimatedPlayPauseIcon
-import com.nexamusic.music.ui.component.GlassComponent
-import com.nexamusic.music.ui.component.LocalGlassEffectConfig
-import com.nexamusic.music.ui.component.backdrop.catalog.utils.InteractiveHighlight
-import com.nexamusic.music.ui.component.isGlassAllowed
-import com.nexamusic.music.ui.component.liquidGlass
-import com.nexamusic.music.ui.theme.PlayerColorExtractor
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.utils.rememberPreference
-import com.nexamusic.music.vivimusic.AudioDeviceBottomSheet
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.player.customize.PlayerGlyph
+import com.nexamusic.app.ui.player.customize.PlayerIconSlot
+import com.nexamusic.app.constants.CropAlbumArtKey
+import com.nexamusic.app.constants.DarkModeKey
+import com.nexamusic.app.constants.MiniPlayerBackgroundStyleKey
+import com.nexamusic.app.constants.MiniPlayerHeight
+import com.nexamusic.app.constants.PlayerBackgroundStyle
+import com.nexamusic.app.constants.PureBlackMiniPlayerKey
+import com.nexamusic.app.constants.SwipeSensitivityKey
+import com.nexamusic.app.constants.SwipeThumbnailKey
+import com.nexamusic.app.constants.ThumbnailCornerRadius
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.constants.UseNewMiniPlayerDesignKey
+import com.nexamusic.app.db.entities.ArtistEntity
+import com.nexamusic.app.listentogether.ListenTogetherManager
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.playback.CastConnectionHandler
+import com.nexamusic.app.playback.PlayerConnection
+import com.nexamusic.app.ui.screens.settings.DarkMode
+import com.nexamusic.app.ui.component.AnimatedPlayPauseIcon
+import com.nexamusic.app.ui.component.GlassComponent
+import com.nexamusic.app.ui.component.LocalGlassEffectConfig
+import com.nexamusic.app.ui.component.backdrop.catalog.utils.InteractiveHighlight
+import com.nexamusic.app.ui.component.isGlassAllowed
+import com.nexamusic.app.ui.component.liquidGlass
+import com.nexamusic.app.ui.theme.PlayerColorExtractor
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.utils.rememberPreference
+import com.nexamusic.app.vivimusic.AudioDeviceBottomSheet
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.math.roundToInt
-import com.nexamusic.music.vivimusic.isBluetoothHeadphoneConnected
+import com.nexamusic.app.vivimusic.isBluetoothHeadphoneConnected
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Headphones
 import androidx.compose.material.icons.filled.Speaker
@@ -165,7 +165,7 @@ import androidx.compose.ui.res.stringResource
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
 import kotlin.math.roundToInt
-import com.nexamusic.music.ui.component.Icon as MIcon
+import com.nexamusic.app.ui.component.Icon as MIcon
 
 /**
  * Stable wrapper for progress state - reads values only during draw phase

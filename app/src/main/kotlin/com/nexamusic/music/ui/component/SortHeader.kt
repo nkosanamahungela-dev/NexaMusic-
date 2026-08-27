@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.layout.padding
@@ -42,9 +42,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.PlaylistSongSortType
-import com.nexamusic.music.ui.theme.rememberGlobalAccentColors
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.PlaylistSongSortType
+import com.nexamusic.app.ui.theme.rememberGlobalAccentColors
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

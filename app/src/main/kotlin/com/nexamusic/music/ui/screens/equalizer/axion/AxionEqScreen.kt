@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.screens.equalizer.axion
+package com.nexamusic.app.ui.screens.equalizer.axion
 
 import androidx.compose.animation.*
 import androidx.compose.foundation.background
@@ -12,8 +12,8 @@ import androidx.compose.material.icons.rounded.Edit
 import androidx.compose.material.icons.rounded.Replay
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
+import com.nexamusic.app.ui.utils.bounceClick
+import com.nexamusic.app.ui.utils.combinedBounceClick
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -30,11 +30,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.nexamusic.music.R
-import com.nexamusic.music.eq.data.SavedEQProfile
-import com.nexamusic.music.ui.component.Material3SettingsGroup
-import com.nexamusic.music.ui.component.Material3SettingsItem
-import com.nexamusic.music.ui.utils.backToMain
+import com.nexamusic.app.R
+import com.nexamusic.app.eq.data.SavedEQProfile
+import com.nexamusic.app.ui.component.Material3SettingsGroup
+import com.nexamusic.app.ui.component.Material3SettingsItem
+import com.nexamusic.app.ui.utils.backToMain
 import kotlin.math.abs
 import racra.compose.smooth_corner_rect_library.AbsoluteSmoothCornerShape
 
@@ -53,7 +53,7 @@ fun AxionEqScreen(
             TopAppBar(
                 title = { Text(stringResource(R.string.vivi_equalizer)) },
                 navigationIcon = {
-                    com.nexamusic.music.ui.component.IconButton(
+                    com.nexamusic.app.ui.component.IconButton(
                         onClick = onBackClick,
                         onLongClick = {}
                     ) {

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.utils
+package com.nexamusic.app.ui.utils
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animate
@@ -33,8 +33,8 @@ import androidx.compose.ui.unit.Velocity
 import androidx.compose.ui.unit.dp
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
-import com.nexamusic.music.constants.IosOverscrollKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.constants.IosOverscrollKey
+import com.nexamusic.app.utils.rememberPreference
 import kotlin.math.sign
 
 /**

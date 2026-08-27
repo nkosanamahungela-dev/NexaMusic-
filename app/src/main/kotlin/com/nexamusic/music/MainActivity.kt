@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music
+package com.nexamusic.app
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -147,19 +147,19 @@ import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.request.crossfade
 import coil3.toBitmap
-import com.nexamusic.music.ui.component.backdrop.backdrops.layerBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberBackdropFreeze
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberLayerBackdrop
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberNavTransitionFreeze
-import com.nexamusic.music.ui.component.backdrop.backdrops.rememberPagerTransitionFreeze
-import com.nexamusic.music.ui.screens.search.SearchScreen
-import com.nexamusic.music.ui.utils.Motion
-import com.nexamusic.music.ui.utils.LocalSharedTransitionScope
-import com.nexamusic.music.ui.utils.markSharedArtworkSource
-import com.nexamusic.music.ui.utils.markMorphDirection
-import com.nexamusic.music.ui.utils.morphArtworkId
-import com.nexamusic.music.ui.utils.isMorphRoute
-import com.nexamusic.music.ui.component.prewarmHeroTint
+import com.nexamusic.app.ui.component.backdrop.backdrops.layerBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberBackdropFreeze
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberLayerBackdrop
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberNavTransitionFreeze
+import com.nexamusic.app.ui.component.backdrop.backdrops.rememberPagerTransitionFreeze
+import com.nexamusic.app.ui.screens.search.SearchScreen
+import com.nexamusic.app.ui.utils.Motion
+import com.nexamusic.app.ui.utils.LocalSharedTransitionScope
+import com.nexamusic.app.ui.utils.markSharedArtworkSource
+import com.nexamusic.app.ui.utils.markMorphDirection
+import com.nexamusic.app.ui.utils.morphArtworkId
+import com.nexamusic.app.ui.utils.isMorphRoute
+import com.nexamusic.app.ui.component.prewarmHeroTint
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
 import com.airbnb.lottie.compose.animateLottieCompositionAsState
@@ -167,153 +167,153 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.music.innertube.YouTube
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.WatchEndpoint
-import com.nexamusic.music.constants.AppBarHeight
-import com.nexamusic.music.constants.AppLanguageKey
-import com.nexamusic.music.constants.DarkModeKey
-import com.nexamusic.music.constants.DefaultOpenTabKey
-import com.nexamusic.music.constants.DisableScreenshotKey
-import com.nexamusic.music.constants.DynamicThemeKey
-import com.nexamusic.music.constants.SearchSource
-import com.nexamusic.music.constants.LocalOnlyModeKey
-import com.nexamusic.music.constants.SearchSourceKey
-import com.nexamusic.music.constants.EnableHighRefreshRateKey
-import com.nexamusic.music.constants.EnableSettingsPopupKey
-import com.nexamusic.music.constants.ListenTogetherInTopBarKey
-import com.nexamusic.music.constants.ListenTogetherUsernameKey
-import com.nexamusic.music.constants.MiniPlayerBottomSpacing
-import com.nexamusic.music.constants.MiniPlayerHeight
-import com.nexamusic.music.constants.DockedAccessoryHeight
-import com.nexamusic.music.constants.NavigationBarAnimationSpec
-import com.nexamusic.music.constants.NavigationBarHeight
-import com.nexamusic.music.constants.OverlayMenuStyleKey
-import com.nexamusic.music.constants.PauseListenHistoryKey
-import com.nexamusic.music.constants.LiquidGlassGlobalEnabledKey
-import com.nexamusic.music.constants.LiquidGlassPlayerEnabledKey
-import com.nexamusic.music.constants.LiquidGlassMiniPlayerEnabledKey
-import com.nexamusic.music.constants.LiquidGlassNavBarEnabledKey
-import com.nexamusic.music.constants.LiquidGlassSidePanelEnabledKey
-import com.nexamusic.music.constants.LiquidGlassSidePanelVibrancyKey
-import com.nexamusic.music.constants.LiquidGlassSidePanelBlurRadiusKey
-import com.nexamusic.music.constants.LiquidGlassSidePanelLensHeightKey
-import com.nexamusic.music.constants.LiquidGlassSidePanelLensAmountKey
-import com.nexamusic.music.constants.LiquidGlassSidePanelColorKey
-import com.nexamusic.music.constants.LiquidGlassSidePanelSurfaceOpacityKey
-import com.nexamusic.music.constants.LiquidGlassSidePanelTextColorKey
-import com.nexamusic.music.constants.SideBarCollapsedKey
-import com.nexamusic.music.constants.LiquidGlassVibrancyKey
-import com.nexamusic.music.constants.LiquidGlassBlurRadiusKey
-import com.nexamusic.music.constants.LiquidGlassLensHeightKey
-import com.nexamusic.music.constants.LiquidGlassLensAmountKey
-import com.nexamusic.music.constants.LiquidGlassChromaticAberrationKey
-import com.nexamusic.music.constants.LiquidGlassDepthEffectKey
-import com.nexamusic.music.constants.LiquidGlassSurfaceTintColorKey
-import com.nexamusic.music.constants.LiquidGlassPuckColorKey
-import com.nexamusic.music.constants.LiquidGlassPuckOpacityKey
-import com.nexamusic.music.constants.LiquidGlassStyleKey
-import com.nexamusic.music.constants.LiquidGlassHighlightColorKey
-import com.nexamusic.music.constants.LiquidGlassHighlightOpacityKey
-import com.nexamusic.music.constants.LiquidGlassSurfaceOpacityKey
-import com.nexamusic.music.constants.LiquidGlassAdaptiveContrastKey
-import com.nexamusic.music.constants.LiquidGlassTextColorKey
-import com.nexamusic.music.constants.ShowHistoryButtonKey
-import com.nexamusic.music.constants.ShowStatsButtonKey
-import com.nexamusic.music.constants.AppleMusicUiKey
-import com.nexamusic.music.constants.PauseSearchHistoryKey
-import com.nexamusic.music.constants.AppBackgroundColorKey
-import com.nexamusic.music.constants.PureBlackKey
-import com.nexamusic.music.constants.SYSTEM_DEFAULT
-import com.nexamusic.music.constants.SelectedThemeColorKey
-import com.nexamusic.music.constants.SlimNavBarHeight
-import com.nexamusic.music.constants.ForceTabletLayoutKey
-import com.nexamusic.music.constants.PlaylistSortType
-import com.nexamusic.music.constants.SlimNavBarKey
-import com.nexamusic.music.constants.StopMusicOnTaskClearKey
-import com.nexamusic.music.constants.UseNewMiniPlayerDesignKey
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.SearchHistory
-import com.nexamusic.music.extensions.toEnum
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.DownloadUtil
-import com.nexamusic.music.playback.MusicService
-import com.nexamusic.music.playback.MusicService.MusicBinder
-import com.nexamusic.music.playback.PlayerConnection
-import com.nexamusic.music.playback.queues.YouTubeQueue
-import com.nexamusic.music.ui.component.AppFloatingNavBar
-import com.nexamusic.music.ui.component.LocalDownloads
-import com.nexamusic.music.ui.component.LocalItemPrefs
-import com.nexamusic.music.ui.component.LocalNavSearchState
-import com.nexamusic.music.ui.component.rememberAppBackgroundTint
-import com.nexamusic.music.ui.component.rememberItemPrefs
-import com.nexamusic.music.ui.component.NavSearchState
-import com.nexamusic.music.ui.component.GlassEffectConfig
-import com.nexamusic.music.ui.component.LocalGlassEffectConfig
-import com.nexamusic.music.ui.component.LocalAppBackdrop
-import com.nexamusic.music.ui.component.GlassStyle
-import com.nexamusic.music.ui.component.glassContentColorFor
-import com.nexamusic.music.ui.component.LocalAppleMusicUi
-import com.nexamusic.music.ui.component.isGlassAllowed
-import com.nexamusic.music.ui.component.AppFloatingNowPlayingPill
-import com.nexamusic.music.ui.component.FloatingMiniPlayerWidthFraction
-import com.nexamusic.music.ui.component.NavBarSearchInputBar
-import com.nexamusic.music.ui.component.GlassCircleButton
-import com.nexamusic.music.ui.component.AppFloatingSideBar
-import com.nexamusic.music.ui.component.SideBarAccountRow
-import com.nexamusic.music.ui.component.SideBarContentInset
-import com.nexamusic.music.ui.component.SideBarMargin
-import com.nexamusic.music.ui.component.SideBarCollapsedWidth
-import com.nexamusic.music.ui.component.SideBarLink
-import com.nexamusic.music.ui.component.SideBarSection
-import com.nexamusic.music.ui.component.TabletWidthThreshold
-import com.nexamusic.music.ui.component.AppNavigationRail
-import com.nexamusic.music.ui.component.BottomSheetMenu
-import com.nexamusic.music.ui.component.OverlayMenu
-import com.nexamusic.music.ui.component.BottomSheetPage
-import com.nexamusic.music.ui.component.ListenTogetherOverlay
-import com.nexamusic.music.ui.component.LocalBottomSheetPageState
-import com.nexamusic.music.ui.component.LocalMenuState
-import com.nexamusic.music.ui.component.rememberBottomSheetState
-import com.nexamusic.music.ui.component.shimmer.ShimmerTheme
-import com.nexamusic.music.ui.menu.YouTubeSongMenu
-import com.nexamusic.music.ui.player.BottomSheetPlayer
-import com.nexamusic.music.ui.player.InstallPlayerMorphLayers
-import com.nexamusic.music.ui.player.PlayerMorph
+import com.nexamusic.app.constants.AppBarHeight
+import com.nexamusic.app.constants.AppLanguageKey
+import com.nexamusic.app.constants.DarkModeKey
+import com.nexamusic.app.constants.DefaultOpenTabKey
+import com.nexamusic.app.constants.DisableScreenshotKey
+import com.nexamusic.app.constants.DynamicThemeKey
+import com.nexamusic.app.constants.SearchSource
+import com.nexamusic.app.constants.LocalOnlyModeKey
+import com.nexamusic.app.constants.SearchSourceKey
+import com.nexamusic.app.constants.EnableHighRefreshRateKey
+import com.nexamusic.app.constants.EnableSettingsPopupKey
+import com.nexamusic.app.constants.ListenTogetherInTopBarKey
+import com.nexamusic.app.constants.ListenTogetherUsernameKey
+import com.nexamusic.app.constants.MiniPlayerBottomSpacing
+import com.nexamusic.app.constants.MiniPlayerHeight
+import com.nexamusic.app.constants.DockedAccessoryHeight
+import com.nexamusic.app.constants.NavigationBarAnimationSpec
+import com.nexamusic.app.constants.NavigationBarHeight
+import com.nexamusic.app.constants.OverlayMenuStyleKey
+import com.nexamusic.app.constants.PauseListenHistoryKey
+import com.nexamusic.app.constants.LiquidGlassGlobalEnabledKey
+import com.nexamusic.app.constants.LiquidGlassPlayerEnabledKey
+import com.nexamusic.app.constants.LiquidGlassMiniPlayerEnabledKey
+import com.nexamusic.app.constants.LiquidGlassNavBarEnabledKey
+import com.nexamusic.app.constants.LiquidGlassSidePanelEnabledKey
+import com.nexamusic.app.constants.LiquidGlassSidePanelVibrancyKey
+import com.nexamusic.app.constants.LiquidGlassSidePanelBlurRadiusKey
+import com.nexamusic.app.constants.LiquidGlassSidePanelLensHeightKey
+import com.nexamusic.app.constants.LiquidGlassSidePanelLensAmountKey
+import com.nexamusic.app.constants.LiquidGlassSidePanelColorKey
+import com.nexamusic.app.constants.LiquidGlassSidePanelSurfaceOpacityKey
+import com.nexamusic.app.constants.LiquidGlassSidePanelTextColorKey
+import com.nexamusic.app.constants.SideBarCollapsedKey
+import com.nexamusic.app.constants.LiquidGlassVibrancyKey
+import com.nexamusic.app.constants.LiquidGlassBlurRadiusKey
+import com.nexamusic.app.constants.LiquidGlassLensHeightKey
+import com.nexamusic.app.constants.LiquidGlassLensAmountKey
+import com.nexamusic.app.constants.LiquidGlassChromaticAberrationKey
+import com.nexamusic.app.constants.LiquidGlassDepthEffectKey
+import com.nexamusic.app.constants.LiquidGlassSurfaceTintColorKey
+import com.nexamusic.app.constants.LiquidGlassPuckColorKey
+import com.nexamusic.app.constants.LiquidGlassPuckOpacityKey
+import com.nexamusic.app.constants.LiquidGlassStyleKey
+import com.nexamusic.app.constants.LiquidGlassHighlightColorKey
+import com.nexamusic.app.constants.LiquidGlassHighlightOpacityKey
+import com.nexamusic.app.constants.LiquidGlassSurfaceOpacityKey
+import com.nexamusic.app.constants.LiquidGlassAdaptiveContrastKey
+import com.nexamusic.app.constants.LiquidGlassTextColorKey
+import com.nexamusic.app.constants.ShowHistoryButtonKey
+import com.nexamusic.app.constants.ShowStatsButtonKey
+import com.nexamusic.app.constants.AppleMusicUiKey
+import com.nexamusic.app.constants.PauseSearchHistoryKey
+import com.nexamusic.app.constants.AppBackgroundColorKey
+import com.nexamusic.app.constants.PureBlackKey
+import com.nexamusic.app.constants.SYSTEM_DEFAULT
+import com.nexamusic.app.constants.SelectedThemeColorKey
+import com.nexamusic.app.constants.SlimNavBarHeight
+import com.nexamusic.app.constants.ForceTabletLayoutKey
+import com.nexamusic.app.constants.PlaylistSortType
+import com.nexamusic.app.constants.SlimNavBarKey
+import com.nexamusic.app.constants.StopMusicOnTaskClearKey
+import com.nexamusic.app.constants.UseNewMiniPlayerDesignKey
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.SearchHistory
+import com.nexamusic.app.extensions.toEnum
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.DownloadUtil
+import com.nexamusic.app.playback.MusicService
+import com.nexamusic.app.playback.MusicService.MusicBinder
+import com.nexamusic.app.playback.PlayerConnection
+import com.nexamusic.app.playback.queues.YouTubeQueue
+import com.nexamusic.app.ui.component.AppFloatingNavBar
+import com.nexamusic.app.ui.component.LocalDownloads
+import com.nexamusic.app.ui.component.LocalItemPrefs
+import com.nexamusic.app.ui.component.LocalNavSearchState
+import com.nexamusic.app.ui.component.rememberAppBackgroundTint
+import com.nexamusic.app.ui.component.rememberItemPrefs
+import com.nexamusic.app.ui.component.NavSearchState
+import com.nexamusic.app.ui.component.GlassEffectConfig
+import com.nexamusic.app.ui.component.LocalGlassEffectConfig
+import com.nexamusic.app.ui.component.LocalAppBackdrop
+import com.nexamusic.app.ui.component.GlassStyle
+import com.nexamusic.app.ui.component.glassContentColorFor
+import com.nexamusic.app.ui.component.LocalAppleMusicUi
+import com.nexamusic.app.ui.component.isGlassAllowed
+import com.nexamusic.app.ui.component.AppFloatingNowPlayingPill
+import com.nexamusic.app.ui.component.FloatingMiniPlayerWidthFraction
+import com.nexamusic.app.ui.component.NavBarSearchInputBar
+import com.nexamusic.app.ui.component.GlassCircleButton
+import com.nexamusic.app.ui.component.AppFloatingSideBar
+import com.nexamusic.app.ui.component.SideBarAccountRow
+import com.nexamusic.app.ui.component.SideBarContentInset
+import com.nexamusic.app.ui.component.SideBarMargin
+import com.nexamusic.app.ui.component.SideBarCollapsedWidth
+import com.nexamusic.app.ui.component.SideBarLink
+import com.nexamusic.app.ui.component.SideBarSection
+import com.nexamusic.app.ui.component.TabletWidthThreshold
+import com.nexamusic.app.ui.component.AppNavigationRail
+import com.nexamusic.app.ui.component.BottomSheetMenu
+import com.nexamusic.app.ui.component.OverlayMenu
+import com.nexamusic.app.ui.component.BottomSheetPage
+import com.nexamusic.app.ui.component.ListenTogetherOverlay
+import com.nexamusic.app.ui.component.LocalBottomSheetPageState
+import com.nexamusic.app.ui.component.LocalMenuState
+import com.nexamusic.app.ui.component.rememberBottomSheetState
+import com.nexamusic.app.ui.component.shimmer.ShimmerTheme
+import com.nexamusic.app.ui.menu.YouTubeSongMenu
+import com.nexamusic.app.ui.player.BottomSheetPlayer
+import com.nexamusic.app.ui.player.InstallPlayerMorphLayers
+import com.nexamusic.app.ui.player.PlayerMorph
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.pager.rememberPagerState
-import com.nexamusic.music.ui.screens.Screens
-import com.nexamusic.music.ui.screens.SettingDialoge
-import com.nexamusic.music.ui.screens.navigationBuilder
-import com.nexamusic.music.ui.screens.settings.DarkMode
-import com.nexamusic.music.ui.screens.settings.NavigationTab
-import com.nexamusic.music.ui.theme.ColorSaver
-import com.nexamusic.music.ui.theme.DefaultThemeColor
-import com.nexamusic.music.ui.theme.BrandName
-import com.nexamusic.music.ui.theme.LocalAccentTextColor
-import com.nexamusic.music.ui.theme.rememberBrandFontFamily
-import com.nexamusic.music.ui.theme.extractThemeColor
-import com.nexamusic.music.ui.theme.extractThemeColorFromVideoFrame
-import com.nexamusic.music.ui.theme.vivimusicTheme
-import com.nexamusic.music.ui.utils.appBarScrollBehavior
-import com.nexamusic.music.ui.utils.resetHeightOffset
-import com.nexamusic.music.utils.SyncUtils
-import com.nexamusic.music.utils.dataStore
-import com.nexamusic.music.utils.get
-import com.nexamusic.music.utils.rememberEnumPreference
-import com.nexamusic.music.constants.CanvasSource
-import com.nexamusic.music.constants.CanvasSourceKey
-import com.nexamusic.music.ui.player.CanvasArtworkPlaybackCache
-import com.nexamusic.music.utils.rememberPreference
-import com.nexamusic.music.constants.IosOverscrollKey
-import com.nexamusic.music.ui.utils.rememberIosOverscrollFactory
-import com.nexamusic.music.utils.reportException
-import com.nexamusic.music.utils.setAppLocale
-import com.nexamusic.music.viewmodels.HistoryViewModel
-import com.nexamusic.music.ui.component.floatingtabbar.rememberFloatingTabBarScrollConnection
-import com.nexamusic.music.viewmodels.HomeViewModel
-import com.nexamusic.music.vivimusic.UpdateNotificationHelper
-import com.nexamusic.music.vivimusic.updater.checkForUpdate
-import com.nexamusic.music.vivimusic.updater.getAutoUpdateCheckSetting
-import com.nexamusic.music.vivimusic.updater.getUpdateNotificationsSetting
-import com.nexamusic.music.vivimusic.updater.saveUpdateAvailableState
+import com.nexamusic.app.ui.screens.Screens
+import com.nexamusic.app.ui.screens.SettingDialoge
+import com.nexamusic.app.ui.screens.navigationBuilder
+import com.nexamusic.app.ui.screens.settings.DarkMode
+import com.nexamusic.app.ui.screens.settings.NavigationTab
+import com.nexamusic.app.ui.theme.ColorSaver
+import com.nexamusic.app.ui.theme.DefaultThemeColor
+import com.nexamusic.app.ui.theme.BrandName
+import com.nexamusic.app.ui.theme.LocalAccentTextColor
+import com.nexamusic.app.ui.theme.rememberBrandFontFamily
+import com.nexamusic.app.ui.theme.extractThemeColor
+import com.nexamusic.app.ui.theme.extractThemeColorFromVideoFrame
+import com.nexamusic.app.ui.theme.vivimusicTheme
+import com.nexamusic.app.ui.utils.appBarScrollBehavior
+import com.nexamusic.app.ui.utils.resetHeightOffset
+import com.nexamusic.app.utils.SyncUtils
+import com.nexamusic.app.utils.dataStore
+import com.nexamusic.app.utils.get
+import com.nexamusic.app.utils.rememberEnumPreference
+import com.nexamusic.app.constants.CanvasSource
+import com.nexamusic.app.constants.CanvasSourceKey
+import com.nexamusic.app.ui.player.CanvasArtworkPlaybackCache
+import com.nexamusic.app.utils.rememberPreference
+import com.nexamusic.app.constants.IosOverscrollKey
+import com.nexamusic.app.ui.utils.rememberIosOverscrollFactory
+import com.nexamusic.app.utils.reportException
+import com.nexamusic.app.utils.setAppLocale
+import com.nexamusic.app.viewmodels.HistoryViewModel
+import com.nexamusic.app.ui.component.floatingtabbar.rememberFloatingTabBarScrollConnection
+import com.nexamusic.app.viewmodels.HomeViewModel
+import com.nexamusic.app.vivimusic.UpdateNotificationHelper
+import com.nexamusic.app.vivimusic.updater.checkForUpdate
+import com.nexamusic.app.vivimusic.updater.getAutoUpdateCheckSetting
+import com.nexamusic.app.vivimusic.updater.getUpdateNotificationsSetting
+import com.nexamusic.app.vivimusic.updater.saveUpdateAvailableState
 import com.valentinilk.shimmer.LocalShimmerTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -416,8 +416,8 @@ private class TopBarChromeVisibility {
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     companion object {
-        private const val ACTION_SEARCH = "com.nexamusic.music.action.SEARCH"
-        private const val ACTION_LIBRARY = "com.nexamusic.music.action.LIBRARY"
+        private const val ACTION_SEARCH = "com.nexamusic.app.action.SEARCH"
+        private const val ACTION_LIBRARY = "com.nexamusic.app.action.LIBRARY"
 
         // Ignore a repeat bottom-nav navigate() to the same route within this
         // window, so the floating tab bar's predictive (press/drag) fire can't
@@ -441,7 +441,7 @@ class MainActivity : ComponentActivity() {
     lateinit var syncUtils: SyncUtils
 
     @Inject
-    lateinit var listenTogetherManager: com.nexamusic.music.listentogether.ListenTogetherManager
+    lateinit var listenTogetherManager: com.nexamusic.app.listentogether.ListenTogetherManager
 
     private var pendingIntent: Intent? = null
 
@@ -1359,7 +1359,7 @@ class MainActivity : ComponentActivity() {
                 var showSettingDialoge by remember { mutableStateOf(false) }
                 val (enableSettingsPopup) = rememberPreference(EnableSettingsPopupKey, defaultValue = false)
 
-                val ringtoneViewModel: com.nexamusic.music.ui.screens.settings.RingtoneViewModel = viewModel()
+                val ringtoneViewModel: com.nexamusic.app.ui.screens.settings.RingtoneViewModel = viewModel()
                 val ringtoneUiState by ringtoneViewModel.uiState.collectAsStateWithLifecycle()
 
                 LaunchedEffect(Unit) {
@@ -2152,7 +2152,7 @@ class MainActivity : ComponentActivity() {
                                 } // SharedTransitionLayout
                             }
 
-                            com.nexamusic.music.ui.component.RingtoneTrimmerDialog(
+                            com.nexamusic.app.ui.component.RingtoneTrimmerDialog(
                                 isVisible = ringtoneUiState.showTrimmer,
                                 songId = ringtoneUiState.targetSongId,
                                 songTitle = ringtoneUiState.targetSongTitle,
@@ -2163,7 +2163,7 @@ class MainActivity : ComponentActivity() {
                             )
 
                             if (ringtoneUiState.showProgress) {
-                                com.nexamusic.music.ui.component.RingtoneProgressDialog(
+                                com.nexamusic.app.ui.component.RingtoneProgressDialog(
                                     isVisible = ringtoneUiState.showProgress,
                                     progress = ringtoneUiState.progress,
                                     statusMessage = ringtoneUiState.statusMessage,
@@ -2174,7 +2174,7 @@ class MainActivity : ComponentActivity() {
                                 )
                             }
 
-                            com.nexamusic.music.ui.component.DonationPromptHost()
+                            com.nexamusic.app.ui.component.DonationPromptHost()
 
                             // Both float OVER the full-width NavHost, exactly as the
                             // bottom bar does on a phone: nothing reserves layout
@@ -2553,12 +2553,12 @@ class MainActivity : ComponentActivity() {
 }
 
 val LocalDatabase = staticCompositionLocalOf<MusicDatabase> { error("No database provided") }
-val LocalRingtoneViewModel = staticCompositionLocalOf<com.nexamusic.music.ui.screens.settings.RingtoneViewModel> { error("No RingtoneViewModel provided") }
+val LocalRingtoneViewModel = staticCompositionLocalOf<com.nexamusic.app.ui.screens.settings.RingtoneViewModel> { error("No RingtoneViewModel provided") }
 val LocalPlayerConnection = staticCompositionLocalOf<PlayerConnection?> { error("No PlayerConnection provided") }
 val LocalPlayerAwareWindowInsets = compositionLocalOf<WindowInsets> { error("No WindowInsets provided") }
 val LocalDownloadUtil = staticCompositionLocalOf<DownloadUtil> { error("No DownloadUtil provided") }
 val LocalSyncUtils = staticCompositionLocalOf<SyncUtils> { error("No SyncUtils provided") }
-val LocalListenTogetherManager = staticCompositionLocalOf<com.nexamusic.music.listentogether.ListenTogetherManager?> { null }
+val LocalListenTogetherManager = staticCompositionLocalOf<com.nexamusic.app.listentogether.ListenTogetherManager?> { null }
 val LocalIsPlayerExpanded = compositionLocalOf { false }
 
 /**

@@ -1,4 +1,4 @@
-package com.nexamusic.music.utils.cipher
+package com.nexamusic.app.utils.cipher
 
 import com.music.innertube.YouTube
 import kotlinx.coroutines.Dispatchers

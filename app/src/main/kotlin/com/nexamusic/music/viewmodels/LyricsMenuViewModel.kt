@@ -3,19 +3,19 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.db.entities.LyricsEntity
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.lyrics.LyricsHelper
-import com.nexamusic.music.lyrics.LyricsResult
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.utils.NetworkConnectivityObserver
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.db.entities.LyricsEntity
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.lyrics.LyricsHelper
+import com.nexamusic.app.lyrics.LyricsResult
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.utils.NetworkConnectivityObserver
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.theme
+package com.nexamusic.app.ui.theme
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
@@ -6,7 +6,7 @@ import androidx.compose.animation.core.tween
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.Shapes
 import androidx.compose.runtime.Composable
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.graphics.toArgb

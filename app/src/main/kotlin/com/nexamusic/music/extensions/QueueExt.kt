@@ -3,17 +3,17 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.extensions
+package com.nexamusic.app.extensions
 
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.models.PersistQueue
-import com.nexamusic.music.models.QueueData
-import com.nexamusic.music.models.QueueType
-import com.nexamusic.music.playback.queues.ListQueue
-import com.nexamusic.music.playback.queues.LocalAlbumRadio
-import com.nexamusic.music.playback.queues.Queue
-import com.nexamusic.music.playback.queues.YouTubeAlbumRadio
-import com.nexamusic.music.playback.queues.YouTubeQueue
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.models.PersistQueue
+import com.nexamusic.app.models.QueueData
+import com.nexamusic.app.models.QueueType
+import com.nexamusic.app.playback.queues.ListQueue
+import com.nexamusic.app.playback.queues.LocalAlbumRadio
+import com.nexamusic.app.playback.queues.Queue
+import com.nexamusic.app.playback.queues.YouTubeAlbumRadio
+import com.nexamusic.app.playback.queues.YouTubeQueue
 
 fun Queue.toPersistQueue(
     title: String?,

@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.playback.audio
+package com.nexamusic.app.playback.audio
 
-import com.nexamusic.music.playback.dj.BeatGrid
-import com.nexamusic.music.playback.dj.MusicalKey
+import com.nexamusic.app.playback.dj.BeatGrid
+import com.nexamusic.app.playback.dj.MusicalKey
 import kotlin.math.abs
 
 /** Locked 3-tier fallback from the grilling session: never force a treatment

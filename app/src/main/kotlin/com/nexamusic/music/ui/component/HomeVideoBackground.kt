@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import android.view.TextureView
 import android.view.ViewGroup
@@ -42,7 +42,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
  * counterpart to [HomeImageBackground]. Renders through a [TextureView] (not
  * PlayerView/SurfaceView): a TextureView is a normal View Compose can apply
  * [Modifier.blur] and alpha to correctly, same reasoning as the player's own
- * [com.nexamusic.music.ui.player.BackgroundVideoView].
+ * [com.nexamusic.app.ui.player.BackgroundVideoView].
  *
  * Local file only — the background video is copied into app storage the same
  * way the image is (see HomeBackgroundControls), so this needs none of the

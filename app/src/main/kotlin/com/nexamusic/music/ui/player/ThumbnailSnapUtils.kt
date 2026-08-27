@@ -6,7 +6,7 @@
  * Copyright (C) OuterTune Project - Custom SnapLayoutInfoProvider idea belongs to OuterTune
  */
 
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.gestures.Orientation

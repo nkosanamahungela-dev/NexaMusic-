@@ -3,17 +3,17 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.extensions
+package com.nexamusic.app.extensions
 
 import android.os.Bundle
 import androidx.core.net.toUri
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata.MEDIA_TYPE_MUSIC
 import com.music.innertube.models.SongItem
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.ui.utils.resize
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.ui.utils.resize
 
 val MediaItem.metadata: MediaMetadata?
     get() = (localConfiguration?.tag as? MediaMetadata) ?: run {

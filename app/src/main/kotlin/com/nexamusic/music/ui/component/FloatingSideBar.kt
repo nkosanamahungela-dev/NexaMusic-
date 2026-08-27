@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.animateDpAsState
@@ -55,19 +55,19 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.component.backdrop.catalog.utils.InteractiveHighlight
-import com.nexamusic.music.ui.component.backdrop.drawBackdrop
-import com.nexamusic.music.ui.component.backdrop.effects.blur
-import com.nexamusic.music.ui.component.backdrop.effects.lens
-import com.nexamusic.music.ui.component.backdrop.highlight.Highlight
-import com.nexamusic.music.ui.component.backdrop.shadow.Shadow
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
-import com.nexamusic.music.ui.player.FloatingMiniPlayer
-import com.nexamusic.music.ui.screens.Screens
-import com.nexamusic.music.ui.theme.BrandName
-import com.nexamusic.music.ui.theme.rememberBrandFontFamily
-import com.nexamusic.music.ui.utils.fadingEdge
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.component.backdrop.catalog.utils.InteractiveHighlight
+import com.nexamusic.app.ui.component.backdrop.drawBackdrop
+import com.nexamusic.app.ui.component.backdrop.effects.blur
+import com.nexamusic.app.ui.component.backdrop.effects.lens
+import com.nexamusic.app.ui.component.backdrop.highlight.Highlight
+import com.nexamusic.app.ui.component.backdrop.shadow.Shadow
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.player.FloatingMiniPlayer
+import com.nexamusic.app.ui.screens.Screens
+import com.nexamusic.app.ui.theme.BrandName
+import com.nexamusic.app.ui.theme.rememberBrandFontFamily
+import com.nexamusic.app.ui.utils.fadingEdge
 
 /** Panel corner. A tall panel, so a rounded rect rather than the phone bar's capsule. */
 private val SideBarShape = ContinuousRoundedRectangle(28.dp)

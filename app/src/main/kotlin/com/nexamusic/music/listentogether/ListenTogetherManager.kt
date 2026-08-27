@@ -3,25 +3,25 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.listentogether
+package com.nexamusic.app.listentogether
 
 import android.content.Context
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import com.music.innertube.YouTube
 import com.music.innertube.models.WatchEndpoint
-import com.nexamusic.music.constants.ListenTogetherSmartResyncKey
-import com.nexamusic.music.constants.ListenTogetherSyncVolumeKey
-import com.nexamusic.music.extensions.currentMetadata
-import com.nexamusic.music.extensions.metadata
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.models.MediaMetadata.Album
-import com.nexamusic.music.models.MediaMetadata.Artist
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.PlayerConnection
-import com.nexamusic.music.playback.queues.YouTubeQueue
-import com.nexamusic.music.utils.dataStore
+import com.nexamusic.app.constants.ListenTogetherSmartResyncKey
+import com.nexamusic.app.constants.ListenTogetherSyncVolumeKey
+import com.nexamusic.app.extensions.currentMetadata
+import com.nexamusic.app.extensions.metadata
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.models.MediaMetadata.Album
+import com.nexamusic.app.models.MediaMetadata.Artist
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.PlayerConnection
+import com.nexamusic.app.playback.queues.YouTubeQueue
+import com.nexamusic.app.utils.dataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

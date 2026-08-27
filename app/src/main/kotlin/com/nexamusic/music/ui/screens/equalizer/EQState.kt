@@ -1,6 +1,6 @@
-package com.nexamusic.music.ui.screens.equalizer
+package com.nexamusic.app.ui.screens.equalizer
 
-import com.nexamusic.music.eq.data.SavedEQProfile
+import com.nexamusic.app.eq.data.SavedEQProfile
 
 /**
  * UI State for EQ Screen

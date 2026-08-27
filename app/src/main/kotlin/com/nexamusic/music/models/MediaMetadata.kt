@@ -3,14 +3,14 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.models
+package com.nexamusic.app.models
 
 import androidx.compose.runtime.Immutable
 import com.music.innertube.models.SongItem
 import com.music.innertube.models.WatchEndpoint.WatchEndpointMusicSupportedConfigs.WatchEndpointMusicConfig.Companion.MUSIC_VIDEO_TYPE_ATV
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.db.entities.SongEntity
-import com.nexamusic.music.ui.utils.resize
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.db.entities.SongEntity
+import com.nexamusic.app.ui.utils.resize
 import java.io.Serializable
 import java.time.LocalDateTime
 

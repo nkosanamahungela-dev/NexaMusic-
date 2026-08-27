@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.search
+package com.nexamusic.app.ui.screens.search
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.tween
@@ -23,9 +23,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextOverflow
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.SearchSource
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.SearchSource
 import kotlinx.coroutines.flow.first
 
 @Composable

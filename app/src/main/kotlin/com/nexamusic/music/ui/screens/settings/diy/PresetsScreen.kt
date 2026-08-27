@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.settings.diy
+package com.nexamusic.app.ui.screens.settings.diy
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -67,15 +67,15 @@ import androidx.core.content.FileProvider
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.PresetCategory
-import com.nexamusic.music.ui.component.IconButton
-import com.nexamusic.music.ui.player.customize.DiyOrientation
-import com.nexamusic.music.ui.player.customize.DiyPlayerMockup
-import com.nexamusic.music.ui.player.customize.rememberDiyLayout
-import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.utils.backToMain
-import com.nexamusic.music.utils.preset.PresetStore
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.PresetCategory
+import com.nexamusic.app.ui.component.IconButton
+import com.nexamusic.app.ui.player.customize.DiyOrientation
+import com.nexamusic.app.ui.player.customize.DiyPlayerMockup
+import com.nexamusic.app.ui.player.customize.rememberDiyLayout
+import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.app.ui.utils.backToMain
+import com.nexamusic.app.utils.preset.PresetStore
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

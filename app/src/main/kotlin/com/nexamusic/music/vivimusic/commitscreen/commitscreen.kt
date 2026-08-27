@@ -1,4 +1,4 @@
-package com.nexamusic.music.vivimusic.commitscreen
+package com.nexamusic.app.vivimusic.commitscreen
 
 import android.content.Intent
 import android.net.Uri
@@ -60,8 +60,8 @@ import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.R
+import com.nexamusic.app.LocalPlayerAwareWindowInsets
+import com.nexamusic.app.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -37,8 +37,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.media3.exoplayer.offline.Download
-import com.nexamusic.music.R
-import com.nexamusic.music.utils.makeTimeString
+import com.nexamusic.app.R
+import com.nexamusic.app.utils.makeTimeString
 
 val GridMenuItemHeight = 108.dp
 

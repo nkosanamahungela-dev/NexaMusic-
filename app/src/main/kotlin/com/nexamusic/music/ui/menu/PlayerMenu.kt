@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import android.content.Context
 import android.content.res.Configuration
@@ -75,28 +75,28 @@ import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import androidx.navigation.NavController
 import com.music.innertube.YouTube
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalDownloadUtil
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ListItemHeight
-import com.nexamusic.music.listentogether.ConnectionState
-import com.nexamusic.music.listentogether.ListenTogetherEvent
-import com.nexamusic.music.listentogether.MAX_ROOM_CODE_LENGTH
-import com.nexamusic.music.listentogether.MIN_ROOM_CODE_LENGTH
-import com.nexamusic.music.models.MediaMetadata
-import com.nexamusic.music.playback.ExoDownloadService
-import com.nexamusic.music.ui.component.BottomSheetState
-import com.nexamusic.music.ui.component.ListDialog
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
-import com.nexamusic.music.ui.component.NewAction
-import com.nexamusic.music.ui.component.NewActionGrid
-import com.nexamusic.music.ui.component.VolumeSlider
-import com.nexamusic.music.ui.theme.rememberGlobalAccentColors
-import com.nexamusic.music.constants.EnableSaavnStreamingKey
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalDownloadUtil
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ListItemHeight
+import com.nexamusic.app.listentogether.ConnectionState
+import com.nexamusic.app.listentogether.ListenTogetherEvent
+import com.nexamusic.app.listentogether.MAX_ROOM_CODE_LENGTH
+import com.nexamusic.app.listentogether.MIN_ROOM_CODE_LENGTH
+import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.app.playback.ExoDownloadService
+import com.nexamusic.app.ui.component.BottomSheetState
+import com.nexamusic.app.ui.component.ListDialog
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
+import com.nexamusic.app.ui.component.NewAction
+import com.nexamusic.app.ui.component.NewActionGrid
+import com.nexamusic.app.ui.component.VolumeSlider
+import com.nexamusic.app.ui.theme.rememberGlobalAccentColors
+import com.nexamusic.app.constants.EnableSaavnStreamingKey
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.math.log2
@@ -114,7 +114,7 @@ fun PlayerMenu(
 ) {
     mediaMetadata ?: return
     val context = LocalContext.current
-    val ringtoneViewModel = com.nexamusic.music.LocalRingtoneViewModel.current
+    val ringtoneViewModel = com.nexamusic.app.LocalRingtoneViewModel.current
     val database = LocalDatabase.current
     val playerConnection = LocalPlayerConnection.current ?: return
     val playerVolume = playerConnection.service.playerVolume.collectAsState()
@@ -152,7 +152,7 @@ fun PlayerMenu(
     }
 
     val listenTogetherManager = LocalListenTogetherManager.current
-    val listenTogetherRoleState = listenTogetherManager?.role?.collectAsState(initial = com.nexamusic.music.listentogether.RoomRole.NONE)
+    val listenTogetherRoleState = listenTogetherManager?.role?.collectAsState(initial = com.nexamusic.app.listentogether.RoomRole.NONE)
     // See Player.kt: gated on control mode, not on role.
     val canControlTogether = listenTogetherManager?.canControl?.collectAsState(initial = true)
     val isListenTogetherGuest = canControlTogether?.value == false
@@ -738,7 +738,7 @@ fun TempoPitchDialog(onDismiss: () -> Unit) {
         playerConnection.player.playbackParameters =
             PlaybackParameters(tempo, 2f.pow(transposeValue.toFloat() / 12))
     }
-    val listenTogetherManager = com.nexamusic.music.LocalListenTogetherManager.current
+    val listenTogetherManager = com.nexamusic.app.LocalListenTogetherManager.current
     val isInRoom = listenTogetherManager?.isInRoom ?: false
 
     AlertDialog(
@@ -857,7 +857,7 @@ fun ListenTogetherDialog(
     if (!visible) return
     
     val context = LocalContext.current
-    val listenTogetherManager = com.nexamusic.music.LocalListenTogetherManager.current
+    val listenTogetherManager = com.nexamusic.app.LocalListenTogetherManager.current
     
     // Handle case where manager is not available
     if (listenTogetherManager == null) {
@@ -911,7 +911,7 @@ fun ListenTogetherDialog(
     val pendingSuggestions by listenTogetherManager.pendingSuggestions.collectAsState()
     
     // Load saved username
-    var savedUsername by rememberPreference(com.nexamusic.music.constants.ListenTogetherUsernameKey, "")
+    var savedUsername by rememberPreference(com.nexamusic.app.constants.ListenTogetherUsernameKey, "")
     var roomCodeInput by rememberSaveable { mutableStateOf("") }
     var usernameInput by rememberSaveable { mutableStateOf(savedUsername) }
 

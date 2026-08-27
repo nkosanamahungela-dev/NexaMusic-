@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -17,11 +17,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.R
-import com.nexamusic.music.playback.audio.DjMixTier
-import com.nexamusic.music.playback.dj.DjState
-import com.nexamusic.music.playback.dj.TransitionStyle
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.R
+import com.nexamusic.app.playback.audio.DjMixTier
+import com.nexamusic.app.playback.dj.DjState
+import com.nexamusic.app.playback.dj.TransitionStyle
 import kotlin.math.roundToInt
 
 /**

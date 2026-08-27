@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.viewmodels
+package com.nexamusic.app.viewmodels
 
 import androidx.lifecycle.ViewModel
-import com.nexamusic.music.listentogether.ListenTogetherManager
+import com.nexamusic.app.listentogether.ListenTogetherManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

@@ -1,4 +1,4 @@
-package com.nexamusic.music.recognition
+package com.nexamusic.app.recognition
 
 /**
  * Native library interface for generating Shazam-compatible audio fingerprints.

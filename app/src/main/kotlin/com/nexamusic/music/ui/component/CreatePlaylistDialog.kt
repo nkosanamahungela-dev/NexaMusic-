@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.component
+package com.nexamusic.app.ui.component
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
@@ -28,12 +28,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import com.music.innertube.YouTube
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.InnerTubeCookieKey
-import com.nexamusic.music.db.entities.PlaylistEntity
-import com.nexamusic.music.extensions.isSyncEnabled
-import com.nexamusic.music.utils.rememberPreference
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.InnerTubeCookieKey
+import com.nexamusic.app.db.entities.PlaylistEntity
+import com.nexamusic.app.extensions.isSyncEnabled
+import com.nexamusic.app.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

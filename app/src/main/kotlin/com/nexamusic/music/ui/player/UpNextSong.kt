@@ -1,4 +1,4 @@
-package com.nexamusic.music.ui.player
+package com.nexamusic.app.ui.player
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -17,10 +17,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import com.nexamusic.music.R
-import com.nexamusic.music.playback.PlayerConnection
-import com.nexamusic.music.extensions.metadata
-import com.nexamusic.music.ui.utils.resize
+import com.nexamusic.app.R
+import com.nexamusic.app.playback.PlayerConnection
+import com.nexamusic.app.extensions.metadata
+import com.nexamusic.app.ui.utils.resize
 
 @Composable
 fun UpNextSong(

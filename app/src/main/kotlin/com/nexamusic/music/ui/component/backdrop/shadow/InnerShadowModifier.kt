@@ -7,7 +7,7 @@
  * scale for cheaper effect rendering. KMP expect/actual declarations were
  * merged into this single Android source set. Package renamed accordingly.
  */
-package com.nexamusic.music.ui.component.backdrop.shadow
+package com.nexamusic.app.ui.component.backdrop.shadow
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.BlendMode
@@ -28,9 +28,9 @@ import androidx.compose.ui.node.invalidateDraw
 import androidx.compose.ui.node.requireGraphicsContext
 import androidx.compose.ui.platform.InspectorInfo
 import androidx.compose.ui.unit.Density
-import com.nexamusic.music.ui.component.backdrop.internal.ShapeProvider
-import com.nexamusic.music.ui.component.backdrop.internal.clipOutline
-import com.nexamusic.music.ui.component.backdrop.isRenderEffectSupported
+import com.nexamusic.app.ui.component.backdrop.internal.ShapeProvider
+import com.nexamusic.app.ui.component.backdrop.internal.clipOutline
+import com.nexamusic.app.ui.component.backdrop.isRenderEffectSupported
 
 internal class InnerShadowElement(
     val shapeProvider: ShapeProvider,

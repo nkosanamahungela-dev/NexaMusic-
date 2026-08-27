@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.utils
+package com.nexamusic.app.utils
 
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import com.nexamusic.music.BuildConfig
-import com.nexamusic.music.ui.screens.CrashActivity
+import com.nexamusic.app.BuildConfig
+import com.nexamusic.app.ui.screens.CrashActivity
 import timber.log.Timber
 import java.io.PrintWriter
 import java.io.StringWriter

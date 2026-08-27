@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.widget
+package com.nexamusic.app.widget
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -33,17 +33,17 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.core.graphics.ColorUtils
 import androidx.palette.graphics.Palette
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
+import com.nexamusic.app.ui.component.shapes.ContinuousRoundedRectangle
 import coil3.ImageLoader
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.request.crossfade
 import coil3.toBitmap
-import com.nexamusic.music.MainActivity
-import com.nexamusic.music.R
-import com.nexamusic.music.db.MusicDatabase
-import com.nexamusic.music.lyrics.LyricsEntry
-import com.nexamusic.music.lyrics.LyricsUtils
+import com.nexamusic.app.MainActivity
+import com.nexamusic.app.R
+import com.nexamusic.app.db.MusicDatabase
+import com.nexamusic.app.lyrics.LyricsEntry
+import com.nexamusic.app.lyrics.LyricsUtils
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first

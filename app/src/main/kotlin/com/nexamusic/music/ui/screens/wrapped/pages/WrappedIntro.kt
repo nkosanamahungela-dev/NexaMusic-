@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.screens.wrapped.pages
+package com.nexamusic.app.ui.screens.wrapped.pages
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
@@ -41,9 +41,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.nexamusic.music.R
-import com.nexamusic.music.ui.screens.wrapped.components.WrappedBackground
-import com.nexamusic.music.ui.theme.bbhBartle
+import com.nexamusic.app.R
+import com.nexamusic.app.ui.screens.wrapped.components.WrappedBackground
+import com.nexamusic.app.ui.theme.bbhBartle
 import kotlinx.coroutines.delay
 
 private const val FADE_IN_DURATION = 1000

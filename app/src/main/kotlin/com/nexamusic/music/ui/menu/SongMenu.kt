@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.ui.menu
+package com.nexamusic.app.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -66,36 +66,36 @@ import androidx.media3.exoplayer.offline.DownloadService
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import com.music.innertube.YouTube
-import com.nexamusic.music.LocalDatabase
-import com.nexamusic.music.LocalDownloadUtil
-import com.nexamusic.music.LocalListenTogetherManager
-import com.nexamusic.music.LocalPlayerConnection
-import com.nexamusic.music.LocalSyncUtils
-import com.nexamusic.music.R
-import com.nexamusic.music.constants.ListItemHeight
-import com.nexamusic.music.constants.ListThumbnailSize
-import com.nexamusic.music.db.entities.ArtistEntity
-import com.nexamusic.music.db.entities.Event
-import com.nexamusic.music.db.entities.SpeedDialItem
-import com.nexamusic.music.db.entities.PlaylistSong
-import com.nexamusic.music.db.entities.Song
-import com.nexamusic.music.extensions.toMediaItem
-import com.nexamusic.music.models.toMediaMetadata
-import com.nexamusic.music.playback.ExoDownloadService
-import com.nexamusic.music.playback.queues.YouTubeQueue
-import com.nexamusic.music.ui.component.ListDialog
-import com.nexamusic.music.ui.component.LocalBottomSheetPageState
-import com.nexamusic.music.ui.component.Material3MenuGroup
-import com.nexamusic.music.ui.component.Material3MenuItemData
-import com.nexamusic.music.ui.component.NewAction
-import com.nexamusic.music.ui.component.NewActionGrid
-import com.nexamusic.music.ui.component.SongListItem
-import com.nexamusic.music.ui.component.TextFieldDialog
+import com.nexamusic.app.LocalDatabase
+import com.nexamusic.app.LocalDownloadUtil
+import com.nexamusic.app.LocalListenTogetherManager
+import com.nexamusic.app.LocalPlayerConnection
+import com.nexamusic.app.LocalSyncUtils
+import com.nexamusic.app.R
+import com.nexamusic.app.constants.ListItemHeight
+import com.nexamusic.app.constants.ListThumbnailSize
+import com.nexamusic.app.db.entities.ArtistEntity
+import com.nexamusic.app.db.entities.Event
+import com.nexamusic.app.db.entities.SpeedDialItem
+import com.nexamusic.app.db.entities.PlaylistSong
+import com.nexamusic.app.db.entities.Song
+import com.nexamusic.app.extensions.toMediaItem
+import com.nexamusic.app.models.toMediaMetadata
+import com.nexamusic.app.playback.ExoDownloadService
+import com.nexamusic.app.playback.queues.YouTubeQueue
+import com.nexamusic.app.ui.component.ListDialog
+import com.nexamusic.app.ui.component.LocalBottomSheetPageState
+import com.nexamusic.app.ui.component.Material3MenuGroup
+import com.nexamusic.app.ui.component.Material3MenuItemData
+import com.nexamusic.app.ui.component.NewAction
+import com.nexamusic.app.ui.component.NewActionGrid
+import com.nexamusic.app.ui.component.SongListItem
+import com.nexamusic.app.ui.component.TextFieldDialog
 import android.widget.Toast
-import com.nexamusic.music.utils.ExternalTagEditor
-import com.nexamusic.music.utils.listItemShape
-import com.nexamusic.music.ui.utils.ShowMediaInfo
-import com.nexamusic.music.viewmodels.CachePlaylistViewModel
+import com.nexamusic.app.utils.ExternalTagEditor
+import com.nexamusic.app.utils.listItemShape
+import com.nexamusic.app.ui.utils.ShowMediaInfo
+import com.nexamusic.app.viewmodels.CachePlaylistViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -111,7 +111,7 @@ fun SongMenu(
     isFromCache: Boolean = false,
 ) {
     val context = LocalContext.current
-    val ringtoneViewModel = com.nexamusic.music.LocalRingtoneViewModel.current
+    val ringtoneViewModel = com.nexamusic.app.LocalRingtoneViewModel.current
     val database = LocalDatabase.current
     val playerConnection = LocalPlayerConnection.current ?: return
     val songState = database.song(originalSong.id).collectAsState(initial = originalSong)
@@ -430,7 +430,7 @@ fun SongMenu(
                             },
                             onClick = {
                                 val durationMs = if (song.song.duration > 0) song.song.duration.toLong() * 1000 else 180000L
-                                val trackInfo = com.nexamusic.music.listentogether.TrackInfo(
+                                val trackInfo = com.nexamusic.app.listentogether.TrackInfo(
                                     id = song.id,
                                     title = song.song.title,
                                     artist = orderedArtists.joinToString(", ") { it.name },

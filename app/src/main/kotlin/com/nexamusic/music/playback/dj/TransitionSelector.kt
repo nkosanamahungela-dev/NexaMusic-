@@ -3,9 +3,9 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.music.playback.dj
+package com.nexamusic.app.playback.dj
 
-import com.nexamusic.music.playback.audio.DjMixTier
+import com.nexamusic.app.playback.audio.DjMixTier
 
 /** What a transition actually does, beyond the volume fade. */
 enum class TransitionStyle {
