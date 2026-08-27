@@ -59,7 +59,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.first
 import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
-import com.nexamusic.app.canvas.AppleMusicArtistBackgroundProvider
+import com.nexamusic.music.canvas.AppleMusicArtistBackgroundProvider
 import com.nexamusic.app.constants.CanvasSource
 import com.nexamusic.app.constants.CanvasSourceKey
 import com.nexamusic.app.ui.player.normalizeCanvasArtistName
@@ -67,7 +67,7 @@ import com.nexamusic.app.ui.player.normalizeCanvasSongTitle
 import com.nexamusic.app.utils.dataStore
 import com.nexamusic.app.vivimusiccanvas.EchoMusicCanvasProvider
 import com.nexamusic.app.vivimusiccanvas.ViviMusicCanvasProvider
-import com.nexamusic.app.canvas.TidalCanvasProvider
+import com.nexamusic.music.canvas.TidalCanvasProvider
 import java.util.Locale
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch

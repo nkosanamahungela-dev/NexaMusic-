@@ -38,7 +38,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import com.nexamusic.app.extensions.filterVideoSongs as filterVideoSongsLocal
-import com.nexamusic.app.artistvideo.ArtistVideoCanvasProvider
+import com.nexamusic.music.artistvideo.ArtistVideoCanvasProvider
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 

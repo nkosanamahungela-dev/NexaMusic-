@@ -9,8 +9,8 @@ package com.nexamusic.app.ui.player
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import com.nexamusic.app.canvas.CanvasArtwork
-import com.nexamusic.app.canvas.TidalCanvasProvider
+import com.nexamusic.music.canvas.CanvasArtwork
+import com.nexamusic.music.canvas.TidalCanvasProvider
 import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
 import com.nexamusic.app.vivimusiccanvas.ViviMusicCanvasProvider
 import com.nexamusic.app.constants.CanvasSource

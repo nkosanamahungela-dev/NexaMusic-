@@ -175,7 +175,7 @@ import com.nexamusic.app.constants.PureBlackHeroBackgroundKey
 import com.nexamusic.app.utils.rememberPreference
 import com.nexamusic.app.viewmodels.ArtistViewModel
 import com.valentinilk.shimmer.shimmer
-import com.nexamusic.app.artistvideo.ArtistVideo
+import com.nexamusic.music.artistvideo.ArtistVideo
 import com.nexamusic.app.constants.DataSaverEnabledKey
 import com.nexamusic.app.constants.ShowArtistVideoKey
 import com.nexamusic.app.constants.ShowArtistBackgroundVideoKey
@@ -184,7 +184,7 @@ import androidx.compose.material3.ButtonDefaults
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import com.nexamusic.app.canvas.AppleMusicArtistBackgroundProvider
+import com.nexamusic.music.canvas.AppleMusicArtistBackgroundProvider
 import com.nexamusic.app.ui.component.floatingtabbar.gooey
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)

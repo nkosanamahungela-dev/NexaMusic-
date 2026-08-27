@@ -13,8 +13,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
-import com.nexamusic.app.canvas.CanvasArtwork
-import com.nexamusic.app.canvas.TidalCanvasProvider
+import com.nexamusic.music.canvas.CanvasArtwork
+import com.nexamusic.music.canvas.TidalCanvasProvider
 import com.nexamusic.app.ui.player.CanvasArtworkPlaybackCache
 import com.nexamusic.app.vivimusiccanvas.EchoMusicCanvasProvider
 import com.nexamusic.app.vivimusiccanvas.ViviMusicCanvasProvider

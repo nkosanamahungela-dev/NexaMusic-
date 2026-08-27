@@ -286,8 +286,8 @@ import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.AspectRatioFrameLayout
 import androidx.media3.ui.PlayerView
 import com.nexamusic.app.applecanvas.AppleMusicCanvasProvider
-import com.nexamusic.app.canvas.CanvasArtwork
-import com.nexamusic.app.canvas.TidalCanvasProvider
+import com.nexamusic.music.canvas.CanvasArtwork
+import com.nexamusic.music.canvas.TidalCanvasProvider
 import com.nexamusic.app.constants.CanvasSource
 import com.nexamusic.app.constants.CanvasSourceKey
 import com.nexamusic.app.constants.CanvasThumbnailAnimationKey

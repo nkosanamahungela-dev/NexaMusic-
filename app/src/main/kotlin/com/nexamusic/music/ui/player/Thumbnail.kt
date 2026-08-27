@@ -115,8 +115,8 @@ import com.nexamusic.app.constants.CanvasSource
 import com.nexamusic.app.constants.CanvasSourceKey
 import com.nexamusic.app.constants.CanvasThumbnailAnimationKey
 import com.nexamusic.app.constants.DataSaverEnabledKey
-import com.nexamusic.app.canvas.TidalCanvasProvider
-import com.nexamusic.app.canvas.CanvasArtwork
+import com.nexamusic.music.canvas.TidalCanvasProvider
+import com.nexamusic.music.canvas.CanvasArtwork
 import com.nexamusic.app.extensions.metadata
 import com.nexamusic.app.ui.utils.resize
 import com.nexamusic.app.utils.rememberPreference
