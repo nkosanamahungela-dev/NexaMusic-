@@ -1,7 +1,7 @@
-import com.nexamusic.music.cast.CastConnectionHandler
-import com.nexamusic.music.ui.component.CastButton
 /**
  * Convx Project (C) 2026
+import com.nexamusic.music.cast.CastConnectionHandler
+import com.nexamusic.music.ui.component.CastButton
  * Licensed under GPL-3.0 | See git history for contributors
  * 
  * Performance optimized MiniPlayer - prevents unnecessary recomposition
