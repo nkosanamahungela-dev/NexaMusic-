@@ -6,6 +6,8 @@ import com.nexamusic.music.ui.component.CastButton
 // Apple Music player UI ported from vivizzz007/vivi-music (https://github.com/vivizzz007/vivi-music), GPL-3.0.
 
 package com.nexamusic.app.ui.player
+import com.nexamusic.music.ui.component.CastButton
+import com.nexamusic.music.cast.*
 
 import android.content.BroadcastReceiver
 import android.content.Intent

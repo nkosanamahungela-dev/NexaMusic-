@@ -5,6 +5,8 @@ import com.nexamusic.music.cast.CastConnectionHandler
  */
 
 package com.nexamusic.app.ui.player
+import com.nexamusic.music.ui.component.CastButton
+import com.nexamusic.music.cast.*
 
 import android.annotation.SuppressLint
 import androidx.activity.compose.BackHandler

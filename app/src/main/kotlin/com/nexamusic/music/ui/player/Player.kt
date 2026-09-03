@@ -6,6 +6,8 @@ import com.nexamusic.music.ui.component.CastButton
  */
 
 package com.nexamusic.app.ui.player
+import com.nexamusic.music.ui.component.CastButton
+import com.nexamusic.music.cast.*
 
 import android.content.ClipData
 import android.content.ClipboardManager

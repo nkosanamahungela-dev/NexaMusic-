@@ -5,6 +5,8 @@ import com.nexamusic.music.ui.component.CastButton
  */
 
 package com.nexamusic.app.ui.player
+import com.nexamusic.music.ui.component.CastButton
+import com.nexamusic.music.cast.*
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.LinearEasing
