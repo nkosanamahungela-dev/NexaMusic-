@@ -1,4 +1,4 @@
-package com.nexamusic.app.utils.cipher
+package com.nexamusic.music.utils.cipher
 
 import android.content.Context
 import android.webkit.ConsoleMessage

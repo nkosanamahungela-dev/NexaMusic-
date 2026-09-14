@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.constants
+package com.nexamusic.music.constants
 
 enum class LibraryFilter {
     SONGS,

@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.utils
+package com.nexamusic.music.utils
 
 import com.music.lastfm.LastFM
-import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.music.models.MediaMetadata
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

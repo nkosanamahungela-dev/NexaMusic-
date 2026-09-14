@@ -1,4 +1,4 @@
-package com.nexamusic.app.ui.utils
+package com.nexamusic.music.ui.utils
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState

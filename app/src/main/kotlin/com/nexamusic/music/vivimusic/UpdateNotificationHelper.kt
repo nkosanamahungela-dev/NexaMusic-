@@ -1,4 +1,4 @@
-package com.nexamusic.app.vivimusic
+package com.nexamusic.music.vivimusic
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -12,7 +12,7 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
-import com.nexamusic.app.R
+import com.nexamusic.music.R
 
 object UpdateNotificationHelper {
     private const val CHANNEL_ID = "updates"

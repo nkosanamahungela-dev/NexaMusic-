@@ -1,4 +1,4 @@
-package com.nexamusic.app.listentogether
+package com.nexamusic.music.listentogether
 
 import android.content.BroadcastReceiver
 import android.content.Context

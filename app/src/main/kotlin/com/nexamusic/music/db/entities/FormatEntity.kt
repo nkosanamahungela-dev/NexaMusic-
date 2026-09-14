@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.db.entities
+package com.nexamusic.music.db.entities
 
 import androidx.compose.runtime.Immutable
 import androidx.room.Entity

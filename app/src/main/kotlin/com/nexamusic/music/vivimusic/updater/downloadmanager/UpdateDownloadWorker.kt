@@ -1,11 +1,11 @@
-package com.nexamusic.app.vivimusic.updater.downloadmanager
+package com.nexamusic.music.vivimusic.updater.downloadmanager
 
 import android.content.Context
 import android.os.Environment
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import androidx.work.workDataOf
-import com.nexamusic.app.R
+import com.nexamusic.music.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File

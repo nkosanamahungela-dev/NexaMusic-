@@ -1,4 +1,4 @@
-package com.nexamusic.app.utils
+package com.nexamusic.music.utils
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body

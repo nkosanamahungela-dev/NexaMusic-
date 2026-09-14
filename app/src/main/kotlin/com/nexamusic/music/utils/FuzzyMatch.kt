@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.utils
+package com.nexamusic.music.utils
 
 /**
  * Lightweight typo-tolerant match: every character of [query] must appear in [target], in

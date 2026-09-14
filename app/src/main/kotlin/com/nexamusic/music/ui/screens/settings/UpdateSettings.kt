@@ -1,6 +1,6 @@
-package com.nexamusic.app.ui.screens.settings
+package com.nexamusic.music.ui.screens.settings
 
-import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.music.ui.utils.appTopBarWindowInsets
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -30,28 +30,28 @@ import androidx.compose.ui.unit.dp
 import android.content.Intent
 import android.net.Uri
 import androidx.navigation.NavController
-import com.nexamusic.app.LocalPlayerAwareWindowInsets
-import com.nexamusic.app.R
-import com.nexamusic.app.ui.component.IconButton
-import com.nexamusic.app.ui.component.Material3SettingsGroup
-import com.nexamusic.app.ui.component.Material3SettingsItem
-import com.nexamusic.app.vivimusic.component.UpdateInfoDialog
-import com.nexamusic.app.ui.utils.backToMain
-import com.nexamusic.app.vivimusic.updater.getAutoUpdateCheckSetting
-import com.nexamusic.app.vivimusic.updater.saveAutoUpdateCheckSetting
-import com.nexamusic.app.vivimusic.updater.getUpdateAvailableState
-import com.nexamusic.app.vivimusic.updater.saveUpdateAvailableState
-import com.nexamusic.app.vivimusic.updater.getUpdateNotificationsSetting
-import com.nexamusic.app.vivimusic.updater.saveUpdateNotificationsSetting
+import com.nexamusic.music.LocalPlayerAwareWindowInsets
+import com.nexamusic.music.R
+import com.nexamusic.music.ui.component.IconButton
+import com.nexamusic.music.ui.component.Material3SettingsGroup
+import com.nexamusic.music.ui.component.Material3SettingsItem
+import com.nexamusic.music.vivimusic.component.UpdateInfoDialog
+import com.nexamusic.music.ui.utils.backToMain
+import com.nexamusic.music.vivimusic.updater.getAutoUpdateCheckSetting
+import com.nexamusic.music.vivimusic.updater.saveAutoUpdateCheckSetting
+import com.nexamusic.music.vivimusic.updater.getUpdateAvailableState
+import com.nexamusic.music.vivimusic.updater.saveUpdateAvailableState
+import com.nexamusic.music.vivimusic.updater.getUpdateNotificationsSetting
+import com.nexamusic.music.vivimusic.updater.saveUpdateNotificationsSetting
 import android.widget.Toast
 import androidx.compose.ui.res.pluralStringResource
-import com.nexamusic.app.vivimusic.updater.getDownloadedApkCount
-import com.nexamusic.app.vivimusic.updater.clearDownloadedApks
-import com.nexamusic.app.vivimusic.updater.getBetaUpdatesSetting
-import com.nexamusic.app.vivimusic.updater.saveBetaUpdatesSetting
-import com.nexamusic.app.vivimusic.updater.autoClearOldApks
+import com.nexamusic.music.vivimusic.updater.getDownloadedApkCount
+import com.nexamusic.music.vivimusic.updater.clearDownloadedApks
+import com.nexamusic.music.vivimusic.updater.getBetaUpdatesSetting
+import com.nexamusic.music.vivimusic.updater.saveBetaUpdatesSetting
+import com.nexamusic.music.vivimusic.updater.autoClearOldApks
 import androidx.compose.material3.MaterialTheme
-import com.nexamusic.app.BuildConfig
+import com.nexamusic.music.BuildConfig
 
 //here b5.0.1 must be used for the beta tag
 

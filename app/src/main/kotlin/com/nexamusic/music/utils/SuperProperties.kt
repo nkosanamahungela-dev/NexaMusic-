@@ -1,4 +1,4 @@
-package com.nexamusic.app.utils
+package com.nexamusic.music.utils
 
 import android.os.Build
 import android.util.Base64

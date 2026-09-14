@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.ui.player
+package com.nexamusic.music.ui.player
 
 import androidx.annotation.StringRes
-import com.nexamusic.app.R
+import com.nexamusic.music.R
 
 /** A reorderable/hideable section of the full-screen Now Playing layout. */
 enum class PlayerSlot(@StringRes val labelRes: Int, val hideable: Boolean) {

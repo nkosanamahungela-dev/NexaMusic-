@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.ui.utils
+package com.nexamusic.music.ui.utils
 
 fun String.resize(
     width: Int? = null,

@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.listentogether
+package com.nexamusic.music.listentogether
 
 import com.google.protobuf.MessageLite
-import com.nexamusic.app.listentogether.proto.ListenTogether
+import com.nexamusic.music.listentogether.proto.ListenTogether
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import java.io.ByteArrayInputStream

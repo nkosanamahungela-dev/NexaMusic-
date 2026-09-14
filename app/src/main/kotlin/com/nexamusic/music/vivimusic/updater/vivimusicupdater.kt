@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.vivimusic.updater
+package com.nexamusic.music.vivimusic.updater
 
 
 import android.content.Context
@@ -59,13 +59,13 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.workDataOf
-import com.nexamusic.app.BuildConfig
-import com.nexamusic.app.R
+import com.nexamusic.music.BuildConfig
+import com.nexamusic.music.R
 import coil3.compose.AsyncImage
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import com.nexamusic.app.vivimusic.updater.downloadmanager.UpdateDownloadWorker
-import com.nexamusic.app.vivimusic.updater.downloadmanager.DownloadNotificationManager
+import com.nexamusic.music.vivimusic.updater.downloadmanager.UpdateDownloadWorker
+import com.nexamusic.music.vivimusic.updater.downloadmanager.DownloadNotificationManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -77,14 +77,14 @@ import java.net.URL
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.regex.Pattern
-import com.nexamusic.app.ui.component.ChangelogItem
-import com.nexamusic.app.ui.component.leadingItemShape
-import com.nexamusic.app.ui.component.middleItemShape
-import com.nexamusic.app.ui.component.endItemShape
-import com.nexamusic.app.ui.component.detachedItemShape
-import com.nexamusic.app.ui.component.AnimatedActionButton
-import com.nexamusic.app.ui.component.ExpressiveIconButton
-import com.nexamusic.app.ui.component.ErrorSnackbar
+import com.nexamusic.music.ui.component.ChangelogItem
+import com.nexamusic.music.ui.component.leadingItemShape
+import com.nexamusic.music.ui.component.middleItemShape
+import com.nexamusic.music.ui.component.endItemShape
+import com.nexamusic.music.ui.component.detachedItemShape
+import com.nexamusic.music.ui.component.AnimatedActionButton
+import com.nexamusic.music.ui.component.ExpressiveIconButton
+import com.nexamusic.music.ui.component.ErrorSnackbar
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString

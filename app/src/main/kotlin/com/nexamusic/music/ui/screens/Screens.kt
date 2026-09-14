@@ -3,12 +3,12 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.ui.screens
+package com.nexamusic.music.ui.screens
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Immutable
-import com.nexamusic.app.R
+import com.nexamusic.music.R
 
 /**
  * A bottom-bar / side-bar destination.

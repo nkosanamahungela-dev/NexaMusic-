@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.playback
+package com.nexamusic.music.playback
 
 import android.content.Context
 import androidx.core.net.toUri

@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.playback.queues
+package com.nexamusic.music.playback.queues
 
 import androidx.media3.common.MediaItem
-import com.nexamusic.app.models.MediaMetadata
+import com.nexamusic.music.models.MediaMetadata
 
 object EmptyQueue : Queue {
     override val preloadItem: MediaMetadata? = null

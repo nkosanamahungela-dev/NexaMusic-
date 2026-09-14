@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.ui.component
+package com.nexamusic.music.ui.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -26,11 +26,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
-import com.nexamusic.app.R
+import com.nexamusic.music.R
 
 import androidx.compose.material3.LocalContentColor
-import com.nexamusic.app.ui.theme.AppleTokens
-import com.nexamusic.app.ui.theme.LocalAccentTextColor
+import com.nexamusic.music.ui.theme.AppleTokens
+import com.nexamusic.music.ui.theme.LocalAccentTextColor
 import androidx.compose.ui.graphics.Color
 
 @Composable

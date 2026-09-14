@@ -3,12 +3,12 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.widget
+package com.nexamusic.music.widget
 
 import android.content.Context
 import android.content.Intent
 import androidx.core.content.ContextCompat
-import com.nexamusic.app.playback.MusicService
+import com.nexamusic.music.playback.MusicService
 
 /**
  * Apple Music styled "Now Playing" widget (row 4x1 / square 2x2 / wide 4x2).

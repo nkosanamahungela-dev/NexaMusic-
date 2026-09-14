@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.listentogether
+package com.nexamusic.music.listentogether
 
 /**
  * Who is allowed to do what inside a room.

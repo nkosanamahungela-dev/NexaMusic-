@@ -1,4 +1,4 @@
-package com.nexamusic.app.vivimusic.commitscreen
+package com.nexamusic.music.vivimusic.commitscreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -26,7 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
-import com.nexamusic.app.R
+import com.nexamusic.music.R
 
 @Composable
  fun CommitItem(

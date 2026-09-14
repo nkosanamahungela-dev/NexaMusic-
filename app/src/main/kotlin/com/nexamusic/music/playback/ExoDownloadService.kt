@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.playback
+package com.nexamusic.music.playback
 
 import android.app.Notification
 import android.app.PendingIntent
@@ -18,7 +18,7 @@ import androidx.media3.exoplayer.offline.DownloadNotificationHelper
 import androidx.media3.exoplayer.offline.DownloadService
 import androidx.media3.exoplayer.scheduler.PlatformScheduler
 import androidx.media3.exoplayer.scheduler.Scheduler
-import com.nexamusic.app.R
+import com.nexamusic.music.R
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

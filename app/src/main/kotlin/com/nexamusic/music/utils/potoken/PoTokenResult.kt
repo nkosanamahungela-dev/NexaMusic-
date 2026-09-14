@@ -1,4 +1,4 @@
-package com.nexamusic.app.utils.potoken
+package com.nexamusic.music.utils.potoken
 
 class PoTokenResult(
     val playerRequestPoToken: String,

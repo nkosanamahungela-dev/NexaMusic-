@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.ui.screens
+package com.nexamusic.music.ui.screens
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -15,7 +15,7 @@ import androidx.compose.runtime.setValue
 import com.nexamusic.music.applecanvas.AppleMusicCanvasProvider
 import com.nexamusic.music.canvas.CanvasArtwork
 import com.nexamusic.music.canvas.TidalCanvasProvider
-import com.nexamusic.app.ui.player.CanvasArtworkPlaybackCache
+import com.nexamusic.music.ui.player.CanvasArtworkPlaybackCache
 import com.nexamusic.music.vivimusiccanvas.EchoMusicCanvasProvider
 import com.nexamusic.music.vivimusiccanvas.ViviMusicCanvasProvider
 import kotlinx.coroutines.Dispatchers

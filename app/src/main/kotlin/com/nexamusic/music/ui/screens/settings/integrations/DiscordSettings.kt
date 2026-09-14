@@ -3,9 +3,9 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.ui.screens.settings.integrations
+package com.nexamusic.music.ui.screens.settings.integrations
 
-import com.nexamusic.app.ui.utils.appTopBarWindowInsets
+import com.nexamusic.music.ui.utils.appTopBarWindowInsets
 import android.content.Intent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize

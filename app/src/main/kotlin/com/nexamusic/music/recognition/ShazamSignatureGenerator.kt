@@ -1,4 +1,4 @@
-package com.nexamusic.app.recognition
+package com.nexamusic.music.recognition
 
 import android.util.Base64
 import java.io.ByteArrayOutputStream

@@ -129,11 +129,11 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
-import com.nexamusic.app.constants.IsFirstRunKey
-import com.nexamusic.app.ui.theme.vivimusicTheme
-import com.nexamusic.app.ui.utils.safeOpenUri
-import com.nexamusic.app.utils.dataStore
-import com.nexamusic.app.utils.get
+import com.nexamusic.music.constants.IsFirstRunKey
+import com.nexamusic.music.ui.theme.vivimusicTheme
+import com.nexamusic.music.ui.utils.safeOpenUri
+import com.nexamusic.music.utils.dataStore
+import com.nexamusic.music.utils.get
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
@@ -187,7 +187,7 @@ class WelcomeActivity : ComponentActivity() {
 @OptIn(ExperimentalTextApi::class)
 val GoogleSansFlex = FontFamily(
     Font(
-        resId = com.nexamusic.app.R.font.google_sans_flex,
+        resId = com.nexamusic.music.R.font.google_sans_flex,
         weight = FontWeight.Normal,
         style = FontStyle.Normal,
         variationSettings = FontVariation.Settings(

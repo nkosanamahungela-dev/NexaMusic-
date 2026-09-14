@@ -1,4 +1,4 @@
-package com.nexamusic.app.db.entities
+package com.nexamusic.music.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

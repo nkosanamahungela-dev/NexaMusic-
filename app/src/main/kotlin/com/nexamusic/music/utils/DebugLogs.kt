@@ -3,14 +3,14 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app.utils
+package com.nexamusic.music.utils
 
 import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.util.Log
 import androidx.core.content.FileProvider
-import com.nexamusic.app.BuildConfig
+import com.nexamusic.music.BuildConfig
 import timber.log.Timber
 import java.io.File
 import java.io.IOException
