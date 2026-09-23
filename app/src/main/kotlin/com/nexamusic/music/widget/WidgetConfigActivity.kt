@@ -5,6 +5,8 @@
 
 package com.nexamusic.music.widget
 
+import com.nexamusic.music.R
+
 import android.app.Activity
 import android.appwidget.AppWidgetManager
 import android.content.Intent
