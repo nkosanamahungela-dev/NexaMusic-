@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -15,7 +15,7 @@ import com.nexamusic.music.constants.BrandFontEnabledKey
 import com.nexamusic.music.utils.rememberPreference
 
 /** The product wordmark, always set in caps. */
-const val BrandName = "CONVX"
+const val BrandName = "NEXAMUSIC"
 
 /** Chillax — the display face used for the wordmark and artist names. */
 val ChillaxFontFamily = FontFamily(

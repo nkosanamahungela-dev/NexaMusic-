@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -133,7 +133,7 @@ fun AboutScreen(
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Image(
-                    painter = painterResource(R.drawable.convx_logo),
+                    painter = painterResource(R.drawable.nexamusic_logo),
                     contentDescription = null,
                     modifier = Modifier.size(24.dp),
                     colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary)

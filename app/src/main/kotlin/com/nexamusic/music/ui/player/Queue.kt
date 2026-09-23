@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
 import com.nexamusic.music.cast.CastConnectionHandler
  * Licensed under GPL-3.0 | See git history for contributors
  */

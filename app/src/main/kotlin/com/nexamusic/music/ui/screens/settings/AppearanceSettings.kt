@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -608,7 +608,7 @@ fun AppearanceSettings(
                     onClick = { navController.navigate("settings/appearance/font") }
                 ),
                 Material3SettingsItem(
-                    icon = painterResource(R.drawable.convx_logo),
+                    icon = painterResource(R.drawable.nexamusic_logo),
                     title = { Text(stringResource(R.string.app_icon)) },
                     description = { Text(stringResource(R.string.app_icon_desc)) },
                     onClick = { navController.navigate("settings/appearance/appicon") }

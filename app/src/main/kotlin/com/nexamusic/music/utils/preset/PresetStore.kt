@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -53,7 +53,7 @@ import java.util.zip.ZipOutputStream
  */
 object PresetStore {
 
-    const val FILE_EXTENSION = "convxpreset"
+    const val FILE_EXTENSION = "nexamusicpreset"
     private const val MANIFEST = "manifest.json"
     private const val THUMB = "thumb.webp"
     private const val ASSETS = "assets"

@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -256,7 +256,7 @@ fun PlayerThemeScreen(
                     contentAlignment = Alignment.Center,
                 ) {
                     androidx.compose.foundation.Image(
-                        painter = painterResource(R.drawable.convx_logo),
+                        painter = painterResource(R.drawable.nexamusic_logo),
                         contentDescription = null,
                         modifier = Modifier.size(48.dp),
                     )
@@ -680,8 +680,8 @@ private fun SlotPreviewBlock(slot: PlayerSlot, artworkUrl: String?) {
                     model = artworkUrl,
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
-                    fallback = painterResource(R.drawable.convx_logo),
-                    error = painterResource(R.drawable.convx_logo),
+                    fallback = painterResource(R.drawable.nexamusic_logo),
+                    error = painterResource(R.drawable.nexamusic_logo),
                     modifier = Modifier.fillMaxSize(),
                 )
             }
@@ -858,8 +858,8 @@ private fun PlayerPreview(
                 model = artworkUrl,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
-                fallback = painterResource(R.drawable.convx_logo),
-                error = painterResource(R.drawable.convx_logo),
+                fallback = painterResource(R.drawable.nexamusic_logo),
+                error = painterResource(R.drawable.nexamusic_logo),
                 modifier = Modifier.fillMaxSize(),
             )
             if (previewShape == CircleShape && artworkStyle == PlayerArtworkStyle.VINYL) {

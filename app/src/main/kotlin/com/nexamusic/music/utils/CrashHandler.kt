@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -66,7 +66,7 @@ class CrashHandler private constructor(
         }.toString()
 
         return buildString {
-            appendLine("Convx Crash Report")
+            appendLine("NexaMusic Crash Report")
             appendLine("=".repeat(50))
             appendLine()
             appendLine("Manufacturer: ${Build.MANUFACTURER}")

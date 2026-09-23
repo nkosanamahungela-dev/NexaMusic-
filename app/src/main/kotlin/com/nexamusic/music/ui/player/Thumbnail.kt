@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
 import com.nexamusic.music.ui.component.CastButton
  * Licensed under GPL-3.0 | See git history for contributors
  */
@@ -1018,7 +1018,7 @@ private fun HiddenThumbnailPlaceholder(
         contentAlignment = Alignment.Center
     ) {
         Icon(
-            painter = painterResource(R.drawable.convx_logo),
+            painter = painterResource(R.drawable.nexamusic_logo),
             contentDescription = stringResource(R.string.hide_player_thumbnail),
             tint = textBackgroundColor.copy(alpha = 0.7f),
             modifier = Modifier.size(120.dp)

@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -383,7 +383,7 @@ private fun MockArtwork(style: MockupStyle, isPortrait: Boolean, modifier: Modif
         contentAlignment = Alignment.Center,
     ) {
         Image(
-            painter = painterResource(R.drawable.convx_logo),
+            painter = painterResource(R.drawable.nexamusic_logo),
             contentDescription = null,
             contentScale = ContentScale.Fit,
             modifier = Modifier.fillMaxSize(0.34f),

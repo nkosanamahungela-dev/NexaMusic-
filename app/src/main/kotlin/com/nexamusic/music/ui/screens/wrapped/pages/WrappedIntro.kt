@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -107,7 +107,7 @@ fun WrappedIntro(onNext: () -> Unit) {
                         slideInVertically(animationSpec = tween(SLIDE_IN_DURATION, delayMillis = ICON_DELAY))
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.convx_logo),
+                    painter = painterResource(id = R.drawable.nexamusic_logo),
                     contentDescription = stringResource(id = R.string.wrapped_logo_content_description),
                     modifier = Modifier
                         .size(100.dp)

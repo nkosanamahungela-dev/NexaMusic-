@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -17,7 +17,7 @@ data class ListenTogetherServer(
 )
 
 object ListenTogetherServers {
-    // Note: Convx Sync has been removed as this project uses community-hosted servers.
+    // Note: NexaMusic Sync has been removed as this project uses community-hosted servers.
     // To use Listen Together, either connect to a community server (below) or
     // host your own via the listen-together-server directory.
     private const val ServersJson = """

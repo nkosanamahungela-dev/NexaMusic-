@@ -1,5 +1,5 @@
 ﻿/**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -577,7 +577,7 @@ class MusicService :
             val notification: Notification = NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentTitle(getString(R.string.music_player))
                 .setContentText("")
-                .setSmallIcon(R.drawable.convx_notification)
+                .setSmallIcon(R.drawable.nexamusic_notification)
                 .setContentIntent(pending)
                 .setOngoing(true)
                 .build()
@@ -600,7 +600,7 @@ class MusicService :
                 R.string.music_player
             )
                 .apply {
-                    setSmallIcon(R.drawable.convx_notification)
+                    setSmallIcon(R.drawable.nexamusic_notification)
                 },
         )
         player = createExoPlayer()

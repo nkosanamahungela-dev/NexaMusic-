@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
 import com.nexamusic.music.cast.CastConnectionHandler
 import com.nexamusic.music.ui.component.CastButton
  * Licensed under GPL-3.0 | See git history for contributors
@@ -1784,7 +1784,7 @@ fun BottomSheetPlayer(
                 ) {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         Image(
-                            painter = painterResource(R.drawable.convx_logo),
+                            painter = painterResource(R.drawable.nexamusic_logo),
                             contentDescription = null,
                             colorFilter = ColorFilter.tint(if (useDarkTheme) Color.White else Color.Black),
                             modifier = Modifier.size(96.dp).alpha(0.4f),

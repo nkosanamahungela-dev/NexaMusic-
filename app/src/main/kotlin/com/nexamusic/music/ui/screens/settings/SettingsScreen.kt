@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -134,7 +134,7 @@ fun SettingsScreen(
         item(key = "general_section") {
             SettingsSection {
                 SettingsNavItem(
-                    icon = painterResource(if (isUpdateAvailable) R.drawable.convx_logo else R.drawable.network_update),
+                    icon = painterResource(if (isUpdateAvailable) R.drawable.nexamusic_logo else R.drawable.network_update),
                     iconTint = if (isUpdateAvailable) MaterialTheme.colorScheme.error else Color(0xFF007AFF),
                     title = stringResource(R.string.system_update),
                     badge = if (isUpdateAvailable) stringResource(R.string.update_available) else null,

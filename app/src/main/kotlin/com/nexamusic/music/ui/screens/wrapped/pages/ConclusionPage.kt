@@ -37,7 +37,7 @@ fun ConclusionPage(onClose: () -> Unit) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             androidx.compose.foundation.Image(
-                painter = painterResource(id = R.drawable.convx_logo),
+                painter = painterResource(id = R.drawable.nexamusic_logo),
                 contentDescription = stringResource(R.string.wrapped_logo_content_description),
                 modifier = Modifier
                     .size(96.dp)

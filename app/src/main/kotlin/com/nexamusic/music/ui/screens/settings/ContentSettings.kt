@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -759,7 +759,7 @@ fun ContentSettings(
                     onClick = {
                         clientProbeOutput?.let { text ->
                             val clipboard = context.getSystemService(ClipboardManager::class.java)
-                            clipboard?.setPrimaryClip(ClipData.newPlainText("Convx client probe", text))
+                            clipboard?.setPrimaryClip(ClipData.newPlainText("NexaMusic client probe", text))
                         }
                         showClientProbeDialog = false
                     },

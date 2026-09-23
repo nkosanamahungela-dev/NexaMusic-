@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -40,7 +40,7 @@ object ListenBrainzManager {
                     artistNames,
                 )}\",\"track_name\":\"${escapeJson(
                     title,
-                )}\",${releasePart}\"additional_info\":{\"duration_ms\":$durationMs,\"position_ms\":$positionMs,\"submission_client\":\"Convx Music\",\"submission_client_version\":\"1.5\"}}}"
+                )}\",${releasePart}\"additional_info\":{\"duration_ms\":$durationMs,\"position_ms\":$positionMs,\"submission_client\":\"NexaMusic Music\",\"submission_client_version\":\"1.5\"}}}"
                 val listensJson = "[$trackMetadata]"
                 val bodyJson = "{\"listen_type\":\"playing_now\",\"payload\":$listensJson}"
                 Timber.tag(logTag).d("submitPlayingNow JSON: %s", bodyJson)
@@ -53,7 +53,7 @@ object ListenBrainzManager {
                         .post(body)
                         .addHeader("Content-Type", "application/json")
                         .addHeader("Authorization", "Token $token")
-                        .addHeader("User-Agent", "ConvxMusic/1.5")
+                        .addHeader("User-Agent", "NexaMusicMusic/1.5")
                         .build()
 
                 httpClient.newCall(request).execute().use { resp ->
@@ -104,7 +104,7 @@ object ListenBrainzManager {
                     artistNames,
                 )}\",\"track_name\":\"${escapeJson(
                     title,
-                )}\",${releasePart}\"additional_info\":{\"duration_ms\":$durationMs,\"start_ms\":$startMs,\"end_ms\":$endMs,\"submission_client\":\"Convx Music\",\"submission_client_version\":\"1.5\"}}}"
+                )}\",${releasePart}\"additional_info\":{\"duration_ms\":$durationMs,\"start_ms\":$startMs,\"end_ms\":$endMs,\"submission_client\":\"NexaMusic Music\",\"submission_client_version\":\"1.5\"}}}"
                 val listensJson = "[$trackMetadataSingle]"
                 val bodyJson = "{\"listen_type\":\"single\",\"payload\":$listensJson}"
                 Timber.tag(logTag).d("submitFinished JSON: %s", bodyJson)
@@ -117,7 +117,7 @@ object ListenBrainzManager {
                         .post(body)
                         .addHeader("Content-Type", "application/json")
                         .addHeader("Authorization", "Token $token")
-                        .addHeader("User-Agent", "ConvxMusic/1.5")
+                        .addHeader("User-Agent", "NexaMusicMusic/1.5")
                         .build()
 
                 httpClient.newCall(request).execute().use { resp ->

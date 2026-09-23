@@ -34,7 +34,7 @@ object UpdateNotificationHelper {
         val apkUrl = if (versionName.contains("nightly", ignoreCase = true)) {
             "https://nightly.link/nkosanamahungela-dev/NexaMusic-/workflows/nightly.yml/main/nexamusic-gms-nightly.zip"
         } else {
-            "https://github.com/nkosanamahungela-dev/NexaMusic-/releases/download/$versionName/convx-$versionName.apk"
+            "https://github.com/nkosanamahungela-dev/NexaMusic-/releases/download/$versionName/nexamusic-$versionName.apk"
         }
         val intent = Intent(Intent.ACTION_VIEW, apkUrl.toUri())
 
@@ -42,7 +42,7 @@ object UpdateNotificationHelper {
         val pending = PendingIntent.getActivity(context, NOTIFICATION_ID, intent, flags)
 
         val notif = NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.convx_notification)
+            .setSmallIcon(R.drawable.nexamusic_notification)
             .setContentTitle(context.getString(R.string.update_available_title))
             .setContentText(versionName)
             .setContentIntent(pending)

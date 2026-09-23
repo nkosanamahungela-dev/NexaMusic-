@@ -1,5 +1,5 @@
 /**
- * Convx Project (C) 2026
+ * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
@@ -408,7 +408,7 @@ fun LyricsImageCard(
                         contentAlignment = Alignment.Center
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.convx_logo),
+                            painter = painterResource(id = R.drawable.nexamusic_logo),
                             contentDescription = null,
                             modifier = Modifier
                                 .size(16.dp),
