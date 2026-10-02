@@ -137,7 +137,7 @@ private fun WidgetConfigScreen(
             .windowInsetsPadding(WindowInsets.systemBars)
             .verticalScroll(rememberScrollState()),
     ) {
-        PreferenceGroupTitle(title = stringResource(R.string.widget_cfg_background))
+        PreferenceGroupTitle(title = stringResource(com.nexamusic.music.R.string.widget_cfg_background))
 
         WidgetBackground.entries.forEach { option ->
             PreferenceEntry(
@@ -160,26 +160,26 @@ private fun WidgetConfigScreen(
 
         if (config.background == WidgetBackground.IMAGE) {
             PreferenceEntry(
-                title = { Text(stringResource(R.string.widget_cfg_choose_image)) },
-                description = config.imageUri ?: stringResource(R.string.widget_cfg_no_image),
+                title = { Text(stringResource(com.nexamusic.music.R.string.widget_cfg_choose_image)) },
+                description = config.imageUri ?: stringResource(com.nexamusic.music.R.string.widget_cfg_no_image),
                 onClick = { pickImage.launch(arrayOf("image/*")) },
             )
         }
 
-        PreferenceGroupTitle(title = stringResource(R.string.widget_cfg_content))
+        PreferenceGroupTitle(title = stringResource(com.nexamusic.music.R.string.widget_cfg_content))
 
         SwitchPreference(
-            title = { Text(stringResource(R.string.widget_cfg_show_artwork)) },
+            title = { Text(stringResource(com.nexamusic.music.R.string.widget_cfg_show_artwork)) },
             checked = config.showArtwork,
             onCheckedChange = { config = config.copy(showArtwork = it) },
         )
         SwitchPreference(
-            title = { Text(stringResource(R.string.widget_cfg_show_prev_next)) },
+            title = { Text(stringResource(com.nexamusic.music.R.string.widget_cfg_show_prev_next)) },
             checked = config.showPrevNext,
             onCheckedChange = { config = config.copy(showPrevNext = it) },
         )
         SwitchPreference(
-            title = { Text(stringResource(R.string.widget_cfg_show_like)) },
+            title = { Text(stringResource(com.nexamusic.music.R.string.widget_cfg_show_like)) },
             checked = config.showLike,
             onCheckedChange = { config = config.copy(showLike = it) },
         )
@@ -190,14 +190,14 @@ private fun WidgetConfigScreen(
                 .fillMaxWidth()
                 .padding(16.dp),
         ) {
-            Text(stringResource(R.string.widget_cfg_done))
+            Text(stringResource(com.nexamusic.music.R.string.widget_cfg_done))
         }
     }
 }
 
 private fun WidgetBackground.labelRes(): Int = when (this) {
-    WidgetBackground.ALBUM_TINT -> R.string.widget_cfg_bg_album
-    WidgetBackground.DARK -> R.string.widget_cfg_bg_dark
-    WidgetBackground.LIGHT -> R.string.widget_cfg_bg_light
-    WidgetBackground.IMAGE -> R.string.widget_cfg_bg_image
+    WidgetBackground.ALBUM_TINT -> com.nexamusic.music.R.string.widget_cfg_bg_album
+    WidgetBackground.DARK -> com.nexamusic.music.R.string.widget_cfg_bg_dark
+    WidgetBackground.LIGHT -> com.nexamusic.music.R.string.widget_cfg_bg_light
+    WidgetBackground.IMAGE -> com.nexamusic.music.R.string.widget_cfg_bg_image
 }
