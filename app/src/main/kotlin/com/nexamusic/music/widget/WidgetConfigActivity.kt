@@ -1,12 +1,10 @@
 package com.nexamusic.music.widget
 import com.nexamusic.music.R
-import R
  * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
 
-import R
 
 import android.app.Activity
 import android.appwidget.AppWidgetManager
@@ -40,7 +38,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import R
 import com.nexamusic.music.ui.component.PreferenceEntry
 import com.nexamusic.music.ui.component.PreferenceGroupTitle
 import com.nexamusic.music.ui.component.SwitchPreference
