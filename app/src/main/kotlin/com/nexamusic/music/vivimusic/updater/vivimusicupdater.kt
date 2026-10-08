@@ -1,4 +1,6 @@
 /**
+import com.nexamusic.app.BuildConfig
+import com.nexamusic.app.R
  * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
  */
@@ -198,3 +200,8 @@ fun UpdateScreen(navController: NavHostController) {
                 context = context,
                 onSuccess = { tag, isAvailable, changelog, size, date, description, imageUrl, apkUrl ->
                     saveLastCheckedTime(context, LocalDateTime.now().format(DateTimeFormatter.ofPattern("d MMMM yyyy, h:mm a")))
+                }
+            )
+        }
+    }
+}
