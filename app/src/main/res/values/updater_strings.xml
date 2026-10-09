@@ -80,4 +80,6 @@
     <string name="new_update"
     <string name="release_date_v"
     <string name="update_size_v"
+    <string name="cancel">Cancel</string>
 </resources>
+
