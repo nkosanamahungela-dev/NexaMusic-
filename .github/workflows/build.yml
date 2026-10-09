@@ -2,39 +2,58 @@ name: Build NexaMusic APK
 
 on:
   push:
-    branches: [ main ]
+    branches: ['**']
+  pull_request:
+    branches: ['**']
   workflow_dispatch:
 
 jobs:
   build:
+    name: Build ARM64 GMS Debug APK
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          submodules: recursive
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v5
+        with:
+          java-version: '21'
           distribution: 'temurin'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-disabled: true
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Generate debug keystore
+      - name: Generate debug.keystore
         run: |
           mkdir -p ~/.android
-          keytool -genkey -v -keystore ~/.android/debug.keystore \
-            -storepass android -alias androiddebugkey -keypass android \
-            -keyalg RSA -keysize 2048 -validity 10000 \
+          keytool -genkey -v \
+            -keystore ~/.android/debug.keystore \
+            -storepass android \
+            -alias androiddebugkey \
+            -keypass android \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
             -dname "CN=Android Debug,O=Android,C=US"
 
       - name: Build Debug APK
-        run: ./gradlew assembleArm64GmsDebug --no-daemon
+        env:
+          LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
+          LASTFM_SECRET: ${{ secrets.LASTFM_SECRET }}
+        run: |
+          ./gradlew assembleArm64GmsDebug --no-configuration-cache --console=plain --warning-mode summary
 
-      - name: Upload APK artifact
+      - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: NexaMusic-debug-apk
-          path: app/build/outputs/apk/**/*.apk
+          name: NexaMusic-arm64-gms-debug
+          path: app/build/outputs/apk/arm64Gms/debug/*.apk
+          if-no-files-found: error
