@@ -1,10 +1,8 @@
 package com.nexamusic.music.widget
-import com.nexamusic.music.MainActivity
+
 import com.nexamusic.app.MainActivity
 import com.nexamusic.app.R
-import com.nexamusic.music.MainActivity
 
-import com.nexamusic.music.MainActivity
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -40,7 +38,6 @@ import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.request.crossfade
 import coil3.toBitmap
-import com.nexamusic.music.MainActivity
 import com.nexamusic.music.db.MusicDatabase
 import com.nexamusic.music.lyrics.LyricsEntry
 import com.nexamusic.music.lyrics.LyricsUtils
