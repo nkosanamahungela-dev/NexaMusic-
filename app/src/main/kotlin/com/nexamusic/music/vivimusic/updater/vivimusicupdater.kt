@@ -1,4 +1,6 @@
 /**
+import com.nexamusic.music.BuildConfig
+import com.nexamusic.music.R
 import com.nexamusic.app.BuildConfig
 import com.nexamusic.app.R
  * NexaMusic Project (C) 2026
@@ -198,15 +200,8 @@ fun UpdateScreen(navController: NavHostController) {
             delay(1000L)
             checkForUpdate(
                 context = context,
-                onSuccess = { tag, isAvailable, changelog, size, date, description, imageUrl, apkUrl ->
-                    saveLastCheckedTime(context, LocalDateTime.now().format(DateTimeFormatter.ofPattern("d MMMM yyyy, h:mm a")))
-                }
-            )
-        }
-    }
-}
                     }
-                }
+                )
             }
         }
     }
