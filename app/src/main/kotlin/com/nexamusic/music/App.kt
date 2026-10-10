@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app
+package com.nexamusic.music
 
 import android.app.Application
 import android.app.NotificationChannel
