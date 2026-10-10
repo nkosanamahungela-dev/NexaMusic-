@@ -3,9 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.nexamusic.app
-
-import com.nexamusic.music.R
+package com.nexamusic.music
 
 import android.Manifest
 import android.annotation.SuppressLint
