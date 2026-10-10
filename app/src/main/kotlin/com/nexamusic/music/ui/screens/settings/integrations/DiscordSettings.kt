@@ -71,7 +71,7 @@ import androidx.compose.material3.OutlinedButton
 import com.nexamusic.music.ui.utils.appTopBarWindowInsets
 import androidx.compose.material3.Surface
 import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.component.GlassSwitchCompat as Switch
+import androidx.compose.material3.Switch
 import com.nexamusic.music.ui.utils.appTopBarWindowInsets
 import androidx.compose.material3.Text
 import com.nexamusic.music.ui.utils.appTopBarWindowInsets
