@@ -1018,7 +1018,7 @@ private fun HiddenThumbnailPlaceholder(
         contentAlignment = Alignment.Center
     ) {
         Icon(
-            painter = painterResource(R.drawable.nexamusic_logo),
+            painter = painterResource(R.drawable.convx_logo),
             contentDescription = stringResource(R.string.hide_player_thumbnail),
             tint = textBackgroundColor.copy(alpha = 0.7f),
             modifier = Modifier.size(120.dp)
