@@ -134,7 +134,7 @@ fun SettingsScreen(
         item(key = "general_section") {
             SettingsSection {
                 SettingsNavItem(
-                    icon = painterResource(if (isUpdateAvailable) R.drawable.nexamusic_logo else R.drawable.network_update),
+                    icon = painterResource(if (isUpdateAvailable) R.drawable.convx_logo else R.drawable.network_update),
                     iconTint = if (isUpdateAvailable) MaterialTheme.colorScheme.error else Color(0xFF007AFF),
                     title = stringResource(R.string.system_update),
                     badge = if (isUpdateAvailable) stringResource(R.string.update_available) else null,

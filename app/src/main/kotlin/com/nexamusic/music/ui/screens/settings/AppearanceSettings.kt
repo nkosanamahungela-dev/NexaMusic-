@@ -608,7 +608,7 @@ fun AppearanceSettings(
                     onClick = { navController.navigate("settings/appearance/font") }
                 ),
                 Material3SettingsItem(
-                    icon = painterResource(R.drawable.nexamusic_logo),
+                    icon = painterResource(R.drawable.convx_logo),
                     title = { Text(stringResource(R.string.app_icon)) },
                     description = { Text(stringResource(R.string.app_icon_desc)) },
                     onClick = { navController.navigate("settings/appearance/appicon") }

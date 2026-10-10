@@ -408,7 +408,7 @@ fun LyricsImageCard(
                         contentAlignment = Alignment.Center
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.nexamusic_logo),
+                            painter = painterResource(id = R.drawable.convx_logo),
                             contentDescription = null,
                             modifier = Modifier
                                 .size(16.dp),

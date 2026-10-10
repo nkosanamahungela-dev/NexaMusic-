@@ -340,8 +340,8 @@ class MessageCodec(
                     insertNext = pb.insertNext,
                     queue = pb.queueList.map { protoToTrackInfo(it) },
                     queueTitle = pb.queueTitle.let { if (it.isEmpty()) null else it },
-                    volume = pb.volume.takeIf { it > 0 },
-                    serverTime = pb.serverTime.takeIf { it > 0 }
+                    volume = pb.volume.let { if (it <= 0) null else it },
+                    serverTime = pb.serverTime.let { if (it <= 0) null else it }
                 )
             }
             MessageTypes.BUFFER_WAIT -> {
@@ -372,7 +372,7 @@ class MessageCodec(
                     position = pb.position,
                     lastUpdate = pb.lastUpdate,
                     queue = pb.queueList.map { protoToTrackInfo(it) },
-                    volume = pb.volume.takeIf { it > 0 }
+                    volume = pb.volume.let { if (it <= 0) null else it }
                 )
             }
             MessageTypes.RECONNECTED -> {

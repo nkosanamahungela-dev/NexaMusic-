@@ -109,7 +109,7 @@ fun SettingDialoge(
                         .padding(start = 4.dp, top = 10.dp, end = 4.dp, bottom = 10.dp)
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.nexamusic_logo),
+                        painter = painterResource(id = R.drawable.convx_logo),
                         contentDescription = "App Icon",
                         modifier = Modifier
                             .size(24.dp)

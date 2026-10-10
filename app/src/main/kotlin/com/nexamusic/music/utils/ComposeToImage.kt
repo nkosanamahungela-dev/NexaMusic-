@@ -251,7 +251,7 @@ object ComposeToImage {
         canvas.drawOval(logoBoxRect, logoBgPaint)
         
         // Draw Logo Icon
-        val rawLogo = context.getDrawable(R.drawable.nexamusic_logo)?.toBitmap()
+        val rawLogo = context.getDrawable(R.drawable.convx_logo)?.toBitmap()
         rawLogo?.let {
             val logoPaint = Paint().apply {
                 // If background is gradient/blur, tint might be tricky. 
