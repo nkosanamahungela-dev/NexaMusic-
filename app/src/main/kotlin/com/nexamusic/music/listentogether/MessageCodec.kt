@@ -6,7 +6,7 @@
 package com.nexamusic.music.listentogether
 
 import com.google.protobuf.MessageLite
-import com.nexamusic.music.listentogether.proto.ListenTogether
+import com.nexamusic.music.listentogether.proto.Listentogether
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import java.io.ByteArrayInputStream
@@ -134,7 +134,7 @@ class MessageCodec(
             }
         }
         
-        val envelope = ListenTogether.Envelope.newBuilder()
+        val envelope = Listentogether.Envelope.newBuilder()
             .setType(msgType)
             .setPayload(com.google.protobuf.ByteString.copyFrom(payloadBytes))
             .setCompressed(compressed)
@@ -147,7 +147,7 @@ class MessageCodec(
      * Decode protobuf message
      */
     private fun decodeProtobuf(data: ByteArray): Pair<String, ByteArray> {
-        val envelope = ListenTogether.Envelope.parseFrom(data)
+        val envelope = Listentogether.Envelope.parseFrom(data)
         
         var payloadBytes = envelope.payload.toByteArray()
         
@@ -189,22 +189,22 @@ class MessageCodec(
      */
     private fun toProtoMessage(payload: Any): MessageLite {
         return when (payload) {
-            is CreateRoomPayload -> ListenTogether.CreateRoomPayload.newBuilder()
+            is CreateRoomPayload -> Listentogether.CreateRoomPayload.newBuilder()
                 .setUsername(payload.username)
                 .build()
-            is JoinRoomPayload -> ListenTogether.JoinRoomPayload.newBuilder()
+            is JoinRoomPayload -> Listentogether.JoinRoomPayload.newBuilder()
                 .setRoomCode(payload.roomCode)
                 .setUsername(payload.username)
                 .build()
-            is ApproveJoinPayload -> ListenTogether.ApproveJoinPayload.newBuilder()
+            is ApproveJoinPayload -> Listentogether.ApproveJoinPayload.newBuilder()
                 .setUserId(payload.userId)
                 .build()
-            is RejectJoinPayload -> ListenTogether.RejectJoinPayload.newBuilder()
+            is RejectJoinPayload -> Listentogether.RejectJoinPayload.newBuilder()
                 .setUserId(payload.userId)
                 .setReason(payload.reason ?: "")
                 .build()
             is PlaybackActionPayload -> {
-                val builder = ListenTogether.PlaybackActionPayload.newBuilder()
+                val builder = Listentogether.PlaybackActionPayload.newBuilder()
                     .setAction(payload.action)
                     .setPosition(payload.position ?: 0)
                     .setInsertNext(payload.insertNext ?: false)
@@ -220,29 +220,29 @@ class MessageCodec(
                 
                 builder.build()
             }
-            is BufferReadyPayload -> ListenTogether.BufferReadyPayload.newBuilder()
+            is BufferReadyPayload -> Listentogether.BufferReadyPayload.newBuilder()
                 .setTrackId(payload.trackId)
                 .build()
-            is KickUserPayload -> ListenTogether.KickUserPayload.newBuilder()
+            is KickUserPayload -> Listentogether.KickUserPayload.newBuilder()
                 .setUserId(payload.userId)
                 .setReason(payload.reason ?: "")
                 .build()
             is SuggestTrackPayload -> {
-                val builder = ListenTogether.SuggestTrackPayload.newBuilder()
+                val builder = Listentogether.SuggestTrackPayload.newBuilder()
                 payload.trackInfo.let { builder.setTrackInfo(trackInfoToProto(it)) }
                 builder.build()
             }
-            is ApproveSuggestionPayload -> ListenTogether.ApproveSuggestionPayload.newBuilder()
+            is ApproveSuggestionPayload -> Listentogether.ApproveSuggestionPayload.newBuilder()
                 .setSuggestionId(payload.suggestionId)
                 .build()
-            is RejectSuggestionPayload -> ListenTogether.RejectSuggestionPayload.newBuilder()
+            is RejectSuggestionPayload -> Listentogether.RejectSuggestionPayload.newBuilder()
                 .setSuggestionId(payload.suggestionId)
                 .setReason(payload.reason ?: "")
                 .build()
-            is ReconnectPayload -> ListenTogether.ReconnectPayload.newBuilder()
+            is ReconnectPayload -> Listentogether.ReconnectPayload.newBuilder()
                 .setSessionToken(payload.sessionToken)
                 .build()
-            is TransferHostPayload -> ListenTogether.TransferHostPayload.newBuilder()
+            is TransferHostPayload -> Listentogether.TransferHostPayload.newBuilder()
                 .setNewHostId(payload.newHostId)
                 .build()
             else -> throw IllegalArgumentException("Unsupported payload type: ${payload::class.simpleName}")
@@ -302,15 +302,15 @@ class MessageCodec(
     private fun decodeProtobufPayload(msgType: String, payloadBytes: ByteArray): Any? {
         return when (msgType) {
             MessageTypes.ROOM_CREATED -> {
-                val pb = ListenTogether.RoomCreatedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.RoomCreatedPayload.parseFrom(payloadBytes)
                 RoomCreatedPayload(pb.roomCode, pb.userId, pb.sessionToken)
             }
             MessageTypes.JOIN_REQUEST -> {
-                val pb = ListenTogether.JoinRequestPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.JoinRequestPayload.parseFrom(payloadBytes)
                 JoinRequestPayload(pb.userId, pb.username)
             }
             MessageTypes.JOIN_APPROVED -> {
-                val pb = ListenTogether.JoinApprovedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.JoinApprovedPayload.parseFrom(payloadBytes)
                 JoinApprovedPayload(
                     pb.roomCode,
                     pb.userId,
@@ -319,19 +319,19 @@ class MessageCodec(
                 )
             }
             MessageTypes.JOIN_REJECTED -> {
-                val pb = ListenTogether.JoinRejectedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.JoinRejectedPayload.parseFrom(payloadBytes)
                 JoinRejectedPayload(pb.reason)
             }
             MessageTypes.USER_JOINED -> {
-                val pb = ListenTogether.UserJoinedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.UserJoinedPayload.parseFrom(payloadBytes)
                 UserJoinedPayload(pb.userId, pb.username)
             }
             MessageTypes.USER_LEFT -> {
-                val pb = ListenTogether.UserLeftPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.UserLeftPayload.parseFrom(payloadBytes)
                 UserLeftPayload(pb.userId, pb.username)
             }
             MessageTypes.SYNC_PLAYBACK -> {
-                val pb = ListenTogether.PlaybackActionPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.PlaybackActionPayload.parseFrom(payloadBytes)
                 PlaybackActionPayload(
                     action = pb.action,
                     trackId = pb.trackId.let { if (it.isEmpty()) null else it },
@@ -340,43 +340,43 @@ class MessageCodec(
                     insertNext = pb.insertNext,
                     queue = pb.queueList.map { protoToTrackInfo(it) },
                     queueTitle = pb.queueTitle.let { if (it.isEmpty()) null else it },
-                    volume = pb.volume.takeIf { it > 0 },
-                    serverTime = pb.serverTime.takeIf { it > 0 }
+                    volume = pb.volume.let { if (it <= 0) null else it },
+                    serverTime = pb.serverTime.let { if (it <= 0) null else it }
                 )
             }
             MessageTypes.BUFFER_WAIT -> {
-                val pb = ListenTogether.BufferWaitPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.BufferWaitPayload.parseFrom(payloadBytes)
                 BufferWaitPayload(pb.trackId, pb.waitingForList)
             }
             MessageTypes.BUFFER_COMPLETE -> {
-                val pb = ListenTogether.BufferCompletePayload.parseFrom(payloadBytes)
+                val pb = Listentogether.BufferCompletePayload.parseFrom(payloadBytes)
                 BufferCompletePayload(pb.trackId)
             }
             MessageTypes.ERROR -> {
-                val pb = ListenTogether.ErrorPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.ErrorPayload.parseFrom(payloadBytes)
                 ErrorPayload(pb.code.toString(), pb.message)
             }
             MessageTypes.HOST_CHANGED -> {
-                val pb = ListenTogether.HostChangedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.HostChangedPayload.parseFrom(payloadBytes)
                 HostChangedPayload(pb.newHostId, pb.newHostName)
             }
             MessageTypes.KICKED -> {
-                val pb = ListenTogether.KickedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.KickedPayload.parseFrom(payloadBytes)
                 KickedPayload(pb.reason)
             }
             MessageTypes.SYNC_STATE -> {
-                val pb = ListenTogether.SyncStatePayload.parseFrom(payloadBytes)
+                val pb = Listentogether.SyncStatePayload.parseFrom(payloadBytes)
                 SyncStatePayload(
                     currentTrack = if (pb.hasCurrentTrack()) protoToTrackInfo(pb.currentTrack) else null,
                     isPlaying = pb.isPlaying,
                     position = pb.position,
                     lastUpdate = pb.lastUpdate,
                     queue = pb.queueList.map { protoToTrackInfo(it) },
-                    volume = pb.volume.takeIf { it > 0 }
+                    volume = pb.volume.let { if (it <= 0) null else it }
                 )
             }
             MessageTypes.RECONNECTED -> {
-                val pb = ListenTogether.ReconnectedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.ReconnectedPayload.parseFrom(payloadBytes)
                 ReconnectedPayload(
                     pb.roomCode,
                     pb.userId,
@@ -385,15 +385,15 @@ class MessageCodec(
                 )
             }
             MessageTypes.USER_RECONNECTED -> {
-                val pb = ListenTogether.UserReconnectedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.UserReconnectedPayload.parseFrom(payloadBytes)
                 UserReconnectedPayload(pb.userId, pb.username)
             }
             MessageTypes.USER_DISCONNECTED -> {
-                val pb = ListenTogether.UserDisconnectedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.UserDisconnectedPayload.parseFrom(payloadBytes)
                 UserDisconnectedPayload(pb.userId, pb.username)
             }
             MessageTypes.SUGGESTION_RECEIVED -> {
-                val pb = ListenTogether.SuggestionReceivedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.SuggestionReceivedPayload.parseFrom(payloadBytes)
                 SuggestionReceivedPayload(
                     pb.suggestionId,
                     pb.fromUserId,
@@ -402,14 +402,14 @@ class MessageCodec(
                 )
             }
             MessageTypes.SUGGESTION_APPROVED -> {
-                val pb = ListenTogether.SuggestionApprovedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.SuggestionApprovedPayload.parseFrom(payloadBytes)
                 SuggestionApprovedPayload(
                     pb.suggestionId,
                     protoToTrackInfo(pb.trackInfo)
                 )
             }
             MessageTypes.SUGGESTION_REJECTED -> {
-                val pb = ListenTogether.SuggestionRejectedPayload.parseFrom(payloadBytes)
+                val pb = Listentogether.SuggestionRejectedPayload.parseFrom(payloadBytes)
                 SuggestionRejectedPayload(pb.suggestionId, pb.reason.let { if (it.isEmpty()) null else it })
             }
             else -> null
@@ -418,8 +418,8 @@ class MessageCodec(
     
     // Helper conversion functions
     
-    private fun trackInfoToProto(track: TrackInfo): ListenTogether.TrackInfo {
-        return ListenTogether.TrackInfo.newBuilder()
+    private fun trackInfoToProto(track: TrackInfo): Listentogether.TrackInfo {
+        return Listentogether.TrackInfo.newBuilder()
             .setId(track.id)
             .setTitle(track.title)
             .setArtist(track.artist)
@@ -430,7 +430,7 @@ class MessageCodec(
             .build()
     }
     
-    private fun protoToTrackInfo(proto: ListenTogether.TrackInfo): TrackInfo {
+    private fun protoToTrackInfo(proto: Listentogether.TrackInfo): TrackInfo {
         return TrackInfo(
             id = proto.id,
             title = proto.title,
@@ -442,7 +442,7 @@ class MessageCodec(
         )
     }
     
-    private fun protoToUserInfo(proto: ListenTogether.UserInfo): UserInfo {
+    private fun protoToUserInfo(proto: Listentogether.UserInfo): UserInfo {
         return UserInfo(
             userId = proto.userId,
             username = proto.username,
@@ -451,7 +451,7 @@ class MessageCodec(
         )
     }
     
-    private fun protoToRoomState(proto: ListenTogether.RoomState): RoomState {
+    private fun protoToRoomState(proto: Listentogether.RoomState): RoomState {
         return RoomState(
             roomCode = proto.roomCode,
             hostId = proto.hostId,
