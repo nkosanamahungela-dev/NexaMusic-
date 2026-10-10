@@ -31,7 +31,7 @@ plugins {
 }
 
 android {
-    namespace = "com.nexamusic.app"
+    namespace = "com.nexamusic.music"
     compileSdk = 37
     ndkVersion = "27.0.12077973"
 
