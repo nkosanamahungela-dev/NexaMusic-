@@ -1,6 +1,6 @@
 package com.nexamusic.music.vivimusic.updater.downloadmanager
 
-import com.nexamusic.app.R
+import com.nexamusic.music.R
 
 import android.app.Notification
 import android.app.NotificationChannel
