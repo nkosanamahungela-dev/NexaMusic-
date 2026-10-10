@@ -5,6 +5,8 @@
 
 package com.nexamusic.app
 
+import com.nexamusic.music.R
+
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.ComponentName
