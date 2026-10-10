@@ -1,6 +1,6 @@
 package com.nexamusic.music.widget
 
-import com.nexamusic.app.MainActivity
+import com.nexamusic.music.MainActivity
 import com.nexamusic.music.R
 
 
