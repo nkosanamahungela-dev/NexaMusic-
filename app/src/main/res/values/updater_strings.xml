@@ -81,6 +81,4 @@
     <string name="update_to_v">Update available %1$s</string>
     <string name="new_update">New update</string>
     <string name="release_date_v">Released on: %1$s</string>
-    <string name="update_size_v">Size: %1$s MB</string>
-    <string name="cancel">Cancel</string>
-</resources>
+    <string name="update_size_v">Size: %1$s MB</string></resources>
