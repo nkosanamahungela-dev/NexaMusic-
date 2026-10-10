@@ -59,8 +59,8 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import androidx.work.workDataOf
-import com.nexamusic.app.BuildConfig
-import com.nexamusic.app.R
+import com.nexamusic.music.BuildConfig
+import com.nexamusic.music.R
 import coil3.compose.AsyncImage
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
