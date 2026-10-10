@@ -22,7 +22,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import com.nexamusic.music.ui.utils.appTopBarWindowInsets
 import androidx.compose.material3.Icon
 import com.nexamusic.music.ui.utils.appTopBarWindowInsets
-import com.nexamusic.music.ui.component.GlassSwitchCompat as Switch
+import androidx.compose.material3.Switch
 import com.nexamusic.music.ui.utils.appTopBarWindowInsets
 import androidx.compose.material3.SwitchDefaults
 import com.nexamusic.music.ui.utils.appTopBarWindowInsets
