@@ -7,10 +7,8 @@ if (localPropertiesFile.exists()) {
     localProperties.load(localPropertiesFile.inputStream())
 }
 
-// Single source of truth for the app version — see version.properties and the
-// bumpVersion task at the bottom of this file. versionCode is DERIVED, not hand-set,
-// so it can never drift from versionName the way it did before (versionCode 5 sat
-// next to versionName "1.5.1" with no relationship between them at all).
+// Beta version name follows semantic versioning; Android versionCode stays monotonic
+// so beta installs can update the currently installed build safely.
 val versionProps = Properties().apply {
     load(rootProject.file("version.properties").inputStream())
 }
@@ -18,8 +16,8 @@ val appVersionMajor = versionProps.getProperty("VERSION_MAJOR").toInt()
 val appVersionMinor = versionProps.getProperty("VERSION_MINOR").toInt()
 val appVersionPatch = versionProps.getProperty("VERSION_PATCH").toInt()
 // 1.5.1 -> 10501. Room for MINOR/PATCH up to 99 each before a scheme change is needed.
-val appVersionCode = appVersionMajor * 10_000 + appVersionMinor * 100 + appVersionPatch
-val appVersionName = "$appVersionMajor.$appVersionMinor.$appVersionPatch"
+val appVersionCode = versionProps.getProperty("VERSION_CODE").toInt()
+val appVersionName = "$appVersionMajor.$appVersionMinor.$appVersionPatch-beta"
 
 plugins {
     id("com.android.application")
@@ -31,7 +29,7 @@ plugins {
 }
 
 android {
-    namespace = "com.nexamusic.app"
+    namespace = "com.nexamusic.music"
     compileSdk = 37
     ndkVersion = "27.0.12077973"
 
@@ -378,12 +376,12 @@ tasks.register("bumpVersion") {
         }
 
         val versionFile = rootProject.file("version.properties")
+        val newVersionCode = maxOf(major * 10_000 + minor * 100 + patch, appVersionCode + 1)
         versionFile.writeText(
-            "VERSION_MAJOR=$major\nVERSION_MINOR=$minor\nVERSION_PATCH=$patch\n"
+            "VERSION_MAJOR=$major\nVERSION_MINOR=$minor\nVERSION_PATCH=$patch\nVERSION_CODE=$newVersionCode\n"
         )
 
-        val newVersionName = "$major.$minor.$patch"
-        val newVersionCode = major * 10_000 + minor * 100 + patch
+        val newVersionName = "$major.$minor.$patch-beta"
         println("Bumped $part: $appVersionName ($appVersionCode) -> $newVersionName ($newVersionCode)")
         println()
         println("Next steps:")
