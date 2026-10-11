@@ -59,9 +59,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.nexamusic.music.BuildConfig
 import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.constants.DonationKofiUrl
-import com.nexamusic.music.constants.DonationUpiId
-import com.nexamusic.music.constants.DonationUpiUri
 import com.nexamusic.music.R
 import com.nexamusic.music.ui.component.IconButton
 import com.nexamusic.music.ui.component.Material3SettingsGroup
@@ -140,7 +137,7 @@ fun AboutScreen(
                 )
 
                 Text(
-                    text = "v${BuildConfig.VERSION_NAME} • ${stringResource(if (BuildConfig.IS_NIGHTLY) R.string.build_nightly else R.string.build_stable)}",
+                    text = "v${BuildConfig.VERSION_NAME} • BETA",
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.primary
                 )
@@ -152,12 +149,12 @@ fun AboutScreen(
             title = stringResource(R.string.developer_section),
             items = listOf(
                 Material3SettingsItem(
-                    icon = painterResource(R.drawable.dev),
+                    icon = painterResource(R.drawable.nexamusic_logo),
                     title = { Text(stringResource(R.string.developer_name)) },
                     description = { Text(stringResource(R.string.app_developer), color = MaterialTheme.colorScheme.primary) },
                     tintIcon = false,
                     iconShape = cookieShape,
-                    onClick = { uriHandler.safeOpenUri(context, "https://github.com/cosmictaserdev-creator") }
+                    onClick = { uriHandler.safeOpenUri(context, "https://github.com/nkosanamahungela-dev") }
                 )
             )
         )
@@ -177,32 +174,14 @@ fun AboutScreen(
                     icon = painterResource(R.drawable.discord),
                     title = { Text(stringResource(R.string.discord_channel)) },
                     description = { Text(stringResource(R.string.join_discord)) },
-                    onClick = { uriHandler.safeOpenUri(context, "https://discord.gg/Ejeb4cmzfd") }
+                    onClick = { uriHandler.safeOpenUri(context, "https://discord.gg/tBCfeMvt9") }
                 )
             )
         )
 
         Spacer(modifier = Modifier.height(27.dp))
 
-        // Support Section
-        Material3SettingsGroup(
-            title = stringResource(R.string.support_section),
-            items = listOf(
-                Material3SettingsItem(
-                    icon = painterResource(R.drawable.favorite),
-                    title = { Text(stringResource(R.string.support_upi)) },
-                    description = { Text(DonationUpiId) },
-                    onClick = { uriHandler.safeOpenUri(context, DonationUpiUri) }
-                ),
-                Material3SettingsItem(
-                    icon = painterResource(R.drawable.favorite),
-                    title = { Text(stringResource(R.string.support_kofi)) },
-                    description = { Text(stringResource(R.string.support_kofi_desc)) },
-                    onClick = { uriHandler.safeOpenUri(context, DonationKofiUrl) }
-                ),
-            )
-        )
-        Spacer(modifier = Modifier.height(27.dp))
+        // No payment or donation links are shown.
 
         // App Information Section
         Material3SettingsGroup(
