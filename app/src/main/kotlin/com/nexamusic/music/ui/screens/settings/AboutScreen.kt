@@ -1,17 +1,13 @@
 /**
  * NexaMusic Project (C) 2026
- * Licensed under GPL-3.0 | See git history for contributors
+ * Licensed under GPL-3.0 | See repository README for upstream credits.
  */
 
 package com.nexamusic.music.ui.screens.settings
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import com.nexamusic.music.ui.utils.bounceClick
-import com.nexamusic.music.ui.utils.combinedBounceClick
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -21,22 +17,15 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.BugReport
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.History
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialShapes
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarScrollBehavior
@@ -45,23 +34,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.nexamusic.music.BuildConfig
 import com.nexamusic.music.LocalPlayerAwareWindowInsets
-import com.nexamusic.music.constants.DonationKofiUrl
-import com.nexamusic.music.constants.DonationUpiId
-import com.nexamusic.music.constants.DonationUpiUri
 import com.nexamusic.music.R
 import com.nexamusic.music.ui.component.IconButton
 import com.nexamusic.music.ui.component.Material3SettingsGroup
@@ -73,6 +55,10 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
+private const val NEXAMUSIC_REPOSITORY = "https://github.com/nkosanamahungela-dev/NexaMusic-"
+private const val NEXAMUSIC_GITHUB_PROFILE = "https://github.com/nkosanamahungela-dev"
+private const val NEXAMUSIC_DISCORD_INVITE = "https://discord.gg/tBCfeMvt9"
+
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 fun AboutScreen(
@@ -82,17 +68,16 @@ fun AboutScreen(
 ) {
     val uriHandler = LocalUriHandler.current
     val context = LocalContext.current
-    val unknownString = stringResource(R.string.unknown)
-
     val cookieShape = MaterialShapes.Cookie7Sided.toShape()
-    
+    val buildChannel = if (BuildConfig.IS_NIGHTLY) "NIGHTLY" else "STABLE"
+
     val installedDate = remember {
         try {
             val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
-            val installTime = packageInfo.firstInstallTime
-            SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(Date(installTime))
+            SimpleDateFormat("MMM dd, yyyy", Locale.getDefault())
+                .format(Date(packageInfo.firstInstallTime))
         } catch (_: Exception) {
-            unknownString
+            "Unknown"
         }
     }
 
@@ -102,21 +87,21 @@ fun AboutScreen(
             .verticalScroll(rememberScrollState())
             .padding(horizontal = 16.dp),
     ) {
-        // Header
+        // NexaMusic brand header
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(vertical = 32.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             Text(
-                text = stringResource(R.string.vivi_music_title),
+                text = "NexaMusic",
                 style = MaterialTheme.typography.displaySmall.copy(
                     fontWeight = FontWeight.Bold,
                     fontSize = 48.sp,
-                    letterSpacing = 2.sp
+                    letterSpacing = 2.sp,
                 ),
-                color = MaterialTheme.colorScheme.onSurface
+                color = MaterialTheme.colorScheme.onSurface,
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -126,112 +111,110 @@ fun AboutScreen(
                     .border(
                         width = 1.5.dp,
                         color = MaterialTheme.colorScheme.primary.copy(alpha = 0.5f),
-                        shape = CircleShape
+                        shape = CircleShape,
                     )
                     .padding(horizontal = 16.dp, vertical = 8.dp),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 Image(
-                    painter = painterResource(R.drawable.nexamusic_logo),
-                    contentDescription = null,
+                    painter = painterResource(R.drawable.ic_launcher_mono),
+                    contentDescription = "NexaMusic logo",
                     modifier = Modifier.size(24.dp),
-                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary)
+                    colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary),
                 )
 
                 Text(
-                    text = "v${BuildConfig.VERSION_NAME} • ${stringResource(if (BuildConfig.IS_NIGHTLY) R.string.build_nightly else R.string.build_stable)}",
+                    text = "v" + BuildConfig.VERSION_NAME + " • " + buildChannel,
                     style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.primary
+                    color = MaterialTheme.colorScheme.primary,
                 )
             }
         }
-        
-        // Developer Section
+
+        // Developer
         Material3SettingsGroup(
-            title = stringResource(R.string.developer_section),
+            title = "DEVELOPER",
             items = listOf(
                 Material3SettingsItem(
-                    icon = painterResource(R.drawable.dev),
-                    title = { Text(stringResource(R.string.developer_name)) },
-                    description = { Text(stringResource(R.string.app_developer), color = MaterialTheme.colorScheme.primary) },
+                    icon = painterResource(R.drawable.ic_launcher_mono),
+                    title = { Text("Smelokuhle Mahungela") },
+                    description = {
+                        Text(
+                            "Lead Developer",
+                            color = MaterialTheme.colorScheme.primary,
+                        )
+                    },
                     tintIcon = false,
                     iconShape = cookieShape,
-                    onClick = { uriHandler.safeOpenUri(context, "https://github.com/cosmictaserdev-creator") }
-                )
-            )
+                    onClick = {
+                        uriHandler.safeOpenUri(context, NEXAMUSIC_GITHUB_PROFILE)
+                    },
+                ),
+            ),
         )
+
         Spacer(modifier = Modifier.height(27.dp))
 
-        // Community Section
+        // Community
         Material3SettingsGroup(
-            title = stringResource(R.string.community_section),
+            title = "COMMUNITY",
             items = listOf(
                 Material3SettingsItem(
                     icon = painterResource(R.drawable.github),
-                    title = { Text(stringResource(R.string.github_repository)) },
-                    description = { Text(stringResource(R.string.view_source_code)) },
-                    onClick = { uriHandler.safeOpenUri(context, "https://github.com/nkosanamahungela-dev/NexaMusic-") }
+                    title = { Text("GitHub Repository") },
+                    description = { Text("View source code") },
+                    onClick = {
+                        uriHandler.safeOpenUri(context, NEXAMUSIC_REPOSITORY)
+                    },
                 ),
                 Material3SettingsItem(
                     icon = painterResource(R.drawable.discord),
-                    title = { Text(stringResource(R.string.discord_channel)) },
-                    description = { Text(stringResource(R.string.join_discord)) },
-                    onClick = { uriHandler.safeOpenUri(context, "https://discord.gg/Ejeb4cmzfd") }
-                )
-            )
+                    title = { Text("Discord") },
+                    description = { Text("Join the NexaMusic community") },
+                    onClick = {
+                        uriHandler.safeOpenUri(context, NEXAMUSIC_DISCORD_INVITE)
+                    },
+                ),
+            ),
         )
 
         Spacer(modifier = Modifier.height(27.dp))
 
-        // Support Section
+        // App information. No payment or donation options are displayed.
         Material3SettingsGroup(
-            title = stringResource(R.string.support_section),
-            items = listOf(
-                Material3SettingsItem(
-                    icon = painterResource(R.drawable.favorite),
-                    title = { Text(stringResource(R.string.support_upi)) },
-                    description = { Text(DonationUpiId) },
-                    onClick = { uriHandler.safeOpenUri(context, DonationUpiUri) }
-                ),
-                Material3SettingsItem(
-                    icon = painterResource(R.drawable.favorite),
-                    title = { Text(stringResource(R.string.support_kofi)) },
-                    description = { Text(stringResource(R.string.support_kofi_desc)) },
-                    onClick = { uriHandler.safeOpenUri(context, DonationKofiUrl) }
-                ),
-            )
-        )
-        Spacer(modifier = Modifier.height(27.dp))
-
-        // App Information Section
-        Material3SettingsGroup(
-            title = stringResource(R.string.app_info_section),
+            title = "APP INFO",
             items = listOf(
                 Material3SettingsItem(
                     icon = painterResource(R.drawable.deployed_app_update),
-                    title = { Text(stringResource(R.string.installed_date_title)) },
-                    description = { Text(installedDate) }
+                    title = { Text("Installed Date") },
+                    description = { Text(installedDate) },
                 ),
                 Material3SettingsItem(
                     icon = painterResource(R.drawable.info),
-                    title = { Text(stringResource(R.string.version_code)) },
-                    description = { Text(BuildConfig.VERSION_CODE.toString()) }
+                    title = { Text("Version code") },
+                    description = { Text(BuildConfig.VERSION_CODE.toString()) },
                 ),
                 Material3SettingsItem(
                     icon = painterResource(R.drawable.license_vivi),
-                    title = { Text(stringResource(R.string.license)) },
+                    title = { Text("GNU General Public License v3.0") },
                     description = { Text("GPL-3.0 • Free Open Source Software") },
-                    onClick = { uriHandler.safeOpenUri(context, "https://github.com/nkosanamahungela-dev/NexaMusic-/blob/main/LICENSE") }
+                    onClick = {
+                        uriHandler.safeOpenUri(
+                            context,
+                            "$NEXAMUSIC_REPOSITORY/blob/main/LICENSE",
+                        )
+                    },
                 ),
-            )
+            ),
         )
+
         Spacer(modifier = Modifier.height(20.dp))
     }
 
     TopAppBar(
-            windowInsets = appTopBarWindowInsets(),
-        title = { Text(stringResource(R.string.about)) },
+        windowInsets = appTopBarWindowInsets(),
+        title = { Text("About") },
         navigationIcon = {
             IconButton(
                 onClick = { onBack?.invoke() ?: navController.navigateUp() },
@@ -239,10 +222,10 @@ fun AboutScreen(
             ) {
                 Icon(
                     painterResource(R.drawable.arrow_back),
-                    contentDescription = null,
+                    contentDescription = "Back",
                 )
             }
         },
-        scrollBehavior = scrollBehavior
+        scrollBehavior = scrollBehavior,
     )
 }
