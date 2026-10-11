@@ -11,10 +11,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.windowInsetsPadding
@@ -118,7 +116,7 @@ fun AboutScreen(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 Image(
-                    painter = painterResource(R.drawable.ic_launcher_mono),
+                    painter = painterResource(R.drawable.nexamusic_logo),
                     contentDescription = "NexaMusic logo",
                     modifier = Modifier.size(24.dp),
                     colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.primary),
