@@ -1,6 +1,9 @@
-name: Build PR
+name: Build and Lint
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - "**"
@@ -51,12 +54,12 @@ jobs:
         run: ./gradlew --console=plain assembleUniversalFossDebug :app:lintUniversalFossDebug --warning-mode summary
         env:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
-          PULL_REQUEST: "true"
+          PULL_REQUEST: ${{ github.event_name == 'pull_request' && 'true' || 'false' }}
           LASTFM_API_KEY: ${{ secrets.LASTFM_API_KEY }}
           LASTFM_SECRET: ${{ secrets.LASTFM_SECRET }}
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: app-universal-debug-pr-${{ github.event.number }}
+          name: app-universal-debug-${{ github.event.number || github.run_number }}
           path: app/build/outputs/apk/universalFoss/debug/*.apk
