@@ -1563,18 +1563,9 @@ class MainActivity : ComponentActivity() {
                         // leave a gray strip behind the transparent status bar.
                         containerColor = Color.Transparent,
                         snackbarHost = { SnackbarHost(snackbarHostState) },
+                        // Global TopAppBar intentionally disabled app-wide, matching the
+                        // requested headerless Convx-style layout on every screen.
                         topBar = {
-                            AnimatedVisibility(
-                                // Home has its own wordmark in the screen content; never render this app-wide bar there.
-                                // Check both the actual NavController destination and the overlay-aware route.
-                                // This prevents a stale/asynchronous visibility state from showing
-                                // the global header when Home is the active destination.
-                                visible = shouldShowTopBar &&
-                                    currentRoute != Screens.Home.route &&
-                                    effectiveRoute != Screens.Home.route,
-                                enter = fadeIn(animationSpec = tween(durationMillis = 300)),
-                                exit = fadeOut(animationSpec = tween(durationMillis = 200))
-                            ) {
                                 Row {
                                     Box(
                                         modifier = Modifier.fillMaxWidth()
