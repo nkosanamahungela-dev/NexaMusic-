@@ -1,6 +1,7 @@
 /**
  * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
+ * UI treatment adapted from Convx 2.0.0-nightly (GPL-3.0).
  */
 package com.nexamusic.music.ui.component
 
@@ -19,6 +20,9 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Tune
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -39,18 +43,9 @@ import com.nexamusic.music.R
 data class SortOption<T>(val value: T, val labelRes: Int)
 
 /**
- * Compact sort control: an icon that opens a checklist of sort fields, a rule, and a
- * descending toggle at the bottom.
- *
- * The alternative already in the codebase, [SortHeader], is a Material split button
- * roughly 160dp wide that takes a row of its own above every list. This is a single icon that fits in a header alongside other
- * actions, which is what lets the list start at the top of the screen instead of below
- * a control strip.
- *
- * Selection is shown with a tick on the chosen row rather than by changing the button
- * label, so the current sort is legible without opening anything only if the caller
- * also shows it — that is the trade a compact control makes, and why this is offered
- * alongside [SortHeader] rather than replacing it everywhere.
+ * Compact sort control for list headers. Unlike [SortHeader], it uses one icon so list content
+ * can start higher on screen. A checkmark shows the selected option; callers can also display
+ * the current sort while the menu is closed.
  */
 @Composable
 fun <T> SortPopupButton(
@@ -62,16 +57,14 @@ fun <T> SortPopupButton(
     modifier: Modifier = Modifier,
     /** Extra rows above the sort fields — grid density, view style, whatever the screen has. */
     leadingSection: (@Composable ColumnScope.() -> Unit)? = null,
+    /** False for orders with no direction, such as a custom arrangement. */
+    showDescending: Boolean = true,
 ) {
     var expanded by remember { mutableStateOf(false) }
 
     Box(modifier = modifier) {
         IconButton(onClick = { expanded = true }) {
-            Icon(
-                painter = painterResource(R.drawable.tune),
-                contentDescription = stringResource(R.string.sort_by),
-                modifier = Modifier.size(24.dp),
-            )
+            Icon(imageVector = Icons.Filled.Tune, contentDescription = stringResource(R.string.sort_by), modifier = Modifier.size(24.dp))
         }
 
         DropdownMenu(
@@ -94,18 +87,20 @@ fun <T> SortPopupButton(
                 )
             }
 
-            HorizontalDivider(modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp))
+            if (showDescending) {
+                HorizontalDivider(modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp))
 
-            SortMenuRow(
-                label = stringResource(R.string.sort_descending),
-                checked = descending,
-                // Deliberately does NOT dismiss: direction is the one option people flip
-                // back and forth to compare, and reopening the menu for each flip is the
-                // kind of friction that makes a sort control feel heavy.
-                onClick = { onDescendingChange(!descending) },
-                trailingIcon = R.drawable.arrow_downward,
-                trailingRotated = !descending,
-            )
+                SortMenuRow(
+                    label = stringResource(R.string.sort_descending),
+                    checked = descending,
+                    // Deliberately does NOT dismiss: direction is the one option people flip
+                    // back and forth to compare, and reopening the menu for each flip is the
+                    // kind of friction that makes a sort control feel heavy.
+                    onClick = { onDescendingChange(!descending) },
+                    trailingIcon = R.drawable.arrow_downward,
+                    trailingRotated = !descending,
+                )
+            }
         }
     }
 }
@@ -153,12 +148,7 @@ private fun SortMenuRow(
                         .graphicsLayer { rotationZ = if (trailingRotated) 180f else 0f },
                 )
 
-                checked -> Icon(
-                    painter = painterResource(R.drawable.check),
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(18.dp),
-                )
+                checked -> SymbolIcon(symbol = sf("checkmark"), contentDescription = null, size = 18.dp, tint = MaterialTheme.colorScheme.primary)
             }
         },
         onClick = onClick,

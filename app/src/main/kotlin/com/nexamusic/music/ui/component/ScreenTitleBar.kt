@@ -1,6 +1,7 @@
 /**
  * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
+ * UI treatment adapted from Convx 2.0.0-nightly (GPL-3.0).
  */
 
 package com.nexamusic.music.ui.component
@@ -24,6 +25,7 @@ import androidx.compose.foundation.lazy.grid.LazyGridState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -57,11 +59,14 @@ fun LargeScreenTitle(
 ) {
     Spacer(Modifier.height(40.dp))
 
+    // Neutral per theme; hero screens keep their artwork-derived tint.
+    val titleColor = color ?: LocalAccentTextColor.current
+
     Text(
         text = title,
         style = MaterialTheme.typography.headlineLarge,
         fontWeight = FontWeight.ExtraBold,
-        color = color ?: LocalAccentTextColor.current,
+        color = titleColor,
         maxLines = 2,
         overflow = TextOverflow.Ellipsis,
         modifier = modifier
@@ -71,16 +76,35 @@ fun LargeScreenTitle(
 }
 
 /**
- * How far the large title has scrolled away, 0..1. Drives [CollapsedTitleBar]'s
- * fade-in.
- *
- * Same shape as [rememberChromeScrimProgress], but keyed to the title's own
- * height rather than a hero image's, so the compact bar appears exactly as the
- * large one leaves.
+ * Progress from 0 to 1 as the large title scrolls out. Uses its measured height
+ * so the compact title appears only after the large title is fully gone.
  */
 @Composable
-fun rememberTitleCollapseProgress(state: LazyListState, thresholdPx: Float = 220f): Float {
-    val progress by remember(state) {
+fun rememberTitleCollapseProgressState(state: LazyListState, titleItemKey: Any? = null): State<Float> =
+    remember(state, titleItemKey) {
+        derivedStateOf {
+            val visible = state.layoutInfo.visibleItemsInfo
+            val titleItem = if (titleItemKey != null) {
+                visible.firstOrNull { it.key == titleItemKey }
+            } else {
+                visible.firstOrNull { it.index == 0 }
+            }
+            if (titleItem == null) {
+                // Not in the visible range at all — scrolled fully past.
+                1f
+            } else {
+                (-titleItem.offset.toFloat() / titleItem.size.coerceAtLeast(1)).coerceIn(0f, 1f)
+            }
+        }
+    }
+
+@Composable
+fun rememberTitleCollapseProgress(state: LazyListState, titleItemKey: Any? = null): Float =
+    rememberTitleCollapseProgressState(state, titleItemKey).value
+
+@Composable
+fun rememberTitleCollapseProgressState(state: LazyGridState, thresholdPx: Float = 220f): State<Float> =
+    remember(state) {
         derivedStateOf {
             val scrolled = if (state.firstVisibleItemIndex == 0) {
                 state.firstVisibleItemScrollOffset.toFloat()
@@ -90,21 +114,10 @@ fun rememberTitleCollapseProgress(state: LazyListState, thresholdPx: Float = 220
             (scrolled / thresholdPx).coerceIn(0f, 1f)
         }
     }
-    return progress
-}
 
 @Composable
 fun rememberTitleCollapseProgress(state: LazyGridState, thresholdPx: Float = 220f): Float {
-    val progress by remember(state) {
-        derivedStateOf {
-            val scrolled = if (state.firstVisibleItemIndex == 0) {
-                state.firstVisibleItemScrollOffset.toFloat()
-            } else {
-                thresholdPx
-            }
-            (scrolled / thresholdPx).coerceIn(0f, 1f)
-        }
-    }
+    val progress by rememberTitleCollapseProgressState(state, thresholdPx)
     return progress
 }
 
