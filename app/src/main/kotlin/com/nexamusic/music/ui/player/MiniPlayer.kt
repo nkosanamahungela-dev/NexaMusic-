@@ -149,6 +149,7 @@ import com.nexamusic.music.ui.component.LocalGlassEffectConfig
 import com.nexamusic.music.ui.component.backdrop.catalog.utils.InteractiveHighlight
 import com.nexamusic.music.ui.component.isGlassAllowed
 import com.nexamusic.music.ui.component.liquidGlass
+import com.nexamusic.music.ui.component.homeCardRim
 import com.nexamusic.music.ui.theme.PlayerColorExtractor
 import com.nexamusic.music.utils.rememberEnumPreference
 import com.nexamusic.music.utils.rememberPreference
@@ -346,6 +347,7 @@ private fun NewMiniPlayer(
     // catalog). Its gesture tracking never consumes pointer events, so it's safe
     // stacked alongside the swipe-to-skip drag detector.
     val interactiveHighlight = remember(coroutineScope) { InteractiveHighlight(animationScope = coroutineScope) }
+    val miniPlayerShape = remember { RoundedCornerShape(32.dp) }
 
     Box(
         modifier = modifier
@@ -426,9 +428,9 @@ private fun NewMiniPlayer(
                 .then(if (isTablet) Modifier.width(500.dp).align(Alignment.Center) else Modifier.fillMaxWidth())
                 .height(64.dp)
                 .offset { IntOffset(offsetXAnimatable.value.roundToInt(), 0) }
-                .clip(RoundedCornerShape(32.dp))
+                .clip(miniPlayerShape)
                 .background(color = backgroundColor)
-                .border(1.dp, outlineColor.copy(alpha = 0.3f), RoundedCornerShape(32.dp))
+                .homeCardRim(miniPlayerShape)
                 .then(interactiveHighlight.modifier)
                 .then(interactiveHighlight.gestureModifier)
         ) {
