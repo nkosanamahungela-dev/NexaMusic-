@@ -1842,6 +1842,12 @@ private fun LazyListScope.heroSection(
 
     // Convx-inspired artwork-first Top Picks rail: the artwork is the card,
     // and its blurred reflection carries the title instead of a wide banner.
+    item(key = "hero_title", contentType = "section_title") {
+        NavigationTitle(
+            title = "Top Picks",
+            modifier = Modifier.animateItem(),
+        )
+    }
     item(key = "hero_card", contentType = "hero_rail") {
         LazyRow(
             contentPadding = PaddingValues(horizontal = AppleTokens.Gutter).plusStart(deps.sideInset),
