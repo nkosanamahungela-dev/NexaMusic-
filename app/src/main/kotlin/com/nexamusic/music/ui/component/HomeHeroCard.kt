@@ -46,9 +46,7 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import com.nexamusic.music.R
-import com.nexamusic.music.constants.HomeCardCornerRadiusOverrideKey
 import com.nexamusic.music.constants.HomeHeroCardHeightOverrideKey
-import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
 import com.nexamusic.music.ui.theme.AppleTokens
 import com.nexamusic.music.ui.utils.bounceClick
 import com.nexamusic.music.utils.rememberPreference
@@ -76,19 +74,19 @@ fun HomeHeroCard(
     modifier: Modifier = Modifier,
 ) {
     val (heightOverride) = rememberPreference(HomeHeroCardHeightOverrideKey, 0)
-    val (cornerOverride) = rememberPreference(HomeCardCornerRadiusOverrideKey, 0)
-    val cornerRadius = if (cornerOverride > 0) cornerOverride.dp else AppleTokens.CardCornerLarge
+    val cardShape = rememberHomeCardShape()
     Box(
         modifier = modifier
             .fillMaxWidth()
             .then(
                 if (heightOverride > 0) Modifier.height(heightOverride.dp) else Modifier.aspectRatio(4f / 3f)
             )
-            .clip(ContinuousRoundedRectangle(cornerRadius))
+            .clip(cardShape)
             // Under the artwork, not decoration: a song whose thumbnailUrl is null or
             // fails to load left the card fully transparent, so the section read as
             // "the hero card never rendered" rather than as a card with no cover.
             .background(MaterialTheme.colorScheme.surfaceContainerHigh)
+            .homeCardRim(cardShape)
             .bounceClick(onClick = onClick),
     ) {
         // Bound the decode to the card's real on-screen pixels and skip the crossfade:
