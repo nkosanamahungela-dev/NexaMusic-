@@ -1,6 +1,7 @@
 /**
  * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
+ * UI treatment adapted from Convx 2.0.0-nightly (GPL-3.0).
  */
 
 package com.nexamusic.music.ui.component
