@@ -1837,43 +1837,40 @@ private fun LazyListScope.heroSection(
     deps: HomeSectionDeps,
     quickPicks: List<Song>?,
 ) {
-    quickPicks?.firstOrNull()?.let { top ->
-        item(key = "hero_card", contentType = "hero_card") {
-            val heroSubtitle = remember(top.id) {
-                top.artists.joinToString { it.name }
+    val picks = quickPicks.orEmpty().distinctBy { it.id }.take(8)
+    if (picks.isEmpty()) return
+
+    // Convx-inspired artwork-first Top Picks rail: the artwork is the card,
+    // and its blurred reflection carries the title instead of a wide banner.
+    item(key = "hero_card", contentType = "hero_rail") {
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = AppleTokens.Gutter).plusStart(deps.sideInset),
+            horizontalArrangement = Arrangement.spacedBy(SpotlightCardSpacing),
+            modifier = Modifier
+                .fillMaxWidth()
+                .animateItem()
+                .bleedStart(deps.sideInset),
+        ) {
+            itemsIndexed(
+                items = picks,
+                key = { _, song -> song.id },
+                contentType = { _, _ -> "home_top_pick" },
+            ) { index, song ->
+                SpotlightCard(
+                    thumbnailUrl = song.song.thumbnailUrl,
+                    title = song.song.title,
+                    subtitle = song.artists.joinToString { it.name },
+                    onClick = {
+                        deps.playerConnection.playQueue(
+                            ListQueue(
+                                title = song.song.title,
+                                items = picks.map { it.toMediaItem() },
+                                startIndex = index,
+                            )
+                        )
+                    },
+                )
             }
-            HomeHeroCard(
-                title = top.song.title,
-                subtitle = heroSubtitle,
-                thumbnailUrl = top.song.thumbnailUrl,
-                onPlay = {
-                    deps.playerConnection.playQueue(
-                        ListQueue(
-                            title = top.song.title,
-                            items = quickPicks.orEmpty().map { it.toMediaItem() },
-                        )
-                    )
-                },
-                onShuffle = {
-                    deps.playerConnection.playQueue(
-                        ListQueue(
-                            title = top.song.title,
-                            items = quickPicks.orEmpty().shuffled().map { it.toMediaItem() },
-                        )
-                    )
-                },
-                onClick = {
-                    deps.playerConnection.playQueue(
-                        ListQueue(
-                            title = top.song.title,
-                            items = listOf(top.toMediaItem()),
-                        )
-                    )
-                },
-                modifier = Modifier
-                    .padding(horizontal = AppleTokens.Gutter)
-                    .animateItem(),
-            )
         }
     }
 }
