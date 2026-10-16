@@ -1,7 +1,6 @@
 /**
  * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
- * UI treatment adapted from Convx 2.0.0-nightly (GPL-3.0).
  */
 
 package com.nexamusic.music.ui.component
@@ -18,6 +17,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -114,7 +115,7 @@ fun PlayingIndicatorBox(
                     modifier = Modifier.height(24.dp),
                 )
             } else {
-                SymbolIcon(symbol = sf("play.fill"), contentDescription = null, tint = color)
+                Icon(imageVector = Icons.Filled.PlayArrow, contentDescription = null, tint = color)
             }
         }
     }

@@ -1,6 +1,7 @@
 /**
  * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
+ * UI treatment adapted from Convx 2.0.0-nightly (GPL-3.0).
  */
 
 package com.nexamusic.music.ui.component
@@ -67,18 +68,14 @@ fun AutoResizeText(
         fontSize = fontSizeValue.sp,
         onTextLayout = {
             if (it.didOverflowHeight && !readyToDraw) {
-                // Did Overflow height, calculate next font size value
                 val nextFontSizeValue = fontSizeValue - fontSizeRange.step.value
                 if (nextFontSizeValue <= fontSizeRange.min.value) {
-                    // Reached minimum, set minimum font size and it's readToDraw
                     fontSizeValue = fontSizeRange.min.value
                     readyToDraw = true
                 } else {
-                    // Text doesn't fit yet and haven't reached minimum text range, keep decreasing
                     fontSizeValue = nextFontSizeValue
                 }
             } else {
-                // Text fits before reaching the minimum, it's readyToDraw
                 readyToDraw = true
             }
         },
