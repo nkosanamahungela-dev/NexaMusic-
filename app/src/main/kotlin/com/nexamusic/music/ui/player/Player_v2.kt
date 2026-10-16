@@ -64,6 +64,7 @@ import com.nexamusic.music.utils.makeTimeString
 import com.nexamusic.music.utils.rememberEnumPreference
 import com.nexamusic.music.extensions.togglePlayPause
 import com.nexamusic.music.ui.component.Lyrics
+import com.nexamusic.music.ui.component.homeCardRim
 import com.nexamusic.music.ui.component.rememberBottomSheetState
 import com.nexamusic.music.ui.component.expandedAnchor
 import androidx.compose.ui.platform.LocalConfiguration
@@ -427,6 +428,7 @@ fun PlayerV2(
                                         )
                                         .background(adaptiveSurface, RoundedCornerShape(12.dp))
                                         .clip(RoundedCornerShape(12.dp))
+                                        .homeCardRim(RoundedCornerShape(12.dp))
                                         .SwipeGesture(
                                             enabled = (playerState == PlayerInternalState.COVER && !isListenTogetherGuest),
                                             onSwipeLeft = { if (canSkipNext) playerConnection.player.seekToNext() },
