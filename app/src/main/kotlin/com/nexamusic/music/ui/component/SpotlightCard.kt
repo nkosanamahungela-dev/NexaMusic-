@@ -102,13 +102,15 @@ fun SpotlightCard(
         lerp(tints.firstOrNull() ?: Color.Black, Color.Black, 0.48f)
     }
     val reflectionsSupported = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
+    val cardShape = remember { ContinuousRoundedRectangle(AppleTokens.CardCorner) }
 
     Box(
         modifier = modifier
             .width(artworkSize)
             .height(artworkSize + infoHeight)
-            .clip(ContinuousRoundedRectangle(AppleTokens.CardCorner))
+            .clip(cardShape)
             .background(cardColor)
+            .homeCardRim(cardShape)
             .bounceClick(onClick = onClick),
     ) {
         AsyncImage(
