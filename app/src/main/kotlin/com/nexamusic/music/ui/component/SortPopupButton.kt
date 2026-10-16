@@ -148,7 +148,7 @@ private fun SortMenuRow(
                         .graphicsLayer { rotationZ = if (trailingRotated) 180f else 0f },
                 )
 
-                checked -> SymbolIcon(symbol = sf("checkmark"), contentDescription = null, size = 18.dp, tint = MaterialTheme.colorScheme.primary)
+                checked -> Icon(imageVector = Icons.Filled.Check, contentDescription = null, modifier = Modifier.size(18.dp), tint = MaterialTheme.colorScheme.primary)
             }
         },
         onClick = onClick,
