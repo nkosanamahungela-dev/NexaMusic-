@@ -1,6 +1,7 @@
 /**
  * NexaMusic Project (C) 2026
  * Licensed under GPL-3.0 | See git history for contributors
+ * UI treatment adapted from Convx 2.0.0-nightly (GPL-3.0).
  */
 
 package com.nexamusic.music.ui.component
@@ -59,22 +60,8 @@ fun GlassSwitch(
     val thumbPadding = 2.dp
     val maxTravel = trackWidth - thumbSize - thumbPadding * 2
 
-    // No liquidGlass here, deliberately. It used to run the full backdrop
-    // pipeline on an UNATTACHED backdrop — which makes drawBackdrop early-return,
-    // so there was never any live content to refract. The old comment admitted as
-    // much ("glass alone rendered as a faint outline, 'on' was all but
-    // indistinguishable from 'off'"), which is why a green wash was painted over
-    // the top to restore the on-state signal.
-    //
-    // So every enabled switch paid for layer allocation, an effect chain, a
-    // highlight and a shadow to produce a faint rim over a colour that was
-    // covering it anyway. Measured on a Galaxy M34: the Appearance screen (~5
-    // switches on) recorded at 49ms/frame against 25ms for the Settings root,
-    // which has none — roughly 5ms per switch, on a 51x31dp control. Preference.kt
-    // routes every preference switch in the app through here, so that cost was
-    // on most settings screens at once.
-    //
-    // The rim is reproduced with a plain border below: same read, no pipeline.
+    // This switch has no attached backdrop to sample, so a solid fill and border
+    // provide the same state feedback without allocating a glass effect chain.
     Box(
         modifier = modifier
             .width(trackWidth)
@@ -89,7 +76,7 @@ fun GlassSwitch(
             )
             .then(
                 if (useGlass && checked && enabled) {
-                    // The specular hint the glass rim used to contribute.
+                    // Adds a subtle highlight to the glass track.
                     Modifier.border(
                         width = 0.8.dp,
                         color = Color.White.copy(alpha = 0.35f),
@@ -141,20 +128,8 @@ fun GlassSwitchCompat(
     enabled: Boolean = true,
     colors: SwitchColors? = null,
 ) {
-    // Delegates to [GlassSwitch] rather than LiquidToggle. LiquidToggle attaches
-    // its own backdrop to the track so the thumb can refract it — a real glass
-    // pipeline per toggle, and every preference switch in the app comes through
-    // here (Preference.kt aliases this as `Switch`).
-    //
-    // Measured on a Galaxy M34, scrolling: the Appearance screen recorded at
-    // 49ms/frame against 25ms for the Settings root, which has no switches —
-    // about 5ms of display-list recording per visible toggle, for refraction on a
-    // 51x31dp control. That was the single largest per-frame cost found on any
-    // screen, larger than the app-wide backdrop capture (~4ms) and larger than
-    // the nav bar and mini player glass combined.
-    //
-    // Visual change, stated plainly: the thumb no longer refracts the track. The
-    // toggle keeps its iOS shape, motion, green on-state and rim highlight.
+    // Avoid a separate backdrop refraction pipeline for every preference switch.
+    // This keeps the toggle's shape and motion, but the thumb no longer refracts the track.
     GlassSwitch(
         checked = checked,
         onCheckedChange = onCheckedChange,
