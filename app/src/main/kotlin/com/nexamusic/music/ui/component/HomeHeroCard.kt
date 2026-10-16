@@ -22,6 +22,8 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.animation.core.Animatable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -50,6 +52,8 @@ import com.nexamusic.music.constants.HomeHeroCardHeightOverrideKey
 import com.nexamusic.music.ui.theme.AppleTokens
 import com.nexamusic.music.ui.utils.bounceClick
 import com.nexamusic.music.utils.rememberPreference
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 
 /**
  * The "star of the day" card that opens Home.
@@ -75,6 +79,19 @@ fun HomeHeroCard(
 ) {
     val (heightOverride) = rememberPreference(HomeHeroCardHeightOverrideKey, 0)
     val cardShape = rememberHomeCardShape()
+
+    // Convx-inspired one-shot artwork entrance: a gentle zoom settles into place
+    // instead of the Home hero appearing abruptly. Keep the animation on the image
+    // only so the card bounds, text, and tap target remain stable.
+    val artworkScale = remember { Animatable(1.06f) }
+    val artworkAlpha = remember { Animatable(0f) }
+    LaunchedEffect(Unit) {
+        coroutineScope {
+            launch { artworkScale.animateTo(1f) }
+            launch { artworkAlpha.animateTo(1f) }
+        }
+    }
+
     Box(
         modifier = modifier
             .fillMaxWidth()
@@ -110,7 +127,13 @@ fun HomeHeroCard(
                 model = request,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .graphicsLayer {
+                        scaleX = artworkScale.value
+                        scaleY = artworkScale.value
+                        alpha = artworkAlpha.value
+                    },
             )
 
             // Frosted band over the lower portion: the cover again, blurred, revealed by
