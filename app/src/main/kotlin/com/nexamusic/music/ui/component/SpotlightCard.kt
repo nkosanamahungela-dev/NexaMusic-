@@ -5,6 +5,7 @@
 package com.nexamusic.music.ui.component
 
 import android.os.Build
+import androidx.compose.animation.core.Animatable
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -19,6 +20,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,6 +41,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 import com.nexamusic.music.ui.component.shapes.ContinuousRoundedRectangle
 import com.nexamusic.music.ui.theme.AppleTokens
 import com.nexamusic.music.ui.theme.rememberArtworkTint
@@ -103,11 +107,25 @@ fun SpotlightCard(
     }
     val reflectionsSupported = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S
     val cardShape = remember { ContinuousRoundedRectangle(AppleTokens.CardCorner) }
+    // Animate the card that actually appears in the Home Top Picks rail.
+    val entranceScale = remember { Animatable(0.96f) }
+    val entranceAlpha = remember { Animatable(0f) }
+    LaunchedEffect(Unit) {
+        coroutineScope {
+            launch { entranceScale.animateTo(1f) }
+            launch { entranceAlpha.animateTo(1f) }
+        }
+    }
 
     Box(
         modifier = modifier
             .width(artworkSize)
             .height(artworkSize + infoHeight)
+            .graphicsLayer {
+                scaleX = entranceScale.value
+                scaleY = entranceScale.value
+                alpha = entranceAlpha.value
+            }
             .clip(cardShape)
             .background(cardColor)
             .homeCardRim(cardShape)
